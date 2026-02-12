@@ -11,7 +11,7 @@ export default function Home() {
           <section className="h-screen flex flex-col items-center justify-between relative overflow-hidden bg-zinc-900 text-white py-12">
             <div className="absolute inset-0 z-0">
                <img src="/images/home-hero.png" className="w-full h-full object-cover opacity-100" />
-               <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/80" />
+               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80" />
             </div>
             
             <div className="relative z-10 text-center px-6 max-w-4xl w-full flex flex-col items-center justify-between h-full pt-12 pb-20">
