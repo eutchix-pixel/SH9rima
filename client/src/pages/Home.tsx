@@ -21,9 +21,6 @@ export default function Home() {
                 transition={{ duration: 1, ease: "easeOut" }}
                 className="mt-4"
               >
-                 <h1 className="font-serif text-5xl md:text-7xl font-bold tracking-tight leading-none text-white drop-shadow-2xl uppercase">
-                  Salle D'honneur
-                </h1>
               </motion.div>
 
               <div className="flex-1" /> {/* Spacer for logo visibility */}
