@@ -1,58 +1,56 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
-import { Loader2, Camera } from "lucide-react";
+import { Loader2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
 
 export default function ScanPage() {
   const [, setLocation] = useLocation();
   const [scanning, setScanning] = useState(true);
 
-  // Simulate scanning delay
+  // Simulate scanning delay and finding a specific ID
   useEffect(() => {
     const timer = setTimeout(() => {
         setScanning(false);
-        // Simulate finding "Asia-1" (Samurai Armor)
-        setLocation(`/artwork/asia-1`);
-    }, 2500);
+        // Simulate finding "tonkin-naissance" from the spec
+        setLocation(`/detail/tonkin-naissance`);
+    }, 2000);
     return () => clearTimeout(timer);
   }, [setLocation]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-[90vh] text-center space-y-8 bg-black fixed inset-0 z-50 text-white">
-      {/* Fake Camera Interface */}
-      <div className="relative w-full max-w-sm aspect-[3/4] rounded-2xl border-2 border-white/20 bg-zinc-900 overflow-hidden flex flex-col items-center justify-center shadow-2xl">
-        
-        {/* Camera Feed Simulator (just a blurred abstract bg) */}
-        <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 to-black opacity-50" />
-        
-        {/* Scanning Overlay */}
-        <div className="relative z-10 w-64 h-64 border-2 border-accent/80 rounded-lg flex items-center justify-center overflow-hidden shadow-[0_0_100px_rgba(var(--accent),0.5)]">
-            <div className="absolute inset-0 bg-accent/5 animate-pulse" />
-            <div className="w-full h-0.5 bg-accent absolute top-0 shadow-[0_0_20px_rgba(var(--accent),1)] animate-[scan_2s_ease-in-out_infinite]" />
-            
-            <div className="absolute top-0 left-0 w-4 h-4 border-t-4 border-l-4 border-accent -mt-1 -ml-1" />
-            <div className="absolute top-0 right-0 w-4 h-4 border-t-4 border-r-4 border-accent -mt-1 -mr-1" />
-            <div className="absolute bottom-0 left-0 w-4 h-4 border-b-4 border-l-4 border-accent -mb-1 -ml-1" />
-            <div className="absolute bottom-0 right-0 w-4 h-4 border-b-4 border-r-4 border-accent -mb-1 -mr-1" />
-        </div>
+    <div className="fixed inset-0 z-50 bg-black text-white flex flex-col">
+      {/* Header */}
+      <div className="p-4 flex justify-between items-center bg-black/50 backdrop-blur-sm absolute top-0 w-full z-10">
+        <h2 className="font-bold tracking-widest text-sm uppercase">Scanner un code</h2>
+        <Button variant="ghost" size="icon" onClick={() => window.history.back()}>
+            <X className="h-6 w-6" />
+        </Button>
+      </div>
 
-        {scanning && (
-            <div className="absolute bottom-12 flex items-center gap-2 text-accent animate-pulse font-mono text-sm tracking-widest">
+      {/* Camera Viewport */}
+      <div className="flex-1 relative flex items-center justify-center bg-zinc-900">
+         <div className="absolute inset-0 opacity-20 bg-[url('https://media.istockphoto.com/id/1144093883/vector/abstract-technology-futuristic-digital-bg.jpg?s=612x612&w=0&k=20&c=BqF_bSgA0uT5yB_3yT5yB_3yT5yB_3yT5yB_3yT5yB_3')] bg-cover" />
+         
+         {/* Reticle */}
+         <div className="relative w-72 h-72 border-2 border-white/50 rounded-lg">
+             <div className="absolute top-0 left-0 w-6 h-6 border-t-4 border-l-4 border-accent -mt-1 -ml-1" />
+             <div className="absolute top-0 right-0 w-6 h-6 border-t-4 border-r-4 border-accent -mt-1 -mr-1" />
+             <div className="absolute bottom-0 left-0 w-6 h-6 border-b-4 border-l-4 border-accent -mb-1 -ml-1" />
+             <div className="absolute bottom-0 right-0 w-6 h-6 border-b-4 border-r-4 border-accent -mb-1 -mr-1" />
+             
+             {scanning && (
+                 <div className="absolute inset-x-0 h-0.5 bg-accent shadow-[0_0_15px_rgba(255,200,0,0.8)] animate-[scan_2s_ease-in-out_infinite]" />
+             )}
+         </div>
+
+         {scanning && (
+            <div className="absolute bottom-32 flex items-center gap-2 font-mono text-xs text-accent animate-pulse tracking-widest">
                 <Loader2 className="h-4 w-4 animate-spin" />
-                ANALYSE EN COURS...
+                RECHERCHE DU SIGNAL...
             </div>
-        )}
+         )}
       </div>
-
-      <div className="max-w-xs space-y-4">
-        <h2 className="text-2xl font-bold">Scannez le cartel</h2>
-        <p className="text-white/60 text-sm">Pointez votre appareil vers le QR code situé à côté de l'œuvre.</p>
-        <Link href="/">
-            <Button variant="outline" className="mt-4 border-white/20 text-white hover:bg-white/10">Annuler</Button>
-        </Link>
-      </div>
-
+      
       <style>{`
         @keyframes scan {
           0% { top: 0%; opacity: 0; }

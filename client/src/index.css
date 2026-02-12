@@ -4,6 +4,21 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-sans: 'Montserrat', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  
+  --color-tonkin: hsl(35, 30%, 85%); /* Parchemin */
+  --color-tonkin-foreground: hsl(30, 40%, 20%); /* Sepia dark */
+  
+  --color-algerie: hsl(40, 50%, 60%); /* Ocre/Sable */
+  --color-algerie-foreground: hsl(0, 0%, 20%);
+  
+  --color-guyane: hsl(150, 80%, 15%); /* Jungle deep green */
+  --color-guyane-foreground: hsl(150, 20%, 90%);
+  
+  --color-traditions: hsl(350, 70%, 40%); /* Rouge Garance */
+  --color-traditions-foreground: hsl(45, 80%, 60%); /* Gold */
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -37,109 +52,51 @@
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
   
-  --color-chart-1: hsl(var(--chart-1));
-  --color-chart-2: hsl(var(--chart-2));
-  --color-chart-3: hsl(var(--chart-3));
-  --color-chart-4: hsl(var(--chart-4));
-  --color-chart-5: hsl(var(--chart-5));
-  
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Libre Baskerville', serif;
-  
   --radius: 0.5rem;
 }
 
-/* BASE STYLES */
 :root {
-  /* Museum Theme - Light Mode */
-  --background: 40 20% 97%; /* Off-white #F9F7F2 */
-  --foreground: 0 0% 17%; /* Dark Grey #2C2C2C */
-  
+  --background: 40 20% 97%;
+  --foreground: 0 0% 15%;
   --card: 0 0% 100%;
-  --card-foreground: 0 0% 17%;
-  
+  --card-foreground: 0 0% 15%;
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 17%;
-  
-  --primary: 0 0% 10%; /* Nearly Black */
-  --primary-foreground: 40 20% 97%;
-  
-  --secondary: 40 10% 90%; /* Light beige */
-  --secondary-foreground: 0 0% 10%;
-  
+  --popover-foreground: 0 0% 15%;
+  --primary: 350 70% 40%; /* Rouge Garance as primary */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 40 10% 90%;
+  --secondary-foreground: 0 0% 15%;
   --muted: 40 10% 90%;
-  --muted-foreground: 0 0% 40%;
-  
-  --accent: 40 50% 56%; /* Gold #C5A059 */
-  --accent-foreground: 0 0% 100%;
-  
+  --muted-foreground: 0 0% 45%;
+  --accent: 45 80% 50%; /* Gold */
+  --accent-foreground: 0 0% 10%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
-
   --border: 0 0% 85%;
   --input: 0 0% 85%;
-  --ring: 40 50% 56%;
-  
-  --radius: 0.5rem;
+  --ring: 350 70% 40%;
 }
 
 .dark {
-  /* Museum Theme - Dark Mode */
-  --background: 0 0% 10%; /* #1A1A1A */
-  --foreground: 40 10% 90%; /* Off-white */
-  
+  --background: 0 0% 10%;
+  --foreground: 40 10% 90%;
   --card: 0 0% 13%;
   --card-foreground: 40 10% 90%;
-  
   --popover: 0 0% 13%;
   --popover-foreground: 40 10% 90%;
-  
-  --primary: 40 50% 56%; /* Gold as primary in dark mode */
-  --primary-foreground: 0 0% 10%;
-  
+  --primary: 350 70% 50%;
+  --primary-foreground: 0 0% 98%;
   --secondary: 0 0% 20%;
   --secondary-foreground: 40 10% 90%;
-  
   --muted: 0 0% 20%;
   --muted-foreground: 0 0% 60%;
-  
-  --accent: 40 50% 56%;
+  --accent: 45 80% 50%;
   --accent-foreground: 0 0% 10%;
-  
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
-  
   --border: 0 0% 20%;
   --input: 0 0% 20%;
-  --ring: 40 50% 56%;
-}
-
-/* Accessibility Modes Classes */
-.dyslexia-mode {
-  --font-sans: 'Open Dyslexic', 'Comic Sans MS', sans-serif !important;
-  --font-serif: 'Open Dyslexic', 'Comic Sans MS', serif !important;
-  letter-spacing: 0.05em;
-  line-height: 1.6;
-}
-
-.high-contrast {
-  --background: 0 0% 100% !important;
-  --foreground: 0 0% 0% !important;
-  --card: 0 0% 100% !important;
-  --card-foreground: 0 0% 0% !important;
-  --primary: 0 0% 0% !important;
-  --primary-foreground: 0 0% 100% !important;
-  --border: 0 0% 0% !important;
-}
-
-.high-contrast.dark {
-  --background: 0 0% 0% !important;
-  --foreground: 0 0% 100% !important;
-  --card: 0 0% 0% !important;
-  --card-foreground: 0 0% 100% !important;
-  --primary: 0 0% 100% !important;
-  --primary-foreground: 0 0% 0% !important;
-  --border: 0 0% 100% !important;
+  --ring: 350 70% 50%;
 }
 
 @layer base {

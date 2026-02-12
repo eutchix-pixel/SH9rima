@@ -1,83 +1,134 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { useSettings } from "@/lib/context";
-import { themes } from "@/lib/data";
+import { museumData } from "@/lib/data";
 import { Link } from "wouter";
-import { QrCode, Search, ChevronRight } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { ChevronDown, Map, ArrowRight } from "lucide-react";
 
 export default function Home() {
-  const { language } = useSettings();
-
   return (
-    <div className="space-y-8 pb-24">
-      {/* Welcome Header */}
-      <section className="pt-6 px-2">
-        <h1 className="font-serif text-3xl font-bold mb-2">
-          {language === "fr" ? "Bienvenue au Musée" : "Welcome to the Museum"}
-        </h1>
-        <p className="text-muted-foreground">
-          {language === "fr" 
-            ? "Choisissez un univers pour commencer votre visite." 
-            : "Choose a universe to start your visit."}
-        </p>
-      </section>
-
-      {/* Main Scan Action */}
-      <div className="px-2">
-        <Link href="/scan">
-          <Button size="lg" className="w-full h-14 text-lg gap-2 shadow-lg bg-foreground text-background hover:bg-foreground/90 transition-all active:scale-[0.98]">
-            <QrCode className="h-5 w-5" />
-            {language === "fr" ? "Scanner un QR Code" : "Scan a QR Code"}
-          </Button>
-        </Link>
-      </div>
-
-      {/* Themes Grid */}
-      <div className="space-y-4">
-        <div className="flex items-center justify-between px-2">
-          <h2 className="text-lg font-bold font-serif uppercase tracking-wider text-muted-foreground text-xs">
-            {language === "fr" ? "Les Collections" : "The Collections"}
-          </h2>
+    <div className="bg-background text-foreground">
+      {/* Hero / Intro */}
+      <section className="h-screen flex flex-col items-center justify-center relative overflow-hidden bg-zinc-900 text-white">
+        <div className="absolute inset-0 z-0">
+           <img src="/images/museum-hero.png" className="w-full h-full object-cover opacity-30" />
+           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
         </div>
         
-        <div className="grid gap-4">
-          {themes.map((theme, index) => (
-            <Link key={theme.id} href={`/theme/${theme.id}`}>
-              <div 
-                className={`relative overflow-hidden rounded-xl h-32 cursor-pointer shadow-md hover:shadow-xl transition-all hover:scale-[1.02] active:scale-[0.98] group`}
-              >
-                {/* Background Image with Overlay */}
-                <div className="absolute inset-0">
-                  <div className={`absolute inset-0 ${theme.color} opacity-90 group-hover:opacity-85 transition-opacity z-10`} />
-                  {/* Pattern or image behind */}
-                  <img src={theme.image} className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay grayscale group-hover:scale-110 transition-transform duration-700" />
+        <div className="relative z-10 text-center px-6 max-w-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            <h1 className="font-serif text-5xl md:text-7xl font-bold mb-4 tracking-tight leading-none">
+              <span className="block text-xl md:text-2xl tracking-[0.2em] font-sans font-light mb-2 text-accent">MUSÉE DU</span>
+              9<sup className="text-3xl align-top">e</sup> RIMa
+            </h1>
+            <div className="h-1 w-24 bg-accent mx-auto my-6" />
+            <p className="font-sans text-lg md:text-xl text-white/80 font-light tracking-wide">
+              De l'Indochine à la Guyane,<br/>une épopée à travers les âges.
+            </p>
+          </motion.div>
+        </div>
+
+        <motion.div 
+            className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 flex flex-col items-center gap-2"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+        >
+            <span className="text-xs uppercase tracking-widest">Explorer</span>
+            <ChevronDown className="h-6 w-6" />
+        </motion.div>
+      </section>
+
+      {/* Timeline Sections */}
+      {museumData.map((section, index) => (
+        <SectionView key={section.id} section={section} index={index} />
+      ))}
+
+      {/* Footer / Map Link */}
+      <section className="py-20 px-6 bg-zinc-900 text-white text-center">
+        <h2 className="font-serif text-3xl mb-6">Plan du Musée</h2>
+        <p className="text-muted-foreground mb-8 max-w-md mx-auto">
+          Repérez-vous dans les différentes salles et trouvez les œuvres principales.
+        </p>
+        <Link href="/map">
+            <button className="bg-white text-black px-8 py-4 rounded-none font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors inline-flex items-center gap-2">
+                <Map className="h-5 w-5" />
+                Ouvrir le plan
+            </button>
+        </Link>
+      </section>
+    </div>
+  );
+}
+
+function SectionView({ section, index }: { section: any, index: number }) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
+
+  return (
+    <section ref={ref} className={`min-h-screen relative flex items-center py-24 overflow-hidden ${section.colorClass}`}>
+        {/* Parallax Background */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+            <motion.div style={{ y }} className="absolute inset-0 h-[120%] -top-[10%]">
+                 <img 
+                    src={section.bgImage} 
+                    alt="" 
+                    className="w-full h-full object-cover opacity-20 mix-blend-multiply grayscale contrast-125" 
+                />
+            </motion.div>
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/5 to-transparent mix-blend-overlay" />
+        </div>
+
+        <div className="container relative z-10 px-6 md:px-12">
+            <div className="grid md:grid-cols-12 gap-12 items-start">
+                {/* Sticky Title Area */}
+                <div className="md:col-span-4 md:sticky md:top-24 text-left">
+                    <span className="block text-xs font-bold tracking-[0.2em] opacity-60 mb-2 uppercase font-sans">
+                        {section.period}
+                    </span>
+                    <h2 className="font-serif text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        {section.title}
+                    </h2>
+                    <p className="font-sans text-lg opacity-80 leading-relaxed border-l-2 border-current pl-4 max-w-sm">
+                        {section.description}
+                    </p>
                 </div>
 
-                {/* Content */}
-                <div className="relative z-20 h-full flex items-center justify-between p-6">
-                  <div className="flex items-center gap-4">
-                    <div className="bg-white/10 p-3 rounded-full backdrop-blur-sm border border-white/20 shadow-inner">
-                      <img src={theme.image} alt="" className="w-8 h-8 object-contain invert brightness-0" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-serif font-bold text-white tracking-tight">
-                        {language === "fr" ? theme.title : theme.titleEn}
-                      </h3>
-                      <p className="text-white/70 text-sm line-clamp-1 max-w-[200px]">
-                        {language === "fr" ? theme.description : theme.descriptionEn}
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-white/20 p-2 rounded-full backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity translate-x-4 group-hover:translate-x-0 duration-300">
-                    <ChevronRight className="text-white h-5 w-5" />
-                  </div>
+                {/* Subsections List (Timeline) */}
+                <div className="md:col-span-8 space-y-6 md:pl-12 border-l border-current/10 ml-2 md:ml-0">
+                    {section.subsections.map((sub: any, i: number) => (
+                        <Link key={sub.id} href={`/detail/${sub.id}`}>
+                            <motion.div 
+                                className="group relative cursor-pointer bg-white/5 backdrop-blur-sm border border-current/10 p-6 hover:bg-white/10 transition-all duration-300"
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ delay: i * 0.1 }}
+                                viewport={{ once: true }}
+                            >
+                                <div className="absolute left-[-29px] md:left-[-53px] top-8 w-3 h-3 rounded-full bg-current opacity-50 group-hover:scale-150 transition-transform" />
+                                
+                                <div className="flex justify-between items-center">
+                                    <h3 className="font-serif text-2xl font-bold group-hover:translate-x-2 transition-transform duration-300">
+                                        {sub.title}
+                                    </h3>
+                                    <ArrowRight className="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity -translate-x-4 group-hover:translate-x-0 duration-300" />
+                                </div>
+                                <p className="text-sm opacity-60 mt-2 font-sans line-clamp-2">
+                                    {sub.content}
+                                </p>
+                            </motion.div>
+                        </Link>
+                    ))}
                 </div>
-              </div>
-            </Link>
-          ))}
+            </div>
         </div>
-      </div>
-    </div>
+    </section>
   );
 }

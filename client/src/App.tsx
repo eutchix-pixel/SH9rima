@@ -1,11 +1,8 @@
 import { Switch, Route } from "wouter";
 import { Layout } from "./components/layout";
 import Home from "./pages/Home";
-import ThemePage from "./pages/Theme";
-import TourPage from "./pages/Tour";
-import ArtworkPage from "./pages/Artwork";
+import DetailPage from "./pages/Detail";
 import ScanPage from "./pages/Scan";
-import AdminPage from "./pages/Admin";
 import NotFound from "./pages/not-found";
 
 function Router() {
@@ -13,11 +10,8 @@ function Router() {
     <Layout>
       <Switch>
         <Route path="/" component={Home} />
-        <Route path="/theme/:id" component={ThemePage} />
-        <Route path="/tour/:id" component={TourPage} />
-        <Route path="/artwork/:id" component={ArtworkPage} />
+        <Route path="/detail/:id" component={DetailPage} />
         <Route path="/scan" component={ScanPage} />
-        <Route path="/admin" component={AdminPage} />
         <Route component={NotFound} />
       </Switch>
     </Layout>

@@ -1,69 +1,41 @@
 import { ReactNode } from "react";
 import { Link, useLocation } from "wouter";
-import { AccessibilityMenu } from "./AccessibilityMenu";
-import { Home, Map, QrCode } from "lucide-react";
+import { QrCode, ArrowLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useSettings } from "@/lib/context";
 
 export function Layout({ children, className }: { children: ReactNode; className?: string }) {
   const [location] = useLocation();
-  const { kidsMode } = useSettings();
+  const isHome = location === "/";
 
   return (
-    <div className={cn("min-h-screen bg-background text-foreground flex flex-col font-sans transition-colors duration-300", className)}>
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 items-center justify-between px-4">
-          <Link href="/">
-            <a className="font-serif font-bold text-lg tracking-tight flex items-center gap-2">
-              <span className="text-accent text-2xl">M</span>
-              <span className="hidden sm:inline-block">Musée Beaux-Arts</span>
-            </a>
-          </Link>
-          <div className="flex items-center gap-2">
-            {kidsMode && (
-              <span className="bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded-full animate-pulse">
-                KIDS MODE
-              </span>
-            )}
-            <AccessibilityMenu />
-          </div>
-        </div>
-      </header>
+    <div className={cn("min-h-screen bg-background text-foreground font-sans", className)}>
+      {/* Floating Scanner Button */}
+      <Link href="/scan">
+        <button 
+          className="fixed bottom-6 right-6 z-50 bg-accent text-accent-foreground rounded-full p-4 shadow-2xl shadow-black/50 border-2 border-white/20 transition-transform active:scale-95 hover:scale-110 flex items-center gap-2 group"
+          aria-label="Scanner"
+        >
+          <QrCode className="h-8 w-8" />
+          <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 ease-in-out whitespace-nowrap font-bold text-sm">
+            SCANNER
+          </span>
+        </button>
+      </Link>
 
       {/* Main Content */}
-      <main className="flex-1 container px-4 py-6 md:py-10 mx-auto max-w-4xl relative">
+      <main className="relative">
         {children}
       </main>
 
-      {/* Mobile Bottom Nav */}
-      <nav className="fixed bottom-0 left-0 right-0 border-t bg-background/90 backdrop-blur-lg z-50 md:hidden pb-safe">
-        <div className="flex justify-around items-center h-16">
-          <Link href="/">
-            <a className={cn("flex flex-col items-center gap-1 p-2 text-xs font-medium transition-colors", location === "/" ? "text-accent" : "text-muted-foreground hover:text-foreground")}>
-              <Home className="h-6 w-6" />
-              Accueil
-            </a>
-          </Link>
-          <Link href="/scan">
-            <a className={cn("flex flex-col items-center gap-1 p-2 text-xs font-medium transition-colors", location === "/scan" ? "text-accent" : "text-muted-foreground hover:text-foreground")}>
-              <div className="bg-accent text-accent-foreground rounded-full p-3 -mt-6 shadow-lg border-4 border-background">
-                <QrCode className="h-6 w-6" />
-              </div>
-              <span className="sr-only">Scan</span>
-            </a>
-          </Link>
-          <Link href="/tour/map">
-            <a className={cn("flex flex-col items-center gap-1 p-2 text-xs font-medium transition-colors", location.startsWith("/tour") ? "text-accent" : "text-muted-foreground hover:text-foreground")}>
-              <Map className="h-6 w-6" />
-              Visite
-            </a>
-          </Link>
-        </div>
-      </nav>
-      
-      {/* Spacer for bottom nav on mobile */}
-      <div className="h-20 md:hidden" />
+      {/* Back Button (if not home) */}
+      {!isHome && location !== "/scan" && (
+        <button 
+          onClick={() => window.history.back()}
+          className="fixed top-4 left-4 z-40 bg-background/50 backdrop-blur-md p-2 rounded-full border border-white/10 text-foreground shadow-lg active:scale-95"
+        >
+          <ArrowLeft className="h-6 w-6" />
+        </button>
+      )}
     </div>
   );
 }

@@ -1,0 +1,41 @@
+# MISSION : Création de l'application Web Phygitale "Musée du 9e RIMa"
+
+Je souhaite créer une application web mobile (PWA) pour le musée du 9e Régiment d'Infanterie de Marine. L'application doit être un guide immersif utilisant des QR Codes.
+
+## 1. STACK TECHNIQUE
+- Framework : React ou HTML5/Tailwind CSS pur (le plus léger pour mobile).
+- Bibliothèque QR : html5-qrcode pour scanner via le navigateur.
+- Animations : Framer Motion (si React) ou AOS.js pour les effets de scroll.
+- Icônes : Lucide-react (style épuré).
+
+## 2. ARCHITECTURE DE L'INTERFACE (UI)
+L'UI doit être "Néo-Traditionnelle" :
+- Typographie : 'Playfair Display' pour les titres (élégance historique) et 'Montserrat' pour le texte (lisibilité moderne).
+- Navigation : Un bouton flottant "SCANNER" toujours présent.
+- Page d'accueil : Un chemin de navigation vertical (Vertical Timeline) avec 4 grandes sections thématiques.
+- Ambiance visuelle : 
+   * Tonkin : Palette parchemin, bois sombre, sépia.
+   * Algérie : Palette ocre, sable, pierre, noir et blanc.
+   * Guyane : Palette vert jungle profond, humidité visuelle, métal moderne.
+   * Traditions : Rouge garance, Or, éclairage théâtral.
+
+## 3. FONCTIONNALITÉS CLÉS
+- SCANNER : Un bouton en haut qui ouvre la caméra. Si le QR contient un ID (ex: "tonkin-naissance"), l'app redirige instantanément vers la page correspondante.
+- PLAN : Un bouton "Plan de la salle" ouvrant une image interactive avec les zones du musée.
+- SCROLL IMMERSIF : Sur la home, le fond d'écran (background) change de texture ou d'image lors du passage d'une époque à une autre.
+
+## 4. STRUCTURE DES DONNÉES (JSON)
+L'app doit charger un fichier de contenu organisé comme suit :
+- Tonkin (1890-1946) : Naissance, Chine, 1900-14, Sibérie, Années Heureuses, Tourmente.
+- Algérie (1956-62) : Renaissance, Palestro, Contre-insurrection, KJ 25, Commando de Chasse, Disparition.
+- Guyane (1976-) : Débuts, Emprises, Fluvial, CRAJ, Jungle, International, Harpie, Titan.
+- Traditions : Drapeau, Insignes, Pagode, Chant, Esprit du 9.
+
+## 5. CONTENU DES PAGES DÉTAILLÉES
+Chaque sous-partie doit pouvoir afficher :
+- Un lecteur Audio (récit historique).
+- Une galerie d'images ou une zone "BD interactive".
+- Une carte interactive (repère spatio-temporel).
+- Un texte narratif immersif.
+
+CONSIGNE : "Génère d'abord la structure de navigation principale (Home + Scanner) et le système de routage basé sur les ID de QR codes. Applique le style Néo-Traditionnel dès le départ."
