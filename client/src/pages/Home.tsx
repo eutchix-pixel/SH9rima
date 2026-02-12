@@ -6,60 +6,58 @@ import { ChevronDown, Map, ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="bg-background text-foreground">
-      {/* Hero / Intro */}
-      <section className="h-screen flex flex-col items-center justify-center relative overflow-hidden bg-zinc-900 text-white">
-        <div className="absolute inset-0 z-0">
-           <img src="/images/museum-hero.png" className="w-full h-full object-cover opacity-30" />
-           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
-        </div>
-        
-        <div className="relative z-10 text-center px-6 max-w-2xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          >
-            <h1 className="font-serif text-5xl md:text-7xl font-bold mb-4 tracking-tight leading-none">
-              <span className="block text-xl md:text-2xl tracking-[0.2em] font-sans font-light mb-2 text-accent">MUSÉE DU</span>
-              9<sup className="text-3xl align-top">e</sup> RIMa
-            </h1>
-            <div className="h-1 w-24 bg-accent mx-auto my-6" />
-            <p className="font-sans text-lg md:text-xl text-white/80 font-light tracking-wide">
-              De l'Indochine à la Guyane,<br/>une épopée à travers les âges.
+      <div className="bg-background text-foreground">
+          {/* Hero / Intro */}
+          <section className="h-screen flex flex-col items-center justify-center relative overflow-hidden bg-zinc-900 text-white">
+            <div className="absolute inset-0 z-0">
+               <img src="/images/museum-hero.png" className="w-full h-full object-cover opacity-30" />
+               <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
+            </div>
+            
+            <div className="relative z-10 text-center px-6 max-w-2xl">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+              >
+                <h1 className="font-serif text-5xl md:text-7xl font-bold mb-4 tracking-tight leading-none">
+                  <span className="block text-xl md:text-2xl tracking-[0.2em] font-sans font-light mb-2 text-accent">SALLE D'HONNEURDU</span>
+                  9<sup className="text-3xl align-top">e</sup> RIMa
+                </h1>
+                <div className="h-1 w-24 bg-accent mx-auto my-6" />
+                <p className="font-sans text-lg md:text-xl text-white/80 font-light tracking-wide">
+                  De l'Indochine à la Guyane,<br/>une épopée à travers les âges.
+                </p>
+              </motion.div>
+            </div>
+
+            <motion.div 
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 flex flex-col items-center gap-2"
+                animate={{ y: [0, 10, 0] }}
+                transition={{ repeat: Infinity, duration: 2 }}
+            >
+                <span className="text-xs uppercase tracking-widest">Explorer</span>
+                <ChevronDown className="h-6 w-6" />
+            </motion.div>
+          </section>
+          {/* Timeline Sections */}
+          {museumData.map((section, index) => (
+            <SectionView key={section.id} section={section} index={index} />
+          ))}
+          {/* Footer / Map Link */}
+          <section className="py-20 px-6 bg-zinc-900 text-white text-center">
+            <h2 className="font-serif text-3xl mb-6">Plan du Musée</h2>
+            <p className="text-muted-foreground mb-8 max-w-md mx-auto">
+              Repérez-vous dans les différentes salles et trouvez les œuvres principales.
             </p>
-          </motion.div>
-        </div>
-
-        <motion.div 
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 flex flex-col items-center gap-2"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-        >
-            <span className="text-xs uppercase tracking-widest">Explorer</span>
-            <ChevronDown className="h-6 w-6" />
-        </motion.div>
-      </section>
-
-      {/* Timeline Sections */}
-      {museumData.map((section, index) => (
-        <SectionView key={section.id} section={section} index={index} />
-      ))}
-
-      {/* Footer / Map Link */}
-      <section className="py-20 px-6 bg-zinc-900 text-white text-center">
-        <h2 className="font-serif text-3xl mb-6">Plan du Musée</h2>
-        <p className="text-muted-foreground mb-8 max-w-md mx-auto">
-          Repérez-vous dans les différentes salles et trouvez les œuvres principales.
-        </p>
-        <Link href="/map">
-            <button className="bg-white text-black px-8 py-4 rounded-none font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors inline-flex items-center gap-2">
-                <Map className="h-5 w-5" />
-                Ouvrir le plan
-            </button>
-        </Link>
-      </section>
-    </div>
+            <Link href="/map">
+                <button className="bg-white text-black px-8 py-4 rounded-none font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors inline-flex items-center gap-2">
+                    <Map className="h-5 w-5" />
+                    Ouvrir le plan
+                </button>
+            </Link>
+          </section>
+      </div>
   );
 }
 
