@@ -21,7 +21,6 @@ export default function Home() {
                 transition={{ duration: 1, ease: "easeOut" }}
                 className="mt-4"
               >
-                 <span className="block text-xl md:text-2xl tracking-[0.3em] font-sans font-light text-accent/80 uppercase mb-2">Musée du</span>
                  <h1 className="font-serif text-5xl md:text-7xl font-bold tracking-tight leading-none text-white drop-shadow-2xl uppercase">
                   Salle D'honneur
                 </h1>
