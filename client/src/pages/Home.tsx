@@ -10,7 +10,7 @@ export default function Home() {
           {/* Hero / Intro */}
           <section className="h-screen flex flex-col items-center justify-center relative overflow-hidden bg-zinc-900 text-white">
             <div className="absolute inset-0 z-0">
-               <img src="/images/museum-hero.png" className="w-full h-full object-cover opacity-30" />
+               <img src="/images/home-hero.png" className="w-full h-full object-cover opacity-50" />
                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
             </div>
             
