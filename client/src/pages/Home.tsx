@@ -8,36 +8,46 @@ export default function Home() {
   return (
       <div className="bg-background text-foreground">
           {/* Hero / Intro */}
-          <section className="h-screen flex flex-col items-center justify-center relative overflow-hidden bg-zinc-900 text-white">
+          <section className="h-screen flex flex-col items-center justify-between relative overflow-hidden bg-zinc-900 text-white py-12">
             <div className="absolute inset-0 z-0">
-               <img src="/images/home-hero.png" className="w-full h-full object-cover opacity-50" />
-               <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
+               <img src="/images/home-hero.png" className="w-full h-full object-cover opacity-100" />
+               <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/80" />
             </div>
             
-            <div className="relative z-10 text-center px-6 max-w-2xl">
+            <div className="relative z-10 text-center px-6 max-w-4xl w-full flex flex-col items-center justify-between h-full pt-12 pb-20">
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="mt-4"
+              >
+                 <span className="block text-xl md:text-2xl tracking-[0.3em] font-sans font-light text-accent/80 uppercase mb-2">Musée du</span>
+                 <h1 className="font-serif text-6xl md:text-8xl font-bold tracking-tight leading-none text-white drop-shadow-2xl">
+                  9<sup className="text-4xl align-top">e</sup> RIMa
+                </h1>
+              </motion.div>
+
+              <div className="flex-1" /> {/* Spacer for logo visibility */}
+
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, ease: "easeOut" }}
+                transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
               >
-                <h1 className="font-serif text-5xl md:text-7xl font-bold mb-4 tracking-tight leading-none">
-                  <span className="block text-xl md:text-2xl tracking-[0.2em] font-sans font-light mb-2 text-accent">SALLE D'HONNEURDU</span>
-                  9<sup className="text-3xl align-top">e</sup> RIMa
-                </h1>
-                <div className="h-1 w-24 bg-accent mx-auto my-6" />
-                <p className="font-sans text-lg md:text-xl text-white/80 font-light tracking-wide">
+                <p className="font-sans text-lg md:text-xl text-white/90 font-light tracking-wide max-w-lg mx-auto leading-relaxed drop-shadow-lg">
+                  <span className="block border-t border-accent/50 pt-4 w-12 mx-auto mb-4" />
                   De l'Indochine à la Guyane,<br/>une épopée à travers les âges.
                 </p>
               </motion.div>
             </div>
 
             <motion.div 
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 flex flex-col items-center gap-2"
+                className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/50 flex flex-col items-center gap-1 z-20"
                 animate={{ y: [0, 10, 0] }}
                 transition={{ repeat: Infinity, duration: 2 }}
             >
-                <span className="text-xs uppercase tracking-widest">Explorer</span>
-                <ChevronDown className="h-6 w-6" />
+                <span className="text-[10px] uppercase tracking-[0.2em] font-bold">Explorer</span>
+                <ChevronDown className="h-5 w-5" />
             </motion.div>
           </section>
           {/* Timeline Sections */}
