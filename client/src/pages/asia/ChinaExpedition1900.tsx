@@ -120,15 +120,16 @@ const expeditionSteps: { name: string; date: string; coords: [number, number]; d
   { name: "Pékin", date: "14–17 août", coords: [39.9042, 116.4074], detail: "Assaut final — la légation française est atteinte à minuit. Fin du siège des 55 jours", etape: 5 },
 ];
 
-function createStepIcon(etape: number, name: string) {
+function createStepIcon(etape: number, name: string, date: string) {
   return L.divIcon({
     className: '',
-    html: `<div style="position:relative;display:flex;flex-direction:column;align-items:center">
-      <div style="background:#8b1a1a;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.4)">${etape}</div>
-      <div style="background:#8b1a1a;color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap;font-family:serif;margin-top:4px;box-shadow:0 1px 4px rgba(0,0,0,.3)">${name}</div>
+    html: `<div style="position:relative;display:flex;flex-direction:column;align-items:center;pointer-events:auto">
+      <div style="background:#8b1a1a;color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;border:3px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.5)">${etape}</div>
+      <div style="background:#8b1a1a;color:#fff;padding:3px 10px;border-radius:5px;font-size:13px;font-weight:700;white-space:nowrap;font-family:serif;margin-top:5px;box-shadow:0 2px 6px rgba(0,0,0,.35);letter-spacing:.3px">${name}</div>
+      <div style="background:rgba(255,255,255,.92);color:#4a3b2a;padding:2px 7px;border-radius:3px;font-size:10px;font-weight:600;white-space:nowrap;margin-top:3px;box-shadow:0 1px 3px rgba(0,0,0,.15);border:1px solid rgba(139,26,26,.2)">${date}</div>
     </div>`,
-    iconSize: [100, 55],
-    iconAnchor: [50, 14],
+    iconSize: [140, 80],
+    iconAnchor: [70, 16],
   });
 }
 
@@ -136,7 +137,7 @@ function FitBounds() {
   const map = useMap();
   useEffect(() => {
     const bounds = L.latLngBounds(expeditionSteps.map(s => s.coords));
-    map.fitBounds(bounds, { padding: [40, 40] });
+    map.fitBounds(bounds, { padding: [60, 60] });
   }, [map]);
   return null;
 }
@@ -146,7 +147,7 @@ function ExpeditionMap() {
 
   return (
     <div className="space-y-3" data-testid="carte-itineraire">
-      <div className="relative w-full h-[500px] rounded-xl overflow-hidden shadow-2xl border-2 border-[#4a3b2a]/30 bg-white">
+      <div className="relative w-full h-[550px] rounded-xl overflow-hidden shadow-2xl border-2 border-[#4a3b2a]/30 bg-white">
         <div className="absolute top-3 left-3 z-[1000] bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow text-xs font-serif font-bold text-[#4a3b2a] border border-[#4a3b2a]/20">
           Itinéraire du Corps Expéditionnaire — Chine 1900
         </div>
@@ -169,7 +170,11 @@ function ExpeditionMap() {
           />
           <Polyline
             positions={expeditionSteps.map(s => s.coords)}
-            pathOptions={{ color: '#8b1a1a', weight: 4, opacity: 0.8, dashArray: '12,8' }}
+            pathOptions={{ color: '#fff', weight: 8, opacity: 0.9 }}
+          />
+          <Polyline
+            positions={expeditionSteps.map(s => s.coords)}
+            pathOptions={{ color: '#8b1a1a', weight: 5, opacity: 0.9, dashArray: '14,10' }}
           />
           {expeditionSteps.map((step, i) => {
             if (i < expeditionSteps.length - 1) {
@@ -196,7 +201,7 @@ function ExpeditionMap() {
             <Marker
               key={i}
               position={step.coords}
-              icon={createStepIcon(step.etape, step.name)}
+              icon={createStepIcon(step.etape, step.name, step.date)}
               eventHandlers={{ click: () => setSelected(selected === i ? null : i) }}
             >
               <Popup>
