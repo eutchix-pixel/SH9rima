@@ -152,7 +152,7 @@ export const tonkinOriginsData: TonkinContent = {
     },
     operations: {
         title: "Premières opérations (1890–1892) : apprendre à “tenir” le Tonkin",
-        intro: "Le Tonkin est alors une zone d’insécurité : bandes tonkinoises et chinoises, replis transfrontaliers, villages complicités ou soumis, terrain favorable à l’embuscade.",
+        intro: "Le Tonkin est une région dangereuse : des bandes armées tonkinoises et chinoises sèment le désordre, se replient de l’autre côté de la frontière, profitent de villages complices ou soumis, et exploitent un terrain propice aux embuscades.",
         subsections: [
             { title: "Son Tay (octobre 1890 – juin 1891)", content: "Une bande (Doc Ngu) opère entre la Rivière Claire et Son Tay, s’abrite dans les massifs, surprend des détachements, et oblige à des opérations longues : marches, ratissages, destructions de repaires, poursuites dans une végétation dense. Le terrain peut annuler la surprise : rizières, lagunes, forêts, dénivelés." },
             { title: "Yen Thé : le fief de Dê Tham (novembre 1890 – janvier 1891)", content: "Dê Tham s’impose comme un chef pirate durable : villages fortifiés, postes, lignes de défense, ruses, réseau d’information. Une logique s’installe : créer des postes, couper les axes, investir et détruire les fortins, tenir dans le temps." },
