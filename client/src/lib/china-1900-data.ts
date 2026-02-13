@@ -76,7 +76,7 @@ export const china1900Data: China1900Content = {
     {
       id: "recit",
       title: "Que se passe-t-il ?",
-      mode: 'recit',
+      mode: 'comprendre',
       content: [
         "Le général Borgnis-Desbordes désigne le colonel de Pelacot pour partir avec un de ses bataillons et un du 11e de Marine.",
         "Le 1er bataillon du commandant Brenot est désigné, composé de la 1re compagnie du capitaine Genty, de la 2e compagnie du capitaine Bunnabocce, de la 4e compagnie du capitaine Poch, et de la 4e compagnie du capitaine Verdant. Le 1er bataillon du 11e de Marine est dirigé par le commandant Roux.",
