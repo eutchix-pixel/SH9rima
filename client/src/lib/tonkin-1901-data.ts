@@ -89,15 +89,6 @@ export const tonkin1901Data: Tonkin1901Content = {
         "Terrain social : la foule, les meneurs, les réseaux."
       ]
     },
-    {
-      id: "carrefour",
-      title: "Ce que ça révèle : le Tonkin comme carrefour",
-      mode: 'comprendre',
-      content: [
-        "Le Tonkin n'est pas isolé : il reçoit les ondes de choc de l'Asie (prestige du Japon, agitation politique), mais il se joue aussi sur le terrain (rizières, digues, massifs, villages, réseaux). Tenir le Tonkin, c'est tenir un carrefour : frontières, influences, routes et populations — avec des outils autant politiques que militaires."
-      ],
-      keyPoints: []
-    }
   ],
   episodes: [
     {
