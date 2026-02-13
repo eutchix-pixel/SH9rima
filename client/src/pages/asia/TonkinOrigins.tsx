@@ -184,7 +184,6 @@ export default function TonkinOriginsPage() {
                     <MapIcon className="h-4 w-4" /> Module Interactif
                 </div>
                 <h2 className="font-serif text-3xl font-bold">{tonkinOriginsData.modules.map.title}</h2>
-                <p className="opacity-80 text-lg leading-relaxed">{tonkinOriginsData.modules.map.intro}</p>
                 
                 {/* Interactive Map Component */}
                 <div className="pt-4">
