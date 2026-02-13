@@ -55,10 +55,6 @@ export default function TonkinOriginsPage() {
             {tonkinOriginsData.title}
           </h1>
           
-          <p className="text-lg md:text-xl opacity-90 leading-relaxed max-w-2xl border-l-4 border-[#4a3b2a] pl-6 italic">
-            {tonkinOriginsData.subtitle}
-          </p>
-
           <div className="flex flex-wrap gap-3 pt-4">
             <Button 
               variant={readingMode === 'essential' ? 'default' : 'outline'}
