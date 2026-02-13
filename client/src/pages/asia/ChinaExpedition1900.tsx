@@ -374,7 +374,95 @@ export default function ChinaExpedition1900Page() {
           </section>
         </FadeInSection>
 
-        {visibleBlocs.map((bloc, blocIdx) => (
+        {readingMode === 'comprendre' ? (
+          <div className="space-y-10" data-testid="essential-view">
+            <FadeInSection>
+              <section className="space-y-6">
+                <h2 className="font-serif text-2xl font-bold border-b border-[#4a3b2a]/20 pb-3">Pourquoi ça explose en 1900 ?</h2>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {[
+                    { title: "Choc des empires", desc: "Les puissances étrangères se partagent la Chine. Le rejet populaire grandit." },
+                    { title: "Les Boxers", desc: "Société anti-occidentale, soutenue par l'impératrice Tseu Hi." },
+                    { title: "Siège des légations", desc: "Les ambassades de Pékin et Tien Tsin sont attaquées et assiégées 55 jours." },
+                    { title: "Coalition internationale", desc: "8 nations envoient des renforts. La France mobilise depuis le Tonkin." },
+                  ].map((item, i) => (
+                    <div key={i} className="bg-[#fdfbf7] border border-[#4a3b2a]/15 rounded-lg p-4">
+                      <h3 className="font-bold text-sm mb-1">{item.title}</h3>
+                      <p className="text-sm opacity-80">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </FadeInSection>
+
+            <FadeInSection>
+              <section className="space-y-4">
+                <h2 className="font-serif text-2xl font-bold border-b border-[#4a3b2a]/20 pb-3">Le 9 en action</h2>
+                <div className="space-y-3 border-l-2 border-[#dcb575] pl-5">
+                  <p className="text-sm"><span className="font-bold">24–25 juin</span> — Le bataillon quitte Hanoï par mer à bord du vapeur l'Eridan.</p>
+                  <p className="text-sm"><span className="font-bold">7 juillet</span> — Arrivée à Ta Kou. 1 500 hommes débarquent.</p>
+                  <p className="text-sm"><span className="font-bold">11–14 juillet</span> — Bataille de Tien Tsin. Prise de la ville le 14 juillet, jour de fête nationale.</p>
+                  <p className="text-sm"><span className="font-bold">5 août</span> — Victoire à Pei Tsang. Les Chinois reculent.</p>
+                  <p className="text-sm"><span className="font-bold">14 août</span> — Assaut sur Pékin. Frey atteint la légation française à minuit.</p>
+                  <p className="text-sm"><span className="font-bold">17 août</span> — Fin des combats. Toute résistance cesse.</p>
+                </div>
+              </section>
+            </FadeInSection>
+
+            <FadeInSection>
+              <section className="space-y-4">
+                <h2 className="font-serif text-2xl font-bold border-b border-[#4a3b2a]/20 pb-3">Chiffres clés</h2>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {[
+                    { value: "1 500", label: "hommes du corps français" },
+                    { value: "55", label: "jours de siège des légations" },
+                    { value: "300", label: "Chinois tombés à Tien Tsin" },
+                    { value: "8", label: "nations de la coalition" },
+                  ].map((stat, i) => (
+                    <div key={i} className="bg-[#4a3b2a] text-[#e8dcc5] rounded-xl p-4 text-center">
+                      <div className="font-serif text-2xl font-bold text-[#dcb575]">{stat.value}</div>
+                      <p className="text-xs mt-1 opacity-70">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </FadeInSection>
+
+            <FadeInSection>
+              <section className="bg-[#4a3b2a] text-[#e8dcc5] p-6 rounded-xl">
+                <h3 className="font-bold uppercase text-xs tracking-widest mb-4 text-[#dcb575]">Ce qu'il faut retenir</h3>
+                <ul className="space-y-3">
+                  {[
+                    "1900 : une crise internationale — les Boxers attaquent, les légations sont assiégées.",
+                    "Le 9 part d'Hanoï et combat de Tien Tsin à Pékin en moins de deux mois.",
+                    "Tien Tsin prise le 14 juillet, Pékin atteinte à minuit le 14 août.",
+                    "Deux inscriptions au drapeau : « Tien Tsin 1900 » et « Pékin 1900 »."
+                  ].map((point, i) => (
+                    <li key={i} className="flex gap-2 text-sm">
+                      <Check className="h-4 w-4 shrink-0 text-[#dcb575] mt-0.5" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </FadeInSection>
+
+            <FadeInSection>
+              <section className="text-center pt-6">
+                <Button
+                  size="lg"
+                  className="bg-[#4a3b2a] text-[#e8dcc5] hover:bg-[#4a3b2a]/90"
+                  onClick={() => setReadingMode('recit')}
+                  data-testid="button-read-complete"
+                >
+                  <Scroll className="mr-2 h-4 w-4" /> Lire la version complète
+                </Button>
+              </section>
+            </FadeInSection>
+          </div>
+        ) : null}
+
+        {readingMode !== 'comprendre' && visibleBlocs.map((bloc, blocIdx) => (
           <FadeInSection key={bloc.id} delay={blocIdx * 0.1}>
             <section className="space-y-6" data-testid={`bloc-${bloc.id}`}>
               <h2 className="font-serif text-2xl md:text-3xl font-bold border-b-2 border-[#dcb575] pb-4">
