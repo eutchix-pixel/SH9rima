@@ -136,17 +136,28 @@ function createDateIcon(name: string, date: string) {
   });
 }
 
+function SepiaLayer() {
+  const map = useMap();
+  useEffect(() => {
+    const pane = map.getPane('tilePane');
+    if (pane) {
+      pane.style.filter = 'sepia(0.5) saturate(0.7) brightness(0.95) contrast(1.05)';
+    }
+  }, [map]);
+  return null;
+}
+
 function ExpeditionMap() {
   return (
-    <div className="rounded-xl overflow-hidden border-2 border-[#4a3b2a]/20 shadow-lg sepia-map" style={{ height: 420 }}>
-      <style>{`.sepia-map .leaflet-tile-pane { filter: sepia(0.5) saturate(0.7) brightness(0.95) contrast(1.05); }`}</style>
+    <div className="relative w-full h-[420px] rounded-xl overflow-hidden border-2 border-[#4a3b2a]/20 shadow-lg bg-[#e8dcc5]">
       <MapContainer
         center={[39.4, 117.1]}
         zoom={8}
         scrollWheelZoom={false}
-        style={{ height: '100%', width: '100%' }}
+        className="w-full h-full z-0"
         attributionControl={false}
       >
+        <SepiaLayer />
         <TileLayer
           url="https://tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png"
         />
