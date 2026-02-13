@@ -64,13 +64,15 @@ export const tonkinOriginsData: TonkinContent = {
       id: "premisses",
       title: "Prémisses d’une conquête (1840–1860)",
       content: [
-        "En Asie, la seconde moitié du XIXe siècle est marquée par la pression des puissances occidentales sur la Chine. À partir de 1840, une série de “traités inégaux” impose des ouvertures commerciales et diplomatiques, et déclenche en retour des réactions xénophobes, des troubles et des révoltes internes.",
+        "En 1860, la France est en Asie parce que l’Europe cherche à sécuriser des routes maritimes, des débouchés commerciaux et une présence diplomatique en Chine. Depuis 1840, une série d’accords imposés à l’Empire chinois — souvent qualifiés de “traités inégaux” — ouvre des ports, facilite les échanges et installe des représentants étrangers. Mais cette pression extérieure nourrit aussi des oppositions : violences locales, mouvements hostiles aux étrangers, et instabilité durable.",
         "Une date clé : 1860.",
-        "Après des opérations conduites dans la région de Tientsin (Tianjin), les forces franco-britanniques remportent des succès décisifs : pont de Palikao (21 septembre 1860), prise de Pékin (17 octobre 1860). Le traité de Pékin (22 octobre 1860) ouvre notamment la voie à l’installation durable de légations étrangères.",
+        "Dans ce contexte, une opération franco-britannique se déroule autour de Tientsin (Tianjin) puis vers Pékin. Elle se conclut par des succès marquants : le pont de Palikao (21 septembre 1860) et la prise de Pékin (17 octobre 1860). Le traité de Pékin (22 octobre 1860) consolide ensuite l’installation de légations étrangères et renforce l’empreinte occidentale dans la région.",
+        "Ce qu’il faut comprendre pour la suite",
+        "Ces événements ne créent pas directement le “9”, mais ils installent un cadre : la France s’engage durablement en Asie, se dote de points d’appui, et développe progressivement une présence militaire et administrative dans l’espace chinois et indochinois. À la frontière sud de la Chine, le Tonkin devient alors une zone stratégique : carrefour vers la Chine, riche en ressources, mais traversée par des tensions et des circulations armées.",
         "Héritage régimentaire :",
-        "L’inscription “Palikao 1860” figure sur le drapeau et rappelle ce jalon lointain, qui s’inscrit dans la longue chronologie menant à l’Indochine.",
+        "L’inscription “Palikao 1860” figure sur le drapeau. Elle rappelle qu’avant même le Tonkin, la France et ses troupes ont déjà été engagées dans de grandes opérations en Asie — un repère mémoriel qui s’inscrit dans la longue chronologie conduisant à l’Indochine.",
         "Conséquence directe pour le futur Tonkin :",
-        "Des troupes chinoises vaincues refluent vers le sud ; sur la durée, certaines se transforment en bandes armées, qui traversent la frontière et alimentent l’insécurité au Tonkin. C’est dans ce contexte que se prépare l’expansion française vers la péninsule indochinoise."
+        "Après les défaites et les troubles, des troupes et groupes armés refluent vers le sud. Avec le temps, certains deviennent des bandes organisées, franchissent les frontières et alimentent l’insécurité au Tonkin. Cette instabilité, ajoutée aux enjeux économiques et politiques, prépare les opérations et les réorganisations militaires qui, plus tard, donneront naissance au régiment autonome du Tonkin : le 9."
       ],
       keyPoints: [
         "“Palikao 1860” : un repère fondateur sur le drapeau.",
