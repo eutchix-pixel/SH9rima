@@ -65,10 +65,10 @@ export const tonkinOriginsData: TonkinContent = {
       title: "Prémisses d’une conquête (1840–1860)",
       content: [
         "Pourquoi les Troupes de marine sont en Asie au XIXe siècle ?",
-        "Au XIXe siècle, la France déploie des forces en Asie pour trois raisons principales : protéger ses routes maritimes, sécuriser des points d’appui dans la région, et peser diplomatiquement et commercialement dans un espace devenu stratégique. Les Troupes de marine, conçues pour les expéditions lointaines, sont l’outil naturel de cette politique : elles embarquent, débarquent, tiennent des positions, protègent des ressortissants et appuient des opérations décidées loin de la métropole.",
-        "À partir de 1840, la pression occidentale sur l’Empire chinois se traduit par des accords imposés — souvent appelés “traités inégaux” — qui ouvrent des ports et installent des représentants étrangers. Mais ces contraintes provoquent aussi des réactions : hostilité envers les étrangers, violences, troubles, et fragmentation locale. Pour la France, cela signifie une présence plus durable, mêlant diplomatie, commerce et interventions armées.",
+        "Au XIXe siècle, la France envoie des forces en Asie pour sécuriser ses routes maritimes, tenir des points d’appui et peser dans un espace devenu stratégique sur les plans diplomatique et commercial. Les Troupes de marine, faites pour l’outre‑mer, embarquent, débarquent, occupent, protègent et appuient ces opérations lointaines.",
+        "Dès 1840, des accords imposés à l’Empire chinois — souvent appelés “traités inégaux” — ouvrent des ports et installent des représentants étrangers, mais déclenchent aussi des réactions : hostilité, violences, troubles et fragmentation locale. La présence française s’inscrit alors dans la durée, entre diplomatie, commerce et actions armées.",
         "Ce qu’il faut comprendre pour la naissance du 9",
-        "Ces engagements ne “créent” pas immédiatement le 9, mais ils installent le cadre d’un ancrage français en Asie : des opérations se succèdent, des garnisons apparaissent, et les unités projetées doivent être organisées, renforcées, puis stabilisées. À la frontière sud de la Chine, le Tonkin devient un carrefour : proche de la Chine, riche en ressources, et exposé aux circulations de groupes armés. C’est cette combinaison — enjeux stratégiques + instabilité + présence prolongée — qui prépare, plus tard, l’existence d’un régiment autonome durablement stationné : le 9."
+        "Cela ne crée pas encore le 9, mais prépare son apparition : opérations répétées, points d’appui, besoin d’unités mieux organisées et stabilisées. À la frontière sud de la Chine, le Tonkin devient un carrefour (proche de la Chine, riche en ressources, exposé aux circulations armées) ; cette combinaison d’enjeux et d’instabilité mène, plus tard, à un régiment autonome durablement stationné : le 9."
       ],
       keyPoints: [
         "“Palikao 1860” : un repère fondateur sur le drapeau.",
@@ -79,36 +79,6 @@ export const tonkinOriginsData: TonkinContent = {
           title: "FOCUS — Palikao (1860)",
           content: "Pourquoi Palikao compte ?\n\nPalikao est un repère qui relie l’histoire du régiment à une première grande séquence d’engagement français en Asie. Le 21 septembre 1860, la bataille du pont de Palikao marque un succès décisif, dans une campagne qui conduit ensuite à la prise de Pékin le 17 octobre 1860. Le traité de Pékin (22 octobre 1860) consolide l’installation de légations étrangères : c’est un moment où l’Occident impose sa présence, et où la région bascule durablement.\n\nHéritage régimentaire\n\nL’inscription “Palikao 1860” figure sur le drapeau. Dans le parcours du visiteur, elle sert de “premier jalon” : avant le Tonkin, l’Asie est déjà un théâtre d’opérations pour la France. Cette mémoire explique pourquoi, quelques décennies plus tard, des unités sont déjà présentes, puis réorganisées, et finissent par former un régiment autonome au Tonkin.\n\nConséquence indirecte pour le Tonkin\n\nLes défaites, les troubles et les déplacements de troupes contribuent, sur la durée, à une instabilité régionale. Vers le sud, certains groupes armés franchissent les frontières et alimentent l’insécurité au Tonkin. C’est dans ce contexte que se préparent les opérations et les réorganisations militaires qui conduiront à la naissance du 9 au Tonkin."
         }
-      ]
-    },
-    {
-      id: "tonkin",
-      title: "Le Tonkin, terre d’aventure (géographie, climat, populations)",
-      content: [
-        "Pourquoi le Tonkin ?",
-        "- Un enjeu économique : voie d’accès vers la Chine, ressources minières et agricoles.",
-        "- Un enjeu politique : rivalités entre puissances européennes.",
-        "- Un enjeu stratégique : contrôler des axes, des deltas, des vallées, et sécuriser les communications.",
-        "Ressources (fin XIXe)",
-        "On attribue au Tonkin de nombreuses ressources : mines (or, argent, cuivre, fer), mais aussi sel, zinc, étain, plomb, charbon, etc. Sur le plan agricole : riz, coton, chanvre, tabac, poivre, bois.",
-        "Relief (3 grandes zones)",
-        "1) Le delta : vaste plaine alluviale, canaux et arroyos, zone riche et densément peuplée.",
-        "2) Le moyen pays : collines et reliefs intermédiaires.",
-        "3) Le haut pays : montagnes vers la Chine, zones difficiles, favorables aux replis et aux sanctuaires.",
-        "Hydrographie (repère majeur)",
-        "- Le Fleuve Rouge (Song Hong) : axe central.",
-        "- Deux affluents cités comme structurants : la Rivière Noire et la Rivière Claire.",
-        "Dans le delta, des canaux relient les cours d’eau : l’eau dicte le mouvement, la logistique et les points de contrôle.",
-        "Climat (lecture “terrain”)",
-        "Le Tonkin alterne saisons fraîches, humidité, brumes, puis chaleur et mousson. Les opérations se mènent souvent quand le climat est plus “supportable”, mais la boue, la chaleur, et l’humidité compliquent tout.",
-        "Populations (mosaïque)",
-        "Le Tonkin rassemble diverses populations (delta, montagnes, vallées). Les structures locales et les loyautés ne sont pas uniformes, ce qui pèse sur le renseignement, la sécurité et la “pacification”.",
-        "Organisation administrative (repère)",
-        "Le schéma administratif colonial s’organise autour de Hanoï et d’un réseau de résidences (résidents, sous-résidents), en appui sur les structures existantes puis progressivement réorganisées."
-      ],
-      keyPoints: [
-        "Ici, la carte commande le combat : vallées, cols, rizières, deltas.",
-        "La météo et l’eau sont des acteurs à part entière."
       ]
     },
     {
