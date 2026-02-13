@@ -97,7 +97,7 @@ export const tonkinOriginsData: TonkinContent = {
   ],
   modules: {
     map: {
-      title: "Carte mentale du Tonkin : fleuves, deltas, massifs",
+      title: "Le 9 RIMa en carte",
       intro: "Pour comprendre la naissance du 9 au Tonkin, il faut “voir” le terrain : une colonne peut gagner une journée… ou la perdre sur un gué, une rizière, une crête, une forêt inextricable.",
       callouts: [
         { name: "Fleuve Rouge", desc: "Axe de circulation et de contrôle" },
