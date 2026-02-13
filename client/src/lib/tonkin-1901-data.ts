@@ -52,8 +52,8 @@ export const tonkin1901Data: Tonkin1901Content = {
       title: "Le Tonkin se calme : pourquoi ?",
       mode: 'comprendre',
       content: [
-        "Ce début de siècle au Tonkin est calme. Les faits graves sont peu nombreux et les opérations d'envergure très rares : les grandes bandes de pirates ont été chassées ; subsiste surtout un brigandage que police et milices locales parviennent à maîtriser.",
-        "En parallèle, l'administration et l'armée se réorganisent : le 1er janvier 1901, les troupes de Marine changent de dénomination. Les régiments d'infanterie et d'artillerie de Marine deviennent des régiments d'infanterie coloniale (RIC) et d'artillerie coloniale (RAC). Le 9e devient ainsi 9e RIC et tient garnison à Hanoï, Son Tay, Tong."
+        "Au début du XXe siècle, les grandes bandes de pirates ont été chassées. Le Tonkin connaît un calme relatif : peu de faits graves, pas d'opérations d'envergure. Police et milices locales suffisent à contenir le brigandage résiduel.",
+        "L'armée se réorganise : le 1er janvier 1901, les troupes de Marine changent de nom. Le 9e RIMa devient 9e RIC (Régiment d'Infanterie Coloniale) et tient garnison à Hanoï, Son Tay et Tong."
       ],
       keyPoints: [
         "Un calme relatif : fin des grandes bandes, maintien de l'ordre local.",
@@ -66,8 +66,8 @@ export const tonkin1901Data: Tonkin1901Content = {
       title: "Le retour de la tension : pourquoi ?",
       mode: 'comprendre',
       content: [
-        "La géopolitique régionale pèse directement sur le Tonkin. La défaite de la Russie dans la guerre russo‑japonaise (1904–1905) a un impact : beaucoup voient la revanche des Asiatiques sur les Occidentaux, et le prestige du Japon devient immense.",
-        "Dans la péninsule indochinoise, le Japon représente l'espoir de « bouter hors du pays » les Français : des figures annamites se réfugient au Japon, et un mouvement d'agitation anti‑français et pro‑japonais se développe rapidement. Il provoque des troubles en Annam (provinces de Quan Nain, Quang‑Ngai, Thun‑Thiey, Binh Dinh) au début de 1908. Une intervention militaire est décidée."
+        "La défaite russe face au Japon (1904–1905) change la donne : pour la première fois, une puissance asiatique bat un empire occidental. Le prestige du Japon explose et nourrit un mouvement anti‑français en Indochine.",
+        "En 1908, l'agitation éclate en Annam : figures politiques réfugiées au Japon, manifestations dans plusieurs provinces (Quan Nain, Quang‑Ngai, Binh Dinh). Une intervention militaire est décidée."
       ],
       keyPoints: [
         "La stabilité locale dépend de l'équilibre régional (Russie/Japon).",
@@ -80,9 +80,8 @@ export const tonkin1901Data: Tonkin1901Content = {
       title: "Gérer l'instabilité : comment ?",
       mode: 'comprendre',
       content: [
-        "Sur place, stationne déjà le 3e bataillon du 9e RIC, avec trois compagnies à Hué et une à Tourane, renforcée par une batterie du 4e RAC.",
-        "L'idée maîtresse de l'intervention est d'éviter l'emploi des armes contre des bandes nombreuses mais faiblement équipées (souvent des armes blanches). Les renforts sont envoyés pour intimider, et pour distraire le bataillon déjà en place des missions de garde qu'il exécute.",
-        "Début avril 1908, un détachement quitte le Tonkin et opère en Annam. La 1re compagnie reste à Quinh Nham ; la 2e rejoint Binh Dinh. Des manifestations sont dispersées, des meneurs arrêtés, et le calme revient progressivement."
+        "Le 3e bataillon du 9e RIC (Hué, Tourane) est déjà sur place, mais l'idée maîtresse est d'éviter la sur‑escalade : les bandes sont nombreuses mais faiblement armées. Les renforts servent à intimider, pas à combattre.",
+        "Début avril 1908, un détachement opère en Annam. Manifestations dispersées, meneurs arrêtés : le calme revient progressivement."
       ],
       keyPoints: [
         "Objectif : tenir sans « sur‑escalade » (intimidation + contrôle).",
