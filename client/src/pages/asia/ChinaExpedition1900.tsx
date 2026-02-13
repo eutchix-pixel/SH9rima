@@ -163,7 +163,7 @@ function ExpeditionMap() {
   return (
     <div className="space-y-3" data-testid="carte-itineraire">
       <div className="relative w-full h-[550px] rounded-xl overflow-hidden shadow-2xl border-2 border-[#4a3b2a]/30 bg-white">
-        <div className="absolute top-3 left-3 z-[1000] bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow text-xs font-serif font-bold text-[#4a3b2a] border border-[#4a3b2a]/20">
+        <div className="absolute top-3 left-14 z-[1000] bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow text-xs font-serif font-bold text-[#4a3b2a] border border-[#4a3b2a]/20">
           Itinéraire du Corps Expéditionnaire — Chine 1900
         </div>
         <MapContainer
