@@ -85,7 +85,6 @@ export const tonkinOriginsData: TonkinContent = {
         id: "naissance",
         title: "Naissance d’un régiment (1869–1890)",
         content: [
-            "26 mars 1869 : un décret fixe à quatre le nombre de régiments d’infanterie de marine. Ces régiments fournissent des compagnies envoyées “au loin”, souvent dispersées, puis regroupées selon les besoins opérationnels.",
             "24 avril 1882 : le commandant Rivière s’empare de la citadelle d’Hanoï. Il trouve sur place des compagnies déjà présentes au titre des traités antérieurs, et arrive avec des renforts (dont des compagnies supplémentaires et de l’artillerie).",
             "27 mars 1883 : prise de Nam Dinh. Les détachements engagés rassemblent des compagnies de différents régiments de marine : l’effort s’intensifie, et la nécessité d’organiser des formations plus cohérentes devient évidente.",
             "16 février 1884 : création de la “division d’Annam”, qui regroupe des compagnies et batteries sous un commandement supérieur. Des brigades et des régiments de marche structurent l’action, notamment autour d’Hanoï.",
