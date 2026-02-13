@@ -144,13 +144,11 @@ function ExpeditionMap() {
         className="w-full h-full z-0"
       >
         <style>{`
-          .expedition-tiles { filter: sepia(0.55) contrast(1.1) brightness(0.9) saturate(0.6); }
           .leaflet-popup-content-wrapper { background: #fdfbf7; color: #4a3b2a; border: 1px solid #dcb575; border-radius: 8px; font-family: serif; }
           .leaflet-popup-tip { background: #fdfbf7; }
         `}</style>
         <TileLayer
           url="https://tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png"
-          className="expedition-tiles"
         />
         <Polyline
           positions={mapSteps.map(s => s.coords)}
