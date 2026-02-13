@@ -144,8 +144,12 @@ export default function TonkinOriginsPage() {
                           <div className="p-4 space-y-4">
                               {sub.content.split('\n\n').map((paragraph, idx) => (
                                   <div key={idx}>
-                                      {paragraph.includes('Pourquoi Palikao compte ?') || paragraph.includes('Héritage régimentaire') || paragraph.includes('Conséquence indirecte pour le Tonkin') ? (
+                                      {idx === 0 ? (
                                            <h4 className="font-bold text-[#4a3b2a] mb-1">{paragraph}</h4>
+                                      ) : paragraph.includes(' : ') ? (
+                                          <p className="text-sm leading-relaxed opacity-90">
+                                            <span className="font-bold text-[#4a3b2a]">{paragraph.split(' : ')[0]} :</span> {paragraph.split(' : ').slice(1).join(' : ')}
+                                          </p>
                                       ) : (
                                           <p className="text-sm leading-relaxed opacity-90">{paragraph}</p>
                                       )}

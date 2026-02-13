@@ -77,8 +77,7 @@ export const tonkinOriginsData: TonkinContent = {
       subsections: [
         {
           title: "FOCUS — Palikao (1860)",
-          content: "Pourquoi Palikao compte ?\n\nPalikao est un repère qui relie l’histoire du régiment à une première grande séquence d’engagement français en Asie. Le 21 septembre 1860, la bataille du pont de Palikao marque un succès décisif, dans une campagne qui conduit ensuite à la prise de Pékin le 17 octobre 1860. Le traité de Pékin (22 octobre 1860) consolide l’installation de légations étrangères : c’est un moment où l’Occident impose sa présence, et où la région bascule durablement.\n\nHéritage régimentaire\n\nL’inscription “Palikao 1860” figure sur le drapeau. Dans le parcours du visiteur, elle sert de “premier jalon” : avant le Tonkin, l’Asie est déjà un théâtre d’opérations pour la France. Cette mémoire explique pourquoi, quelques décennies plus tard, des unités sont déjà présentes, puis réorganisées, et finissent par former un régiment autonome au Tonkin.\n\nConséquence indirecte pour le Tonkin\n\nLes défaites, les troubles et les déplacements de troupes contribuent, sur la durée, à une instabilité régionale. Vers le sud, certains groupes armés franchissent les frontières et alimentent l’insécurité au Tonkin. C’est dans ce contexte que se préparent les opérations et les réorganisations militaires qui conduiront à la naissance du 9 au Tonkin."
-        }
+          content: "Pourquoi on s’est battu à Palikao (1860) ?\n\nForcer le Commerce : L’Empire de Chine est fermé. On se bat pour obliger l’Empereur à ouvrir ses ports aux marchandises et aux navires français et anglais.\n\nVenger les Martyrs : L’exécution du missionnaire Auguste Chapdelaine sert de “Casus Belli” (prétexte légal) pour déclencher l’intervention militaire.\n\nCasser l’Armée Impériale : Il fallait détruire la puissance militaire chinoise (la cavalerie mongole) pour dicter les conditions de paix directement à Pékin."}
       ]
     },
     {
