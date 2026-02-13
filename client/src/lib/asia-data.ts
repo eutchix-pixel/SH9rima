@@ -64,19 +64,21 @@ export const tonkinOriginsData: TonkinContent = {
       id: "premisses",
       title: "Prémisses d’une conquête (1840–1860)",
       content: [
-        "En 1860, la France est en Asie parce que l’Europe cherche à sécuriser des routes maritimes, des débouchés commerciaux et une présence diplomatique en Chine. Depuis 1840, une série d’accords imposés à l’Empire chinois — souvent qualifiés de “traités inégaux” — ouvre des ports, facilite les échanges et installe des représentants étrangers. Mais cette pression extérieure nourrit aussi des oppositions : violences locales, mouvements hostiles aux étrangers, et instabilité durable.",
-        "Une date clé : 1860.",
-        "Dans ce contexte, une opération franco-britannique se déroule autour de Tientsin (Tianjin) puis vers Pékin. Elle se conclut par des succès marquants : le pont de Palikao (21 septembre 1860) et la prise de Pékin (17 octobre 1860). Le traité de Pékin (22 octobre 1860) consolide ensuite l’installation de légations étrangères et renforce l’empreinte occidentale dans la région.",
-        "Ce qu’il faut comprendre pour la suite",
-        "Ces événements ne créent pas directement le “9”, mais ils installent un cadre : la France s’engage durablement en Asie, se dote de points d’appui, et développe progressivement une présence militaire et administrative dans l’espace chinois et indochinois. À la frontière sud de la Chine, le Tonkin devient alors une zone stratégique : carrefour vers la Chine, riche en ressources, mais traversée par des tensions et des circulations armées.",
-        "Héritage régimentaire :",
-        "L’inscription “Palikao 1860” figure sur le drapeau. Elle rappelle qu’avant même le Tonkin, la France et ses troupes ont déjà été engagées dans de grandes opérations en Asie — un repère mémoriel qui s’inscrit dans la longue chronologie conduisant à l’Indochine.",
-        "Conséquence directe pour le futur Tonkin :",
-        "Après les défaites et les troubles, des troupes et groupes armés refluent vers le sud. Avec le temps, certains deviennent des bandes organisées, franchissent les frontières et alimentent l’insécurité au Tonkin. Cette instabilité, ajoutée aux enjeux économiques et politiques, prépare les opérations et les réorganisations militaires qui, plus tard, donneront naissance au régiment autonome du Tonkin : le 9."
+        "Pourquoi les Troupes de marine sont en Asie au XIXe siècle ?",
+        "Au XIXe siècle, la France déploie des forces en Asie pour trois raisons principales : protéger ses routes maritimes, sécuriser des points d’appui dans la région, et peser diplomatiquement et commercialement dans un espace devenu stratégique. Les Troupes de marine, conçues pour les expéditions lointaines, sont l’outil naturel de cette politique : elles embarquent, débarquent, tiennent des positions, protègent des ressortissants et appuient des opérations décidées loin de la métropole.",
+        "À partir de 1840, la pression occidentale sur l’Empire chinois se traduit par des accords imposés — souvent appelés “traités inégaux” — qui ouvrent des ports et installent des représentants étrangers. Mais ces contraintes provoquent aussi des réactions : hostilité envers les étrangers, violences, troubles, et fragmentation locale. Pour la France, cela signifie une présence plus durable, mêlant diplomatie, commerce et interventions armées.",
+        "Ce qu’il faut comprendre pour la naissance du 9",
+        "Ces engagements ne “créent” pas immédiatement le 9, mais ils installent le cadre d’un ancrage français en Asie : des opérations se succèdent, des garnisons apparaissent, et les unités projetées doivent être organisées, renforcées, puis stabilisées. À la frontière sud de la Chine, le Tonkin devient un carrefour : proche de la Chine, riche en ressources, et exposé aux circulations de groupes armés. C’est cette combinaison — enjeux stratégiques + instabilité + présence prolongée — qui prépare, plus tard, l’existence d’un régiment autonome durablement stationné : le 9."
       ],
       keyPoints: [
         "“Palikao 1860” : un repère fondateur sur le drapeau.",
         "Les mouvements de troupes et la fragmentation du pouvoir local alimentent le banditisme transfrontalier."
+      ],
+      subsections: [
+        {
+          title: "FOCUS — Palikao (1860)",
+          content: "Pourquoi Palikao compte ?\n\nPalikao est un repère qui relie l’histoire du régiment à une première grande séquence d’engagement français en Asie. Le 21 septembre 1860, la bataille du pont de Palikao marque un succès décisif, dans une campagne qui conduit ensuite à la prise de Pékin le 17 octobre 1860. Le traité de Pékin (22 octobre 1860) consolide l’installation de légations étrangères : c’est un moment où l’Occident impose sa présence, et où la région bascule durablement.\n\nHéritage régimentaire\n\nL’inscription “Palikao 1860” figure sur le drapeau. Dans le parcours du visiteur, elle sert de “premier jalon” : avant le Tonkin, l’Asie est déjà un théâtre d’opérations pour la France. Cette mémoire explique pourquoi, quelques décennies plus tard, des unités sont déjà présentes, puis réorganisées, et finissent par former un régiment autonome au Tonkin.\n\nConséquence indirecte pour le Tonkin\n\nLes défaites, les troubles et les déplacements de troupes contribuent, sur la durée, à une instabilité régionale. Vers le sud, certains groupes armés franchissent les frontières et alimentent l’insécurité au Tonkin. C’est dans ce contexte que se préparent les opérations et les réorganisations militaires qui conduiront à la naissance du 9 au Tonkin."
+        }
       ]
     },
     {

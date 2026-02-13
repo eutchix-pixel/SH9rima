@@ -143,9 +143,30 @@ export default function TonkinOriginsPage() {
                 </AccordionTrigger>
                 <AccordionContent className="space-y-6 text-base leading-relaxed opacity-90 pb-6">
                   {section.content.map((p, idx) => (
-                    <p key={idx} className={p.startsWith("-") ? "pl-4" : ""}>{p}</p>
+                    <p key={idx} className={`${p.startsWith("-") ? "pl-4" : ""} ${p.includes("?") && idx === 0 ? "font-bold text-[#dcb575] uppercase tracking-widest text-xs mb-2" : ""}`}>
+                        {p}
+                    </p>
                   ))}
                   
+                  {section.subsections && section.subsections.map((sub, i) => (
+                      <div key={i} className="mt-8 bg-[#4a3b2a]/5 border border-[#4a3b2a]/10 rounded-lg overflow-hidden">
+                          <div className="bg-[#4a3b2a] text-[#e8dcc5] px-4 py-2 font-bold font-serif flex items-center gap-2">
+                             <Crosshair className="h-4 w-4" /> {sub.title}
+                          </div>
+                          <div className="p-4 space-y-4">
+                              {sub.content.split('\n\n').map((paragraph, idx) => (
+                                  <div key={idx}>
+                                      {paragraph.includes('Pourquoi Palikao compte ?') || paragraph.includes('Héritage régimentaire') || paragraph.includes('Conséquence indirecte pour le Tonkin') ? (
+                                           <h4 className="font-bold text-[#4a3b2a] mb-1">{paragraph}</h4>
+                                      ) : (
+                                          <p className="text-sm leading-relaxed opacity-90">{paragraph}</p>
+                                      )}
+                                  </div>
+                              ))}
+                          </div>
+                      </div>
+                  ))}
+
                   {section.keyPoints && (
                     <div className="bg-[#4a3b2a]/5 p-4 rounded-md border-l-4 border-[#4a3b2a] mt-6">
                       <h4 className="font-bold uppercase text-xs tracking-widest mb-2 opacity-70">À retenir</h4>
