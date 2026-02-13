@@ -87,7 +87,7 @@ export const tonkinOriginsData: TonkinContent = {
             "1882 : Le commandant Rivière s'empare d'Hanoï.",
             "1884 : Création de la division d'Annam. Les unités se structurent autour d'Hanoï.",
             "1888 : Les bataillons sont regroupés en régiments de marche. Le Tonkin reçoit le n°2.",
-            "10 mars 1890 : le tournant. Le régiment de marche n°2 devient le 9e régiment d'infanterie de marine, autonome et stationné au Tonkin. Le 9 est né."
+            "10 mars 1890 : le tournant. Le régiment de marche n°2 devient le 9e régiment d'infanterie de marine, autonome, il est stationné à Hanoï."
         ],
         keyPoints: [
             "1890 : naissance du 9 autonome au Tonkin.",
