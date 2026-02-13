@@ -9,9 +9,6 @@ import {
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useInView, AnimatePresence } from "framer-motion";
-import { MapContainer, TileLayer, Marker, Polyline, Popup, useMap } from "react-leaflet";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
 
 type ReadingMode = 'comprendre' | 'recit' | 'archives';
 
@@ -112,77 +109,116 @@ function QuizCard({ question, answer }: { question: string; answer: string }) {
   );
 }
 
-const routeSteps: { name: string; date: string; lat: number; lng: number; detail?: string }[] = [
-  { name: "Ta Kou", date: "7 juillet", lat: 38.97, lng: 117.72, detail: "Arrivée en rade, débarquement du corps français (1 500 hommes)" },
-  { name: "Tien Tsin", date: "11–14 juillet", lat: 39.1235, lng: 117.1980, detail: "Bataille de Tien Tsin — prise de la ville le 14 juillet, jour de fête nationale" },
-  { name: "Pei Tsang", date: "5 août", lat: 39.35, lng: 117.05, detail: "Bataille de Pei Tsang — les Chinois battent en retraite après contournement" },
-  { name: "Toung Tchéou", date: "12–13 août", lat: 39.85, lng: 116.66, detail: "Bivouac des marsouins de Frey, à 3 km de Pékin" },
-  { name: "Pékin", date: "14–17 août", lat: 39.9042, lng: 116.4074, detail: "Prise de Pékin — légation française atteinte à minuit par marche forcée" },
+const mapSteps = [
+  { name: "Ta Kou", date: "7 juillet", x: 88, y: 85, detail: "Arrivée en rade, débarquement (1 500 hommes)" },
+  { name: "Tien Tsin", date: "11–14 juil.", x: 72, y: 68, detail: "Bataille — prise le 14 juillet" },
+  { name: "Pei Tsang", date: "5 août", x: 58, y: 52, detail: "Les Chinois battent en retraite" },
+  { name: "Toung Tchéou", date: "12–13 août", x: 35, y: 35, detail: "Bivouac à 3 km de Pékin" },
+  { name: "Pékin", date: "14–17 août", x: 15, y: 18, detail: "Légation française atteinte à minuit" },
 ];
 
-const routePositions: [number, number][] = routeSteps.map(s => [s.lat, s.lng]);
-
-function createDateIcon(name: string, date: string) {
-  return L.divIcon({
-    className: '',
-    html: `<div style="display:flex;flex-direction:column;align-items:center;transform:translateX(-50%)">
-      <div style="background:#4a3b2a;color:#e8dcc5;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700;white-space:nowrap;font-family:serif;box-shadow:0 2px 6px rgba(0,0,0,.3);border:1px solid #dcb575">${name}</div>
-      <div style="width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid #4a3b2a;margin-top:-1px"></div>
-      <div style="width:10px;height:10px;border-radius:50%;background:#dcb575;border:2px solid #4a3b2a;margin-top:2px;box-shadow:0 0 0 3px rgba(220,181,117,.3)"></div>
-      <div style="color:#4a3b2a;font-size:10px;font-weight:600;margin-top:2px;white-space:nowrap;background:rgba(232,220,197,.9);padding:1px 5px;border-radius:4px">${date}</div>
-    </div>`,
-    iconSize: [0, 0],
-    iconAnchor: [0, 28],
-  });
-}
-
-function SepiaLayer() {
-  const map = useMap();
-  useEffect(() => {
-    const pane = map.getPane('tilePane');
-    if (pane) {
-      pane.style.filter = 'sepia(0.5) saturate(0.7) brightness(0.95) contrast(1.05)';
-    }
-  }, [map]);
-  return null;
-}
-
 function ExpeditionMap() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const [activeStep, setActiveStep] = useState<number | null>(null);
+
   return (
-    <div style={{ position: 'relative', width: '100%', height: 420, borderRadius: 12, overflow: 'hidden', border: '2px solid rgba(74,59,42,0.2)', boxShadow: '0 10px 25px rgba(0,0,0,0.15)', background: '#e8dcc5' }}>
-      <MapContainer
-        center={[39.4, 117.1]}
-        zoom={8}
-        scrollWheelZoom={false}
-        style={{ width: '100%', height: '100%' }}
-        attributionControl={false}
-      >
-        <SepiaLayer />
-        <TileLayer
-          url="https://tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png"
-        />
-        <Polyline
-          positions={routePositions}
-          pathOptions={{ color: '#4a3b2a', weight: 3, dashArray: '8,6', opacity: 0.8 }}
-        />
-        {routeSteps.map((step, i) => (
-          <Marker
-            key={i}
-            position={[step.lat, step.lng]}
-            icon={createDateIcon(step.name, step.date)}
+    <div ref={ref} className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-[#4a3b2a]/20" data-testid="carte-itineraire">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#d4c4a0] via-[#e0d2b4] to-[#c8b896]" />
+      <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v60H0z' fill='none' stroke='%234a3b2a' stroke-width='0.3'/%3E%3C/svg%3E")` }} />
+      <div className="absolute top-3 right-3 z-20 bg-[#4a3b2a]/80 text-[#e8dcc5] text-[10px] px-2 py-1 rounded font-serif tracking-wider uppercase">Chine du Nord — 1900</div>
+
+      <svg viewBox="0 0 100 100" className="w-full relative z-10" style={{ minHeight: 320 }}>
+        <defs>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="0.8" result="blur" />
+            <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+          </filter>
+          <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+            <polygon points="0 0, 6 2, 0 4" fill="#4a3b2a" opacity="0.6" />
+          </marker>
+        </defs>
+
+        <text x="50" y="6" textAnchor="middle" fill="#4a3b2a" fontSize="3" fontWeight="bold" fontFamily="serif" opacity="0.3" letterSpacing="0.3">ITINÉRAIRE DU CORPS EXPÉDITIONNAIRE</text>
+
+        <motion.text x="8" y="96" fill="#4a3b2a" fontSize="2" opacity="0.2" fontFamily="serif"
+          initial={{ opacity: 0 }} animate={isInView ? { opacity: 0.2 } : {}}>
+          Golfe de Pei Tchi Li →
+        </motion.text>
+        <motion.text x="20" y="12" fill="#4a3b2a" fontSize="2.2" opacity="0.15" fontFamily="serif" fontStyle="italic"
+          initial={{ opacity: 0 }} animate={isInView ? { opacity: 0.15 } : {}}>
+          Ville Tartare
+        </motion.text>
+
+        {mapSteps.map((step, i) => {
+          if (i === mapSteps.length - 1) return null;
+          const next = mapSteps[i + 1];
+          return (
+            <motion.line
+              key={`line-${i}`}
+              x1={step.x} y1={step.y}
+              x2={next.x} y2={next.y}
+              stroke="#4a3b2a"
+              strokeWidth="0.8"
+              strokeDasharray="2,1.5"
+              markerEnd="url(#arrowhead)"
+              initial={{ pathLength: 0, opacity: 0 }}
+              animate={isInView ? { pathLength: 1, opacity: 0.7 } : {}}
+              transition={{ duration: 1, delay: i * 0.5 + 0.3 }}
+            />
+          );
+        })}
+
+        {mapSteps.map((step, i) => (
+          <motion.g
+            key={`step-${i}`}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.5, delay: i * 0.5 + 0.1, type: "spring" }}
+            style={{ cursor: 'pointer' }}
+            onClick={() => setActiveStep(activeStep === i ? null : i)}
           >
-            {step.detail && (
-              <Popup>
-                <div style={{ fontFamily: 'serif', textAlign: 'center' }}>
-                  <strong style={{ fontSize: 14 }}>{step.name}</strong>
-                  <div style={{ fontSize: 12, color: '#4a3b2a', fontWeight: 600 }}>{step.date}</div>
-                  <div style={{ fontSize: 11, marginTop: 4, opacity: 0.8 }}>{step.detail}</div>
-                </div>
-              </Popup>
-            )}
-          </Marker>
+            <circle cx={step.x} cy={step.y} r={activeStep === i ? "3.5" : "2.8"} fill="#dcb575" stroke="#4a3b2a" strokeWidth="0.8" filter="url(#glow)">
+              {activeStep === i && (
+                <animate attributeName="r" values="3.5;4.2;3.5" dur="1.5s" repeatCount="indefinite" />
+              )}
+            </circle>
+
+            <rect
+              x={step.x - (step.name.length * 1.5 + 2)} y={step.y - 9}
+              width={step.name.length * 3 + 4} height={5}
+              rx="1.2" fill="#4a3b2a" opacity="0.9"
+            />
+            <text x={step.x} y={step.y - 5.5} textAnchor="middle" fill="#e8dcc5" fontSize="2.8" fontWeight="bold" fontFamily="serif">
+              {step.name}
+            </text>
+
+            <text x={step.x} y={step.y + 6} textAnchor="middle" fill="#4a3b2a" fontSize="2.2" fontWeight="600" opacity="0.8">
+              {step.date}
+            </text>
+          </motion.g>
         ))}
-      </MapContainer>
+      </svg>
+
+      <AnimatePresence>
+        {activeStep !== null && (
+          <motion.div
+            className="absolute bottom-4 left-4 right-4 z-20 bg-[#4a3b2a] text-[#e8dcc5] rounded-xl p-4 shadow-2xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+          >
+            <div className="flex items-start justify-between">
+              <div>
+                <h4 className="font-serif font-bold text-lg text-[#dcb575]">{mapSteps[activeStep].name}</h4>
+                <p className="text-xs font-bold opacity-70 mb-1">{mapSteps[activeStep].date}</p>
+                <p className="text-sm opacity-90">{mapSteps[activeStep].detail}</p>
+              </div>
+              <button onClick={() => setActiveStep(null)} className="text-[#dcb575] hover:text-white ml-3 text-lg font-bold">✕</button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
