@@ -149,12 +149,12 @@ function SepiaLayer() {
 
 function ExpeditionMap() {
   return (
-    <div className="relative w-full h-[420px] rounded-xl overflow-hidden border-2 border-[#4a3b2a]/20 shadow-lg bg-[#e8dcc5]">
+    <div style={{ position: 'relative', width: '100%', height: 420, borderRadius: 12, overflow: 'hidden', border: '2px solid rgba(74,59,42,0.2)', boxShadow: '0 10px 25px rgba(0,0,0,0.15)', background: '#e8dcc5' }}>
       <MapContainer
         center={[39.4, 117.1]}
         zoom={8}
         scrollWheelZoom={false}
-        className="w-full h-full z-0"
+        style={{ width: '100%', height: '100%' }}
         attributionControl={false}
       >
         <SepiaLayer />
