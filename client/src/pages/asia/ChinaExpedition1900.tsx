@@ -684,9 +684,11 @@ export default function ChinaExpedition1900Page() {
             </p>
 
             <div className="pt-8">
-              <Button size="lg" className="bg-[#4a3b2a] text-[#e8dcc5] hover:bg-[#4a3b2a]/90 h-14 px-8 text-lg shadow-lg" data-testid="button-next-page">
-                {china1900Data.nextStep} <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link href="/asie/tonkin-1901-1914">
+                <Button size="lg" className="bg-[#4a3b2a] text-[#e8dcc5] hover:bg-[#4a3b2a]/90 h-14 px-8 text-lg shadow-lg" data-testid="button-next-page">
+                  {china1900Data.nextStep} <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </div>
           </section>
         </FadeInSection>

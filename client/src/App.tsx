@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import DetailPage from "./pages/Detail";
 import TonkinOriginsPage from "./pages/asia/TonkinOrigins";
 import ChinaExpedition1900Page from "./pages/asia/ChinaExpedition1900";
+import Tonkin1901Page from "./pages/asia/Tonkin1901";
 import ScanPage from "./pages/Scan";
 import AiAssistant from "./pages/AiAssistant";
 import NotFound from "./pages/not-found";
@@ -17,6 +18,7 @@ function Router() {
         <Route path="/detail/:id" component={DetailPage} />
         <Route path="/asie/naissance-du-9-tonkin" component={TonkinOriginsPage} />
         <Route path="/asie/chine-1900-expedition" component={ChinaExpedition1900Page} />
+        <Route path="/asie/tonkin-1901-1914" component={Tonkin1901Page} />
         <Route path="/scan" component={ScanPage} />
         <Route component={NotFound} />
       </Switch>

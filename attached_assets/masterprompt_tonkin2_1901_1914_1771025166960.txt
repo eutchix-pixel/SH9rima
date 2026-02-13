@@ -1,0 +1,215 @@
+MASTER PROMPT — REPLIT AI
+Projet : “Museum Tour Guide — 9e RIMa”
+Nouvelle page à créer : ASIE → “1901–1914 — Stabilisation & troubles”
+Source : TONKIN 2 (1901–1914) — Replit n’a pas accès au PDF, donc TOUT le texte à afficher est ci‑dessous.
+
+OBJECTIF
+Faire une page SIMPLE, CLAIRE, IMMERSIVE — plus “cours de géopolitique” que “cours d’histoire”.
+Le visiteur doit comprendre : pourquoi la situation se calme, pourquoi elle redevient instable, quels acteurs agissent, quels leviers (renseignement, milices, colonnes), et ce que ça dit du Tonkin à l’époque.
+
+CONTRAINTES
+- N’invente aucun fait.
+- Le texte affiché sur la page doit être EXACTEMENT celui de “CONTENU À AFFICHER” (tu peux seulement ajouter de la micro‑copie UI : boutons, “Retour”, “Suivant”, “Explorer”, etc.).
+- Mobile‑first, lisible, pas de pavés.
+- Prévoir 3 modes : “Comprendre”, “Récit”, “Archives”.
+- Slug : /asie/tonkin-1901-1914
+
+À FAIRE DANS L’APP (FONCTIONNEL)
+1) ROUTE + NAV
+- Ajouter une sous-page ASIE : “1901–1914 — Stabilisation & troubles”
+- Lier depuis : ASIE → (Naissance du 9) → “Continuer : 1901–1914”
+- Boutons fixes : “Revenir aux thèmes”, “Retour ASIE”, “Continuer la visite”
+
+2) STRUCTURE UX (TRÈS SIMPLE)
+- HERO + question directrice
+- 3 modes :
+  a) Comprendre (5 min) → uniquement : contexte + acteurs + leviers + à retenir
+  b) Récit (10–15 min) → ajoute : chronologie des épisodes (Annam 1908 / Datura / Dê Tham 1909–1913)
+  c) Archives (approfondir) → ajoute : citations longues + détails tactiques + galerie complète
+- Timeline (8 repères max, cliquable)
+- 4 blocs principaux :
+  1) “Le Tonkin se calme : pourquoi ?”
+  2) “Le retour de la tension : pourquoi ?”
+  3) “Gérer l’instabilité : comment ?”
+  4) “Ce que ça révèle : le Tonkin comme carrefour”
+- Un seul accordéon “Cartes & photos” (placeholders OK mais légendes obligatoires)
+- Mini‑quiz (6 questions) + score
+
+3) DONNÉES
+- Stocker le contenu dans le format existant (JSON/TS/MD).
+- Coller le texte tel quel.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER (TEXTE DU SITE)
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+1901–1914 — Stabilisation & troubles au Tonkin
+
+SOUS‑TITRE (H2)
+Début de siècle : le Tonkin se stabilise… puis la géopolitique régionale rallume les tensions (Annam 1908, “affaire du datura”, traque du Dê Tham).
+
+QUESTION DIRECTRICE
+Comment un territoire “calme” redevient-il instable, et quels outils de contrôle (milices, renseignement, colonnes) sont utilisés pour tenir le Tonkin ?
+
+ENCADRÉ “REPÈRES” (cartel)
+1er janvier 1901 : changement de dénomination • 1908 : troubles d’Annam • 28 juin 1908 : empoisonnement (datura) • 1909 : traque du Dê Tham • 1er mars 1910 : dissolution de la colonne (calme total) • février 1913 : assassinat du Dê Tham (région pacifiée) • 1914 : fin de période
+
+BOUTONS (micro‑copie)
+- Comprendre (5 min)
+- Récit (10–15 min)
+- Archives (approfondir)
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+Au début du XXe siècle, le Tonkin se calme : moins de “faits graves”, moins d’opérations d’envergure, et les grandes bandes de pirates sont chassées. Mais la région reste sensible : la pression extérieure sur l’Asie, puis le choc de la guerre russo‑japonaise, alimentent un mouvement anti‑français et pro‑japonais en Annam (1908). Dans le même temps, le Tonkin connaît des actions clandestines (empoisonnement au datura à Hanoï) et une insécurité persistante liée aux bandes (Dê Tham). La réponse combine intimidation, contrôle local, renseignement, milices et colonnes mobiles : une géopolitique “au ras du terrain”.
+
+────────────────────────────
+TIMELINE (8 repères max)
+────────────────────────────
+- 7 juillet 1900 : création des troupes coloniales (mission : défense des territoires d’outre‑mer).
+- 1er janvier 1901 : les troupes de Marine changent de dénomination.
+- 1901 : le 9e RIMa devient 9e RIC ; garnison à Hanoï, Son Tay, Tong.
+- 1908 : troubles d’Annam (agitation anti‑française, pro‑japonaise).
+- 28 juin 1908 : “affaire du datura” (empoisonnement à la citadelle d’Hanoï).
+- 1909 (juillet–décembre) : traque du Dê Tham, opérations longues et éprouvantes.
+- 1er mars 1910 : colonne dissoute, calme total.
+- février 1913 : mort du Dê Tham → retour définitif au calme dans la région.
+
+────────────────────────────
+BLOC 1 — Le Tonkin se calme : pourquoi ?
+────────────────────────────
+Ce début de siècle au Tonkin est calme. Les faits graves sont peu nombreux et les opérations d’envergure très rares : les grandes bandes de pirates ont été chassées ; subsiste surtout un brigandage que police et milices locales parviennent à maîtriser.
+
+En parallèle, l’administration et l’armée se réorganisent : le 1er janvier 1901, les troupes de Marine changent de dénomination. Les régiments d’infanterie et d’artillerie de Marine deviennent des régiments d’infanterie coloniale (RIC) et d’artillerie coloniale (RAC). Le 9e devient ainsi 9e RIC et tient garnison à Hanoï, Son Tay, Tong.
+
+À retenir (cartel)
+- Un calme relatif : fin des grandes bandes, maintien de l’ordre local.
+- Un territoire tenu par l’organisation (garnisons) plus que par les “grandes opérations”.
+- Le cadre militaire change (RIMa → RIC).
+
+────────────────────────────
+BLOC 2 — Le retour de la tension : pourquoi ?
+────────────────────────────
+La géopolitique régionale pèse directement sur le Tonkin. La défaite de la Russie dans la guerre russo‑japonaise (1904–1905) a un impact : beaucoup voient la revanche des Asiatiques sur les Occidentaux, et le prestige du Japon devient immense.
+
+Dans la péninsule indochinoise, le Japon représente l’espoir de “bouter hors du pays” les Français : des figures annamites se réfugient au Japon, et un mouvement d’agitation anti‑français et pro‑japonais se développe rapidement. Il provoque des troubles en Annam (provinces de Quan Nain, Quang‑Ngai, Thun‑Thiey, Binh Dinh) au début de 1908. Une intervention militaire est décidée.
+
+À retenir (cartel)
+- La stabilité locale dépend de l’équilibre régional (Russie/Japon).
+- L’Annam devient un foyer d’agitation : politique, influence, symbole.
+- Le Tonkin reste exposé aux “répliques” de la région.
+
+────────────────────────────
+BLOC 3 — Gérer l’instabilité : comment ? (leviers de contrôle)
+────────────────────────────
+Sur place, stationne déjà le 3e bataillon du 9e RIC, avec trois compagnies à Hué et une à Tourane, renforcée par une batterie du 4e RAC.
+
+L’idée maîtresse de l’intervention est d’éviter l’emploi des armes contre des bandes nombreuses mais faiblement équipées (souvent des armes blanches). Les renforts sont envoyés pour intimider, et pour distraire le bataillon déjà en place des missions de garde qu’il exécute.
+
+Début avril 1908, un détachement quitte le Tonkin et opère en Annam. La 1re compagnie reste à Quinh Nham ; la 2e rejoint Binh Dinh. Des manifestations sont dispersées, des meneurs arrêtés, et le calme revient progressivement.
+
+À retenir (cartel)
+- Objectif : tenir sans “sur‑escalade” (intimidation + contrôle).
+- Outils : détachements, gardes, arrestations, appui d’artillerie si nécessaire.
+- Terrain social : la foule, les meneurs, les réseaux.
+
+────────────────────────────
+ÉPISODE — “Affaire du datura” (Hanoï, 28 juin 1908)
+────────────────────────────
+Le 24 juin 1908, le général Nayo‑Cando reçoit une lettre dénonçant un plan de conjuration. Le 28 juin à 20 h 00, Geil apprend l’empoisonnement de la citadelle d’Hanoï (où résident le 9e RIC et le 4e RAC) et l’imminence d’une attaque.
+
+L’enquête montre qu’une substance hallucinogène, le datura, a été versée dans le repas des hommes de garde. Elle provoque rougeurs, délire, excitation : un soldat grimpe à un arbre “persuadé d’être poursuivi par des tigres”, un autre traverse Hanoï à bicyclette “comme un fou”.
+
+L’enquête révèle aussi des tentatives antérieures et la participation plus ou moins active du Dê Tham. Des agitateurs annamites réfugiés au Japon sont démasqués ; les empoisonneurs sont exécutés.
+
+À retenir (cartel)
+- Menace : attaque contre un symbole (citadelle / garnison).
+- Mode d’action : clandestin, psychologique, visant à ouvrir une brèche.
+- Réponse : alerte, enquête, démantèlement.
+
+────────────────────────────
+ÉPISODE — Traque du Dê Tham (juillet–décembre 1909) : “l’insécurité qui dure”
+────────────────────────────
+Au début de 1909, des bandes opèrent dans la région du Yen Thê. Le 24 juin, une nouvelle éclate : présence du Dê Tham repérée ; la zone est investie et fouillée, mais la population est complice et la région quadrillée devient “invivable”.
+
+En juillet, la colonne est mise sur pied : quatre compagnies (dont deux du 9e RIC et deux du 1er RTT), plus un peloton de cavalerie légère. Les compagnies du 9 sont celles du capitaine Gremillet et du capitaine Pertuis. La colonne est organisée en groupes et manœuvre sur les axes et les massifs (Tam Dao, Nui Lang…).
+
+Les combats et accrochages s’étalent : encerclements, négociations, embuscades, assauts, replis. La fatigue, la chaleur, l’humidité et la difficulté du renseignement pèsent. Les pertes sont lourdes : au petit jour, les pirates fuient ; “l’affaire a fait 17 tués et 39 blessés”.
+
+Fin décembre, les unités sont renvoyées ; ne demeurent qu’un élément réduit. La colonne est dissoute le 1er mars 1910, le calme étant total.
+
+À retenir (cartel)
+- Problème géopolitique “local” : bande + complicité + refuge terrain.
+- Le renseignement est l’arme décisive (ou son absence est un frein).
+- La pacification est une usure : hommes, climat, distances, temps.
+
+────────────────────────────
+CLÉ DE SORTIE — 1913 : la fin du Dê Tham
+────────────────────────────
+Le Dê Tham échappe longtemps. Sa tête est mise à prix dès 1909, mais il est impossible de le capturer. En février 1913, il est assassiné : deux Chinois alliéchés par la prime gagnent sa confiance pour mieux l’abattre. Sa mort marque le retour définitif au calme dans cette région.
+
+────────────────────────────
+CE QUE ÇA RÉVÈLE (géopolitique du Tonkin)
+────────────────────────────
+Le Tonkin n’est pas isolé : il reçoit les ondes de choc de l’Asie (prestige du Japon, agitation politique), mais il se joue aussi sur le terrain (rizières, digues, massifs, villages, réseaux). Tenir le Tonkin, c’est tenir un carrefour : frontières, influences, routes et populations — avec des outils autant politiques que militaires.
+
+À RETENIR (5 PUces)
+- Début XXe : calme relatif, maintien de l’ordre, fin des “grandes bandes”.
+- Réorganisation : RIMa/RAMa → RIC/RAC ; le 9 devient 9e RIC.
+- 1908 : agitation pro‑japonaise en Annam ; intervention sans sur‑escalade.
+- 1908 : datura à Hanoï — menace clandestine et psychologique.
+- 1909–1913 : Dê Tham — l’insécurité durable qui se règle par renseignement, usure, et enfin élimination.
+
+────────────────────────────
+ACCORDÉON — Cartes & photos (placeholders OK, légendes obligatoires)
+────────────────────────────
+1) “Carte des troubles d’Annam — 1908.” (placeholder)
+2) “Hanoï : citadelle — 1908 (affaire du datura).” (placeholder)
+3) “Croquis des opérations dans la région du Yen Thê (Dê Tham) — 1909.” (placeholder)
+4) “Interrogatoire d’un pirate (Yen‑Thê).” (photo placeholder)
+5) “Pirates de la bande du Dê Tham.” (photo placeholder)
+
+ALT‑TEXT (à utiliser)
+1) Carte schématique des provinces touchées en Annam.
+2) Vue/illustration de la citadelle d’Hanoï.
+3) Carte/croquis des axes et massifs (Yen Thê / Tam Dao).
+4) Scène d’interrogatoire d’un pirate du Yen Thê.
+5) Portraits de pirates associés à la bande du Dê Tham.
+
+────────────────────────────
+MINI‑QUIZ (6 questions)
+────────────────────────────
+Q1. Au début du XXe siècle, le Tonkin est plutôt…
+A. Calme, avec peu d’opérations d’envergure
+
+Q2. En 1901, le 9e RIMa devient…
+A. 9e RIC
+
+Q3. Quel événement régional renforce le prestige du Japon et pèse sur l’Indochine ?
+A. La guerre russo‑japonaise (1904–1905) et la défaite de la Russie
+
+Q4. En 1908, quel type d’action vise la citadelle d’Hanoï ?
+A. Un empoisonnement au datura (substance hallucinogène)
+
+Q5. La traque du Dê Tham (1909–1913) montre surtout…
+A. Le poids du renseignement, du terrain et de l’usure dans la pacification
+
+Q6. Quel événement marque le retour définitif au calme dans la région du Yen Thê ?
+A. La mort du Dê Tham (février 1913)
+
+────────────────────────────
+PROCHAINE ÉTAPE (bouton)
+────────────────────────────
+- Continuer vers : “ASIE — 1914–1919” (placeholder si page non créée)
+
+──────────────────────────────────────────────────────────────────────────────
+FIN DU CONTENU
+──────────────────────────────────────────────────────────────────────────────
+
+NOTES UI (micro‑immersion)
+- Barre de progression de lecture.
+- Bouton “Écouter l’ambiance” (audio placeholder : “ville / rizières / forêt”).
+- “Cartels” : Repères, À retenir, Ce que ça révèle.
+- Timeline cliquable : panneau latéral avec le paragraphe correspondant.
