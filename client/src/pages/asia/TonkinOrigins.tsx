@@ -196,59 +196,72 @@ export default function TonkinOriginsPage() {
         ) : (
           <>
             {/* Main Content Sections */}
-            <div className="space-y-8">
-              <Accordion type="multiple" defaultValue={readingMode === 'complete' ? tonkinOriginsData.sections.map(s => s.id) : ['tonkin']} className="space-y-4">
-                {tonkinOriginsData.sections.map((section) => (
-                  <AccordionItem key={section.id} value={section.id} className="border border-[#4a3b2a]/20 rounded-lg bg-[#fdfbf7] px-6 shadow-sm">
-                    <AccordionTrigger className="font-serif text-xl md:text-2xl font-bold py-6 hover:no-underline">
-                      {section.title}
-                    </AccordionTrigger>
-                    <AccordionContent className="space-y-6 text-base leading-relaxed opacity-90 pb-6">
-                      {section.content.map((p, idx) => (
-                        <p key={idx} className={`${p.startsWith("-") ? "pl-4" : ""} ${p.includes("?") && idx === 0 ? "font-bold text-[#dcb575] uppercase tracking-widest text-xs mb-2" : ""}`}>
-                            {p}
-                        </p>
-                      ))}
-                      
-                      {section.subsections && section.subsections.map((sub, i) => (
-                          <div key={i} className="mt-8 bg-[#4a3b2a]/5 border border-[#4a3b2a]/10 rounded-lg overflow-hidden">
-                              <div className="bg-[#4a3b2a] text-[#e8dcc5] px-4 py-2 font-bold font-serif flex items-center gap-2">
-                                 <Crosshair className="h-4 w-4" /> {sub.title}
-                              </div>
-                              <div className="p-4 space-y-4">
-                                  {sub.content.split('\n\n').map((paragraph, idx) => (
-                                      <div key={idx}>
-                                          {idx === 0 ? (
-                                               <h4 className="font-bold text-[#4a3b2a] mb-1">{paragraph}</h4>
-                                          ) : paragraph.includes(' : ') ? (
-                                              <p className="text-sm leading-relaxed opacity-90">
-                                                <span className="font-bold text-[#4a3b2a]">{paragraph.split(' : ')[0]} :</span> {paragraph.split(' : ').slice(1).join(' : ')}
-                                              </p>
-                                          ) : (
-                                              <p className="text-sm leading-relaxed opacity-90">{paragraph}</p>
-                                          )}
-                                      </div>
-                                  ))}
-                              </div>
-                          </div>
-                      ))}
+            <div className="space-y-16">
+              {tonkinOriginsData.sections.map((section) => (
+                <section key={section.id} className="space-y-6">
+                  <h2 className="font-serif text-2xl md:text-3xl font-bold border-b-2 border-[#dcb575] pb-4">
+                    {section.title}
+                  </h2>
 
-                      {section.keyPoints && (
-                        <div className="bg-[#4a3b2a]/5 p-4 rounded-md border-l-4 border-[#4a3b2a] mt-6">
-                          <h4 className="font-bold uppercase text-xs tracking-widest mb-2 opacity-70">À retenir</h4>
-                          <ul className="space-y-2">
-                            {section.keyPoints.map((kp, k) => (
-                              <li key={k} className="flex gap-2 text-sm font-medium">
-                                <span className="text-[#4a3b2a]">•</span> {kp}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
+                  <div className="space-y-4">
+                    {section.content.map((p, idx) => (
+                      <div key={idx}>
+                        {p.includes("?") && idx === 0 ? (
+                          <h3 className="font-bold text-[#4a3b2a] text-lg mb-4">{p}</h3>
+                        ) : p.includes(" : ") ? (
+                          <div className="flex gap-3 items-start bg-[#fdfbf7] border border-[#4a3b2a]/10 rounded-lg p-4">
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#dcb575] mt-2.5 shrink-0" />
+                            <p className="text-base leading-relaxed">
+                              <span className="font-bold text-[#4a3b2a]">{p.split(' : ')[0]} :</span> {p.split(' : ').slice(1).join(' : ')}
+                            </p>
+                          </div>
+                        ) : (
+                          <p className="text-base leading-relaxed opacity-90">{p}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+
+                  {section.subsections && section.subsections.map((sub, i) => (
+                    <div key={i} className="rounded-xl overflow-hidden shadow-md">
+                      <div className="bg-[#4a3b2a] text-[#e8dcc5] px-5 py-3 font-bold font-serif flex items-center gap-2 text-lg">
+                        <Crosshair className="h-4 w-4 text-[#dcb575]" /> {sub.title}
+                      </div>
+                      <div className="bg-[#fdfbf7] p-5 space-y-4 border border-t-0 border-[#4a3b2a]/10 rounded-b-xl">
+                        {sub.content.split('\n\n').map((paragraph, idx) => (
+                          <div key={idx}>
+                            {idx === 0 ? (
+                              <h4 className="font-bold text-[#4a3b2a] text-base">{paragraph}</h4>
+                            ) : paragraph.includes(' : ') ? (
+                              <div className="flex gap-3 items-start">
+                                <div className="w-1.5 h-1.5 rounded-full bg-[#dcb575] mt-2.5 shrink-0" />
+                                <p className="text-sm leading-relaxed">
+                                  <span className="font-bold text-[#4a3b2a]">{paragraph.split(' : ')[0]} :</span> {paragraph.split(' : ').slice(1).join(' : ')}
+                                </p>
+                              </div>
+                            ) : (
+                              <p className="text-sm leading-relaxed opacity-90">{paragraph}</p>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+
+                  {section.keyPoints && (
+                    <div className="bg-[#4a3b2a] text-[#e8dcc5] p-5 rounded-xl">
+                      <h4 className="font-bold uppercase text-xs tracking-widest mb-3 text-[#dcb575]">À retenir</h4>
+                      <ul className="space-y-2">
+                        {section.keyPoints.map((kp, k) => (
+                          <li key={k} className="flex gap-2 text-sm">
+                            <Check className="h-4 w-4 shrink-0 text-[#dcb575] mt-0.5" /> {kp}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </section>
+              ))}
             </div>
 
             {/* Module: Carte & Milieu */}
