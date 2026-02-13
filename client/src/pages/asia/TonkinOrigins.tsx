@@ -9,6 +9,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
+import { useQuery } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
 
 import GlobalMapChronology from "@/components/GlobalMapChronology";
 
@@ -17,19 +19,36 @@ export default function TonkinOriginsPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [quizAnswers, setQuizAnswers] = useState<Record<number, string>>({});
   const [quizScore, setQuizScore] = useState<number | null>(null);
+  const [quizSubmitted, setQuizSubmitted] = useState(false);
   const { scrollYProgress } = useScroll();
+
+  const { data: quizStats } = useQuery<{ averageScore: number; totalAttempts: number }>({
+    queryKey: ["/api/quiz/stats/tonkin-origins"],
+  });
 
   const filteredGlossary = tonkinOriginsData.modules.glossary.filter(item =>  
     item.term.toLowerCase().includes(searchQuery.toLowerCase()) || 
     item.def.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const checkQuiz = () => {
+  const checkQuiz = async () => {
     let score = 0;
     tonkinOriginsData.modules.quiz.forEach((q, idx) => {
       if (quizAnswers[idx] === q.answer) score++;
     });
     setQuizScore(score);
+
+    if (!quizSubmitted) {
+      try {
+        await apiRequest("POST", "/api/quiz/results", {
+          sectionId: "tonkin-origins",
+          score,
+          totalQuestions: tonkinOriginsData.modules.quiz.length,
+        });
+        setQuizSubmitted(true);
+      } catch (e) {
+      }
+    }
   };
 
   return (
@@ -340,14 +359,21 @@ export default function TonkinOriginsPage() {
           </div>
 
           <div className="pt-6 border-t border-white/10 flex items-center justify-between">
-            <Button onClick={checkQuiz} className="bg-[#dcb575] text-[#4a3b2a] hover:bg-white font-bold">
+            <Button onClick={checkQuiz} className="bg-[#dcb575] text-[#4a3b2a] hover:bg-white font-bold" data-testid="button-check-quiz">
               Vérifier mes réponses
             </Button>
-            {quizScore !== null && (
-              <div className="font-bold text-xl flex items-center gap-2 animate-in fade-in slide-in-from-right">
-                <Check className="h-5 w-5 text-green-400" /> Score : {quizScore} / {tonkinOriginsData.modules.quiz.length}
-              </div>
-            )}
+            <div className="flex items-center gap-4">
+              {quizScore !== null && (
+                <div className="font-bold text-xl flex items-center gap-2 animate-in fade-in slide-in-from-right" data-testid="text-quiz-score">
+                  <Check className="h-5 w-5 text-green-400" /> Score : {quizScore} / {tonkinOriginsData.modules.quiz.length}
+                </div>
+              )}
+              {quizStats && quizStats.totalAttempts > 0 && (
+                <div className="text-xs opacity-60" data-testid="text-quiz-stats">
+                  Moyenne : {quizStats.averageScore}/{tonkinOriginsData.modules.quiz.length} ({quizStats.totalAttempts} tentative{quizStats.totalAttempts > 1 ? 's' : ''})
+                </div>
+              )}
+            </div>
           </div>
         </section>
 
