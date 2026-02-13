@@ -33,7 +33,7 @@ export default function TonkinOriginsPage() {
         <div className="flex justify-between items-center absolute top-4 left-4 right-4 z-10">
             <Link href="/#tonkin">
             <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#4a3b2a]/10">
-                <ArrowLeft className="mr-2 h-4 w-4" /> Revenir aux thèmes
+                <ArrowLeft className="mr-2 h-4 w-4" /> Accueil
             </Button>
             </Link>
             
