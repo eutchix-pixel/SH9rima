@@ -419,21 +419,6 @@ export default function Tonkin1901Page() {
               <p className="text-base leading-relaxed opacity-90">
                 {tonkin1901Data.revelation.text}
               </p>
-              <div className="space-y-3 pt-4">
-                {tonkin1901Data.revelation.points.map((point, i) => (
-                  <motion.div
-                    key={i}
-                    className="flex gap-3 text-sm"
-                    initial={{ opacity: 0, x: -15 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.12 + 0.3 }}
-                  >
-                    <Check className="h-4 w-4 shrink-0 text-[#dcb575] mt-0.5" />
-                    <span>{point}</span>
-                  </motion.div>
-                ))}
-              </div>
             </div>
           </section>
         </FadeInSection>
