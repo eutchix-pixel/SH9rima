@@ -85,7 +85,6 @@ export const tonkinOriginsData: TonkinContent = {
         title: "Naissance d’un régiment (1869–1890)",
         content: [
             "24 avril 1882 : le commandant Rivière s’empare de la citadelle d’Hanoï. Il trouve sur place des compagnies déjà présentes au titre des traités antérieurs, et arrive avec des renforts (dont des compagnies supplémentaires et de l’artillerie).",
-            "27 mars 1883 : prise de Nam Dinh. Les détachements engagés rassemblent des compagnies de différents régiments de marine : l’effort s’intensifie, et la nécessité d’organiser des formations plus cohérentes devient évidente.",
             "16 février 1884 : création de la “division d’Annam”, qui regroupe des compagnies et batteries sous un commandement supérieur. Des brigades et des régiments de marche structurent l’action, notamment autour d’Hanoï.",
             "8 janvier 1885 : début d’opérations vers Lang Son dans un cadre plus structuré, mais l’organisation reste perfectible et doit encore évoluer.",
             "23 janvier 1888 : décision de regrouper plusieurs bataillons en régiments de marche, pour faciliter administration, commandement et emploi. Le régiment de marche du Tonkin porte alors le numéro 2 (administré par le 2e régiment d’infanterie de marine).",
