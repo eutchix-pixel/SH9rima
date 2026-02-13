@@ -69,7 +69,6 @@ export const tonkinOriginsData: TonkinContent = {
         "La Porte de la Chine : Le Tonkin est stratégique. On veut contrôler le Fleuve Rouge pour en faire une autoroute commerciale vers les richesses du Yunnan (Chine du Sud).",
         "Laver l'affront de 1870 : Après la défaite contre les Prussiens, la République cherche une victoire de prestige. Coloniser, c'est prouver au monde que la France n'est pas morte.",
         "Sécuriser l'Indochine : La France tient déjà le Sud (Cochinchine). Pour que l'ensemble soit viable, elle doit posséder le Nord (Tonkin) et protéger ses frontières contre les incursions chinoises.",
-        "Cela ne crée pas encore le 9, mais prépare son apparition : opérations répétées, points d’appui, besoin d’unités mieux organisées et stabilisées. À la frontière sud de la Chine, le Tonkin devient un carrefour (proche de la Chine, riche en ressources, exposé aux circulations armées) ; cette combinaison d’enjeux et d’instabilité mène, plus tard, à un régiment autonome durablement stationné : le 9."
       ],
       keyPoints: [
         "“Palikao 1860” : un repère fondateur sur le drapeau.",
