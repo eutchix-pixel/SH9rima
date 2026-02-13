@@ -113,12 +113,11 @@ function QuizCard({ question, answer }: { question: string; answer: string }) {
 }
 
 const routeSteps: { name: string; date: string; lat: number; lng: number; detail?: string }[] = [
-  { name: "Hanoï", date: "24–25 juin", lat: 21.0285, lng: 105.8542, detail: "Départ du bataillon à bord du vapeur l'Éridan" },
-  { name: "Ta Kou", date: "7 juillet", lat: 38.97, lng: 117.72, detail: "Arrivée en rade, débarquement du corps français" },
-  { name: "Tien Tsin", date: "11–14 juillet", lat: 39.1235, lng: 117.1980, detail: "Bataille de Tien Tsin — prise de la ville le 14 juillet" },
-  { name: "Pei Tsang", date: "5 août", lat: 39.35, lng: 117.05, detail: "Bataille — les Chinois battent en retraite" },
-  { name: "Toung Tchéou", date: "12–13 août", lat: 39.85, lng: 116.66, detail: "Bivouac à 3 km de Pékin" },
-  { name: "Pékin", date: "14–17 août", lat: 39.9042, lng: 116.4074, detail: "Prise de Pékin — légation française atteinte à minuit" },
+  { name: "Ta Kou", date: "7 juillet", lat: 38.97, lng: 117.72, detail: "Arrivée en rade, débarquement du corps français (1 500 hommes)" },
+  { name: "Tien Tsin", date: "11–14 juillet", lat: 39.1235, lng: 117.1980, detail: "Bataille de Tien Tsin — prise de la ville le 14 juillet, jour de fête nationale" },
+  { name: "Pei Tsang", date: "5 août", lat: 39.35, lng: 117.05, detail: "Bataille de Pei Tsang — les Chinois battent en retraite après contournement" },
+  { name: "Toung Tchéou", date: "12–13 août", lat: 39.85, lng: 116.66, detail: "Bivouac des marsouins de Frey, à 3 km de Pékin" },
+  { name: "Pékin", date: "14–17 août", lat: 39.9042, lng: 116.4074, detail: "Prise de Pékin — légation française atteinte à minuit par marche forcée" },
 ];
 
 const routePositions: [number, number][] = routeSteps.map(s => [s.lat, s.lng]);
@@ -139,16 +138,17 @@ function createDateIcon(name: string, date: string) {
 
 function ExpeditionMap() {
   return (
-    <div className="rounded-xl overflow-hidden border-2 border-[#4a3b2a]/20 shadow-lg" style={{ height: 420 }}>
+    <div className="rounded-xl overflow-hidden border-2 border-[#4a3b2a]/20 shadow-lg sepia-map" style={{ height: 420 }}>
+      <style>{`.sepia-map .leaflet-tile-pane { filter: sepia(0.5) saturate(0.7) brightness(0.95) contrast(1.05); }`}</style>
       <MapContainer
-        center={[32, 112]}
-        zoom={4}
+        center={[39.4, 117.1]}
+        zoom={8}
         scrollWheelZoom={false}
         style={{ height: '100%', width: '100%' }}
         attributionControl={false}
       >
         <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url="https://tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png"
         />
         <Polyline
           positions={routePositions}
