@@ -45,12 +45,6 @@ export default function TonkinOriginsPage() {
         </div>
 
         <div className="max-w-4xl mx-auto space-y-6 pt-8">
-          <div className="flex flex-wrap gap-2 text-xs font-bold tracking-widest uppercase opacity-60">
-            {tonkinOriginsData.intro.reperes.map((rep, i) => (
-              <span key={i} className="bg-[#4a3b2a]/5 px-2 py-1 rounded border border-[#4a3b2a]/10">{rep}</span>
-            ))}
-          </div>
-
           <h1 className="font-serif text-4xl md:text-6xl font-bold leading-tight">
             {tonkinOriginsData.title}
           </h1>
