@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import DetailPage from "./pages/Detail";
 import TonkinOriginsPage from "./pages/asia/TonkinOrigins";
 import ScanPage from "./pages/Scan";
+import AiAssistant from "./pages/AiAssistant";
 import NotFound from "./pages/not-found";
 
 function Router() {
@@ -11,6 +12,7 @@ function Router() {
     <Layout>
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/ai-assistant" component={AiAssistant} />
         <Route path="/detail/:id" component={DetailPage} />
         <Route path="/asie/naissance-du-9-tonkin" component={TonkinOriginsPage} />
         <Route path="/scan" component={ScanPage} />
