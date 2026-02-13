@@ -1,0 +1,100 @@
+Pour intégrer cette dimension spatio-temporelle à votre application Replit, vous avez besoin d'un module de **cartographie interactive synchronisé avec une frise chronologique**.
+
+Voici le "package" complet (instructions techniques + structure de données) à copier-coller dans votre interface Replit AI pour générer cette fonctionnalité.
+
+---
+
+## Instructions pour Replit AI
+
+**Objet : Ajout d'un module "Carte Temporelle Interactive" pour la page Naissance du 9.**
+
+### 1. Objectif Technique
+
+Créer un composant React/Vue (selon l'architecture) nommé `GlobalMapChronology` qui combine une carte du Tonkin et une frise chronologique. Le déplacement sur la frise doit mettre à jour les points d'intérêt (POI) sur la carte.
+
+### 2. Stack recommandée
+
+* **Cartographie :** Leaflet.js ou React-Leaflet (léger, adapté au style "carte ancienne").
+* 
+**Style :** Utiliser un filtre CSS `sepia(0.8) contrast(1.2)` sur les tuiles de carte pour correspondre au style "musée colonial". 
+
+
+* **Interactivité :** Framer Motion pour les transitions fluides entre les dates.
+
+### 3. Structure de Données (JSON) à intégrer
+
+```json
+{
+  "map_events": [
+    {
+      "date": "1860",
+      "label": "Palikao",
+      "coords": [39.9042, 116.4074],
+      [cite_start]"description": "Jalon fondateur : victoire en Chine ouvrant la voie vers le sud." [cite: 21, 23]
+    },
+    {
+      "date": "1882",
+      "label": "Hanoï",
+      "coords": [21.0285, 105.8542],
+      [cite_start]"description": "Prise de la citadelle par le commandant Rivière." [cite: 47]
+    },
+    {
+      "date": "1890",
+      "label": "Naissance du 9e RIMa",
+      "coords": [21.0285, 105.8542],
+      [cite_start]"description": "Le régiment devient autonome et stationné au Tonkin." [cite: 55]
+    },
+    {
+      "date": "1890-1891",
+      "label": "Secteur Son Tay",
+      "coords": [21.1333, 105.5],
+      [cite_start]"description": "Opérations contre la bande de Doc Ngu entre Rivière Claire et Son Tay." [cite: 64]
+    },
+    {
+      "date": "1892",
+      "label": "Combat de Dongly",
+      "coords": [21.4, 106.3],
+      [cite_start]"description": "Poursuite et succès tactique du lieutenant Couteret." [cite: 73, 74]
+    },
+    {
+      "date": "1893",
+      "label": "Siam (Chantaboum)",
+      "coords": [12.6111, 102.1039],
+      [cite_start]"description": "Projection navale et diplomatique hors du Tonkin." [cite: 79, 81]
+    },
+    {
+      "date": "1894",
+      "label": "Yen Muc",
+      "coords": [21.5, 106.1],
+      [cite_start]"description": "Sortie d'encerclement héroïque à la baïonnette." [cite: 88, 90]
+    },
+    {
+      "date": "1899",
+      "label": "Quang Tcheou Wan",
+      "coords": [21.2, 110.4],
+      [cite_start]"description": "Occupation et organisation d'un territoire concédé." [cite: 97, 102]
+    }
+  ]
+}
+
+```
+
+### 4. Spécifications d'Interface (UI/UX)
+
+* **Frise Chronologique :** Placer une barre horizontale en bas de la carte. Chaque clic sur une date doit centrer la carte sur le marqueur correspondant avec un zoom fluide. 
+
+
+* 
+**Popups Immersifs :** Lorsqu'un point est sélectionné, afficher un "cartel" de musée avec le texte descriptif et, si disponible, l'image d'archive associée (ex: Croquis de Dongly). 
+
+
+* 
+**Calques Géographiques :** Ajouter des tracés de couleur bleue pour souligner le **Fleuve Rouge**, la **Rivière Noire** et la **Rivière Claire**, car "la carte commande le combat". 
+
+
+
+---
+
+### Prochaine étape suggérée
+
+Souhaitez-vous que je rédige également le **code CSS spécifique** pour donner à cette carte l'aspect d'un vieux parchemin militaire (bords brûlés, typographie machine à écrire) ?

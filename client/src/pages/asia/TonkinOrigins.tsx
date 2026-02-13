@@ -10,6 +10,8 @@ import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 
+import GlobalMapChronology from "@/components/GlobalMapChronology";
+
 export default function TonkinOriginsPage() {
   const [readingMode, setReadingMode] = useState<'essential' | 'complete' | 'archives'>('complete');
   const [searchQuery, setSearchQuery] = useState("");
@@ -164,56 +166,20 @@ export default function TonkinOriginsPage() {
 
         {/* Module: Carte & Milieu */}
         <section className="bg-[#4a3b2a] text-[#e8dcc5] p-8 rounded-xl shadow-xl relative overflow-hidden">
-          <div className="grid md:grid-cols-2 gap-8 relative z-10">
-            <div className="space-y-6">
+            <div className="space-y-6 relative z-10">
                 <div className="flex items-center gap-3 opacity-60 uppercase text-xs tracking-widest font-bold">
-                <MapIcon className="h-4 w-4" /> Module Interactif
+                    <MapIcon className="h-4 w-4" /> Module Interactif
                 </div>
                 <h2 className="font-serif text-3xl font-bold">{tonkinOriginsData.modules.map.title}</h2>
                 <p className="opacity-80 text-lg leading-relaxed">{tonkinOriginsData.modules.map.intro}</p>
                 
-                <div className="grid gap-3 pt-4">
-                {tonkinOriginsData.modules.map.callouts.map((c, i) => (
-                    <div key={i} className="bg-white/10 p-4 rounded border border-white/10 hover:bg-white/20 transition-colors cursor-pointer group">
-                    <div className="flex items-center justify-between">
-                        <h3 className="font-bold text-[#dcb575] group-hover:text-white transition-colors">{c.name}</h3>
-                        <MapIcon className="h-4 w-4 opacity-50 group-hover:opacity-100" />
-                    </div>
-                    <p className="text-sm opacity-80 mt-1">{c.desc}</p>
-                    </div>
-                ))}
+                {/* Interactive Map Component */}
+                <div className="pt-4">
+                    <GlobalMapChronology />
                 </div>
             </div>
-            
-            <div className="relative h-full min-h-[400px] bg-[#e8dcc5] rounded-lg overflow-hidden border-4 border-white/10 shadow-inner group">
-                <img 
-                    src="/images/map-tonkin-1890.png" 
-                    alt="Carte du Tonkin 1890" 
-                    className="w-full h-full object-cover sepia contrast-125 hover:scale-105 transition-transform duration-700"
-                />
-                
-                {/* Simulated Map Pins/Markers overlay */}
-                <div className="absolute top-[60%] left-[55%] group-hover:scale-110 transition-transform duration-300 cursor-pointer">
-                    <div className="w-4 h-4 bg-red-800 rounded-full border-2 border-[#e8dcc5] animate-pulse" />
-                    <span className="absolute left-6 top-0 bg-[#e8dcc5] text-[#4a3b2a] text-xs font-bold px-2 py-0.5 rounded shadow-lg whitespace-nowrap">Hanoï</span>
-                </div>
-                <div className="absolute top-[40%] left-[45%] group-hover:scale-110 transition-transform duration-300 delay-100 cursor-pointer">
-                    <div className="w-3 h-3 bg-[#4a3b2a] rounded-full border border-[#e8dcc5]" />
-                    <span className="absolute left-5 top-0 bg-[#e8dcc5] text-[#4a3b2a] text-[10px] font-bold px-1.5 py-0.5 rounded shadow-lg whitespace-nowrap">Son Tay</span>
-                </div>
-                 <div className="absolute top-[20%] left-[65%] group-hover:scale-110 transition-transform duration-300 delay-200 cursor-pointer">
-                    <div className="w-3 h-3 bg-[#4a3b2a] rounded-full border border-[#e8dcc5]" />
-                    <span className="absolute left-5 top-0 bg-[#e8dcc5] text-[#4a3b2a] text-[10px] font-bold px-1.5 py-0.5 rounded shadow-lg whitespace-nowrap">Lang Son</span>
-                </div>
-                
-                {/* Legend overlay */}
-                <div className="absolute bottom-4 right-4 bg-[#e8dcc5]/90 backdrop-blur text-[#4a3b2a] p-3 rounded border border-[#4a3b2a]/20 text-xs shadow-lg">
-                    <div className="font-bold mb-2 uppercase tracking-widest border-b border-[#4a3b2a]/20 pb-1">Légende</div>
-                    <div className="flex items-center gap-2 mb-1"><div className="w-2 h-2 rounded-full bg-red-800" /> Postes principaux</div>
-                    <div className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-[#4a3b2a]" /> Zones d'opérations</div>
-                </div>
-            </div>
-          </div>
+            {/* Decorative map bg placeholder */}
+            <div className="absolute right-0 top-0 w-1/2 h-full bg-[url('/images/bg-tonkin.png')] opacity-10 mix-blend-overlay" />
         </section>
 
         {/* Module: Vie du Marsouin */}
