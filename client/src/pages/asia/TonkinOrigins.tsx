@@ -37,9 +37,9 @@ export default function TonkinOriginsPage() {
             </Button>
             </Link>
             
-            <Link href="/detail/tonkin-1900">
+            <Link href="/asie/chine-1900-expedition">
              <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#4a3b2a]/10">
-                Continuer la visite <ArrowRight className="ml-2 h-4 w-4" />
+                Continuer : Chine 1900 <ArrowRight className="ml-2 h-4 w-4" />
              </Button>
             </Link>
         </div>
@@ -366,9 +366,11 @@ export default function TonkinOriginsPage() {
               </p>
               
               <div className="pt-8">
-                <Button size="lg" className="bg-[#4a3b2a] text-[#e8dcc5] hover:bg-[#4a3b2a]/90 h-14 px-8 text-lg shadow-lg">
-                  {tonkinOriginsData.conclusion.nextStep} <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                <Link href="/asie/chine-1900-expedition">
+                  <Button size="lg" className="bg-[#4a3b2a] text-[#e8dcc5] hover:bg-[#4a3b2a]/90 h-14 px-8 text-lg shadow-lg">
+                    Continuer : Chine (1900) <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
               </div>
             </section>
           </>
