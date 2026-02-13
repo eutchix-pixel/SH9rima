@@ -33,7 +33,7 @@ export const museumData: Section[] = [
         content: "La création du régiment et ses premières missions...",
         link: "/asie/naissance-du-9-tonkin"
       },
-      { id: "tonkin-chine", title: "Chine", image: "/images/placeholder.png", content: "L'intervention en Chine jusqu'à Pekin ..." },
+      { id: "tonkin-chine", title: "Chine", image: "/images/placeholder.png", content: "L'intervention en Chine jusqu'à Pekin ...", link: "/asie/chine-1900-expedition" },
       { id: "tonkin-1900", title: "1900-1914", image: "/images/placeholder.png", content: "La pacification et l'organisation du territoire..." },
       { id: "tonkin-siberie", title: "Sibérie", image: "/images/placeholder.png", content: "L'expédition de Sibérie, une aventure méconnue..." },
       { id: "tonkin-heureuses", title: "Années Heureuses", image: "/images/placeholder.png", content: "La vie de garnison dans les années 20 et 30..." },
