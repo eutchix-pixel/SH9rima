@@ -3,20 +3,19 @@ import { SubSection } from "@/lib/data";
 export interface TonkinContent {
   title: string;
   subtitle: string;
-  intro: {
-    reperes: string[];
-  };
-  sections: {
+  summary: string;
+  timelineEvents: { year: string; title: string; desc?: string }[];
+  keyBlocks: { title: string; content: string; note?: string }[];
+  focus: { title: string; content: string; note?: string };
+  mainKeyPoints: string[];
+  
+  detailedSections: {
     id: string;
     title: string;
-    content: string[]; // Array of paragraphs
-    keyPoints?: string[]; // "À retenir"
-    dates?: { year: string; event: string }[];
-    subsections?: {
-      title: string;
-      content: string;
-    }[];
+    content: string[];
+    subsections?: { title: string; content: string }[];
   }[];
+
   modules: {
     map: {
       title: string;
@@ -55,50 +54,57 @@ export interface TonkinContent {
 
 export const tonkinOriginsData: TonkinContent = {
   title: "Naissance du 9 au Tonkin — Des prémisses d’une conquête à l’autonomie du régiment",
-  subtitle: "Ici commence l’histoire “Asie” du 9 : un théâtre rude, des marches interminables, une géographie qui commande tout… et la naissance d’un régiment qui va porter ses couleurs pendant plus d’un demi-siècle.",
-  intro: {
-    reperes: ["1860 (Palikao)", "1882 (Hanoï, Rivière)", "1890 (le 9 devient régiment autonome au Tonkin)", "1890–1895 (premières campagnes de pacification)"]
-  },
-  sections: [
+  subtitle: "Un théâtre rude, une carte qui commande tout, et une présence française qui s’installe : c’est dans ce cadre que naît, au Tonkin, un régiment autonome — le 9.",
+  summary: "Au XIXe siècle, la France projette des troupes en Asie pour sécuriser routes maritimes et points d’appui, et peser dans une région stratégique. L’instabilité au sud de la Chine (troubles, bandes armées, insécurité transfrontalière) fait du Tonkin un carrefour à contrôler. Les compagnies de Marine, d’abord dispersées, sont progressivement regroupées, organisées, puis fixées : le 10 mars 1890, le régiment de marche devient le 9e régiment d’infanterie de marine autonome au Tonkin.",
+  timelineEvents: [
+    { year: "1840", title: "Ouverture", desc: "Traités inégaux" },
+    { year: "1860", title: "Palikao", desc: "Victoire décisive" },
+    { year: "1882", title: "Hanoï", desc: "Rivière prend la citadelle" },
+    { year: "1888", title: "Organisation", desc: "Régiments de marche" },
+    { year: "1890", title: "Naissance du 9", desc: "Autonomie au Tonkin" },
+    { year: "1890-95", title: "Pacification", desc: "Campagnes d'endurance" }
+  ],
+  keyBlocks: [
     {
-      id: "premisses",
-      title: "Prémisses d’une conquête (1840–1860)",
-      content: [
-        "Pourquoi les Troupes de marine sont en Asie au XIXe siècle ?",
-        "Au XIXe siècle, la France envoie des forces en Asie pour sécuriser ses routes maritimes, tenir des points d’appui et peser dans un espace devenu stratégique sur les plans diplomatique et commercial. Les Troupes de marine, faites pour l’outre‑mer, embarquent, débarquent, occupent, protègent et appuient ces opérations lointaines.",
-        "Dès 1840, des accords imposés à l’Empire chinois — souvent appelés “traités inégaux” — ouvrent des ports et installent des représentants étrangers, mais déclenchent aussi des réactions : hostilité, violences, troubles et fragmentation locale. La présence française s’inscrit alors dans la durée, entre diplomatie, commerce et actions armées.",
-        "Ce qu’il faut comprendre pour la naissance du 9",
-        "Cela ne crée pas encore le 9, mais prépare son apparition : opérations répétées, points d’appui, besoin d’unités mieux organisées et stabilisées. À la frontière sud de la Chine, le Tonkin devient un carrefour (proche de la Chine, riche en ressources, exposé aux circulations armées) ; cette combinaison d’enjeux et d’instabilité mène, plus tard, à un régiment autonome durablement stationné : le 9."
-      ],
-      keyPoints: [
-        "“Palikao 1860” : un repère fondateur sur le drapeau.",
-        "Les mouvements de troupes et la fragmentation du pouvoir local alimentent le banditisme transfrontalier."
-      ],
-      subsections: [
-        {
-          title: "FOCUS — Palikao (1860)",
-          content: "Pourquoi Palikao compte ?\n\nPalikao est un repère qui relie l’histoire du régiment à une première grande séquence d’engagement français en Asie. Le 21 septembre 1860, la bataille du pont de Palikao marque un succès décisif, dans une campagne qui conduit ensuite à la prise de Pékin le 17 octobre 1860. Le traité de Pékin (22 octobre 1860) consolide l’installation de légations étrangères : c’est un moment où l’Occident impose sa présence, et où la région bascule durablement.\n\nHéritage régimentaire\n\nL’inscription “Palikao 1860” figure sur le drapeau. Dans le parcours du visiteur, elle sert de “premier jalon” : avant le Tonkin, l’Asie est déjà un théâtre d’opérations pour la France. Cette mémoire explique pourquoi, quelques décennies plus tard, des unités sont déjà présentes, puis réorganisées, et finissent par former un régiment autonome au Tonkin.\n\nConséquence indirecte pour le Tonkin\n\nLes défaites, les troubles et les déplacements de troupes contribuent, sur la durée, à une instabilité régionale. Vers le sud, certains groupes armés franchissent les frontières et alimentent l’insécurité au Tonkin. C’est dans ce contexte que se préparent les opérations et les réorganisations militaires qui conduiront à la naissance du 9 au Tonkin."
-        }
-      ]
+      title: "Pourquoi des Troupes de marine en Asie ?",
+      content: "Parce qu’elles sont l’outil des expéditions lointaines : embarquer, débarquer, tenir des positions, protéger et appuyer une présence française durable (commerce, diplomatie, sécurité).",
+      note: "À retenir : ce n’est pas “un épisode”, c’est un engagement qui s’installe."
     },
     {
-        id: "naissance",
-        title: "Naissance d’un régiment (1869–1890)",
-        content: [
-            "24 avril 1882 : le commandant Rivière s’empare de la citadelle d’Hanoï. Il trouve sur place des compagnies déjà présentes au titre des traités antérieurs, et arrive avec des renforts (dont des compagnies supplémentaires et de l’artillerie).",
-            "27 mars 1883 : prise de Nam Dinh. Les détachements engagés rassemblent des compagnies de différents régiments de marine : l’effort s’intensifie, et la nécessité d’organiser des formations plus cohérentes devient évidente.",
-            "16 février 1884 : création de la “division d’Annam”, qui regroupe des compagnies et batteries sous un commandement supérieur. Des brigades et des régiments de marche structurent l’action, notamment autour d’Hanoï.",
-            "8 janvier 1885 : début d’opérations vers Lang Son dans un cadre plus structuré, mais l’organisation reste perfectible et doit encore évoluer.",
-            "23 janvier 1888 : décision de regrouper plusieurs bataillons en régiments de marche, pour faciliter administration, commandement et emploi. Le régiment de marche du Tonkin porte alors le numéro 2 (administré par le 2e régiment d’infanterie de marine).",
-            "10 mars 1890 : le tournant.",
-            "Le régiment de marche n°2 devient le 9e régiment d’infanterie de marine autonome et stationné au Tonkin. Le 9 s’inscrit alors durablement comme “régiment du Tonkin”, acteur majeur de la pacification.",
-            "Structure (repère)",
-            "Le régiment est fixé à trois bataillons. Les compagnies sont numérotées 1 à 12."
-        ],
-        keyPoints: [
-            "1890 : naissance “administrative” et opérationnelle du 9 autonome au Tonkin.",
-            "Le 9 devient un régiment de présence et d’action prolongée."
-        ]
+      title: "Pourquoi le Tonkin compte ?",
+      content: "Le Tonkin est proche de la Chine, riche en ressources, et traversé par des axes d’eau (Fleuve Rouge et affluents) : la géographie y impose le rythme des opérations.",
+      note: "Ici, un gué, une digue ou une rizière peut décider d’une journée de marche."
+    },
+    {
+      title: "Comment naît le 9 ?",
+      content: "Au départ, des compagnies de Marine sont envoyées et regroupées selon les besoins. À mesure que la présence se prolonge, l’organisation se fixe : commandement, regroupements, régiments de marche. Le tournant arrive le 10 mars 1890 : le régiment de marche devient le 9e régiment d’infanterie de marine autonome, stationné au Tonkin.",
+      note: "C’est la “naissance” du 9 au Tonkin : une unité pensée pour durer."
+    }
+  ],
+  focus: {
+    title: "FOCUS — Palikao (1860)",
+    content: "Palikao est un jalon-mémoire : victoire décisive (21 septembre 1860) dans une campagne qui mène à la prise de Pékin (17 octobre) puis au traité de Pékin (22 octobre). L’inscription “Palikao 1860” sur le drapeau rappelle que l’Asie est déjà un théâtre d’engagement avant le Tonkin.",
+    note: "Un repère sur le drapeau = une mémoire transmise."
+  },
+  mainKeyPoints: [
+    "Le XIXe siècle installe une présence française durable en Asie.",
+    "Le Tonkin est stratégique : frontière, ressources, fleuves, routes.",
+    "Les bandes armées et l’insécurité transfrontalière rendent les opérations longues.",
+    "Les compagnies de Marine se regroupent et se stabilisent.",
+    "10 mars 1890 : naissance du 9 autonome au Tonkin."
+  ],
+  detailedSections: [
+    {
+      id: "tonkin_detail",
+      title: "Le Tonkin en détail : géographie, fleuves, climat, populations",
+      content: [
+        "Pourquoi le Tonkin ? Un enjeu économique : voie d’accès vers la Chine, ressources minières et agricoles. Un enjeu politique : rivalités entre puissances européennes. Un enjeu stratégique : contrôler des axes, des deltas, des vallées, et sécuriser les communications.",
+        "Ressources (fin XIXe) : On attribue au Tonkin de nombreuses ressources : mines (or, argent, cuivre, fer), mais aussi sel, zinc, étain, plomb, charbon, etc. Sur le plan agricole : riz, coton, chanvre, tabac, poivre, bois.",
+        "Relief (3 grandes zones) : 1) Le delta : vaste plaine alluviale, canaux et arroyos, zone riche et densément peuplée. 2) Le moyen pays : collines et reliefs intermédiaires. 3) Le haut pays : montagnes vers la Chine, zones difficiles, favorables aux replis et aux sanctuaires.",
+        "Hydrographie (repère majeur) : Le Fleuve Rouge (Song Hong) est l'axe central. Deux affluents cités comme structurants : la Rivière Noire et la Rivière Claire. Dans le delta, des canaux relient les cours d’eau : l’eau dicte le mouvement, la logistique et les points de contrôle.",
+        "Climat (lecture “terrain”) : Le Tonkin alterne saisons fraîches, humidité, brumes, puis chaleur et mousson. Les opérations se mènent souvent quand le climat est plus “supportable”, mais la boue, la chaleur, et l’humidité compliquent tout.",
+        "Populations (mosaïque) : Le Tonkin rassemble diverses populations (delta, montagnes, vallées). Les structures locales et les loyautés ne sont pas uniformes, ce qui pèse sur le renseignement, la sécurité et la “pacification”."
+      ]
     }
   ],
   modules: {
