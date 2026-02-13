@@ -33,6 +33,12 @@ export interface TonkinContent {
         subsections: { title: string; content: string }[];
         stories: { title: string; content: string }[];
     };
+    projection: {
+        title: string;
+        context: string;
+        reperes: string[];
+        keyPoints: string[];
+    };
     glossary: { term: string; def: string }[];
     quiz: { question: string; answer: string }[];
   };
@@ -184,17 +190,34 @@ export const tonkinOriginsData: TonkinContent = {
             { title: "Son Tay (octobre 1890 – juin 1891)", content: "Une bande (Doc Ngu) opère entre la Rivière Claire et Son Tay, s’abrite dans les massifs, surprend des détachements, et oblige à des opérations longues : marches, ratissages, destructions de repaires, poursuites dans une végétation dense. Le terrain peut annuler la surprise : rizières, lagunes, forêts, dénivelés." },
             { title: "Yen Thé : le fief de Dê Tham (novembre 1890 – janvier 1891)", content: "Dê Tham s’impose comme un chef pirate durable : villages fortifiés, postes, lignes de défense, ruses, réseau d’information. Une logique s’installe : créer des postes, couper les axes, investir et détruire les fortins, tenir dans le temps." },
             { title: "Luu Ky (novembre 1891 – mai 1892) : la chasse dans les massifs", content: "Luu Ky s’appuie sur des massifs difficiles (forêts, pentes, crêtes). Les opérations combinent colonnes convergentes, recherches de camps, coups de main sur villages, et une lutte constante contre la fuite et le renseignement adverse. Point de bascule : la pression prolongée asphyxie le ravitaillement et fragilise la bande." },
-            { title: "Yen Bay (décembre 1891 – février 1892)", content: "Dans la région entre le Fleuve Rouge et le Song Chay, les opérations cherchent à briser les cycles de raids. Les colonnes progressent dans des massifs où une erreur de guide peut mener à un engagement inattendu contre un camp fortifié." }
+            { title: "Yen Bay (décembre 1891 – février 1892)", content: "Dans la région entre le Fleuve Rouge et le Song Chay, les opérations cherchent à briser les cycles de raids. Les colonnes progressent dans des massifs où une erreur de guide peut mener à un engagement inattendu contre un camp fortifié." },
+            { title: "1893 : projection et pression (Siam)", content: "Expédition du Siam (7 août – 7 septembre 1893). Contexte : tensions autour du Laos et des accords régionaux. L’opération est limitée et vise notamment l’occupation de Chantaboum. Ce qui marque l’épisode : une action conduite sans combat majeur, où la diplomatie et la négociation jouent un rôle central ; un détachement du 9 est engagé dans un dispositif expéditionnaire embarqué, puis rappelé. À retenir : Le 9 n’agit pas seulement dans les rizières et les massifs : il peut être projeté dans des opérations “politiques” et navales." },
+            { title: "1893–1895 : la pacification s’étire, les tactiques évoluent", content: "Sous la pression, les bandes changent de tactique : prises d’otages, parfois européens, pour rançon. Les colonnes réagissent par poursuites et destructions de refuges. Arrivée de Gallieni (décembre 1893 – janvier 1894) : une phase de réorganisation logistique précède l’offensive. Retour au Yen Thé contre Dê Tham (1894) : Dê Tham reste insaisissable. Pan Ai (juillet–août 1894) et haut Song Cau (mars–mai 1895) : opérations d’envergure contre des positions et dépôts d’armes." }
         ],
         stories: [
             {
                 title: "Le combat de Dongly (10 septembre 1892)",
-                content: "Après le pillage d’un village, le lieutenant Couteret poursuit les pirates avec vingt marsouins du 9 et des tirailleurs tonkinois. Deux jours de chasse, puis contact à Dongly : la troupe se divise, coupe la retraite, engage le combat. Cinq pirates sont tués. Le village est fouillé puis brûlé. Le détachement reçoit la médaille commémorative du Tonkin."
+                content: "Après le pillage d’un village, le lieutenant Couteret poursuit les pirates avec vingt marsouins du 9 et des tirailleurs tonkinois. Deux jours de chasse, puis contact à Dongly : la troupe se divise, coupe la retraite, engage le combat. Cinq pirates sont tués. Le village est fouillé puis brûlé. Le détachement reçoit la médaille commémorative du Tonkin. À retenir : La pacification est une guerre d’endurance : marcher, chercher, encercler, tenir des postes. Le renseignement, les guides, et la population sont déterminants."
             },
             {
                 title: "Le combat de Yen Muc (8 novembre 1894)",
                 content: "Le sous-lieutenant Gressard, avec sept marsouins du 9, trente tirailleurs et cinq partisans, recherche le repaire du pirate Con Nhi dans le massif du Nui Ban To. À Yen Muc, la section est presque encerclée : une centaine puis près de deux cents Chinois se déploient dans la rizière. Une seule issue : reprendre la piste d’arrivée. “Baïonnette au canon ! À l’assaut !” La charge brise le verrou et ouvre le passage."
             }
+        ]
+    },
+    projection: {
+        title: "1898–1899 : Quang Tcheou Wan (occupation)",
+        context: "À la fin du XIXe siècle, plusieurs puissances occupent des points stratégiques en Chine. La France décide à son tour d’établir une présence à Quang Tcheou Wan.",
+        reperes: [
+            "Octobre 1898 : envoi de compagnies ; le 9 fournit notamment des éléments pour la garnison.",
+            "1899 : opérations et combats autour des postes et axes ; réaction après l’assassinat de deux officiers de marine en mission.",
+            "Novembre 1899 : actions offensives, prise de positions, puis organisation durable du territoire.",
+            "15 novembre 1899 : le territoire est concédé à la France par traité.",
+            "1900 : mise sous autorité civile."
+        ],
+        keyPoints: [
+            "Quang Tcheou Wan montre la dimension “littorale et politico-stratégique” des engagements.",
+            "Le 9 participe à la sécurisation d’une possession, au-delà du seul Tonkin."
         ]
     },
     glossary: [

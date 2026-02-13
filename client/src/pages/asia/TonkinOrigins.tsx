@@ -93,6 +93,36 @@ export default function TonkinOriginsPage() {
 
       <div className="max-w-4xl mx-auto px-6 py-12 space-y-16">
         
+        {/* Timeline */}
+        <div className="py-8 border-b border-[#4a3b2a]/10 mb-8">
+            <h3 className="text-xs font-bold uppercase tracking-widest opacity-60 mb-6 text-center">Chronologie des événements</h3>
+            <div className="overflow-x-auto pb-4 -mx-6 px-6 scrollbar-none flex justify-start md:justify-center">
+                <div className="flex gap-8 min-w-max px-8">
+                    {[
+                        { year: "1860", title: "Palikao", desc: "Succès décisif" },
+                        { year: "1882", title: "Hanoï", desc: "Prise de la citadelle" },
+                        { year: "1890", title: "Naissance du 9", desc: "Régiment autonome" },
+                        { year: "1893", title: "Siam", desc: "Expédition navale" },
+                        { year: "1894", title: "Yen Thé", desc: "Contre Dê Tham" },
+                        { year: "1899", title: "Quang Tcheou Wan", desc: "Concession" },
+                    ].map((ev, i, arr) => (
+                        <div key={i} className="relative flex flex-col items-center gap-3 group cursor-pointer w-32 text-center">
+                             <div className="text-xl font-bold font-serif text-[#4a3b2a]">{ev.year}</div>
+                             <div className="w-4 h-4 rounded-full bg-[#dcb575] border-2 border-[#4a3b2a] group-hover:scale-125 transition-transform z-10 relative" />
+                             {/* Line connector */}
+                             {i < arr.length - 1 && (
+                                 <div className="absolute top-[46px] left-[50%] w-[calc(100%+32px)] h-0.5 bg-[#4a3b2a]/20" />
+                             )}
+                             <div>
+                                 <div className="font-bold text-sm leading-tight mb-1">{ev.title}</div>
+                                 <div className="text-xs opacity-60 leading-tight">{ev.desc}</div>
+                             </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+
         {/* Main Content Sections */}
         <div className="space-y-8">
           <Accordion type="multiple" defaultValue={readingMode === 'complete' ? tonkinOriginsData.sections.map(s => s.id) : ['tonkin']} className="space-y-4">
@@ -201,6 +231,42 @@ export default function TonkinOriginsPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Module: Projection Quang Tcheou Wan */}
+        <section className="space-y-6">
+            <div className="flex items-center gap-2 border-b border-[#4a3b2a]/20 pb-2">
+                <MapIcon className="h-5 w-5" />
+                <h2 className="font-serif text-2xl font-bold">{tonkinOriginsData.modules.projection.title}</h2>
+            </div>
+            <p className="text-lg opacity-90 italic border-l-4 border-[#dcb575] pl-6 py-2">
+                {tonkinOriginsData.modules.projection.context}
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-8 pt-4">
+                <div className="space-y-4">
+                    <h3 className="font-bold uppercase text-xs tracking-widest opacity-70">Chronologie</h3>
+                     <ul className="space-y-3 relative border-l border-[#4a3b2a]/20 ml-2">
+                        {tonkinOriginsData.modules.projection.reperes.map((rep, i) => (
+                          <li key={i} className="pl-6 relative">
+                              <div className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-[#4a3b2a]" />
+                              <p className="text-sm">{rep}</p>
+                          </li>
+                        ))}
+                      </ul>
+                </div>
+                <div className="bg-[#4a3b2a] text-[#e8dcc5] p-6 rounded-lg">
+                    <h3 className="font-bold uppercase text-xs tracking-widest opacity-70 mb-4 text-[#dcb575]">À retenir</h3>
+                    <ul className="space-y-3">
+                         {tonkinOriginsData.modules.projection.keyPoints.map((kp, i) => (
+                             <li key={i} className="flex gap-2 text-sm">
+                                 <Check className="h-4 w-4 shrink-0 text-[#dcb575]" />
+                                 <span>{kp}</span>
+                             </li>
+                         ))}
+                    </ul>
+                </div>
+            </div>
         </section>
 
         {/* Gallery Grid */}
