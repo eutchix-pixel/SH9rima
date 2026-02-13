@@ -215,10 +215,6 @@ export default function ChinaExpedition1900Page() {
           <p className="text-lg md:text-xl opacity-85 leading-relaxed max-w-3xl">
             {china1900Data.subtitle}
           </p>
-          <p className="text-base italic opacity-75 border-l-4 border-[#dcb575] pl-4 py-1 max-w-2xl">
-            {china1900Data.question}
-          </p>
-
           <div className="flex flex-wrap gap-3 pt-4">
             {([
               { mode: 'comprendre' as ReadingMode, label: 'Comprendre (5 min)', icon: Clock },
