@@ -156,8 +156,6 @@ export const tonkinOriginsData: TonkinContent = {
         subsections: [
             { title: "Son Tay (1890–1891)", content: "La bande de Doc Ngu opère entre la Rivière Claire et Son Tay. Opérations longues : marches, ratissages, poursuites en forêt dense." },
             { title: "Yen Thé (1890–1891)", content: "Dê Tham, chef pirate redoutable, s’appuie sur des villages fortifiés. Le 9 crée des postes, coupe les axes et détruit les fortins." },
-            { title: "Luu Ky (1891–1892)", content: "Colonnes convergentes dans les massifs. La pression prolongée asphyxie le ravitaillement et fragilise la bande." },
-            { title: "Yen Bay (1891–1892)", content: "Entre le Fleuve Rouge et le Song Chay, les colonnes cherchent à briser les cycles de raids dans les massifs." },
             { title: "Siam (1893)", content: "Expédition vers Chantaboum. Le 9 est projeté dans une opération politique et navale, sans combat majeur." },
             { title: "Pacification (1893–1895)", content: "Arrivée de Gallieni : réorganisation puis offensive. Dê Tham reste insaisissable. Opérations d’envergure à Pan Ai et au haut Song Cau." }
         ],
