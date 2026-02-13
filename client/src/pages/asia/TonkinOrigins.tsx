@@ -7,49 +7,18 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
-import { useQuery } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 
 import GlobalMapChronology from "@/components/GlobalMapChronology";
 
 export default function TonkinOriginsPage() {
   const [readingMode, setReadingMode] = useState<'essential' | 'complete' | 'archives'>('complete');
   const [searchQuery, setSearchQuery] = useState("");
-  const [quizAnswers, setQuizAnswers] = useState<Record<number, string>>({});
-  const [quizScore, setQuizScore] = useState<number | null>(null);
-  const [quizSubmitted, setQuizSubmitted] = useState(false);
   const { scrollYProgress } = useScroll();
-
-  const { data: quizStats } = useQuery<{ averageScore: number; totalAttempts: number }>({
-    queryKey: ["/api/quiz/stats/tonkin-origins"],
-  });
 
   const filteredGlossary = tonkinOriginsData.modules.glossary.filter(item =>  
     item.term.toLowerCase().includes(searchQuery.toLowerCase()) || 
     item.def.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
-  const checkQuiz = async () => {
-    let score = 0;
-    tonkinOriginsData.modules.quiz.forEach((q, idx) => {
-      if (quizAnswers[idx] === q.answer) score++;
-    });
-    setQuizScore(score);
-
-    if (!quizSubmitted) {
-      try {
-        await apiRequest("POST", "/api/quiz/results", {
-          sectionId: "tonkin-origins",
-          score,
-          totalQuestions: tonkinOriginsData.modules.quiz.length,
-        });
-        setQuizSubmitted(true);
-      } catch (e) {
-      }
-    }
-  };
 
   return (
     <div className="bg-[#e8dcc5] text-[#4a3b2a] min-h-screen font-sans pb-24">
