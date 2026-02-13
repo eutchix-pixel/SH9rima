@@ -40,13 +40,21 @@ export default function TonkinOriginsPage() {
 
       {/* Header / Hero */}
       <header className="relative pt-12 pb-16 px-6 overflow-hidden bg-[#dcb575]/20 border-b border-[#4a3b2a]/10">
-        <Link href="/detail/tonkin-naissance">
-          <Button variant="ghost" className="absolute top-4 left-4 text-[#4a3b2a] hover:bg-[#4a3b2a]/10">
-            <ArrowLeft className="mr-2 h-4 w-4" /> Retour
-          </Button>
-        </Link>
+        <div className="flex justify-between items-center absolute top-4 left-4 right-4 z-10">
+            <Link href="/#tonkin">
+            <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#4a3b2a]/10">
+                <ArrowLeft className="mr-2 h-4 w-4" /> Revenir aux thèmes
+            </Button>
+            </Link>
+            
+            <Link href="/detail/tonkin-1900">
+             <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#4a3b2a]/10">
+                Continuer la visite <ArrowRight className="ml-2 h-4 w-4" />
+             </Button>
+            </Link>
+        </div>
 
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className="max-w-4xl mx-auto space-y-6 pt-8">
           <div className="flex flex-wrap gap-2 text-xs font-bold tracking-widest uppercase opacity-60">
             {tonkinOriginsData.intro.reperes.map((rep, i) => (
               <span key={i} className="bg-[#4a3b2a]/5 px-2 py-1 rounded border border-[#4a3b2a]/10">{rep}</span>

@@ -77,7 +77,7 @@ function SectionView({ section, index }: { section: any, index: number }) {
   const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
 
   return (
-    <section ref={ref} className={`min-h-screen relative flex items-center py-24 overflow-hidden ${section.colorClass}`}>
+    <section id={section.id} ref={ref} className={`min-h-screen relative flex items-center py-24 overflow-hidden ${section.colorClass}`}>
         {/* Parallax Background */}
         <div className="absolute inset-0 z-0 overflow-hidden">
             <motion.div style={{ y }} className="absolute inset-0 h-[120%] -top-[10%]">
@@ -108,7 +108,7 @@ function SectionView({ section, index }: { section: any, index: number }) {
                 {/* Subsections List (Timeline) */}
                 <div className="md:col-span-8 space-y-6 md:pl-12 border-l border-current/10 ml-2 md:ml-0">
                     {section.subsections.map((sub: any, i: number) => (
-                        <Link key={sub.id} href={`/detail/${sub.id}`}>
+                        <Link key={sub.id} href={sub.link || `/detail/${sub.id}`}>
                             <motion.div 
                                 className="group relative cursor-pointer bg-white/5 backdrop-blur-sm border border-current/10 p-6 hover:bg-white/10 transition-all duration-300"
                                 initial={{ opacity: 0, x: 20 }}

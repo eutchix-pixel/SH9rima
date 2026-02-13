@@ -14,6 +14,7 @@ export interface SubSection {
   image: string; // placeholder for now
   audio?: string;
   content: string; // Narrative text
+  link?: string; // Optional custom link override
 }
 
 export const museumData: Section[] = [
@@ -25,7 +26,13 @@ export const museumData: Section[] = [
     colorClass: "bg-[#e8dcc5] text-[#4a3b2a]", // Parchemin / Sepia
     bgImage: "/images/bg-tonkin.png",
     subsections: [
-      { id: "tonkin-naissance", title: "Naissance", image: "/images/placeholder.png", content: "La création du régiment et ses premières missions..." },
+      { 
+        id: "tonkin-naissance", 
+        title: "Naissance", 
+        image: "/images/placeholder.png", 
+        content: "La création du régiment et ses premières missions...",
+        link: "/asie/naissance-du-9-tonkin"
+      },
       { id: "tonkin-chine", title: "Chine", image: "/images/placeholder.png", content: "L'intervention en Chine jusqu'à Pekin ..." },
       { id: "tonkin-1900", title: "1900-1914", image: "/images/placeholder.png", content: "La pacification et l'organisation du territoire..." },
       { id: "tonkin-siberie", title: "Sibérie", image: "/images/placeholder.png", content: "L'expédition de Sibérie, une aventure méconnue..." },
