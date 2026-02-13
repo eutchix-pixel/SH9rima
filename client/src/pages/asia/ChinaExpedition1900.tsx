@@ -179,8 +179,8 @@ function ExpeditionMap() {
             .leaflet-popup-content { margin:10px 14px; }
           `}</style>
           <TileLayer
-            url="https://tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> France'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           />
           <Polyline
             positions={seaRouteHanoiTakou}
