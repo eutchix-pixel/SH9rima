@@ -2,7 +2,7 @@ import { tonkinOriginsData } from "@/lib/asia-data";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Clock, ScrollText, BookOpen, Map as MapIcon, Shirt, Crosshair, HelpCircle, ArrowRight, Volume2, Search, Check } from "lucide-react";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -15,10 +15,9 @@ export default function TonkinOriginsPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [quizAnswers, setQuizAnswers] = useState<Record<number, string>>({});
   const [quizScore, setQuizScore] = useState<number | null>(null);
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({ container: containerRef });
+  const { scrollYProgress } = useScroll();
 
-  const filteredGlossary = tonkinOriginsData.modules.glossary.filter(item => 
+  const filteredGlossary = tonkinOriginsData.modules.glossary.filter(item =>  
     item.term.toLowerCase().includes(searchQuery.toLowerCase()) || 
     item.def.toLowerCase().includes(searchQuery.toLowerCase())
   );
