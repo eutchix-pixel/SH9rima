@@ -1,0 +1,378 @@
+MASTER PROMPT — REPLIT AI
+Projet : “Museum Tour Guide — 9e RIMa”
+Page à créer / mettre à jour : ASIE → “Naissance du 9” (Tonkin)
+
+RÔLE
+Tu es Replit AI et tu dois MODIFIER l’app existante (sans accès au PDF). Tu dois donc intégrer directement dans le site tout le texte ci-dessous, tel quel, et mettre en forme la page pour une expérience immersive, fluide et exhaustive.
+
+OBJECTIF VISITEUR
+Permettre à un visiteur (sans guide) de comprendre la naissance du régiment au Tonkin, le contexte, l’environnement (géographie/climat), l’organisation, puis les premières campagnes et opérations de pacification, avec une narration claire + des modules interactifs (frise, cartes, portraits, glossaire, mini-quiz, encadrés “à retenir”).
+
+CONTRAINTES IMPORTANTES
+- N’invente aucun fait historique.
+- Le texte affiché sur la page doit être EXACTEMENT celui de la section “CONTENU À AFFICHER” ci-dessous (tu peux seulement ajouter de la micro-copie UI : “Suivant”, “Retour”, “Explorer la carte”, etc.).
+- Ajoute la page dans la navigation ASIE, et dans le plan global “5 thèmes” (ASIE, ALGÉRIE, GUYANE, SALLE DES MORTS, DRAPEAU/INSIGNE/TRADITIONS).
+- Garde le style visuel “musée colonial / TDM” déjà choisi sur l’app (fonds, typographies, ambiance), mais sans surcharger : lisible, moderne, mobile-first.
+- Prévois des emplacements “Images d’archives” (gallery) avec légendes et alt-text fournis ci-dessous. Si les assets n’existent pas encore, mets des placeholders mais CONSERVE les légendes.
+
+À FAIRE DANS L’APP (FONCTIONNEL)
+1) ROUTE + NAV
+- Ajouter une sous-page ASIE : “Naissance du 9 (Tonkin)”
+- Slug conseillé : /asie/naissance-du-9-tonkin
+- Ajouter un bouton “Revenir aux thèmes” et un bouton “Continuer la visite”.
+
+2) STRUCTURE DE PAGE (UX IMMERSIVE)
+- Hero (titre + sous-titre + 3 boutons de modes de lecture)
+  a) “Essentiel (5 min)”
+  b) “Visite complète (20–30 min)”
+  c) “Archives (lecture approfondie)”
+- Une FRlSE CHRONOLOGIQUE interactive (cliquable, scroll horizontal).
+- Des SECTIONS en accordéon (par défaut ouvertes en mode “Visite complète”).
+- Un bloc “CARTE & MILIEU” avec callouts (Fleuve Rouge, Rivière Noire, Rivière Claire, delta).
+- Un bloc “VIE DU MARSOUIN” (tenue/équipement/logistique) en cartes.
+- Un bloc “OPÉRATIONS” avec fiches par campagne (1890–1895) + 3 récits courts (Dongly, Yen Muc, Siam).
+- Un bloc “PROJECTION” Quang Tcheou Wan (1898–1899).
+- Un GLOSSAIRE (recherche).
+- Un MINI-QUIZ (7 questions) + score simple.
+- Une section finale “Ce qu’il faut retenir” + “Prochaine étape” (lien vers la prochaine rubrique ASIE si elle existe, sinon placeholder).
+
+3) DONNÉES
+- Stocker le contenu dans un fichier de données (JSON/TS/MD selon l’archi existante).
+- Le texte doit être copié-collé depuis “CONTENU À AFFICHER” sans réécriture.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER (TEXTE DU SITE)
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Naissance du 9 au Tonkin — Des prémisses d’une conquête à l’autonomie du régiment
+
+SOUS-TITRE (H2)
+Ici commence l’histoire “Asie” du 9 : un théâtre rude, des marches interminables, une géographie qui commande tout… et la naissance d’un régiment qui va porter ses couleurs pendant plus d’un demi-siècle.
+
+ENCADRÉ D’OUVERTURE (à afficher en haut, style “cartel de musée”)
+Repères : 1860 (Palikao) • 1882 (Hanoï, Rivière) • 1890 (le 9 devient régiment autonome au Tonkin) • 1890–1895 (premières campagnes de pacification)
+
+BOUTONS (micro-copie)
+- Essentiel (5 min)
+- Visite complète (20–30 min)
+- Archives (approfondir)
+
+────────────────────────────
+SECTION 1 — Prémisses d’une conquête (1840–1860)
+────────────────────────────
+En Asie, la seconde moitié du XIXe siècle est marquée par la pression des puissances occidentales sur la Chine. À partir de 1840, une série de “traités inégaux” impose des ouvertures commerciales et diplomatiques, et déclenche en retour des réactions xénophobes, des troubles et des révoltes internes.
+
+Une date clé : 1860.
+Après des opérations conduites dans la région de Tientsin (Tianjin), les forces franco-britanniques remportent des succès décisifs : pont de Palikao (21 septembre 1860), prise de Pékin (17 octobre 1860). Le traité de Pékin (22 octobre 1860) ouvre notamment la voie à l’installation durable de légations étrangères.
+
+Héritage régimentaire :
+L’inscription “Palikao 1860” figure sur le drapeau et rappelle ce jalon lointain, qui s’inscrit dans la longue chronologie menant à l’Indochine.
+
+Conséquence directe pour le futur Tonkin :
+Des troupes chinoises vaincues refluent vers le sud ; sur la durée, certaines se transforment en bandes armées, qui traversent la frontière et alimentent l’insécurité au Tonkin. C’est dans ce contexte que se prépare l’expansion française vers la péninsule indochinoise.
+
+À retenir (cartel)
+- “Palikao 1860” : un repère fondateur sur le drapeau.
+- Les mouvements de troupes et la fragmentation du pouvoir local alimentent le banditisme transfrontalier.
+
+────────────────────────────
+SECTION 2 — Le Tonkin, terre d’aventure (géographie, climat, populations)
+────────────────────────────
+Pourquoi le Tonkin ?
+- Un enjeu économique : voie d’accès vers la Chine, ressources minières et agricoles.
+- Un enjeu politique : rivalités entre puissances européennes.
+- Un enjeu stratégique : contrôler des axes, des deltas, des vallées, et sécuriser les communications.
+
+Ressources (fin XIXe)
+On attribue au Tonkin de nombreuses ressources : mines (or, argent, cuivre, fer), mais aussi sel, zinc, étain, plomb, charbon, etc. Sur le plan agricole : riz, coton, chanvre, tabac, poivre, bois.
+
+Relief (3 grandes zones)
+1) Le delta : vaste plaine alluviale, canaux et arroyos, zone riche et densément peuplée.
+2) Le moyen pays : collines et reliefs intermédiaires.
+3) Le haut pays : montagnes vers la Chine, zones difficiles, favorables aux replis et aux sanctuaires.
+
+Hydrographie (repère majeur)
+- Le Fleuve Rouge (Song Hong) : axe central.
+- Deux affluents cités comme structurants : la Rivière Noire et la Rivière Claire.
+Dans le delta, des canaux relient les cours d’eau : l’eau dicte le mouvement, la logistique et les points de contrôle.
+
+Climat (lecture “terrain”)
+Le Tonkin alterne saisons fraîches, humidité, brumes, puis chaleur et mousson. Les opérations se mènent souvent quand le climat est plus “supportable”, mais la boue, la chaleur, et l’humidité compliquent tout.
+
+Populations (mosaïque)
+Le Tonkin rassemble diverses populations (delta, montagnes, vallées). Les structures locales et les loyautés ne sont pas uniformes, ce qui pèse sur le renseignement, la sécurité et la “pacification”.
+
+Organisation administrative (repère)
+Le schéma administratif colonial s’organise autour de Hanoï et d’un réseau de résidences (résidents, sous-résidents), en appui sur les structures existantes puis progressivement réorganisées.
+
+À retenir (cartel)
+- Ici, la carte commande le combat : vallées, cols, rizières, deltas.
+- La météo et l’eau sont des acteurs à part entière.
+
+────────────────────────────
+MODULE — Carte & Milieu (bloc interactif)
+────────────────────────────
+Titre
+Carte mentale du Tonkin : fleuves, deltas, massifs
+
+Texte d’intro
+Pour comprendre la naissance du 9 au Tonkin, il faut “voir” le terrain : une colonne peut gagner une journée… ou la perdre sur un gué, une rizière, une crête, une forêt inextricable.
+
+Callouts (étiquettes sur la carte)
+- Fleuve Rouge : axe de circulation et de contrôle
+- Rivière Noire : reliefs, vallées, zones de replis
+- Rivière Claire : itinéraires, confluences, embuscades
+- Delta : canaux, densité, enjeux économiques
+
+Boutons
+- Explorer la carte
+- Revenir au texte
+
+────────────────────────────
+SECTION 3 — Naissance d’un régiment (1869–1890)
+────────────────────────────
+26 mars 1869 : un décret fixe à quatre le nombre de régiments d’infanterie de marine. Ces régiments fournissent des compagnies envoyées “au loin”, souvent dispersées, puis regroupées selon les besoins opérationnels.
+
+24 avril 1882 : le commandant Rivière s’empare de la citadelle d’Hanoï. Il trouve sur place des compagnies déjà présentes au titre des traités antérieurs, et arrive avec des renforts (dont des compagnies supplémentaires et de l’artillerie).
+
+27 mars 1883 : prise de Nam Dinh. Les détachements engagés rassemblent des compagnies de différents régiments de marine : l’effort s’intensifie, et la nécessité d’organiser des formations plus cohérentes devient évidente.
+
+16 février 1884 : création de la “division d’Annam”, qui regroupe des compagnies et batteries sous un commandement supérieur. Des brigades et des régiments de marche structurent l’action, notamment autour d’Hanoï.
+
+8 janvier 1885 : début d’opérations vers Lang Son dans un cadre plus structuré, mais l’organisation reste perfectible et doit encore évoluer.
+
+23 janvier 1888 : décision de regrouper plusieurs bataillons en régiments de marche, pour faciliter administration, commandement et emploi. Le régiment de marche du Tonkin porte alors le numéro 2 (administré par le 2e régiment d’infanterie de marine).
+
+10 mars 1890 : le tournant.
+Le régiment de marche n°2 devient le 9e régiment d’infanterie de marine autonome et stationné au Tonkin. Le 9 s’inscrit alors durablement comme “régiment du Tonkin”, acteur majeur de la pacification.
+
+Structure (repère)
+Le régiment est fixé à trois bataillons. Les compagnies sont numérotées 1 à 12.
+
+À retenir (cartel)
+- 1890 : naissance “administrative” et opérationnelle du 9 autonome au Tonkin.
+- Le 9 devient un régiment de présence et d’action prolongée.
+
+────────────────────────────
+MODULE — Vie du marsouin (tenue, équipement, logistique)
+────────────────────────────
+Titre
+Tenues & équipements : s’adapter au Tonkin
+
+Carte 1 — Tenue (vers 1885)
+- Casque colonial modèle 1878 (jugulaire noire)
+- Képi indochinois (souvent noir)
+- Pantalon sombre (parfois treillis modèle 1879)
+- Ceinturon d’infanterie de marine
+- Cartouchière modèle 1877
+- Bidon recouvert de toile bleue
+- Musette en toile
+- Fusil modèle 1874 encore présent sur plusieurs années
+
+Carte 2 — Tenue (évolutions 1895–1903)
+- Apparition d’une toile “bleu mécanique” (1895) : couvre-casque, paletot, pantalon
+- Passage progressif au kaki (à partir de 1903)
+- Guêtres blanches en toile (vers 1894)
+- Équipements : couverture roulée, sac modèle 1892, gamelle modèle 1882, bidon modèle 1877, cartouchières modèle 1888, fusil Lebel 1886/93
+
+Carte 3 — Logistique (règle d’or)
+Une colonne ne vit pas “sur le pays” longtemps. Il faut transporter :
+- vivres (pain, biscuits, conserves), parfois vin
+- munitions
+- matériel (artillerie, outillage)
+- et même le riz destiné aux auxiliaires et aux coolies
+Conséquence : au-delà d’environ deux semaines, la manœuvre dépend de dépôts intermédiaires et de rotations de portage.
+
+Carte 4 — Terrain (citation “ambiance”)
+“Chaleur, humidité, odeurs de végétation, boue : le Tonkin fatigue les corps et étire les colonnes.”
+
+────────────────────────────
+SECTION 4 — Premières opérations (1890–1892) : apprendre à “tenir” le Tonkin
+────────────────────────────
+Le Tonkin est alors une zone d’insécurité : bandes tonkinoises et chinoises, replis transfrontaliers, villages complicités ou soumis, terrain favorable à l’embuscade.
+
+Sous-section 4.1 — Son Tay (octobre 1890 – juin 1891)
+Une bande (Doc Ngu) opère entre la Rivière Claire et Son Tay, s’abrite dans les massifs, surprend des détachements, et oblige à des opérations longues : marches, ratissages, destructions de repaires, poursuites dans une végétation dense.
+Le terrain peut annuler la surprise : rizières, lagunes, forêts, dénivelés.
+
+Sous-section 4.2 — Yen Thé : le fief de Dê Tham (novembre 1890 – janvier 1891)
+Dê Tham s’impose comme un chef pirate durable : villages fortifiés, postes, lignes de défense, ruses, réseau d’information. Une logique s’installe : créer des postes, couper les axes, investir et détruire les fortins, tenir dans le temps.
+
+Sous-section 4.3 — Luu Ky (novembre 1891 – mai 1892) : la chasse dans les massifs
+Luu Ky s’appuie sur des massifs difficiles (forêts, pentes, crêtes). Les opérations combinent colonnes convergentes, recherches de camps, coups de main sur villages, et une lutte constante contre la fuite et le renseignement adverse.
+Point de bascule : la pression prolongée asphyxie le ravitaillement et fragilise la bande.
+
+Sous-section 4.4 — Yen Bay (décembre 1891 – février 1892)
+Dans la région entre le Fleuve Rouge et le Song Chay, les opérations cherchent à briser les cycles de raids. Les colonnes progressent dans des massifs où une erreur de guide peut mener à un engagement inattendu contre un camp fortifié.
+
+Récit court (à afficher en “carte récit”)
+Le combat de Dongly (10 septembre 1892)
+Après le pillage d’un village, le lieutenant Couteret poursuit les pirates avec vingt marsouins du 9 et des tirailleurs tonkinois. Deux jours de chasse, puis contact à Dongly : la troupe se divise, coupe la retraite, engage le combat. Cinq pirates sont tués. Le village est fouillé puis brûlé. Le détachement reçoit la médaille commémorative du Tonkin.
+
+À retenir (cartel)
+- La pacification est une guerre d’endurance : marcher, chercher, encercler, tenir des postes.
+- Le renseignement, les guides, et la population sont déterminants.
+
+────────────────────────────
+SECTION 5 — 1893 : projection et pression (Siam)
+────────────────────────────
+Expédition du Siam (7 août – 7 septembre 1893)
+Contexte : tensions autour du Laos et des accords régionaux. L’opération est limitée et vise notamment l’occupation de Chantaboum.
+
+Ce qui marque l’épisode :
+- Une action conduite sans combat majeur, où la diplomatie et la négociation jouent un rôle central.
+- Un détachement du 9 est engagé dans un dispositif expéditionnaire embarqué, puis rappelé.
+
+À retenir (cartel)
+- Le 9 n’agit pas seulement dans les rizières et les massifs : il peut être projeté dans des opérations “politiques” et navales.
+
+────────────────────────────
+SECTION 6 — 1893–1895 : la pacification s’étire, les tactiques évoluent
+────────────────────────────
+Sous-section 6.1 — Lang Son et enlèvements (octobre 1893)
+Sous la pression, les bandes changent de tactique : prises d’otages, parfois européens, pour rançon. Les colonnes réagissent par poursuites et destructions de refuges.
+
+Sous-section 6.2 — Arrivée de Gallieni (décembre 1893 – janvier 1894)
+Une phase de réorganisation logistique précède l’offensive : ravitaillement, coolies, repositionnement, reconnaissances. Les opérations, même à résultats limités, peuvent produire un effet moral : les habitants osent davantage se retourner contre les bandes.
+
+Sous-section 6.3 — Retour au Yen Thé contre Dê Tham (1894)
+Dê Tham reste insaisissable : ruse, pièges, embuscades, forêts inextricables. Les opérations alternent coups durs et revers. La discipline des colonnes et la coordination des groupes restent vitales.
+
+Récit court (carte récit)
+Le combat de Yen Muc (8 novembre 1894)
+Le sous-lieutenant Gressard, avec sept marsouins du 9, trente tirailleurs et cinq partisans, recherche le repaire du pirate Con Nhi dans le massif du Nui Ban To. À Yen Muc, la section est presque encerclée : une centaine puis près de deux cents Chinois se déploient dans la rizière. Une seule issue : reprendre la piste d’arrivée. “Baïonnette au canon ! À l’assaut !” La charge brise le verrou et ouvre le passage.
+
+Sous-section 6.4 — Pan Ai (juillet–août 1894) et haut Song Cau (mars–mai 1895)
+- Pan Ai : zone frontalière où les bandes franchissent la frontière pour échapper à la poursuite. Les colonnes subissent des embuscades, ajustent leur dispositif, et ratissent méthodiquement le massif.
+- Haut Song Cau : opération d’envergure contre des positions, dépôts d’armes, et prises d’otages. Manœuvre multi-colonnes, combats, libérations, création de postes.
+
+À retenir (cartel)
+- Plus le terrain est “cassé”, plus la colonne s’étire… et plus l’embuscade menace.
+- La pacification est une accumulation d’actions : postes, ratissages, coups de main, interdictions d’axes.
+
+────────────────────────────
+SECTION 7 — 1898–1899 : Quang Tcheou Wan (occupation)
+────────────────────────────
+Contexte international :
+À la fin du XIXe siècle, plusieurs puissances occupent des points stratégiques en Chine. La France décide à son tour d’établir une présence à Quang Tcheou Wan.
+
+Repères
+- Octobre 1898 : envoi de compagnies ; le 9 fournit notamment des éléments pour la garnison.
+- 1899 : opérations et combats autour des postes et axes ; réaction après l’assassinat de deux officiers de marine en mission.
+- Novembre 1899 : actions offensives, prise de positions, puis organisation durable du territoire.
+- 15 novembre 1899 : le territoire est concédé à la France par traité.
+- 1900 : mise sous autorité civile.
+
+À retenir (cartel)
+- Quang Tcheou Wan montre la dimension “littorale et politico-stratégique” des engagements.
+- Le 9 participe à la sécurisation d’une possession, au-delà du seul Tonkin.
+
+────────────────────────────
+GALERIE — Images & légendes (afficher en grille, zoom possible)
+────────────────────────────
+Important : ces images sont des archives. Si les fichiers ne sont pas disponibles, conserver des placeholders, mais afficher exactement ces légendes.
+
+1) Couverture
+Légende : “Au Tonkin 1890–1946 — Hanoï (1920), porte-drapeau : lieutenant Pérignon.”
+Alt : Couverture d’archive “Au Tonkin 1890–1946”.
+
+2) Schéma administratif (Hanoï / résidences)
+Légende : “Organisation administrative : du Résident supérieur à Hanoï au réseau de résidents et sous-résidents.”
+Alt : Schéma d’organisation administrative au Tonkin.
+
+3) Mirador / citadelle
+Légende : “Mirador de la citadelle de Son Tay.”
+Alt : Photo d’un mirador à Son Tay.
+
+4) Carte pirate
+Légende : “Copie d’une carte pirate (Yen Thé).”
+Alt : Carte manuscrite attribuée aux pirates.
+
+5) Croquis défenses (Dê Tham)
+Légende : “Croquis des défenses du fort du Dê Tham.”
+Alt : Croquis de fortifications.
+
+6) Croquis du combat de Dongly
+Légende : “Croquis du combat de Dongly.”
+Alt : Croquis d’un engagement tactique.
+
+7) Expédition du Siam : croquis des lieux
+Légende : “Croquis des lieux de l’expédition du Siam (lieutenant Plailly).”
+Alt : Carte manuscrite de l’expédition du Siam.
+
+8) Région de Moncay / Pan Ai
+Légende : “Région de Moncay — opérations de frontière (Pan Ai).”
+Alt : Carte de région côtière et frontalière.
+
+9) Carte de la région du Pan Ai
+Légende : “Carte de la région du Pan Ai.”
+Alt : Carte manuscrite du massif du Pan Ai.
+
+10) Combat de Yen Muc
+Légende : “Le combat de Yen Muc (8 novembre 1894) — croquis de situation.”
+Alt : Page d’archive sur le combat de Yen Muc.
+
+11) Carte de l’île de Quang Tcheou Wan
+Légende : “Carte de l’île de Quang Tcheou Wan.”
+Alt : Carte manuscrite de Quang Tcheou Wan.
+
+12) Fort Bayard (pavillon des sous-officiers)
+Légende : “Quang Tcheou Wan — Fort Bayard : pavillon des sous-officiers.”
+Alt : Photo d’un bâtiment à Fort Bayard.
+
+────────────────────────────
+GLOSSAIRE (liste, recherche)
+────────────────────────────
+- Traités inégaux : accords imposés à la Chine au XIXe siècle, ouvrant ports et droits aux puissances étrangères.
+- Palikao (1860) : pont et bataille (septembre 1860) ; repère mémoriel sur le drapeau.
+- Tonkin : Nord de l’actuel Vietnam ; delta, massifs, frontière chinoise.
+- Fleuve Rouge : axe majeur, structure les déplacements et les zones de contrôle.
+- Tirailleurs tonkinois : unités indigènes intégrées aux colonnes et opérations.
+- Colonne : formation de marche et de combat ; en terrain fermé, elle s’étire et devient vulnérable.
+- Partisans : auxiliaires locaux armés, utilisés notamment pour la sûreté et l’action dans les vallées.
+- Pacification : terme de l’époque ; désigne les opérations prolongées de contrôle, postes, ratissages et lutte contre les bandes.
+- Quang Tcheou Wan : territoire concédé à la France en 1899 ; occupation et organisation à la charnière XIXe–XXe.
+
+────────────────────────────
+MINI-QUIZ (7 questions)
+────────────────────────────
+Q1. Quelle inscription rappelle l’épisode de 1860 sur le drapeau ?
+A. Palikao 1860
+
+Q2. En quelle année le 9 devient-il un régiment autonome au Tonkin ?
+A. 1890
+
+Q3. Quel fleuve structure fortement la mobilité et le contrôle au Tonkin ?
+A. Le Fleuve Rouge
+
+Q4. Pourquoi les colonnes ont-elles besoin de dépôts et rotations au-delà d’environ deux semaines ?
+A. Parce que vivres, munitions et matériel doivent être portés : l’autonomie logistique est limitée.
+
+Q5. Quel chef pirate est associé au fief du Yen Thé ?
+A. Dê Tham
+
+Q6. Quel récit illustre une manœuvre de sortie d’encerclement par l’assaut ?
+A. Le combat de Yen Muc (8 novembre 1894)
+
+Q7. Quel territoire est concédé à la France par traité le 15 novembre 1899 ?
+A. Quang Tcheou Wan
+
+────────────────────────────
+CONCLUSION — Ce qu’il faut retenir
+────────────────────────────
+Le 9 “naît” au Tonkin dans un monde où la géographie décide : fleuves, deltas, massifs, rizières, forêts. À partir de 1890, il devient un régiment autonome, puis se forge dans des campagnes longues : poursuivre, encercler, tenir des postes, recommencer. C’est une histoire d’endurance, de terrain et d’adaptation.
+
+PROCHAINE ÉTAPE (bouton)
+- Continuer vers : “ASIE — Stabilisation & troubles (1901–1914)” (placeholder si la page n’existe pas)
+
+──────────────────────────────────────────────────────────────────────────────
+FIN DU CONTENU
+──────────────────────────────────────────────────────────────────────────────
+
+NOTES POUR LA MISE EN FORME (UI)
+- Utilise des “cartels” (petits encadrés) pour : À retenir, Repères, Récit court.
+- Insère une barre de progression de lecture (scroll progress).
+- Ajoute un bouton “Écouter l’ambiance” (audio placeholder : “Ambiance jungle / rivière / vent”).
+- Pour la frise : afficher dates + labels courts ; au clic ouvrir un panneau avec le paragraphe correspondant.
+- Pour le quiz : interface simple (radio) + score + bouton “Recommencer”.

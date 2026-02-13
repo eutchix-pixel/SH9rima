@@ -2,6 +2,7 @@ import { Switch, Route } from "wouter";
 import { Layout } from "./components/layout";
 import Home from "./pages/Home";
 import DetailPage from "./pages/Detail";
+import TonkinOriginsPage from "./pages/asia/TonkinOrigins";
 import ScanPage from "./pages/Scan";
 import NotFound from "./pages/not-found";
 
@@ -11,6 +12,7 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/detail/:id" component={DetailPage} />
+        <Route path="/asie/naissance-du-9-tonkin" component={TonkinOriginsPage} />
         <Route path="/scan" component={ScanPage} />
         <Route component={NotFound} />
       </Switch>

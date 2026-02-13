@@ -1,0 +1,307 @@
+import { tonkinOriginsData } from "@/lib/asia-data";
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, Clock, ScrollText, BookOpen, Map as MapIcon, Shirt, Crosshair, HelpCircle, ArrowRight, Volume2, Search, Check } from "lucide-react";
+import { useState, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+
+export default function TonkinOriginsPage() {
+  const [readingMode, setReadingMode] = useState<'essential' | 'complete' | 'archives'>('complete');
+  const [searchQuery, setSearchQuery] = useState("");
+  const [quizAnswers, setQuizAnswers] = useState<Record<number, string>>({});
+  const [quizScore, setQuizScore] = useState<number | null>(null);
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({ container: containerRef });
+
+  const filteredGlossary = tonkinOriginsData.modules.glossary.filter(item => 
+    item.term.toLowerCase().includes(searchQuery.toLowerCase()) || 
+    item.def.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const checkQuiz = () => {
+    let score = 0;
+    tonkinOriginsData.modules.quiz.forEach((q, idx) => {
+      if (quizAnswers[idx] === q.answer) score++;
+    });
+    setQuizScore(score);
+  };
+
+  return (
+    <div className="bg-[#e8dcc5] text-[#4a3b2a] min-h-screen font-sans pb-24">
+      {/* Scroll Progress */}
+      <motion.div 
+        className="fixed top-0 left-0 right-0 h-1.5 bg-[#dcb575] origin-left z-50"
+        style={{ scaleX: scrollYProgress }}
+      />
+
+      {/* Header / Hero */}
+      <header className="relative pt-12 pb-16 px-6 overflow-hidden bg-[#dcb575]/20 border-b border-[#4a3b2a]/10">
+        <Link href="/detail/tonkin-naissance">
+          <Button variant="ghost" className="absolute top-4 left-4 text-[#4a3b2a] hover:bg-[#4a3b2a]/10">
+            <ArrowLeft className="mr-2 h-4 w-4" /> Retour
+          </Button>
+        </Link>
+
+        <div className="max-w-4xl mx-auto space-y-6">
+          <div className="flex flex-wrap gap-2 text-xs font-bold tracking-widest uppercase opacity-60">
+            {tonkinOriginsData.intro.reperes.map((rep, i) => (
+              <span key={i} className="bg-[#4a3b2a]/5 px-2 py-1 rounded border border-[#4a3b2a]/10">{rep}</span>
+            ))}
+          </div>
+
+          <h1 className="font-serif text-4xl md:text-6xl font-bold leading-tight">
+            {tonkinOriginsData.title}
+          </h1>
+          
+          <p className="text-lg md:text-xl opacity-90 leading-relaxed max-w-2xl border-l-4 border-[#4a3b2a] pl-6 italic">
+            {tonkinOriginsData.subtitle}
+          </p>
+
+          <div className="flex flex-wrap gap-3 pt-4">
+            <Button 
+              variant={readingMode === 'essential' ? 'default' : 'outline'}
+              className={readingMode === 'essential' ? "bg-[#4a3b2a] text-[#e8dcc5]" : "border-[#4a3b2a] text-[#4a3b2a] hover:bg-[#4a3b2a]/10"}
+              onClick={() => setReadingMode('essential')}
+            >
+              <Clock className="mr-2 h-4 w-4" /> Essentiel (5 min)
+            </Button>
+            <Button 
+              variant={readingMode === 'complete' ? 'default' : 'outline'}
+              className={readingMode === 'complete' ? "bg-[#4a3b2a] text-[#e8dcc5]" : "border-[#4a3b2a] text-[#4a3b2a] hover:bg-[#4a3b2a]/10"}
+              onClick={() => setReadingMode('complete')}
+            >
+              <ScrollText className="mr-2 h-4 w-4" /> Visite complète (20 min)
+            </Button>
+            <Button 
+              variant={readingMode === 'archives' ? 'default' : 'outline'}
+              className={readingMode === 'archives' ? "bg-[#4a3b2a] text-[#e8dcc5]" : "border-[#4a3b2a] text-[#4a3b2a] hover:bg-[#4a3b2a]/10"}
+              onClick={() => setReadingMode('archives')}
+            >
+              <BookOpen className="mr-2 h-4 w-4" /> Archives
+            </Button>
+          </div>
+          
+          <Button variant="ghost" className="text-xs uppercase tracking-widest opacity-60 hover:bg-transparent pl-0 hover:opacity-100 transition-opacity">
+            <Volume2 className="mr-2 h-4 w-4" /> Écouter l’ambiance (Jungle / Rivière)
+          </Button>
+        </div>
+      </header>
+
+      <div className="max-w-4xl mx-auto px-6 py-12 space-y-16">
+        
+        {/* Main Content Sections */}
+        <div className="space-y-8">
+          <Accordion type="multiple" defaultValue={readingMode === 'complete' ? tonkinOriginsData.sections.map(s => s.id) : ['tonkin']} className="space-y-4">
+            {tonkinOriginsData.sections.map((section) => (
+              <AccordionItem key={section.id} value={section.id} className="border border-[#4a3b2a]/20 rounded-lg bg-[#fdfbf7] px-6 shadow-sm">
+                <AccordionTrigger className="font-serif text-xl md:text-2xl font-bold py-6 hover:no-underline">
+                  {section.title}
+                </AccordionTrigger>
+                <AccordionContent className="space-y-6 text-base leading-relaxed opacity-90 pb-6">
+                  {section.content.map((p, idx) => (
+                    <p key={idx} className={p.startsWith("-") ? "pl-4" : ""}>{p}</p>
+                  ))}
+                  
+                  {section.keyPoints && (
+                    <div className="bg-[#4a3b2a]/5 p-4 rounded-md border-l-4 border-[#4a3b2a] mt-6">
+                      <h4 className="font-bold uppercase text-xs tracking-widest mb-2 opacity-70">À retenir</h4>
+                      <ul className="space-y-2">
+                        {section.keyPoints.map((kp, k) => (
+                          <li key={k} className="flex gap-2 text-sm font-medium">
+                            <span className="text-[#4a3b2a]">•</span> {kp}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+
+        {/* Module: Carte & Milieu */}
+        <section className="bg-[#4a3b2a] text-[#e8dcc5] p-8 rounded-xl shadow-xl relative overflow-hidden">
+          <div className="relative z-10 space-y-6">
+            <div className="flex items-center gap-3 opacity-60 uppercase text-xs tracking-widest font-bold">
+              <MapIcon className="h-4 w-4" /> Module Interactif
+            </div>
+            <h2 className="font-serif text-3xl font-bold">{tonkinOriginsData.modules.map.title}</h2>
+            <p className="opacity-80 max-w-2xl text-lg">{tonkinOriginsData.modules.map.intro}</p>
+            
+            <div className="grid sm:grid-cols-2 gap-4 pt-4">
+              {tonkinOriginsData.modules.map.callouts.map((c, i) => (
+                <div key={i} className="bg-white/10 p-4 rounded border border-white/10 hover:bg-white/20 transition-colors cursor-pointer">
+                  <h3 className="font-bold text-[#dcb575] mb-1">{c.name}</h3>
+                  <p className="text-sm opacity-80">{c.desc}</p>
+                </div>
+              ))}
+            </div>
+            
+            <div className="pt-4 flex gap-4">
+              <Button className="bg-[#e8dcc5] text-[#4a3b2a] hover:bg-white font-bold">Explorer la carte</Button>
+            </div>
+          </div>
+          {/* Decorative map bg placeholder */}
+          <div className="absolute right-0 top-0 w-1/2 h-full bg-[url('/images/bg-tonkin.png')] opacity-10 mix-blend-overlay" />
+        </section>
+
+        {/* Module: Vie du Marsouin */}
+        <section className="space-y-6">
+          <div className="flex items-center gap-2 border-b border-[#4a3b2a]/20 pb-2">
+            <Shirt className="h-5 w-5" />
+            <h2 className="font-serif text-2xl font-bold">{tonkinOriginsData.modules.life.title}</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {tonkinOriginsData.modules.life.cards.map((card, i) => (
+              <Card key={i} className="bg-[#fdfbf7] border-[#4a3b2a]/10 shadow-sm hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <CardTitle className="font-serif text-lg text-[#4a3b2a]">{card.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm space-y-1 opacity-80">
+                  {card.content.map((line, l) => (
+                    <p key={l}>{line}</p>
+                  ))}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Module: Opérations */}
+        <section className="space-y-8">
+          <div className="flex items-center gap-2 border-b border-[#4a3b2a]/20 pb-2">
+            <Crosshair className="h-5 w-5" />
+            <h2 className="font-serif text-2xl font-bold">{tonkinOriginsData.modules.operations.title}</h2>
+          </div>
+          <p className="text-lg opacity-90">{tonkinOriginsData.modules.operations.intro}</p>
+
+          <div className="space-y-6 border-l-2 border-[#dcb575] pl-6">
+            {tonkinOriginsData.modules.operations.subsections.map((sub, i) => (
+              <div key={i} className="relative">
+                <div className="absolute -left-[31px] top-1 h-3 w-3 rounded-full bg-[#dcb575]" />
+                <h3 className="font-bold text-lg mb-2">{sub.title}</h3>
+                <p className="opacity-80 text-sm leading-relaxed">{sub.content}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Récits courts */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {tonkinOriginsData.modules.operations.stories.map((story, i) => (
+              <div key={i} className="bg-[#4a3b2a] text-[#e8dcc5] p-6 rounded-lg shadow-lg rotate-1 hover:rotate-0 transition-transform duration-300">
+                <span className="text-xs font-bold uppercase tracking-widest opacity-60 mb-2 block">Récit du terrain</span>
+                <h3 className="font-serif text-xl font-bold mb-3 text-[#dcb575]">{story.title}</h3>
+                <p className="text-sm opacity-90 italic leading-relaxed">"{story.content}"</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Gallery Grid */}
+        <section className="space-y-6">
+          <h2 className="font-serif text-2xl font-bold border-b border-[#4a3b2a]/20 pb-2">Archives Photographiques</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {tonkinOriginsData.gallery.map((img, i) => (
+              <div key={i} className="group relative aspect-square bg-black/10 rounded overflow-hidden cursor-pointer">
+                {/* Placeholder since images don't exist yet */}
+                <div className="absolute inset-0 flex items-center justify-center bg-[#4a3b2a]/10 group-hover:bg-[#4a3b2a]/20 transition-colors">
+                  <span className="text-xs font-mono opacity-50 uppercase text-center px-2">{img.alt}</span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-2 text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">
+                  {img.caption}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Glossary */}
+        <section className="bg-white/50 p-6 rounded-xl border border-[#4a3b2a]/10">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="font-serif text-xl font-bold">Glossaire</h2>
+            <div className="relative">
+              <Search className="absolute left-2 top-2.5 h-4 w-4 opacity-50" />
+              <Input 
+                placeholder="Rechercher..." 
+                className="pl-8 bg-white border-[#4a3b2a]/20 h-9 w-48"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {filteredGlossary.map((item, i) => (
+              <div key={i} className="text-sm">
+                <span className="font-bold text-[#dcb575]">{item.term}</span> : <span className="opacity-80">{item.def}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Quiz */}
+        <section className="bg-[#4a3b2a] text-[#e8dcc5] p-8 rounded-xl shadow-xl space-y-8">
+          <div className="flex items-center gap-3 border-b border-white/10 pb-4">
+            <HelpCircle className="h-6 w-6 text-[#dcb575]" />
+            <h2 className="font-serif text-2xl font-bold">Testez vos connaissances</h2>
+          </div>
+
+          <div className="space-y-8">
+            {tonkinOriginsData.modules.quiz.map((q, i) => (
+              <div key={i} className="space-y-3">
+                <p className="font-bold text-lg">{i + 1}. {q.question}</p>
+                <RadioGroup 
+                  onValueChange={(val) => setQuizAnswers(prev => ({ ...prev, [i]: val }))} 
+                  className="space-y-2"
+                >
+                  <div className="flex items-center space-x-2 bg-white/5 p-3 rounded hover:bg-white/10 transition-colors cursor-pointer">
+                    <RadioGroupItem value={q.answer} id={`q${i}-a`} className="border-[#dcb575] text-[#dcb575]" />
+                    <Label htmlFor={`q${i}-a`} className="cursor-pointer flex-1">{q.answer}</Label>
+                  </div>
+                  {/* Dummy wrong answers could be added here for a real quiz */}
+                  <div className="flex items-center space-x-2 bg-white/5 p-3 rounded hover:bg-white/10 transition-colors cursor-pointer opacity-50">
+                    <RadioGroupItem value="wrong" id={`q${i}-b`} className="border-[#dcb575]" />
+                    <Label htmlFor={`q${i}-b`} className="cursor-pointer flex-1">Une autre réponse incorrecte...</Label>
+                  </div>
+                </RadioGroup>
+              </div>
+            ))}
+          </div>
+
+          <div className="pt-6 border-t border-white/10 flex items-center justify-between">
+            <Button onClick={checkQuiz} className="bg-[#dcb575] text-[#4a3b2a] hover:bg-white font-bold">
+              Vérifier mes réponses
+            </Button>
+            {quizScore !== null && (
+              <div className="font-bold text-xl flex items-center gap-2 animate-in fade-in slide-in-from-right">
+                <Check className="h-5 w-5 text-green-400" /> Score : {quizScore} / {tonkinOriginsData.modules.quiz.length}
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Conclusion */}
+        <section className="text-center space-y-8 py-12 border-t-2 border-[#4a3b2a]/10">
+          <div className="w-16 h-1 bg-[#4a3b2a] mx-auto mb-6" />
+          <h2 className="font-serif text-2xl font-bold uppercase tracking-widest">Ce qu'il faut retenir</h2>
+          <p className="text-xl leading-relaxed max-w-3xl mx-auto italic font-serif">
+            "{tonkinOriginsData.conclusion.text}"
+          </p>
+          
+          <div className="pt-8">
+            <Button size="lg" className="bg-[#4a3b2a] text-[#e8dcc5] hover:bg-[#4a3b2a]/90 h-14 px-8 text-lg shadow-lg">
+              {tonkinOriginsData.conclusion.nextStep} <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  );
+}
