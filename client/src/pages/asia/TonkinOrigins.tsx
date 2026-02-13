@@ -288,24 +288,6 @@ export default function TonkinOriginsPage() {
             </div>
         </section>
 
-        {/* Gallery Grid */}
-        <section className="space-y-6">
-          <h2 className="font-serif text-2xl font-bold border-b border-[#4a3b2a]/20 pb-2">Archives Photographiques</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {tonkinOriginsData.gallery.map((img, i) => (
-              <div key={i} className="group relative aspect-square bg-black/10 rounded overflow-hidden cursor-pointer">
-                {/* Placeholder since images don't exist yet */}
-                <div className="absolute inset-0 flex items-center justify-center bg-[#4a3b2a]/10 group-hover:bg-[#4a3b2a]/20 transition-colors">
-                  <span className="text-xs font-mono opacity-50 uppercase text-center px-2">{img.alt}</span>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-2 text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">
-                  {img.caption}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Glossary */}
         <section className="bg-white/50 p-6 rounded-xl border border-[#4a3b2a]/10">
           <div className="flex items-center justify-between mb-6">
@@ -326,54 +308,6 @@ export default function TonkinOriginsPage() {
                 <span className="font-bold text-[#dcb575]">{item.term}</span> : <span className="opacity-80">{item.def}</span>
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* Quiz */}
-        <section className="bg-[#4a3b2a] text-[#e8dcc5] p-8 rounded-xl shadow-xl space-y-8">
-          <div className="flex items-center gap-3 border-b border-white/10 pb-4">
-            <HelpCircle className="h-6 w-6 text-[#dcb575]" />
-            <h2 className="font-serif text-2xl font-bold">Testez vos connaissances</h2>
-          </div>
-
-          <div className="space-y-8">
-            {tonkinOriginsData.modules.quiz.map((q, i) => (
-              <div key={i} className="space-y-3">
-                <p className="font-bold text-lg">{i + 1}. {q.question}</p>
-                <RadioGroup 
-                  onValueChange={(val) => setQuizAnswers(prev => ({ ...prev, [i]: val }))} 
-                  className="space-y-2"
-                >
-                  <div className="flex items-center space-x-2 bg-white/5 p-3 rounded hover:bg-white/10 transition-colors cursor-pointer">
-                    <RadioGroupItem value={q.answer} id={`q${i}-a`} className="border-[#dcb575] text-[#dcb575]" />
-                    <Label htmlFor={`q${i}-a`} className="cursor-pointer flex-1">{q.answer}</Label>
-                  </div>
-                  {/* Dummy wrong answers could be added here for a real quiz */}
-                  <div className="flex items-center space-x-2 bg-white/5 p-3 rounded hover:bg-white/10 transition-colors cursor-pointer opacity-50">
-                    <RadioGroupItem value="wrong" id={`q${i}-b`} className="border-[#dcb575]" />
-                    <Label htmlFor={`q${i}-b`} className="cursor-pointer flex-1">Une autre réponse incorrecte...</Label>
-                  </div>
-                </RadioGroup>
-              </div>
-            ))}
-          </div>
-
-          <div className="pt-6 border-t border-white/10 flex items-center justify-between">
-            <Button onClick={checkQuiz} className="bg-[#dcb575] text-[#4a3b2a] hover:bg-white font-bold" data-testid="button-check-quiz">
-              Vérifier mes réponses
-            </Button>
-            <div className="flex items-center gap-4">
-              {quizScore !== null && (
-                <div className="font-bold text-xl flex items-center gap-2 animate-in fade-in slide-in-from-right" data-testid="text-quiz-score">
-                  <Check className="h-5 w-5 text-green-400" /> Score : {quizScore} / {tonkinOriginsData.modules.quiz.length}
-                </div>
-              )}
-              {quizStats && quizStats.totalAttempts > 0 && (
-                <div className="text-xs opacity-60" data-testid="text-quiz-stats">
-                  Moyenne : {quizStats.averageScore}/{tonkinOriginsData.modules.quiz.length} ({quizStats.totalAttempts} tentative{quizStats.totalAttempts > 1 ? 's' : ''})
-                </div>
-              )}
-            </div>
           </div>
         </section>
 
