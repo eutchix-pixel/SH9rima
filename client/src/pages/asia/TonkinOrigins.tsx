@@ -62,7 +62,7 @@ export default function TonkinOriginsPage() {
               className={readingMode === 'complete' ? "bg-[#4a3b2a] text-[#e8dcc5]" : "border-[#4a3b2a] text-[#4a3b2a] hover:bg-[#4a3b2a]/10"}
               onClick={() => setReadingMode('complete')}
             >
-              <ScrollText className="mr-2 h-4 w-4" /> Visite complète (20 min)
+              <ScrollText className="mr-2 h-4 w-4" /> Visite complète
             </Button>
             <Button 
               variant={readingMode === 'archives' ? 'default' : 'outline'}

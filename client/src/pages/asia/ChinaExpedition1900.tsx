@@ -342,7 +342,7 @@ export default function ChinaExpedition1900Page() {
           <div className="flex flex-wrap gap-3 pt-4">
             {([
               { mode: 'comprendre' as ReadingMode, label: 'Essentiel (2 min)', icon: Clock },
-              { mode: 'recit' as ReadingMode, label: 'Visite complète (20 min)', icon: Scroll },
+              { mode: 'recit' as ReadingMode, label: 'Visite complète', icon: Scroll },
               { mode: 'archives' as ReadingMode, label: 'Archives', icon: BookOpen },
             ]).map(({ mode, label, icon: Icon }) => (
               <Button
