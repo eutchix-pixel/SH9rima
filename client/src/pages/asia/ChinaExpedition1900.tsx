@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
   ArrowLeft, ArrowRight, Clock, BookOpen, Scroll, Check, Search,
-  Crosshair, Map as MapIcon, Flag, ChevronDown, RotateCcw
+  Crosshair, Map as MapIcon, Flag, ChevronDown, RotateCcw, Info
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useState, useEffect, useRef } from "react";
@@ -297,6 +297,27 @@ export default function ChinaExpedition1900Page() {
                       >
                         {p.replace("SECTION:", "")}
                       </motion.h3>
+                    );
+                  }
+
+                  if (p.startsWith("INFO:")) {
+                    const infoText = p.replace("INFO:", "");
+                    const parts = infoText.split(" ? ");
+                    return (
+                      <motion.div
+                        key={idx}
+                        className="bg-[#dcb575]/15 border border-[#dcb575]/40 rounded-xl p-5 flex gap-4 items-start"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <Info className="h-5 w-5 shrink-0 text-[#4a3b2a] mt-0.5" />
+                        <div className="text-sm leading-relaxed opacity-90">
+                          <span className="font-bold text-[#4a3b2a]">{parts[0]} ? </span>
+                          {parts.slice(1).join(" ? ")}
+                        </div>
+                      </motion.div>
                     );
                   }
 

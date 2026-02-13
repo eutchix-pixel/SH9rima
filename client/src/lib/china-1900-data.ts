@@ -64,6 +64,7 @@ export const china1900Data: China1900Content = {
       content: [
         "En mai la situation devient critique, car non seulement les bandes armées sillonnent le pays, mais l'armée républicaine chinoise part en campagne. Elle a été réorganisée par l'impératrice dès sa prise de pouvoir : forte de 57 000 hommes répartis en cinq divisions, elle est renforcée par quelques 50 000 Mandchous et 10 000 Mongols. L'entraînement qu'elle a repris lui a redonné un excellent moral.",
         "Dès le 17 juin, les attaques systématiques contre tout ce qui est occidental débutent. Les légations dans Pékin sont attaquées et assiégées, ainsi que les légations de Tien Tsin.",
+        "INFO:Qu'est-ce qu'une légation ? Une légation est la résidence officielle d'un diplomate étranger et de son personnel dans un pays. À Pékin, le quartier des Légations regroupait les ambassades des puissances occidentales et du Japon, protégées par de petites garnisons. C'est ce quartier fortifié que les Boxers et l'armée impériale assiègent pendant 55 jours.",
         "Les Boxers attaquent la colonne du général Seymour, qui a 70 tués et 200 blessés : elle arrive éprouvée à Tien Tsin le 25. La situation devient si grave que des renforts sont appelés de toutes parts."
       ],
       keyPoints: [
