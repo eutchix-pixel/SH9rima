@@ -82,19 +82,16 @@ export const tonkinOriginsData: TonkinContent = {
     },
     {
         id: "naissance",
-        title: "Naissance d’un régiment (1869–1890)",
+        title: "Naissance d'un régiment (1869–1890)",
         content: [
-            "24 avril 1882 : le commandant Rivière s’empare de la citadelle d’Hanoï. Il trouve sur place des compagnies déjà présentes au titre des traités antérieurs, et arrive avec des renforts (dont des compagnies supplémentaires et de l’artillerie).",
-            "16 février 1884 : création de la “division d’Annam”, qui regroupe des compagnies et batteries sous un commandement supérieur. Des brigades et des régiments de marche structurent l’action, notamment autour d’Hanoï.",
-            "8 janvier 1885 : début d’opérations vers Lang Son dans un cadre plus structuré, mais l’organisation reste perfectible et doit encore évoluer.",
-            "23 janvier 1888 : décision de regrouper plusieurs bataillons en régiments de marche, pour faciliter administration, commandement et emploi. Le régiment de marche du Tonkin porte alors le numéro 2 (administré par le 2e régiment d’infanterie de marine).",
-            "10 mars 1890 : le tournant.",
-            "Le régiment de marche n°2 devient le 9e régiment d’infanterie de marine autonome et stationné au Tonkin. Le 9 s’inscrit alors durablement comme “régiment du Tonkin”, acteur majeur de la pacification.",
-            "Le régiment est fixé à trois bataillons. Les compagnies sont numérotées 1 à 12."
+            "1882 : Rivière prend Hanoï. Des compagnies de marine sont déjà sur place.",
+            "1884 : Création de la division d'Annam. Les unités se structurent autour d'Hanoï.",
+            "1888 : Les bataillons sont regroupés en régiments de marche. Le Tonkin reçoit le n°2.",
+            "10 mars 1890 : le tournant. Le régiment de marche n°2 devient le 9e régiment d'infanterie de marine, autonome et stationné au Tonkin. Le 9 est né."
         ],
         keyPoints: [
-            "1890 : naissance “administrative” et opérationnelle du 9 autonome au Tonkin.",
-            "Le 9 devient un régiment de présence et d’action prolongée."
+            "1890 : naissance du 9 autonome au Tonkin.",
+            "Le 9 devient le régiment de présence et d'action au Tonkin."
         ]
     }
   ],
