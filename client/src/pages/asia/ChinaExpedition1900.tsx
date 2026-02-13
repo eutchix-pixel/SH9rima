@@ -112,60 +112,113 @@ function QuizCard({ question, answer }: { question: string; answer: string }) {
   );
 }
 
-const mapSteps: { name: string; date: string; coords: [number, number]; detail: string }[] = [
-  { name: "Ta Kou", date: "7 juillet", coords: [38.97, 117.72], detail: "Arrivée en rade, débarquement (1 500 hommes)" },
-  { name: "Tien Tsin", date: "11–14 juil.", coords: [39.1235, 117.1980], detail: "Bataille — prise le 14 juillet" },
-  { name: "Pei Tsang", date: "5 août", coords: [39.35, 117.05], detail: "Les Chinois battent en retraite" },
-  { name: "Toung Tchéou", date: "12–13 août", coords: [39.85, 116.66], detail: "Bivouac à 3 km de Pékin" },
-  { name: "Pékin", date: "14–17 août", coords: [39.9042, 116.4074], detail: "Légation française atteinte à minuit" },
+const expeditionSteps: { name: string; date: string; coords: [number, number]; detail: string; etape: number }[] = [
+  { name: "Ta Kou", date: "7 juillet 1900", coords: [38.97, 117.72], detail: "Débarquement du corps expéditionnaire français — 1 500 hommes sous le commandement du général Frey", etape: 1 },
+  { name: "Tien Tsin", date: "11–14 juillet", coords: [39.1235, 117.1980], detail: "Bataille de Tien Tsin — la ville est prise le 14 juillet, jour de la fête nationale", etape: 2 },
+  { name: "Pei Tsang", date: "5 août", coords: [39.35, 117.05], detail: "Victoire rapide — les troupes chinoises battent en retraite vers l'ouest", etape: 3 },
+  { name: "Toung Tchéou", date: "12–13 août", coords: [39.85, 116.66], detail: "Dernier bivouac avant Pékin — les troupes alliées se regroupent à 3 km de la capitale", etape: 4 },
+  { name: "Pékin", date: "14–17 août", coords: [39.9042, 116.4074], detail: "Assaut final — la légation française est atteinte à minuit. Fin du siège des 55 jours", etape: 5 },
 ];
 
-function makeIcon(name: string, date: string) {
+function createStepIcon(etape: number, name: string) {
   return L.divIcon({
     className: '',
-    html: `<div style="display:flex;flex-direction:column;align-items:center;pointer-events:auto">
-      <div style="background:#4a3b2a;color:#e8dcc5;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700;white-space:nowrap;font-family:serif;box-shadow:0 2px 6px rgba(0,0,0,.3);border:1px solid #dcb575">${name}</div>
-      <div style="width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid #4a3b2a;margin-top:-1px"></div>
-      <div style="width:10px;height:10px;border-radius:50%;background:#dcb575;border:2px solid #4a3b2a;margin-top:2px;box-shadow:0 0 0 3px rgba(220,181,117,.3)"></div>
-      <div style="color:#4a3b2a;font-size:10px;font-weight:600;margin-top:2px;white-space:nowrap;background:rgba(232,220,197,.9);padding:1px 5px;border-radius:4px">${date}</div>
+    html: `<div style="position:relative;display:flex;flex-direction:column;align-items:center">
+      <div style="background:#8b1a1a;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.4)">${etape}</div>
+      <div style="background:#8b1a1a;color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap;font-family:serif;margin-top:4px;box-shadow:0 1px 4px rgba(0,0,0,.3)">${name}</div>
     </div>`,
-    iconSize: [80, 60],
-    iconAnchor: [40, 30],
+    iconSize: [100, 55],
+    iconAnchor: [50, 14],
   });
 }
 
+function FitBounds() {
+  const map = useMap();
+  useEffect(() => {
+    const bounds = L.latLngBounds(expeditionSteps.map(s => s.coords));
+    map.fitBounds(bounds, { padding: [40, 40] });
+  }, [map]);
+  return null;
+}
+
 function ExpeditionMap() {
+  const [selected, setSelected] = useState<number | null>(null);
+
   return (
-    <div className="relative w-full h-[500px] rounded-xl overflow-hidden shadow-2xl border-4 border-[#4a3b2a]/20 bg-[#e8dcc5]">
-      <MapContainer
-        center={[39.4, 117.0]}
-        zoom={8}
-        scrollWheelZoom={false}
-        className="w-full h-full z-0"
-      >
-        <style>{`
-          .leaflet-popup-content-wrapper { background: #fdfbf7; color: #4a3b2a; border: 1px solid #dcb575; border-radius: 8px; font-family: serif; }
-          .leaflet-popup-tip { background: #fdfbf7; }
-        `}</style>
-        <TileLayer
-          url="https://tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png"
-        />
-        <Polyline
-          positions={mapSteps.map(s => s.coords)}
-          pathOptions={{ color: '#4a3b2a', weight: 3, dashArray: '10,8', opacity: 0.7 }}
-        />
-        {mapSteps.map((step, i) => (
-          <Marker key={i} position={step.coords} icon={makeIcon(step.name, step.date)}>
-            <Popup>
-              <div style={{ textAlign: 'center', maxWidth: 200 }}>
-                <strong style={{ fontSize: 15, fontFamily: 'serif' }}>{step.name}</strong>
-                <div style={{ fontSize: 12, color: '#4a3b2a', fontWeight: 700, marginTop: 2 }}>{step.date}</div>
-                <div style={{ fontSize: 12, marginTop: 6, opacity: 0.85, lineHeight: 1.4 }}>{step.detail}</div>
-              </div>
-            </Popup>
-          </Marker>
+    <div className="space-y-3" data-testid="carte-itineraire">
+      <div className="relative w-full h-[500px] rounded-xl overflow-hidden shadow-2xl border-2 border-[#4a3b2a]/30 bg-white">
+        <div className="absolute top-3 left-3 z-[1000] bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow text-xs font-serif font-bold text-[#4a3b2a] border border-[#4a3b2a]/20">
+          Itinéraire du Corps Expéditionnaire — Chine 1900
+        </div>
+        <MapContainer
+          center={[39.4, 117.0]}
+          zoom={8}
+          scrollWheelZoom={false}
+          className="w-full h-full z-0"
+          style={{ background: '#f2efe9' }}
+        >
+          <style>{`
+            .leaflet-popup-content-wrapper { background:#fff; color:#4a3b2a; border:2px solid #8b1a1a; border-radius:10px; font-family:serif; box-shadow:0 4px 12px rgba(0,0,0,.15); }
+            .leaflet-popup-tip { background:#fff; }
+            .leaflet-popup-content { margin:10px 14px; }
+          `}</style>
+          <FitBounds />
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          />
+          <Polyline
+            positions={expeditionSteps.map(s => s.coords)}
+            pathOptions={{ color: '#8b1a1a', weight: 4, opacity: 0.8, dashArray: '12,8' }}
+          />
+          {expeditionSteps.map((step, i) => {
+            if (i < expeditionSteps.length - 1) {
+              const next = expeditionSteps[i + 1];
+              const midLat = (step.coords[0] + next.coords[0]) / 2;
+              const midLng = (step.coords[1] + next.coords[1]) / 2;
+              return (
+                <Marker
+                  key={`arrow-${i}`}
+                  position={[midLat, midLng]}
+                  icon={L.divIcon({
+                    className: '',
+                    html: `<div style="color:#8b1a1a;font-size:16px;font-weight:900;text-shadow:0 0 3px #fff,0 0 3px #fff">▸</div>`,
+                    iconSize: [16, 16],
+                    iconAnchor: [8, 8],
+                  })}
+                  interactive={false}
+                />
+              );
+            }
+            return null;
+          })}
+          {expeditionSteps.map((step, i) => (
+            <Marker
+              key={i}
+              position={step.coords}
+              icon={createStepIcon(step.etape, step.name)}
+              eventHandlers={{ click: () => setSelected(selected === i ? null : i) }}
+            >
+              <Popup>
+                <div style={{ textAlign: 'center', minWidth: 180 }}>
+                  <div style={{ fontSize: 16, fontWeight: 900, fontFamily: 'serif', color: '#8b1a1a' }}>{step.name}</div>
+                  <div style={{ fontSize: 12, fontWeight: 700, color: '#4a3b2a', marginTop: 4, padding: '2px 8px', background: '#f5f0e6', borderRadius: 4, display: 'inline-block' }}>{step.date}</div>
+                  <div style={{ fontSize: 12, marginTop: 8, lineHeight: 1.5, color: '#333' }}>{step.detail}</div>
+                </div>
+              </Popup>
+            </Marker>
+          ))}
+        </MapContainer>
+      </div>
+      <div className="flex flex-wrap gap-2 justify-center">
+        {expeditionSteps.map((step, i) => (
+          <div key={i} className="flex items-center gap-1.5 text-xs text-[#4a3b2a] font-serif">
+            <span className="w-5 h-5 rounded-full bg-[#8b1a1a] text-white flex items-center justify-center text-[10px] font-bold">{step.etape}</span>
+            <span className="font-semibold">{step.name}</span>
+            {i < expeditionSteps.length - 1 && <span className="text-[#8b1a1a] ml-1">→</span>}
+          </div>
         ))}
-      </MapContainer>
+      </div>
     </div>
   );
 }
