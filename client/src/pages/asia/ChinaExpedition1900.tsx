@@ -9,6 +9,9 @@ import {
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useInView, AnimatePresence } from "framer-motion";
+import { MapContainer, TileLayer, Marker, Polyline, Popup, useMap } from "react-leaflet";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 
 type ReadingMode = 'comprendre' | 'recit' | 'archives';
 
@@ -109,50 +112,66 @@ function QuizCard({ question, answer }: { question: string; answer: string }) {
   );
 }
 
-function RouteMap() {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const steps = [
-    { name: "Hanoï", sub: "24–25 juin", x: 10, y: 75 },
-    { name: "Ta Kou", sub: "7 juillet", x: 35, y: 45 },
-    { name: "Tien Tsin", sub: "11–14 juillet", x: 55, y: 35 },
-    { name: "Pei Tsang", sub: "5 août", x: 70, y: 28 },
-    { name: "Pékin", sub: "14–17 août", x: 88, y: 20 },
-  ];
+const routeSteps: { name: string; date: string; lat: number; lng: number; detail?: string }[] = [
+  { name: "Hanoï", date: "24–25 juin", lat: 21.0285, lng: 105.8542, detail: "Départ du bataillon à bord du vapeur l'Éridan" },
+  { name: "Ta Kou", date: "7 juillet", lat: 38.97, lng: 117.72, detail: "Arrivée en rade, débarquement du corps français" },
+  { name: "Tien Tsin", date: "11–14 juillet", lat: 39.1235, lng: 117.1980, detail: "Bataille de Tien Tsin — prise de la ville le 14 juillet" },
+  { name: "Pei Tsang", date: "5 août", lat: 39.35, lng: 117.05, detail: "Bataille — les Chinois battent en retraite" },
+  { name: "Toung Tchéou", date: "12–13 août", lat: 39.85, lng: 116.66, detail: "Bivouac à 3 km de Pékin" },
+  { name: "Pékin", date: "14–17 août", lat: 39.9042, lng: 116.4074, detail: "Prise de Pékin — légation française atteinte à minuit" },
+];
 
+const routePositions: [number, number][] = routeSteps.map(s => [s.lat, s.lng]);
+
+function createDateIcon(name: string, date: string) {
+  return L.divIcon({
+    className: '',
+    html: `<div style="display:flex;flex-direction:column;align-items:center;transform:translateX(-50%)">
+      <div style="background:#4a3b2a;color:#e8dcc5;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700;white-space:nowrap;font-family:serif;box-shadow:0 2px 6px rgba(0,0,0,.3);border:1px solid #dcb575">${name}</div>
+      <div style="width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid #4a3b2a;margin-top:-1px"></div>
+      <div style="width:10px;height:10px;border-radius:50%;background:#dcb575;border:2px solid #4a3b2a;margin-top:2px;box-shadow:0 0 0 3px rgba(220,181,117,.3)"></div>
+      <div style="color:#4a3b2a;font-size:10px;font-weight:600;margin-top:2px;white-space:nowrap;background:rgba(232,220,197,.9);padding:1px 5px;border-radius:4px">${date}</div>
+    </div>`,
+    iconSize: [0, 0],
+    iconAnchor: [0, 28],
+  });
+}
+
+function ExpeditionMap() {
   return (
-    <div ref={ref} className="relative bg-[#3a2e1f] rounded-xl p-6 overflow-hidden" style={{ minHeight: 220 }}>
-      <div className="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%200h60v60H0z%22%20fill%3D%22none%22%20stroke%3D%22%23dcb575%22%20stroke-width%3D%220.5%22/%3E%3C/svg%3E')]" />
-      <svg viewBox="0 0 100 100" className="w-full h-40 md:h-52 relative z-10">
-        {steps.map((step, i) => {
-          if (i === steps.length - 1) return null;
-          const next = steps[i + 1];
-          return (
-            <motion.line
-              key={i}
-              x1={step.x} y1={step.y}
-              x2={next.x} y2={next.y}
-              stroke="#dcb575"
-              strokeWidth="0.6"
-              strokeDasharray="2,1"
-              initial={{ pathLength: 0, opacity: 0 }}
-              animate={isInView ? { pathLength: 1, opacity: 1 } : {}}
-              transition={{ duration: 0.8, delay: i * 0.4 + 0.3 }}
-            />
-          );
-        })}
-        {steps.map((step, i) => (
-          <motion.g key={i}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.4, delay: i * 0.4 + 0.1 }}
+    <div className="rounded-xl overflow-hidden border-2 border-[#4a3b2a]/20 shadow-lg" style={{ height: 420 }}>
+      <MapContainer
+        center={[32, 112]}
+        zoom={4}
+        scrollWheelZoom={false}
+        style={{ height: '100%', width: '100%' }}
+        attributionControl={false}
+      >
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Polyline
+          positions={routePositions}
+          pathOptions={{ color: '#4a3b2a', weight: 3, dashArray: '8,6', opacity: 0.8 }}
+        />
+        {routeSteps.map((step, i) => (
+          <Marker
+            key={i}
+            position={[step.lat, step.lng]}
+            icon={createDateIcon(step.name, step.date)}
           >
-            <circle cx={step.x} cy={step.y} r="2.5" fill="#dcb575" stroke="#e8dcc5" strokeWidth="0.5" />
-            <text x={step.x} y={step.y - 5} textAnchor="middle" fill="#e8dcc5" fontSize="3.2" fontWeight="bold">{step.name}</text>
-            <text x={step.x} y={step.y + 6} textAnchor="middle" fill="#dcb575" fontSize="2.2" opacity="0.7">{step.sub}</text>
-          </motion.g>
+            {step.detail && (
+              <Popup>
+                <div style={{ fontFamily: 'serif', textAlign: 'center' }}>
+                  <strong style={{ fontSize: 14 }}>{step.name}</strong>
+                  <div style={{ fontSize: 12, color: '#4a3b2a', fontWeight: 600 }}>{step.date}</div>
+                  <div style={{ fontSize: 11, marginTop: 4, opacity: 0.8 }}>{step.detail}</div>
+                </div>
+              </Popup>
+            )}
+          </Marker>
         ))}
-      </svg>
+      </MapContainer>
     </div>
   );
 }
@@ -161,7 +180,6 @@ export default function ChinaExpedition1900Page() {
   const [readingMode, setReadingMode] = useState<ReadingMode>('comprendre');
   const [searchQuery, setSearchQuery] = useState("");
   const { scrollYProgress } = useScroll();
-  const [activeRepere, setActiveRepere] = useState<number | null>(null);
 
   const filteredGlossary = china1900Data.glossary.filter(item =>
     item.term.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -243,40 +261,14 @@ export default function ChinaExpedition1900Page() {
       <div className="max-w-4xl mx-auto px-6 py-12 space-y-16">
 
         <FadeInSection>
-          <div className="py-6 border-b border-[#4a3b2a]/10">
-            <h3 className="text-xs font-bold uppercase tracking-widest opacity-60 mb-6 text-center">Repères</h3>
-            <div className="overflow-x-auto pb-4 -mx-6 px-6 scrollbar-none flex justify-start md:justify-center">
-              <div className="flex gap-6 min-w-max px-4">
-                {china1900Data.reperes.map((rep, i, arr) => (
-                  <div
-                    key={i}
-                    className={`relative flex flex-col items-center gap-2 group cursor-pointer w-28 text-center transition-all duration-300 ${activeRepere === i ? 'scale-110' : ''}`}
-                    onClick={() => setActiveRepere(activeRepere === i ? null : i)}
-                    data-testid={`repere-${i}`}
-                  >
-                    <motion.div
-                      className="text-base font-bold font-serif text-[#4a3b2a]"
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.1 }}
-                    >
-                      {rep.date}
-                    </motion.div>
-                    <motion.div
-                      className="w-3.5 h-3.5 rounded-full bg-[#dcb575] border-2 border-[#4a3b2a] group-hover:scale-125 transition-transform z-10 relative"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ delay: i * 0.1 + 0.05, type: "spring" }}
-                    />
-                    {i < arr.length - 1 && (
-                      <div className="absolute top-[38px] left-[50%] w-[calc(100%+24px)] h-0.5 bg-[#4a3b2a]/20" />
-                    )}
-                    <div className="text-xs opacity-70 leading-tight font-medium">{rep.label}</div>
-                  </div>
-                ))}
-              </div>
+          <section className="space-y-4" data-testid="bloc-carte-itineraire">
+            <div className="flex items-center gap-2 border-b-2 border-[#dcb575] pb-3">
+              <MapIcon className="h-5 w-5" />
+              <h2 className="font-serif text-2xl font-bold">Itinéraire : Hanoï → Pékin</h2>
             </div>
-          </div>
+            <p className="text-sm opacity-60 italic">Cliquez sur un marqueur pour voir les détails.</p>
+            <ExpeditionMap />
+          </section>
         </FadeInSection>
 
         {visibleBlocs.map((bloc, blocIdx) => (
@@ -376,17 +368,6 @@ export default function ChinaExpedition1900Page() {
           </FadeInSection>
         ))}
 
-        {showRecit && (
-          <FadeInSection>
-            <section className="space-y-6">
-              <div className="flex items-center gap-2 border-b-2 border-[#dcb575] pb-3">
-                <MapIcon className="h-5 w-5" />
-                <h2 className="font-serif text-2xl font-bold">Itinéraire : Hanoï → Pékin</h2>
-              </div>
-              <RouteMap />
-            </section>
-          </FadeInSection>
-        )}
 
         <FadeInSection>
           <section className="relative overflow-hidden rounded-2xl shadow-2xl" data-testid="bloc-heritage-drapeau">
