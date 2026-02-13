@@ -72,10 +72,6 @@ export default function TonkinOriginsPage() {
               <BookOpen className="mr-2 h-4 w-4" /> Archives
             </Button>
           </div>
-          
-          <Button variant="ghost" className="text-xs uppercase tracking-widest opacity-60 hover:bg-transparent pl-0 hover:opacity-100 transition-opacity">
-            <Volume2 className="mr-2 h-4 w-4" /> Écouter l’ambiance (Jungle / Rivière)
-          </Button>
         </div>
       </header>
 
