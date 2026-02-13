@@ -203,29 +203,6 @@ export default function TonkinOriginsPage() {
             <div className="absolute right-0 top-0 w-1/2 h-full bg-[url('/images/bg-tonkin.png')] opacity-10 mix-blend-overlay" />
         </section>
 
-        {/* Module: Vie du Marsouin */}
-        <section className="space-y-6">
-          <div className="flex items-center gap-2 border-b border-[#4a3b2a]/20 pb-2">
-            <Shirt className="h-5 w-5" />
-            <h2 className="font-serif text-2xl font-bold">{tonkinOriginsData.modules.life.title}</h2>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            {tonkinOriginsData.modules.life.cards.map((card, i) => (
-              <Card key={i} className="bg-[#fdfbf7] border-[#4a3b2a]/10 shadow-sm hover:shadow-md transition-shadow">
-                <CardHeader>
-                  <CardTitle className="font-serif text-lg text-[#4a3b2a]">{card.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-sm space-y-1 opacity-80">
-                  {card.content.map((line, l) => (
-                    <p key={l}>{line}</p>
-                  ))}
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
         {/* Module: Opérations */}
         <section className="space-y-8">
           <div className="flex items-center gap-2 border-b border-[#4a3b2a]/20 pb-2">
