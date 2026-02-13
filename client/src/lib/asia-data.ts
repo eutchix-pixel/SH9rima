@@ -65,7 +65,6 @@ export const tonkinOriginsData: TonkinContent = {
       title: "Prémisses d’une conquête (1840–1860)",
       content: [
         "Pourquoi les Troupes de marine sont en Asie au XIXe siècle ?",
-        "Au XIXe siècle, la France envoie des forces en Asie pour sécuriser ses routes maritimes, tenir des points d’appui et peser dans un espace devenu stratégique sur les plans diplomatique et commercial. Les Troupes de marine, faites pour l’outre‑mer, embarquent, débarquent, occupent, protègent et appuient ces opérations lointaines.",
         "Dès 1840, des accords imposés à l’Empire chinois — souvent appelés “traités inégaux” — ouvrent des ports et installent des représentants étrangers, mais déclenchent aussi des réactions : hostilité, violences, troubles et fragmentation locale. La présence française s’inscrit alors dans la durée, entre diplomatie, commerce et actions armées.",
         "Ce qu’il faut comprendre pour la naissance du 9",
         "Cela ne crée pas encore le 9, mais prépare son apparition : opérations répétées, points d’appui, besoin d’unités mieux organisées et stabilisées. À la frontière sud de la Chine, le Tonkin devient un carrefour (proche de la Chine, riche en ressources, exposé aux circulations armées) ; cette combinaison d’enjeux et d’instabilité mène, plus tard, à un régiment autonome durablement stationné : le 9."
