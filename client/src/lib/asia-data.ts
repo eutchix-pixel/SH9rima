@@ -90,7 +90,6 @@ export const tonkinOriginsData: TonkinContent = {
             "23 janvier 1888 : décision de regrouper plusieurs bataillons en régiments de marche, pour faciliter administration, commandement et emploi. Le régiment de marche du Tonkin porte alors le numéro 2 (administré par le 2e régiment d’infanterie de marine).",
             "10 mars 1890 : le tournant.",
             "Le régiment de marche n°2 devient le 9e régiment d’infanterie de marine autonome et stationné au Tonkin. Le 9 s’inscrit alors durablement comme “régiment du Tonkin”, acteur majeur de la pacification.",
-            "Le régiment est fixé à trois bataillons. Les compagnies sont numérotées 1 à 12."
         ],
         keyPoints: [
             "1890 : naissance “administrative” et opérationnelle du 9 autonome au Tonkin.",
