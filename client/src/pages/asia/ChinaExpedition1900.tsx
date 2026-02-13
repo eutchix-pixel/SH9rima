@@ -9,7 +9,7 @@ import {
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useInView, AnimatePresence } from "framer-motion";
-import { MapContainer, TileLayer, Marker, Polyline, Popup, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Polyline, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
@@ -133,14 +133,29 @@ function createStepIcon(etape: number, name: string, date: string) {
   });
 }
 
-function FitBounds() {
-  const map = useMap();
-  useEffect(() => {
-    const bounds = L.latLngBounds(expeditionSteps.map(s => s.coords));
-    map.fitBounds(bounds, { padding: [60, 60] });
-  }, [map]);
-  return null;
-}
+const seaRouteHanoiTakou: [number, number][] = [
+  [21.03, 105.85],
+  [20.86, 106.68],
+  [20.3, 107.1],
+  [19.5, 107.8],
+  [18.8, 109.0],
+  [19.2, 110.5],
+  [20.0, 111.0],
+  [21.0, 111.5],
+  [22.3, 114.2],
+  [23.4, 116.8],
+  [24.5, 118.1],
+  [26.1, 119.9],
+  [28.0, 121.0],
+  [30.6, 122.3],
+  [32.0, 122.0],
+  [34.0, 121.0],
+  [35.5, 120.5],
+  [37.0, 122.0],
+  [37.8, 121.2],
+  [38.3, 119.0],
+  [38.97, 117.72],
+];
 
 function ExpeditionMap() {
   const [selected, setSelected] = useState<number | null>(null);
@@ -163,11 +178,38 @@ function ExpeditionMap() {
             .leaflet-popup-tip { background:#fff; }
             .leaflet-popup-content { margin:10px 14px; }
           `}</style>
-          <FitBounds />
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           />
+          <Polyline
+            positions={seaRouteHanoiTakou}
+            pathOptions={{ color: '#fff', weight: 6, opacity: 0.8 }}
+          />
+          <Polyline
+            positions={seaRouteHanoiTakou}
+            pathOptions={{ color: '#1a5276', weight: 3, opacity: 0.8, dashArray: '8,6' }}
+          />
+          <Marker
+            position={[21.03, 105.85]}
+            icon={L.divIcon({
+              className: '',
+              html: `<div style="display:flex;flex-direction:column;align-items:center">
+                <div style="background:#1a5276;color:#fff;padding:3px 10px;border-radius:5px;font-size:13px;font-weight:700;white-space:nowrap;font-family:serif;box-shadow:0 2px 6px rgba(0,0,0,.35)">Hanoï</div>
+                <div style="background:rgba(255,255,255,.92);color:#1a5276;padding:2px 7px;border-radius:3px;font-size:10px;font-weight:600;white-space:nowrap;margin-top:3px;border:1px solid rgba(26,82,118,.2)">Départ</div>
+                <div style="width:10px;height:10px;border-radius:50%;background:#1a5276;border:3px solid #fff;margin-top:4px;box-shadow:0 2px 6px rgba(0,0,0,.4)"></div>
+              </div>`,
+              iconSize: [100, 65],
+              iconAnchor: [50, 60],
+            })}
+          >
+            <Popup>
+              <div style={{ textAlign: 'center', minWidth: 160 }}>
+                <div style={{ fontSize: 16, fontWeight: 900, fontFamily: 'serif', color: '#1a5276' }}>Hanoï</div>
+                <div style={{ fontSize: 12, marginTop: 6, lineHeight: 1.5, color: '#333' }}>Point de départ du corps expéditionnaire — traversée maritime le long des côtes de Chine jusqu'à Ta Kou</div>
+              </div>
+            </Popup>
+          </Marker>
           <Polyline
             positions={expeditionSteps.map(s => s.coords)}
             pathOptions={{ color: '#fff', weight: 8, opacity: 0.9 }}
@@ -215,7 +257,12 @@ function ExpeditionMap() {
           ))}
         </MapContainer>
       </div>
-      <div className="flex flex-wrap gap-2 justify-center">
+      <div className="flex flex-wrap gap-2 justify-center items-center">
+        <div className="flex items-center gap-1.5 text-xs text-[#4a3b2a] font-serif">
+          <span className="w-5 h-5 rounded-full bg-[#1a5276] text-white flex items-center justify-center text-[10px] font-bold">⚓</span>
+          <span className="font-semibold">Hanoï</span>
+          <span className="text-[#1a5276] ml-1">⟿</span>
+        </div>
         {expeditionSteps.map((step, i) => (
           <div key={i} className="flex items-center gap-1.5 text-xs text-[#4a3b2a] font-serif">
             <span className="w-5 h-5 rounded-full bg-[#8b1a1a] text-white flex items-center justify-center text-[10px] font-bold">{step.etape}</span>
@@ -223,6 +270,10 @@ function ExpeditionMap() {
             {i < expeditionSteps.length - 1 && <span className="text-[#8b1a1a] ml-1">→</span>}
           </div>
         ))}
+      </div>
+      <div className="flex justify-center gap-6 text-[10px] text-[#4a3b2a]/70 font-serif">
+        <span className="flex items-center gap-1.5"><span className="w-6 h-0.5 bg-[#1a5276] inline-block" style={{ borderTop: '2px dashed #1a5276' }} /> Route maritime</span>
+        <span className="flex items-center gap-1.5"><span className="w-6 h-0.5 bg-[#8b1a1a] inline-block" style={{ borderTop: '2px dashed #8b1a1a' }} /> Route terrestre</span>
       </div>
     </div>
   );
