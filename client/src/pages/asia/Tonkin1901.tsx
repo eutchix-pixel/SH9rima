@@ -1,6 +1,7 @@
 import { tonkin1901Data } from "@/lib/tonkin-1901-data";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   ArrowLeft, ArrowRight, Clock, BookOpen, Scroll, Check, Search,
   Crosshair, Map as MapIcon, Shield, ChevronDown, RotateCcw, Info,
@@ -108,8 +109,12 @@ const blocIcons: Record<string, React.ReactNode> = {
 export default function Tonkin1901Page() {
   const [readingMode, setReadingMode] = useState<ReadingMode>('comprendre');
   const { scrollYProgress } = useScroll();
-  const [quizScore, setQuizScore] = useState(0);
-  const [answeredQuiz, setAnsweredQuiz] = useState<Set<number>>(new Set());
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredGlossary = tonkin1901Data.glossary.filter(item =>
+    item.term.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.def.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   const showRecit = readingMode === 'recit' || readingMode === 'archives';
   const showArchives = readingMode === 'archives';
@@ -367,6 +372,31 @@ export default function Tonkin1901Page() {
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
+              </section>
+            </FadeInSection>
+
+            <FadeInSection>
+              <section className="bg-white/50 p-6 rounded-xl border border-[#4a3b2a]/10" data-testid="bloc-glossaire">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="font-serif text-xl font-bold">Glossaire</h2>
+                  <div className="relative">
+                    <Search className="absolute left-2 top-2.5 h-4 w-4 opacity-50" />
+                    <Input
+                      placeholder="Rechercher..."
+                      className="pl-8 bg-white border-[#4a3b2a]/20 h-9 w-48"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      data-testid="input-glossary-search"
+                    />
+                  </div>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {filteredGlossary.map((item, i) => (
+                    <div key={i} className="text-sm">
+                      <span className="font-bold text-[#dcb575]">{item.term}</span> : <span className="opacity-80">{item.def}</span>
+                    </div>
+                  ))}
+                </div>
               </section>
             </FadeInSection>
           </>

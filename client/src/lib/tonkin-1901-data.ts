@@ -25,6 +25,7 @@ export interface Tonkin1901Content {
     text: string;
     points: string[];
   };
+  glossary: { term: string; def: string }[];
   gallery: { caption: string; alt: string }[];
   quiz: { question: string; answer: string }[];
   conclusion: string;
@@ -146,6 +147,22 @@ export const tonkin1901Data: Tonkin1901Content = {
       "1909–1913 : Dê Tham — l'insécurité durable qui se règle par renseignement, usure, et enfin élimination."
     ]
   },
+  glossary: [
+    { term: "RIMa", def: "Régiment d'Infanterie de Marine — désignation avant 1901." },
+    { term: "RIC", def: "Régiment d'Infanterie Coloniale — nouvelle désignation à partir du 1er janvier 1901." },
+    { term: "RAC", def: "Régiment d'Artillerie Coloniale — remplace les régiments d'artillerie de Marine." },
+    { term: "RTT", def: "Régiment de Tirailleurs Tonkinois — unité de soldats autochtones encadrés par des officiers français." },
+    { term: "Dê Tham", def: "Chef de bande insaisissable, figure de la résistance anti-française dans la région du Yen Thê. Assassiné en février 1913." },
+    { term: "Datura", def: "Plante hallucinogène utilisée pour empoisonner les soldats de la citadelle d'Hanoï le 28 juin 1908." },
+    { term: "Annam", def: "Protectorat français au centre du Viêt Nam actuel, entre le Tonkin (nord) et la Cochinchine (sud)." },
+    { term: "Tonkin", def: "Protectorat français au nord du Viêt Nam actuel, avec Hanoï pour capitale." },
+    { term: "Yen Thê", def: "Région montagneuse du Tonkin, refuge du Dê Tham et de ses bandes." },
+    { term: "Colonne", def: "Formation militaire mobile constituée pour une opération spécifique, souvent en terrain difficile." },
+    { term: "Pacification", def: "Ensemble des opérations militaires et politiques visant à rétablir l'ordre dans un territoire." },
+    { term: "Guerre russo-japonaise", def: "Conflit de 1904–1905 entre la Russie et le Japon, remporté par le Japon. Événement majeur pour le prestige asiatique." },
+    { term: "Citadelle", def: "Fortification abritant la garnison militaire. À Hanoï, siège du 9e RIC et du 4e RAC." },
+    { term: "Marsouin", def: "Surnom traditionnel des soldats d'infanterie de Marine / coloniale." },
+  ],
   gallery: [
     { caption: "Carte des troubles d'Annam — 1908.", alt: "Carte schématique des provinces touchées en Annam." },
     { caption: "Hanoï : citadelle — 1908 (affaire du datura).", alt: "Vue/illustration de la citadelle d'Hanoï." },
