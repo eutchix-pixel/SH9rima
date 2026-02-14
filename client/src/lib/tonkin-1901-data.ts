@@ -111,10 +111,8 @@ export const tonkin1901Data: Tonkin1901Content = {
       title: "Traque du Dê Tham — juillet–décembre 1909",
       mode: 'recit',
       content: [
-        "Au début de 1909, des bandes opèrent dans la région du Yen Thê. Le 24 juin, une nouvelle éclate : présence du Dê Tham repérée ; la zone est investie et fouillée, mais la population est complice et la région quadrillée devient « invivable ».",
-        "En juillet, la colonne est mise sur pied : quatre compagnies (dont deux du 9e RIC et deux du 1er RTT), plus un peloton de cavalerie légère. Les compagnies du 9 sont celles du capitaine Gremillet et du capitaine Pertuis. La colonne est organisée en groupes et manœuvre sur les axes et les massifs (Tam Dao, Nui Lang…).",
-        "Les combats et accrochages s'étalent : encerclements, négociations, embuscades, assauts, replis. La fatigue, la chaleur, l'humidité et la difficulté du renseignement pèsent. Les pertes sont lourdes : au petit jour, les pirates fuient ; « l'affaire a fait 17 tués et 39 blessés ».",
-        "Fin décembre, les unités sont renvoyées ; ne demeurent qu'un élément réduit. La colonne est dissoute le 1er mars 1910, le calme étant total."
+        "En 1909, le Dê Tham est repéré dans la région du Yen Thê. Une colonne de quatre compagnies (dont deux du 9e RIC) est lancée à sa poursuite — mais la population le protège et le terrain rend les opérations épuisantes.",
+        "Embuscades, chaleur, renseignement défaillant : la traque s'étire sur six mois. Bilan : 17 tués, 39 blessés. La colonne est dissoute le 1er mars 1910, le calme étant revenu."
       ],
       keyPoints: [
         "Problème géopolitique « local » : bande + complicité + refuge terrain.",
