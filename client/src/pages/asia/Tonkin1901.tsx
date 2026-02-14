@@ -162,8 +162,8 @@ export default function Tonkin1901Page() {
           </p>
           <div className="flex flex-wrap gap-3 pt-4">
             {([
-              { mode: 'comprendre' as ReadingMode, label: 'Comprendre (5 min)', icon: Clock },
-              { mode: 'recit' as ReadingMode, label: 'Récit (10–15 min)', icon: Scroll },
+              { mode: 'comprendre' as ReadingMode, label: 'Essentiel (5 min)', icon: Clock },
+              { mode: 'recit' as ReadingMode, label: 'Visite complète', icon: Scroll },
               { mode: 'archives' as ReadingMode, label: 'Archives', icon: BookOpen },
             ]).map(({ mode, label, icon: Icon }) => (
               <Button
