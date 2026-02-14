@@ -328,90 +328,91 @@ export default function Tonkin1901Page() {
               </FadeInSection>
             ))}
 
-            <FadeInSection>
-              <section className="relative overflow-hidden rounded-2xl shadow-2xl" data-testid="bloc-detham-portrait">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#1a1208] via-[#2a1f14] to-[#4a3b2a]" />
-                <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%226%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20fill%3D%22%23dcb575%22/%3E%3C/svg%3E')]" />
-
-                <div className="relative z-10 p-8 md:p-12 space-y-8">
-                  <motion.div
-                    className="flex items-center gap-3"
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    <Skull className="h-7 w-7 text-red-500" />
-                    <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#e8dcc5] uppercase tracking-widest">La fin du Dê Tham</h2>
-                  </motion.div>
-
-                  <motion.div
-                    className="w-24 h-0.5 bg-red-500/60"
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.3 }}
-                  />
-
-                  <motion.div
-                    className="bg-white/5 border border-[#dcb575]/20 rounded-xl p-6 space-y-3"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                  >
-                    <div className="flex items-center gap-2 mb-2">
-                      <Users className="h-4 w-4 text-[#dcb575]" />
-                      <span className="text-xs uppercase tracking-widest text-[#dcb575] font-bold">Qui est le Dê Tham ?</span>
-                    </div>
-                    <p className="text-sm text-[#e8dcc5]/85 leading-relaxed">
-                      Chef de guerre insaisissable, le Dê Tham est la figure emblématique de la résistance anti-française au Tonkin. Depuis les massifs du Yen Thê, il mène des embuscades, rallie des bandes et échappe à toutes les colonnes lancées contre lui. Sa tête est mise à prix dès 1909 — mais personne ne parvient à le capturer.
-                    </p>
-                  </motion.div>
-
-                  <div className="space-y-6 pt-2">
-                    {[
-                      { year: "1909", text: "Sa tête est mise à prix. Les colonnes militaires ratissent le Yen Thê sans succès.", icon: "🎯" },
-                      { year: "1909–1912", text: "Il échappe à chaque opération. La population le protège, le terrain le cache.", icon: "🌿" },
-                      { year: "Fév. 1913", text: "Deux Chinois, alléchés par la prime, gagnent sa confiance… pour mieux l'abattre.", icon: "⚔️" },
-                    ].map((step, i) => (
-                      <motion.div
-                        key={i}
-                        className="flex gap-4 items-start"
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: i * 0.25 + 0.5, duration: 0.5 }}
-                      >
-                        <div className="flex flex-col items-center">
-                          <span className="text-2xl">{step.icon}</span>
-                          {i < 2 && <div className="w-0.5 h-8 bg-[#dcb575]/30 mt-2" />}
-                        </div>
-                        <div>
-                          <span className="font-serif font-bold text-[#dcb575] text-sm">{step.year}</span>
-                          <p className="text-sm text-[#e8dcc5]/85 leading-relaxed mt-1">{step.text}</p>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-
-                  <motion.div
-                    className="bg-red-900/20 border border-red-500/30 rounded-xl p-6 text-center space-y-3 mt-4"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 1.3, duration: 0.6, type: "spring" }}
-                  >
-                    <p className="font-serif text-xl md:text-2xl font-bold text-[#e8dcc5] italic">
-                      « Sa mort marque le retour définitif au calme dans cette région. »
-                    </p>
-                    <p className="text-xs text-[#dcb575]/70 uppercase tracking-widest">Février 1913 — Yen Thê, Tonkin</p>
-                  </motion.div>
-                </div>
-              </section>
-            </FadeInSection>
           </>
         )}
+
+        <FadeInSection>
+          <section className="relative overflow-hidden rounded-2xl shadow-2xl" data-testid="bloc-detham-portrait">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#1a1208] via-[#2a1f14] to-[#4a3b2a]" />
+            <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%226%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20fill%3D%22%23dcb575%22/%3E%3C/svg%3E')]" />
+
+            <div className="relative z-10 p-8 md:p-12 space-y-8">
+              <motion.div
+                className="flex items-center gap-3"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <Skull className="h-7 w-7 text-red-500" />
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#e8dcc5] uppercase tracking-widest">La fin du Dê Tham</h2>
+              </motion.div>
+
+              <motion.div
+                className="w-24 h-0.5 bg-red-500/60"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.3 }}
+              />
+
+              <motion.div
+                className="bg-white/5 border border-[#dcb575]/20 rounded-xl p-6 space-y-3"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  <Users className="h-4 w-4 text-[#dcb575]" />
+                  <span className="text-xs uppercase tracking-widest text-[#dcb575] font-bold">Qui est le Dê Tham ?</span>
+                </div>
+                <p className="text-sm text-[#e8dcc5]/85 leading-relaxed">
+                  Chef de guerre insaisissable, le Dê Tham est la figure emblématique de la résistance anti-française au Tonkin. Depuis les massifs du Yen Thê, il mène des embuscades, rallie des bandes et échappe à toutes les colonnes lancées contre lui. Sa tête est mise à prix dès 1909 — mais personne ne parvient à le capturer.
+                </p>
+              </motion.div>
+
+              <div className="space-y-6 pt-2">
+                {[
+                  { year: "1909", text: "Sa tête est mise à prix. Les colonnes militaires ratissent le Yen Thê sans succès.", icon: "🎯" },
+                  { year: "1909–1912", text: "Il échappe à chaque opération. La population le protège, le terrain le cache.", icon: "🌿" },
+                  { year: "Fév. 1913", text: "Deux Chinois, alléchés par la prime, gagnent sa confiance… pour mieux l'abattre.", icon: "⚔️" },
+                ].map((step, i) => (
+                  <motion.div
+                    key={i}
+                    className="flex gap-4 items-start"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.25 + 0.5, duration: 0.5 }}
+                  >
+                    <div className="flex flex-col items-center">
+                      <span className="text-2xl">{step.icon}</span>
+                      {i < 2 && <div className="w-0.5 h-8 bg-[#dcb575]/30 mt-2" />}
+                    </div>
+                    <div>
+                      <span className="font-serif font-bold text-[#dcb575] text-sm">{step.year}</span>
+                      <p className="text-sm text-[#e8dcc5]/85 leading-relaxed mt-1">{step.text}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <motion.div
+                className="bg-red-900/20 border border-red-500/30 rounded-xl p-6 text-center space-y-3 mt-4"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1.3, duration: 0.6, type: "spring" }}
+              >
+                <p className="font-serif text-xl md:text-2xl font-bold text-[#e8dcc5] italic">
+                  « Sa mort marque le retour définitif au calme dans cette région. »
+                </p>
+                <p className="text-xs text-[#dcb575]/70 uppercase tracking-widest">Février 1913 — Yen Thê, Tonkin</p>
+              </motion.div>
+            </div>
+          </section>
+        </FadeInSection>
 
         {showArchives && (
           <>
