@@ -299,31 +299,6 @@ export default function Tonkin1901Page() {
                     ))}
                   </div>
 
-                  {episode.keyPoints.length > 0 && (
-                    <motion.div
-                      className="bg-[#4a3b2a] text-[#e8dcc5] p-5 rounded-xl"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.2 }}
-                    >
-                      <h4 className="font-bold uppercase text-xs tracking-widest mb-3 text-[#dcb575]">À retenir</h4>
-                      <ul className="space-y-2">
-                        {episode.keyPoints.map((kp, k) => (
-                          <motion.li
-                            key={k}
-                            className="flex gap-2 text-sm"
-                            initial={{ opacity: 0, x: -10 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: k * 0.15 + 0.3 }}
-                          >
-                            <Check className="h-4 w-4 shrink-0 text-[#dcb575] mt-0.5" /> {kp}
-                          </motion.li>
-                        ))}
-                      </ul>
-                    </motion.div>
-                  )}
                 </section>
               </FadeInSection>
             ))}
