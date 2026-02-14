@@ -63,30 +63,17 @@ export const tonkin1901Data: Tonkin1901Content = {
     },
     {
       id: "tension",
-      title: "Le retour de la tension : pourquoi ?",
+      title: "Tension & réponse : 1904–1908",
       mode: 'comprendre',
       content: [
         "La défaite russe face au Japon (1904–1905) change la donne : pour la première fois, une puissance asiatique bat un empire occidental. Le prestige du Japon explose et nourrit un mouvement anti‑français en Indochine.",
-        "En 1908, l'agitation éclate en Annam : figures politiques réfugiées au Japon, manifestations dans plusieurs provinces (Quan Nain, Quang‑Ngai, Binh Dinh). Une intervention militaire est décidée."
+        "En 1908, l'agitation éclate en Annam : figures politiques réfugiées au Japon, manifestations dans plusieurs provinces (Quan Nain, Quang‑Ngai, Binh Dinh). Une intervention militaire est décidée.",
+        "Le 3e bataillon du 9e RIC (Hué, Tourane) est déjà sur place, mais l'idée maîtresse est d'éviter la sur‑escalade : les bandes sont nombreuses mais faiblement armées. Les renforts servent à intimider, pas à combattre. Début avril 1908, un détachement opère en Annam. Manifestations dispersées, meneurs arrêtés : le calme revient progressivement."
       ],
       keyPoints: [
         "La stabilité locale dépend de l'équilibre régional (Russie/Japon).",
-        "L'Annam devient un foyer d'agitation : politique, influence, symbole.",
-        "Le Tonkin reste exposé aux « répliques » de la région."
-      ]
-    },
-    {
-      id: "leviers",
-      title: "Gérer l'instabilité : comment ?",
-      mode: 'comprendre',
-      content: [
-        "Le 3e bataillon du 9e RIC (Hué, Tourane) est déjà sur place, mais l'idée maîtresse est d'éviter la sur‑escalade : les bandes sont nombreuses mais faiblement armées. Les renforts servent à intimider, pas à combattre.",
-        "Début avril 1908, un détachement opère en Annam. Manifestations dispersées, meneurs arrêtés : le calme revient progressivement."
-      ],
-      keyPoints: [
-        "Objectif : tenir sans « sur‑escalade » (intimidation + contrôle).",
-        "Outils : détachements, gardes, arrestations, appui d'artillerie si nécessaire.",
-        "Terrain social : la foule, les meneurs, les réseaux."
+        "L'Annam devient un foyer d'agitation pro‑japonaise.",
+        "Réponse : intimidation + contrôle, sans sur‑escalade."
       ]
     },
   ],
