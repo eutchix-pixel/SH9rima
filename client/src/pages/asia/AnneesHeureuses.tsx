@@ -219,14 +219,6 @@ export default function AnneesHeureusesPage() {
                 </motion.div>
                 <div className="space-y-4">
                   <p className="text-base leading-relaxed opacity-90">{heureusesData.musique.texte}</p>
-                  <div className="space-y-2">
-                    {heureusesData.musique.documents.map((doc, i) => (
-                      <div key={i} className="flex items-center gap-2 text-sm opacity-80">
-                        <Volume2 className="h-4 w-4 shrink-0 text-[#dcb575]" />
-                        <span>{doc}</span>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </div>
             </div>
