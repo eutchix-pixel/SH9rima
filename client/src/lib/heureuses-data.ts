@@ -61,7 +61,7 @@ export const heureusesData: HeureusesContent = {
     { title: "Dans l'arrière‑pays, franchissement en pirogue", parenthese: "Ici, l'eau est une route — et parfois une frontière." },
   ],
   hanoiReperes: [
-    { title: "Boulevard Dong Khanh", parenthese: "Une capitale coloniale, vitrine administrative et urbaine.", image: "/images/hanoi-boulevard-dong-khanh.png", legende: "Boulevard Dong Khanh, Hanoï — années 1920" },
+    { title: "Rue Paul‑Bert (rue de l'Opéra)", parenthese: "Une capitale coloniale, vitrine administrative et urbaine.", image: "/images/hanoi-rue-paul-bert.png", legende: "Tonkin — Hanoï, rue Paul‑Bert — carte postale d'époque" },
     { title: "La gare de Hanoï", parenthese: "La mobilité, le contrôle et la logistique commencent souvent ici.", image: "/images/hanoi-gare.png", legende: "Gare de Hanoï — point de départ vers le Tonkin" },
     { title: "Boulevard Henri Rivière", parenthese: "Les noms de lieux racontent aussi une mémoire.", image: "/images/hanoi-boulevard-riviere.png", legende: "Boulevard Henri Rivière, au bord du Petit Lac" },
   ],
