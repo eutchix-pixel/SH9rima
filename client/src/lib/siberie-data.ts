@@ -10,7 +10,20 @@ export interface SiberieContent {
     keyPoints: string[];
     mode: 'comprendre' | 'recit' | 'archives';
   }[];
-  role9: string;
+  itineraire: {
+    etape: string;
+    detail: string;
+  }[];
+  unite: {
+    effectifs: string;
+    detail: string[];
+    commandant: string;
+    depart: string;
+  };
+  chocThermique: {
+    title: string;
+    text: string;
+  };
   glossary: { term: string; def: string }[];
   gallery: { caption: string; alt: string }[];
   quiz: { question: string; answer: string }[];
@@ -24,8 +37,9 @@ export const siberieData: SiberieContent = {
   question: "Pourquoi des forces françaises et alliées se retrouvent-elles à Vladivostok et le long du Transsibérien, alors que l'Europe sort de la Première Guerre mondiale ?",
   reperes: [
     { date: "1917", label: "Révolutions en Russie → bascule politique" },
-    { date: "1918", label: "Sortie de la guerre (Brest‑Litovsk) → rupture stratégique" },
-    { date: "1918", label: "Montée de la guerre civile → fragmentation du pouvoir" },
+    { date: "Mars 1918", label: "Traité de Brest‑Litovsk → la Russie sort de la guerre" },
+    { date: "30 juin 1918", label: "Les Légions Tchèques s'emparent de Vladivostok" },
+    { date: "24 juil. 1918", label: "Départ du 9e RIC depuis Hanoï sur le vapeur André Lebon" },
     { date: "1918–1919", label: "Interventions alliées → sécurisation de points/axes" },
     { date: "1919–1920", label: "Désengagement progressif → priorité au nouvel ordre européen" },
   ],
@@ -47,16 +61,15 @@ export const siberieData: SiberieContent = {
     },
     {
       id: "acteurs",
-      title: "Qui intervient, et pour quoi faire ?",
+      title: "L'imbroglio : France, Tchèques, Bolcheviks",
       mode: 'comprendre',
       content: [
-        "Plusieurs acteurs interviennent ou cherchent à peser : les puissances alliées (dont la France) : protéger des intérêts, sécuriser des points d'appui, éviter l'extension du chaos et maintenir une capacité d'influence.",
-        "Les forces russes opposées aux bolcheviks : acteurs internes de la guerre civile, avec des agendas et des zones d'autorité variables. Les bolcheviks : cherchent à consolider un pouvoir central et à reprendre le contrôle des axes.",
-        "Le Japon et les États‑Unis : présents en Asie‑Pacifique, avec des objectifs et des inquiétudes propres, notamment sur l'équilibre régional.",
+        "Les Légions Tchèques : 50 000 soldats d'élite (ex-armée du Tsar) veulent rejoindre la France via Vladivostok. Moscou ordonne leur désarmement total. Les Tchèques refusent, se révoltent et s'emparent de Vladivostok le 30 juin 1918 sous les ordres du Général Dietrich.",
+        "La France envoie le 9e RIC pour sécuriser leur retour et freiner la révolution bolchevique. Le Japon et les États‑Unis sont également présents en Asie‑Pacifique, avec des objectifs propres sur l'équilibre régional.",
         "(Parenthèse : dans une intervention « multinationale », la coalition n'a pas toujours une stratégie unique. L'alliance existe… mais les intérêts divergent.)"
       ],
       keyPoints: [
-        "Plusieurs agendas coexistent : sécurité, influence, équilibre régional.",
+        "Triangle géopolitique : France — Légions Tchèques — Bolcheviks.",
         "La coopération alliée n'efface pas la concurrence entre puissances.",
         "La guerre civile russe reconfigure le théâtre."
       ]
@@ -91,7 +104,30 @@ export const siberieData: SiberieContent = {
       ]
     },
   ],
-  role9: "Des éléments du 9 ont été associés à l'histoire « Asie » du régiment. Pour une version exhaustive (dates, missions, lieux), cette section sera complétée à partir des documents régimentaires.",
+  unite: {
+    effectifs: "454 hommes du 9e RIC",
+    detail: [
+      "1ʳᵉ compagnie (Lt Deseille, 228 hommes)",
+      "8ᵉ compagnie (Capt. Schill, 226 hommes)",
+    ],
+    commandant: "Chef de bataillon Mallet (commande aussi 2 compagnies du 16e RIC)",
+    depart: "24 juillet 1918, depuis Hanoï, sur le vapeur André Lebon",
+  },
+  itineraire: [
+    { etape: "Hanoï", detail: "Juillet 1918 — Départ des troupes coloniales" },
+    { etape: "Vladivostok", detail: "Base arrière et débarquement" },
+    { etape: "Jonction Amour-Mandchourie", detail: "Prise par les Tchèques après 2 jours de combat" },
+    { etape: "Transsibérien", detail: "Le bataillon remonte la voie ferrée vers l'Ouest" },
+    { etape: "Lac Baïkal", detail: "Traversée de la région Transbaïkalie" },
+    { etape: "Krasnoïarsk & Tomsk", detail: "Progression dans la steppe sibérienne" },
+    { etape: "Omsk", detail: "Centre névralgique du gouvernement « Blanc »" },
+    { etape: "Monts Oural (Tchéliabinsk)", detail: "Porte d'entrée de la Russie d'Europe" },
+    { etape: "Oufa", detail: "Zone de front et point d'arrêt extrême" },
+  ],
+  chocThermique: {
+    title: "Le choc thermique : du Tonkin à la Sibérie",
+    text: "Les marsouins du 9e RIC quittent les +35 °C du Tonkin pour affronter les −40 °C de l'hiver sibérien. Un voyage digne de Michel Strogoff : du riz des rizières à la neige de la steppe, des moustiques de la jungle aux blizzards de l'Oural. Le contraste est total — climat, paysage, ennemi, tout change."
+  },
   glossary: [
     { term: "Brest‑Litovsk", def: "Traité de 1918 marquant la sortie de la Russie de la guerre." },
     { term: "Guerre civile", def: "Conflit interne entre forces rivales pour le contrôle du pouvoir." },
@@ -99,6 +135,12 @@ export const siberieData: SiberieContent = {
     { term: "Intervention alliée", def: "Présence militaire extérieure visant à peser sur un équilibre stratégique." },
     { term: "Transsibérien", def: "Axe ferroviaire structurant la mobilité et l'autorité en Sibérie." },
     { term: "Vladivostok", def: "Port d'entrée et point d'appui en Extrême‑Orient russe." },
+    { term: "Légions Tchèques", def: "50 000 soldats d'élite, ex-armée du Tsar, cherchant à rejoindre la France via Vladivostok." },
+    { term: "Général Dietrich", def: "Commandant des Légions Tchèques lors de la prise de Vladivostok." },
+    { term: "André Lebon", def: "Vapeur sur lequel le bataillon du 9e RIC embarque depuis Hanoï le 24 juillet 1918." },
+    { term: "Bataillon de marche", def: "Unité constituée spécialement pour une opération, ici 454 hommes du 9e RIC." },
+    { term: "Omsk", def: "Centre politique du gouvernement « Blanc » (anti-bolchevique) en Sibérie." },
+    { term: "Oufa", def: "Zone de front et point d'arrêt extrême de la progression alliée." },
   ],
   gallery: [
     { caption: "Carte schématique du Transsibérien.", alt: "Carte du Transsibérien." },
@@ -108,12 +150,14 @@ export const siberieData: SiberieContent = {
     { caption: "Coalition : diversité des forces.", alt: "Groupes de soldats de différentes nations." },
   ],
   quiz: [
-    { question: "En Sibérie, l'enjeu principal est souvent…", answer: "Le contrôle des axes et de l'influence" },
+    { question: "Combien d'hommes du 9e RIC partent en Sibérie ?", answer: "454 hommes (1ʳᵉ et 8ᵉ compagnies)" },
+    { question: "Qui commande le bataillon de marche ?", answer: "Le chef de bataillon Mallet" },
+    { question: "Sur quel navire le 9e RIC embarque-t-il ?", answer: "Le vapeur André Lebon, le 24 juillet 1918" },
+    { question: "Pourquoi les Légions Tchèques se révoltent-elles ?", answer: "Moscou ordonne leur désarmement ; elles refusent et s'emparent de Vladivostok" },
+    { question: "Quel est le point d'arrêt extrême du bataillon ?", answer: "Oufa — zone de front" },
     { question: "Quelle infrastructure structure la mobilité en Sibérie ?", answer: "Le Transsibérien" },
-    { question: "Pourquoi un port compte autant dans ce théâtre ?", answer: "Parce qu'il conditionne l'entrée, le ravitaillement et la présence" },
-    { question: "Une coalition multinationale signifie toujours…", answer: "Des intérêts parfois divergents malgré l'alliance" },
     { question: "Dans un territoire immense, la « victoire » est souvent…", answer: "Politique avant d'être militaire" },
-    { question: "Quel est l'effet majeur d'une intervention limitée ?", answer: "Peser localement (points d'appui, axes), sans régler seul un conflit continental" },
+    { question: "Quel choc affrontent les marsouins du 9e ?", answer: "De +35 °C au Tonkin à −40 °C en Sibérie" },
   ],
   conclusion: "La Sibérie, à la fin de la Grande Guerre, est un test de puissance : distance, logistique, influence, coalition. Comprendre ce théâtre, c'est comprendre que la géopolitique se joue autant sur des axes que sur des batailles.",
   nextStep: "Continuer vers : ASIE — Les Années Heureuses"

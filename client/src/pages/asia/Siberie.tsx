@@ -4,8 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
   ArrowLeft, ArrowRight, Clock, BookOpen, Scroll, Check, Search,
-  Crosshair, Map as MapIcon, ChevronDown, RotateCcw, Info,
-  Globe, Train, Anchor, Snowflake, Users, Compass, FileQuestion
+  Crosshair, Map as MapIcon, RotateCcw, Info,
+  Globe, Train, Anchor, Snowflake, Users, Compass, Ship,
+  Thermometer, Shield
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useState, useRef } from "react";
@@ -82,16 +83,6 @@ function TimelineInteractive() {
               <span className="font-serif font-bold text-sm text-[#dcb575] whitespace-nowrap">{rep.date}</span>
               <span className={`text-sm transition-colors ${activeIndex === i ? 'font-bold text-[#4a3b2a]' : 'opacity-80'}`}>{rep.label}</span>
             </div>
-            {activeIndex === i && (
-              <motion.div
-                className="mt-2 text-xs bg-[#4a3b2a]/5 border border-[#4a3b2a]/10 rounded-lg p-3 opacity-80"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                transition={{ duration: 0.3 }}
-              >
-                {rep.label}
-              </motion.div>
-            )}
           </motion.div>
         ))}
       </div>
@@ -106,55 +97,128 @@ const blocIcons: Record<string, React.ReactNode> = {
   consequences: <Compass className="h-5 w-5" />,
 };
 
+const etapeIcons = [Ship, Anchor, Crosshair, Train, Snowflake, MapIcon, Shield, Globe, Crosshair];
+
+function ItineraireTimeline() {
+  const [activeStep, setActiveStep] = useState<number | null>(null);
+
+  return (
+    <div data-testid="itineraire-timeline">
+      <div className="overflow-x-auto pb-4 -mx-2">
+        <div className="flex items-start gap-0 min-w-[900px] px-2">
+          {siberieData.itineraire.map((step, i) => {
+            const Icon = etapeIcons[i] || MapIcon;
+            const isActive = activeStep === i;
+            return (
+              <div key={i} className="flex items-start flex-1">
+                <div
+                  className="flex flex-col items-center cursor-pointer group"
+                  onClick={() => setActiveStep(isActive ? null : i)}
+                >
+                  <motion.div
+                    className={`w-12 h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300
+                      ${isActive
+                        ? 'bg-[#4a3b2a] border-[#dcb575] text-[#dcb575] scale-110'
+                        : 'bg-white border-[#4a3b2a]/20 text-[#4a3b2a]/60 group-hover:border-[#dcb575] group-hover:text-[#dcb575]'
+                      }`}
+                    initial={{ opacity: 0, y: -10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.08, duration: 0.3 }}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </motion.div>
+                  <p className={`text-xs font-bold mt-2 text-center max-w-[90px] leading-tight transition-colors ${isActive ? 'text-[#4a3b2a]' : 'opacity-60'}`}>
+                    {step.etape}
+                  </p>
+                  {isActive && (
+                    <motion.div
+                      className="mt-2 bg-[#4a3b2a] text-[#e8dcc5] rounded-lg p-3 text-xs max-w-[140px] text-center shadow-lg"
+                      initial={{ opacity: 0, y: -5 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {step.detail}
+                    </motion.div>
+                  )}
+                </div>
+                {i < siberieData.itineraire.length - 1 && (
+                  <div className="flex-1 flex items-center mt-6 px-1">
+                    <div className="w-full h-0.5 bg-[#dcb575]/40" style={{ backgroundImage: 'repeating-linear-gradient(90deg, #dcb575 0, #dcb575 8px, transparent 8px, transparent 14px)' }} />
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <p className="text-xs opacity-50 italic text-center mt-2">Cliquez sur une étape pour voir le détail. Faites défiler horizontalement si nécessaire.</p>
+    </div>
+  );
+}
+
 function TranssiberienMap() {
   return (
     <div className="relative bg-[#f5eedf] border-2 border-[#4a3b2a]/20 rounded-xl overflow-hidden shadow-lg">
       <div className="p-4 border-b border-[#4a3b2a]/10 bg-[#4a3b2a]/5">
         <div className="flex items-center gap-2">
           <MapIcon className="h-5 w-5 text-[#4a3b2a]" />
-          <h3 className="font-serif font-bold text-lg">Atlas — Sibérie & Transsibérien</h3>
+          <h3 className="font-serif font-bold text-lg">Atlas — Itinéraire du 9e RIC en Sibérie</h3>
         </div>
-        <p className="text-xs opacity-60 mt-1">Schéma non à l'échelle : l'objectif est de comprendre les distances, les points d'entrée et l'axe ferroviaire.</p>
+        <p className="text-xs opacity-60 mt-1">Schéma non à l'échelle : Hanoï → Vladivostok → Transsibérien → Oufa.</p>
       </div>
 
-      <div className="relative h-64 md:h-80 p-6">
-        <svg viewBox="0 0 800 300" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
-          <rect x="0" y="0" width="800" height="300" fill="#f5eedf" />
+      <div className="relative h-72 md:h-96 p-4">
+        <svg viewBox="0 0 900 350" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
+          <rect x="0" y="0" width="900" height="350" fill="#f5eedf" />
 
-          <ellipse cx="80" cy="150" rx="60" ry="80" fill="#4a3b2a" opacity="0.08" stroke="#4a3b2a" strokeWidth="1" strokeDasharray="4 2" />
-          <text x="80" y="145" textAnchor="middle" className="font-serif" fontSize="12" fill="#4a3b2a" fontWeight="bold">EUROPE</text>
-          <text x="80" y="162" textAnchor="middle" fontSize="9" fill="#4a3b2a" opacity="0.6">(point de départ</text>
-          <text x="80" y="173" textAnchor="middle" fontSize="9" fill="#4a3b2a" opacity="0.6">politique)</text>
+          <path d="M80 260 Q200 320 340 240" stroke="#4a7a9b" strokeWidth="2" fill="none" strokeDasharray="6 3" />
+          <text x="200" y="300" fontSize="8" fill="#4a7a9b" opacity="0.7" textAnchor="middle">Route maritime</text>
 
-          <line x1="140" y1="150" x2="680" y2="150" stroke="#8B4513" strokeWidth="3" strokeDasharray="8 4" />
-          <line x1="140" y1="150" x2="680" y2="150" stroke="#dcb575" strokeWidth="1.5" />
+          <circle cx="80" cy="260" r="14" fill="#dcb575" stroke="#4a3b2a" strokeWidth="2" />
+          <text x="80" y="264" textAnchor="middle" fontSize="8" fill="#4a3b2a" fontWeight="bold">H</text>
+          <text x="80" y="290" textAnchor="middle" className="font-serif" fontSize="10" fill="#4a3b2a" fontWeight="bold">HANOÏ</text>
+          <text x="80" y="302" textAnchor="middle" fontSize="7" fill="#4a3b2a" opacity="0.5">+35 °C</text>
 
-          {[200, 340, 500].map((x, i) => (
+          <circle cx="340" cy="240" r="16" fill="#dcb575" stroke="#4a3b2a" strokeWidth="2" />
+          <text x="340" y="244" textAnchor="middle" fontSize="8" fill="#4a3b2a" fontWeight="bold">V</text>
+          <text x="340" y="270" textAnchor="middle" className="font-serif" fontSize="10" fill="#4a3b2a" fontWeight="bold">VLADIVOSTOK</text>
+          <text x="340" y="282" textAnchor="middle" fontSize="7" fill="#4a3b2a" opacity="0.5">Port d'entrée</text>
+
+          <line x1="356" y1="235" x2="830" y2="120" stroke="#8B4513" strokeWidth="3" strokeDasharray="8 4" />
+          <line x1="356" y1="235" x2="830" y2="120" stroke="#dcb575" strokeWidth="1.5" />
+
+          {[
+            { x: 420, y: 218, label: "Amour", sub: "Zone de combat" },
+            { x: 500, y: 200, label: "Baïkal", sub: "Transbaïkalie" },
+            { x: 580, y: 180, label: "Krasnoïarsk", sub: "" },
+            { x: 660, y: 162, label: "Omsk", sub: "Gouv. Blanc" },
+            { x: 740, y: 142, label: "Tchéliabinsk", sub: "Oural" },
+          ].map((pt, i) => (
             <g key={i}>
-              <rect x={x - 3} y="143" width="6" height="14" fill="#4a3b2a" opacity="0.3" rx="1" />
-              <line x1={x} y1="155" x2={x} y2="165" stroke="#4a3b2a" strokeWidth="0.5" opacity="0.3" />
+              <circle cx={pt.x} cy={pt.y} r="5" fill="#4a3b2a" opacity="0.4" />
+              <text x={pt.x} y={pt.y - 12} textAnchor="middle" fontSize="8" fill="#4a3b2a" fontWeight="bold">{pt.label}</text>
+              {pt.sub && <text x={pt.x} y={pt.y + 16} textAnchor="middle" fontSize="6.5" fill="#4a3b2a" opacity="0.5">{pt.sub}</text>}
             </g>
           ))}
 
-          <text x="400" y="130" textAnchor="middle" className="font-serif" fontSize="11" fill="#8B4513" fontWeight="bold" letterSpacing="6">TRANSSIBÉRIEN</text>
-          <text x="400" y="180" textAnchor="middle" fontSize="9" fill="#4a3b2a" opacity="0.5">≈ 9 000 km</text>
+          <circle cx="830" cy="120" r="14" fill="#c0392b" stroke="#4a3b2a" strokeWidth="2" />
+          <text x="830" y="124" textAnchor="middle" fontSize="8" fill="white" fontWeight="bold">!</text>
+          <text x="830" y="105" textAnchor="middle" className="font-serif" fontSize="10" fill="#c0392b" fontWeight="bold">OUFA</text>
+          <text x="830" y="148" textAnchor="middle" fontSize="7" fill="#4a3b2a" opacity="0.5">Point extrême</text>
 
-          <text x="400" y="240" textAnchor="middle" fontSize="10" fill="#4a3b2a" opacity="0.4" fontStyle="italic">« Profondeur continentale »</text>
+          <text x="590" y="155" textAnchor="middle" className="font-serif" fontSize="9" fill="#8B4513" fontWeight="bold" letterSpacing="4">TRANSSIBÉRIEN</text>
 
-          <circle cx="720" cy="150" r="18" fill="#dcb575" stroke="#4a3b2a" strokeWidth="2" />
-          <circle cx="720" cy="150" r="6" fill="#4a3b2a" />
-          <text x="720" y="185" textAnchor="middle" className="font-serif" fontSize="11" fill="#4a3b2a" fontWeight="bold">VLADIVOSTOK</text>
-          <text x="720" y="198" textAnchor="middle" fontSize="8" fill="#4a3b2a" opacity="0.6">(port / entrée)</text>
+          <rect x="15" y="15" width="170" height="80" rx="6" fill="white" opacity="0.8" stroke="#4a3b2a" strokeWidth="0.5" />
+          <text x="25" y="32" fontSize="8" fill="#4a3b2a" fontWeight="bold">LÉGENDE</text>
+          <line x1="25" y1="46" x2="50" y2="46" stroke="#4a7a9b" strokeWidth="2" strokeDasharray="4 2" />
+          <text x="55" y="49" fontSize="7" fill="#4a3b2a">Route maritime</text>
+          <line x1="25" y1="62" x2="50" y2="62" stroke="#dcb575" strokeWidth="2" />
+          <text x="55" y="65" fontSize="7" fill="#4a3b2a">Transsibérien</text>
+          <circle cx="32" cy="78" r="4" fill="#c0392b" />
+          <text x="55" y="81" fontSize="7" fill="#4a3b2a">Zone de front</text>
 
-          <path d="M720 132 Q730 110 750 105" stroke="#4a7a9b" strokeWidth="1.5" fill="none" strokeDasharray="3 2" />
-          <text x="755" y="100" fontSize="8" fill="#4a7a9b" opacity="0.7">Pacifique</text>
-
-          <g>
-            <line x1="690" y1="60" x2="710" y2="60" stroke="#dcb575" strokeWidth="2" />
-            <text x="715" y="63" fontSize="8" fill="#4a3b2a" opacity="0.7">Transsibérien</text>
-            <circle cx="700" cy="78" r="4" fill="#dcb575" stroke="#4a3b2a" strokeWidth="1" />
-            <text x="715" y="82" fontSize="8" fill="#4a3b2a" opacity="0.7">Port / point clé</text>
-          </g>
+          <text x="600" y="340" textAnchor="middle" fontSize="8" fill="#4a3b2a" opacity="0.3" fontStyle="italic">−40 °C en hiver</text>
         </svg>
       </div>
     </div>
@@ -223,7 +287,7 @@ export default function SiberiePage() {
           <div className="bg-[#4a3b2a]/5 border border-[#4a3b2a]/10 rounded-xl p-4 max-w-2xl">
             <p className="text-xs uppercase tracking-widest font-bold opacity-50 mb-2">Repères</p>
             <p className="text-sm opacity-80 leading-relaxed">
-              1917 : révolutions russes &bull; mars 1918 : Brest‑Litovsk &bull; 1918 : chaos et guerre civile &bull; 1918–1919 : interventions alliées en Russie &bull; 1919–1920 : désengagement progressif
+              1917 : révolutions russes &bull; mars 1918 : Brest‑Litovsk &bull; 30 juin 1918 : les Tchèques prennent Vladivostok &bull; 24 juil. 1918 : départ du 9e RIC &bull; 1919–1920 : désengagement
             </p>
           </div>
 
@@ -255,7 +319,7 @@ export default function SiberiePage() {
           <section className="space-y-4" data-testid="bloc-timeline">
             <div className="flex items-center gap-2 border-b-2 border-[#dcb575] pb-3">
               <Clock className="h-5 w-5" />
-              <h2 className="font-serif text-2xl font-bold">Chronologie — 5 repères</h2>
+              <h2 className="font-serif text-2xl font-bold">Chronologie — 6 repères</h2>
             </div>
             <p className="text-sm opacity-60 italic">Cliquez sur un repère pour le mettre en avant.</p>
             <TimelineInteractive />
@@ -279,7 +343,7 @@ export default function SiberiePage() {
                 transition={{ duration: 0.8 }}
               />
               <p className="text-base leading-relaxed opacity-90">
-                La Sibérie devient un enjeu parce que la Russie s'effondre politiquement en 1917, puis sort de la guerre en 1918. Les Alliés craignent alors une cascade d'effets : stocks et équipements militaires laissés sans contrôle, extension du chaos, et rivalités entre puissances en Asie du Nord‑Est. La clef, c'est la logistique : la Sibérie n'est pas « une bataille », c'est un réseau d'axes — surtout le Transsibérien — qui permet de déplacer hommes, armes et influence sur un continent entier.
+                La Sibérie devient un enjeu parce que la Russie s'effondre politiquement en 1917, puis sort de la guerre en 1918. Les Légions Tchèques — 50 000 soldats d'élite — se révoltent et prennent Vladivostok. La France envoie 454 hommes du 9e RIC, embarqués à Hanoï sur le vapeur André Lebon, pour sécuriser leur retour et peser sur le théâtre. Le bataillon remonte le Transsibérien de Vladivostok jusqu'à Oufa, traversant un continent entier — du +35 °C du Tonkin au −40 °C de l'hiver sibérien.
               </p>
             </div>
           </section>
@@ -349,12 +413,117 @@ export default function SiberiePage() {
           </FadeInSection>
         ))}
 
+        <FadeInSection>
+          <section className="relative overflow-hidden rounded-2xl shadow-2xl" data-testid="bloc-unite">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#2c3e50] via-[#34495e] to-[#2c3e50]" />
+            <div className="absolute inset-0 opacity-[0.04] bg-[url('data:image/svg+xml,%3Csvg%20width%3D%228%22%20height%3D%228%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%200h8v8H0z%22%20fill%3D%22none%22%20stroke%3D%22%23ecf0f1%22%20stroke-width%3D%220.5%22/%3E%3C/svg%3E')]" />
+            <div className="relative z-10 text-[#ecf0f1] p-8 md:p-12 space-y-6">
+              <div className="flex items-center gap-3">
+                <Shield className="h-6 w-6 text-[#dcb575]" />
+                <h2 className="font-serif text-xl md:text-2xl font-bold uppercase tracking-widest">Le bataillon de marche du 9e RIC</h2>
+              </div>
+              <motion.div
+                className="w-20 h-0.5 bg-[#dcb575]"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              />
+              <div className="grid sm:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <div className="bg-white/10 rounded-lg p-4">
+                    <p className="text-xs uppercase tracking-widest text-[#dcb575] font-bold mb-1">Effectifs</p>
+                    <p className="text-lg font-bold">{siberieData.unite.effectifs}</p>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-4">
+                    <p className="text-xs uppercase tracking-widest text-[#dcb575] font-bold mb-1">Commandant</p>
+                    <p className="text-sm">{siberieData.unite.commandant}</p>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="bg-white/10 rounded-lg p-4">
+                    <p className="text-xs uppercase tracking-widest text-[#dcb575] font-bold mb-2">Composition</p>
+                    {siberieData.unite.detail.map((d, i) => (
+                      <p key={i} className="text-sm flex items-center gap-2">
+                        <Check className="h-3 w-3 text-[#dcb575] shrink-0" /> {d}
+                      </p>
+                    ))}
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-4">
+                    <p className="text-xs uppercase tracking-widest text-[#dcb575] font-bold mb-1">Départ</p>
+                    <p className="text-sm">{siberieData.unite.depart}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </FadeInSection>
+
         {showRecit && (
-          <FadeInSection>
-            <section data-testid="bloc-carte">
-              <TranssiberienMap />
-            </section>
-          </FadeInSection>
+          <>
+            <FadeInSection>
+              <section className="space-y-6" data-testid="bloc-itineraire">
+                <div className="flex items-center gap-3 border-b-2 border-[#dcb575] pb-4">
+                  <Train className="h-5 w-5" />
+                  <h2 className="font-serif text-2xl md:text-3xl font-bold">Itinéraire — Hanoï → Oufa</h2>
+                </div>
+                <ItineraireTimeline />
+              </section>
+            </FadeInSection>
+
+            <FadeInSection>
+              <section data-testid="bloc-carte">
+                <TranssiberienMap />
+              </section>
+            </FadeInSection>
+
+            <FadeInSection>
+              <section className="relative overflow-hidden rounded-2xl shadow-xl" data-testid="bloc-choc-thermique">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#e74c3c]/10 via-transparent to-[#3498db]/10" />
+                <div className="relative bg-[#fdfbf7] border border-[#4a3b2a]/10 rounded-2xl p-8 md:p-10 space-y-4">
+                  <div className="flex items-center gap-3">
+                    <Thermometer className="h-6 w-6 text-[#e74c3c]" />
+                    <h2 className="font-serif text-xl md:text-2xl font-bold">{siberieData.chocThermique.title}</h2>
+                  </div>
+                  <div className="flex items-center gap-4 justify-center py-4">
+                    <motion.div
+                      className="text-center"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <p className="text-3xl font-bold text-[#e74c3c]">+35 °C</p>
+                      <p className="text-xs opacity-60 mt-1">Tonkin</p>
+                    </motion.div>
+                    <motion.div
+                      className="flex flex-col items-center"
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.3 }}
+                    >
+                      <ArrowRight className="h-8 w-8 text-[#4a3b2a]/30" />
+                      <p className="text-xs opacity-40 mt-1">75° d'écart</p>
+                    </motion.div>
+                    <motion.div
+                      className="text-center"
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.6 }}
+                    >
+                      <p className="text-3xl font-bold text-[#3498db]">−40 °C</p>
+                      <p className="text-xs opacity-60 mt-1">Sibérie</p>
+                    </motion.div>
+                  </div>
+                  <p className="text-base leading-relaxed opacity-85 italic text-center max-w-2xl mx-auto">
+                    {siberieData.chocThermique.text}
+                  </p>
+                </div>
+              </section>
+            </FadeInSection>
+          </>
         )}
 
         {showArchives && (

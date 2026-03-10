@@ -1,0 +1,49 @@
+Données source (Utilise uniquement ces faits) :
+
+Le Contexte Géopolitique (L'Imbroglio) :
+
+Les Légions Tchèques : 50 000 soldats d'élite (ex-armée du Tsar) veulent rejoindre la France via Vladivostok.
+
+Le Conflit : Moscou ordonne leur désarmement total. Les Tchèques refusent, se révoltent et s'emparent de Vladivostok le 30 juin 1918 sous les ordres du Général Dietrich.
+
+L'Intervention : La France envoie le 9e RIC pour sécuriser leur retour et freiner la révolution bolchevique.
+
+L'Unité Française (Le Bataillon de Marche) :
+
+Effectifs : 454 hommes du 9e RIC.
+
+Détail : 1ère compagnie (Lt Deseille, 228 hommes) et 8ème compagnie (Capt. Schill, 226 hommes).
+
+Commandant : Chef de bataillon Mallet (qui commande aussi 2 compagnies du 16e RIC).
+
+Départ : 24 juillet 1918 depuis le Tonkin (Hanoï) sur le vapeur "André Lebon".
+
+La Frise Chronologique de l'Itinéraire (Arrêts obligatoires) :
+
+Étape 1 : Hanoï (Juillet 1918) - Départ des troupes coloniales.
+
+Étape 2 : Vladivostok - Base arrière et débarquement.
+
+Étape 3 : Jonction Amour-Mandchourie - Prise par les Tchèques après 2 jours de combat.
+
+Étape 4 : Le Transsibérien (Vers l'Ouest) - Le bataillon remonte la voie ferrée.
+
+Étape 5 : Lac Baïkal - Traversée de la région Transbaïkalie.
+
+Étape 6 : Krasnoïarsk & Tomsk - Progression dans la steppe sibérienne.
+
+Étape 7 : Omsk - Centre névralgique du gouvernement "Blanc".
+
+Étape 8 : Monts Oural (Tchéliabinsk) - Porte d'entrée de la Russie d'Europe.
+
+Étape 9 : Oufa (Ourfa) - Zone de front et point d'arrêt extrême.
+
+Spécifications Techniques de la Page :
+
+Timeline Horizontale : Crée un composant visuel qui montre le trajet de Hanoï jusqu'à Oufa. Chaque arrêt doit être cliquable pour afficher le détail (ex: "Omsk : centre politique" ou "Jonction Amour-Mandchourie : zone de combat").
+
+Composant Géopolitique : Une section "Pourquoi la Sibérie ?" expliquant le triangle France-Tchèques-Bolcheviks.
+
+Design : Thème "Expédition Polaire". Couleurs : Gris acier, Blanc neige, Bleu colonial. Utilise des icônes de train (Transsibérien) et de bateaux.
+
+Section "Choc Thermique" : Texte soulignant le passage des +35°C du Tonkin aux -40°C de la Sibérie (référence à Jules Verne/Michel Strogoff).
