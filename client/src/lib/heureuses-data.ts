@@ -56,7 +56,6 @@ export const heureusesData: HeureusesContent = {
     { title: "La vie aux champs, le repiquage du riz", parenthese: "Une scène qui rappelle que le Tonkin, c'est d'abord un territoire vécu par ses habitants." },
     { title: "Labours en rizière", parenthese: "Le paysage agricole explique aussi les contraintes de déplacement et de terrain." },
     { title: "Fabrication du papier « Le pressage »", parenthese: "Une économie locale, des savoir‑faire, et un quotidien très concret." },
-    { title: "Sontay. Moulin à décortiquer le riz chez les Mans du Mont Bavi", parenthese: "L'arrière‑pays et ses populations : diversité des lieux, diversité des vies." },
     { title: "Marché de Dong Dang", parenthese: "Carrefour d'échanges — et parfois de tensions — dans une région de circulation." },
     { title: "Enseignement traditionnel par le Ong Do (maître des caractères chinois) — 1931", parenthese: "Transmission, langue, autorités : une société structurée par ses repères." },
     { title: "École élémentaire de Thái Binh — 1931", parenthese: "Modernité et continuités se côtoient dans le quotidien." },
