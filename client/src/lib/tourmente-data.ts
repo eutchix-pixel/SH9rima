@@ -69,7 +69,6 @@ export const tourmenteData: TourmenteContent = {
     "Na Cham (sept. 1940) : plus de 1 000 Japonais hors de combat.",
     "9 mars 1945 : coup de force japonais sur la Citadelle — 200 tués.",
     "Le drapeau, enterré en 1945, est retrouvé intact en 1946.",
-    "Avril 1946 : le 9e RIC occupe Dien Bien Phu.",
     "Décembre 1946 : dissolution du régiment.",
   ],
   timeline: [
