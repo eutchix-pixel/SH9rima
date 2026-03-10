@@ -107,7 +107,6 @@ export const tourmenteData: TourmenteContent = {
       organisation: [
         "Division du Tonkin — PC à Hanoï — 3 Bataillons",
         "Par bataillon : 3 compagnies de fusiliers voltigeurs, 1 compagnie de mitrailleuses, 1 compagnie de commandement (CC)",
-        "CC : 4 mitrailleuses, 2 mortiers, 2 canons antichar de 25 mm",
         "Moyens régimentaires : compagnie de canons de 25 mm (tractés), section DCA (20 mm)",
       ],
       armement: [
