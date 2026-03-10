@@ -314,13 +314,6 @@ export default function SiberiePage() {
             {siberieData.question}
           </p>
 
-          <div className="bg-[#4a3b2a]/5 border border-[#4a3b2a]/10 rounded-xl p-4 max-w-2xl">
-            <p className="text-xs uppercase tracking-widest font-bold opacity-50 mb-2">Repères</p>
-            <p className="text-sm opacity-80 leading-relaxed">
-              1917 : révolutions russes &bull; mars 1918 : Brest‑Litovsk &bull; 30 juin 1918 : les Tchèques prennent Vladivostok &bull; 24 juil. 1918 : départ du 9e RIC &bull; 1919–1920 : désengagement
-            </p>
-          </div>
-
           <div className="flex flex-wrap gap-3 pt-4">
             {([
               { mode: 'comprendre' as ReadingMode, label: 'Essentiel (5 min)', icon: Clock },
