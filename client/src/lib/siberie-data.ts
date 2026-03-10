@@ -46,15 +46,13 @@ export const siberieData: SiberieContent = {
   blocs: [
     {
       id: "enjeu",
-      title: "Pourquoi la Sibérie devient un enjeu ?",
+      title: "La révolution russe",
       mode: 'comprendre',
       content: [
-        "En 1917, la Russie s'effondre : révolution, guerre civile, vide de pouvoir. Pour les puissances étrangères, la question devient : qui contrôle les ports et le Transsibérien ? En Sibérie, tenir un axe compte plus que gagner une bataille."
+        "En février puis octobre 1917, deux révolutions renversent le régime tsariste. Les bolcheviks prennent le pouvoir et signent la paix avec l'Allemagne (Brest‑Litovsk, mars 1918), retirant la Russie de la guerre.",
+        "Le pays bascule dans la guerre civile. Pour les Alliés, c'est un vide stratégique immense : les stocks militaires, les ports et le Transsibérien deviennent des enjeux disputés."
       ],
-      keyPoints: [
-        "Crise russe = vide de pouvoir → compétition internationale.",
-        "Enjeu central : contrôle des axes ferroviaires et portuaires."
-      ]
+      keyPoints: []
     },
     {
       id: "acteurs",
