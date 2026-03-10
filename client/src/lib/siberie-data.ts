@@ -1,3 +1,13 @@
+export interface BatailleEntry {
+  id: string;
+  title: string;
+  date: string;
+  situation: string;
+  combat: string;
+  bilan: string;
+  mode: 'comprendre' | 'recit' | 'archives';
+}
+
 export interface SiberieContent {
   title: string;
   subtitle: string;
@@ -10,6 +20,11 @@ export interface SiberieContent {
     keyPoints: string[];
     mode: 'comprendre' | 'recit' | 'archives';
   }[];
+  batailles: BatailleEntry[];
+  suiteOperations: {
+    title: string;
+    etapes: { date: string; detail: string }[];
+  };
   itineraire: {
     etape: string;
     detail: string;
@@ -40,7 +55,9 @@ export const siberieData: SiberieContent = {
     { date: "Mars 1918", label: "Traité de Brest‑Litovsk → la Russie sort de la guerre" },
     { date: "30 juin 1918", label: "Les Légions Tchèques s'emparent de Vladivostok" },
     { date: "24 juil. 1918", label: "Départ du 9e RIC depuis Hanoï sur le vapeur André Lebon" },
-    { date: "1918–1919", label: "Interventions alliées → sécurisation de points/axes" },
+    { date: "15–19 août 1918", label: "Épreuve du feu à Kraïevski — premier contact avec l'ennemi" },
+    { date: "23–24 août 1918", label: "Bataille de Doukovskoïe — 4 500 bolcheviques repoussés" },
+    { date: "Oct.–Nov. 1918", label: "Remontée du Transsibérien vers Oufa en train blindé (10 000 km)" },
     { date: "1919–1920", label: "Désengagement progressif → priorité au nouvel ordre européen" },
   ],
   blocs: [
@@ -89,16 +106,44 @@ export const siberieData: SiberieContent = {
       title: "Conséquences : ce que ça change (et ce que ça ne change pas)",
       mode: 'recit',
       content: [
-        "Concrètement, le bataillon du 9e RIC a repoussé les forces bolcheviques sur plusieurs points du Transsibérien et sécurisé des convois d'armes et de munitions essentiels pour les Alliés et les Légions Tchèques. Ces actions ont stabilisé localement les nœuds ferroviaires stratégiques.",
-        "Mais à l'échelle d'un continent, l'intervention ne résout pas la guerre civile russe. Le désengagement progressif (1919–1920) reflète cette réalité : la « victoire » en Sibérie est politique avant d'être militaire."
+        "Le bataillon a repoussé les assauts bolcheviques sur le front de l'Oussouri, sécurisé la voie ferrée et protégé les convois d'armes et de munitions. Mais à l'échelle d'un continent, l'intervention ne résout pas la guerre civile russe.",
+        "Le désengagement progressif (1919–1920) reflète cette réalité : la « victoire » en Sibérie est politique avant d'être militaire."
       ],
       keyPoints: [
-        "Le 9e RIC repousse les bolcheviques et sécurise les convois d'armes.",
-        "Stabilisation locale des axes, mais pas de résolution du conflit continental.",
+        "Kraïevski et Doukovskoïe : le 9e RIC repousse les bolcheviques.",
+        "10 000 km de Transsibérien sécurisés en train blindé.",
         "Le désengagement illustre les limites d'une intervention à si grande échelle."
       ]
     },
   ],
+  batailles: [
+    {
+      id: "kraievski",
+      title: "L'épreuve du feu — Kraïevski",
+      date: "15 au 19 août 1918",
+      situation: "Dès son arrivée sur le front de l'Oussouri, le bataillon est divisé en deux groupements (Groupes Schill et Feneurstein). Installés sur leurs positions le 13 août, les soldats subissent une pression constante des forces bolcheviques pendant quatre jours.",
+      combat: "Il ne s'agit pas d'un affrontement frontal massif, mais d'une guerre d'usure : tirs d'artillerie, escarmouches et manœuvres dilatoires. Un coup de main bolchevique nocturne vise le poste de commandement russe (Cosaques du Tsar). Malgré la protection assurée par une douzaine de Français, l'attaque entraîne la disparition de 4 Zouaves.",
+      bilan: "Premier contact réel et douloureux avec l'ennemi. Le bataillon tient ses positions face à une pression continue de 4 jours.",
+      mode: 'comprendre',
+    },
+    {
+      id: "doukovskoe",
+      title: "La bataille de Doukovskoïe",
+      date: "23 au 24 août 1918",
+      situation: "C'est l'engagement le plus sérieux du bataillon, mené en coalition avec les forces tchèques, japonaises et anglaises le long de la voie ferrée. Grâce aux informations d'un prisonnier, le commandant Mallet apprend qu'une attaque imminente de 4 500 bolcheviques se prépare.",
+      combat: "Le choc se produit à 5h00 du matin le 23 août. Le groupe Schill (9e RIC), placé en pointe, reçoit la première vague d'assaut. Jugé trop vulnérable, il reçoit l'ordre de se replier sur une position de rechange aux lisières de Doukovskoïe pour organiser la défense globale. Le 24 août, une contre-attaque vigoureuse est lancée en lien avec un détachement japonais, brisant l'élan bolchevique et sécurisant la zone.",
+      bilan: "2 tués et 15 blessés. L'assaut de 4 500 bolcheviques est repoussé. La zone est sécurisée.",
+      mode: 'comprendre',
+    },
+  ],
+  suiteOperations: {
+    title: "Suite des opérations",
+    etapes: [
+      { date: "Octobre 1918", detail: "Les Tonkinois sont regroupés pour garder Vladivostok, tandis que le reste du bataillon entame sa remontée vers l'Ouest." },
+      { date: "Novembre 1918", detail: "Le bataillon traverse la Sibérie (Kharbine, Irkoutsk, Omsk) dans un train blindé pour atteindre Oufa dans l'Oural." },
+      { date: "10 000 km", detail: "Ce trajet se fait sans combat direct, mais dans des conditions climatiques extrêmes. Le bataillon sert de force de présence et de protection de la ligne ferroviaire face aux partisans." },
+    ],
+  },
   unite: {
     effectifs: "454 hommes du 9e RIC",
     detail: [
@@ -134,6 +179,10 @@ export const siberieData: SiberieContent = {
     { term: "Général Dietrich", def: "Commandant des Légions Tchèques lors de la prise de Vladivostok." },
     { term: "André Lebon", def: "Vapeur sur lequel le bataillon du 9e RIC embarque depuis Hanoï le 24 juillet 1918." },
     { term: "Bataillon de marche", def: "Unité constituée spécialement pour une opération, ici 454 hommes du 9e RIC." },
+    { term: "Kraïevski", def: "Localité du front de l'Oussouri où le 9e RIC subit son baptême du feu (15–19 août 1918)." },
+    { term: "Doukovskoïe", def: "Ville où le bataillon repousse 4 500 bolcheviques en coalition avec Tchèques, Japonais et Anglais (23–24 août 1918)." },
+    { term: "Front de l'Oussouri", def: "Zone de combat à l'est de la Sibérie, première affectation du bataillon." },
+    { term: "Train blindé", def: "Train militaire blindé utilisé pour la remontée du Transsibérien vers Oufa (10 000 km)." },
     { term: "Omsk", def: "Centre politique du gouvernement « Blanc » (anti-bolchevique) en Sibérie." },
     { term: "Oufa", def: "Zone de front et point d'arrêt extrême de la progression alliée." },
   ],
@@ -146,14 +195,14 @@ export const siberieData: SiberieContent = {
   ],
   quiz: [
     { question: "Combien d'hommes du 9e RIC partent en Sibérie ?", answer: "454 hommes (1ʳᵉ et 8ᵉ compagnies)" },
-    { question: "Qui commande le bataillon de marche ?", answer: "Le chef de bataillon Mallet" },
-    { question: "Sur quel navire le 9e RIC embarque-t-il ?", answer: "Le vapeur André Lebon, le 24 juillet 1918" },
+    { question: "Où le bataillon subit-il son baptême du feu ?", answer: "À Kraïevski, sur le front de l'Oussouri (15–19 août 1918)" },
+    { question: "Combien de bolcheviques attaquent à Doukovskoïe ?", answer: "4 500 — repoussés par le 9e RIC et ses alliés" },
+    { question: "Quel est le bilan de la bataille de Doukovskoïe ?", answer: "2 tués et 15 blessés côté français" },
+    { question: "Comment le bataillon traverse-t-il la Sibérie après les combats ?", answer: "Dans un train blindé, 10 000 km sans combat direct" },
     { question: "Pourquoi les Légions Tchèques se révoltent-elles ?", answer: "Moscou ordonne leur désarmement ; elles refusent et s'emparent de Vladivostok" },
-    { question: "Quel est le point d'arrêt extrême du bataillon ?", answer: "Oufa — zone de front" },
-    { question: "Quelle infrastructure structure la mobilité en Sibérie ?", answer: "Le Transsibérien" },
-    { question: "Dans un territoire immense, la « victoire » est souvent…", answer: "Politique avant d'être militaire" },
     { question: "Quel choc affrontent les marsouins du 9e ?", answer: "De +35 °C au Tonkin à −40 °C en Sibérie" },
+    { question: "Quelle est la mission finale du bataillon le long du Transsibérien ?", answer: "Force de présence et protection de la ligne ferroviaire face aux partisans" },
   ],
-  conclusion: "La Sibérie, à la fin de la Grande Guerre, est un test de puissance : distance, logistique, influence, coalition. Comprendre ce théâtre, c'est comprendre que la géopolitique se joue autant sur des axes que sur des batailles.",
+  conclusion: "De Kraïevski à Doukovskoïe, le 9e RIC a repoussé les forces bolcheviques et sécurisé la voie ferrée. Puis, dans un train blindé, le bataillon a traversé 10 000 km de Sibérie — sans combat direct mais dans des conditions extrêmes — pour protéger le Transsibérien face aux partisans. Un engagement à l'échelle d'un continent.",
   nextStep: "Continuer vers : ASIE — Les Années Heureuses"
 };

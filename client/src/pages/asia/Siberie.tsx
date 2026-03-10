@@ -6,7 +6,7 @@ import {
   ArrowLeft, ArrowRight, Clock, BookOpen, Scroll, Check, Search,
   Crosshair, Map as MapIcon, RotateCcw, Info,
   Globe, Train, Anchor, Snowflake, Users, Compass, Ship,
-  Thermometer, Shield
+  Thermometer, Shield, Swords, AlertTriangle
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useState, useRef } from "react";
@@ -342,7 +342,7 @@ export default function SiberiePage() {
           <section className="space-y-4" data-testid="bloc-timeline">
             <div className="flex items-center gap-2 border-b-2 border-[#dcb575] pb-3">
               <Clock className="h-5 w-5" />
-              <h2 className="font-serif text-2xl font-bold">Chronologie — 6 repères</h2>
+              <h2 className="font-serif text-2xl font-bold">Chronologie — 8 repères</h2>
             </div>
             <p className="text-sm opacity-60 italic">Cliquez sur un repère pour le mettre en avant.</p>
             <TimelineInteractive />
@@ -366,7 +366,7 @@ export default function SiberiePage() {
                 transition={{ duration: 0.8 }}
               />
               <p className="text-base leading-relaxed opacity-90">
-                La Sibérie devient un enjeu parce que la Russie s'effondre politiquement en 1917, puis sort de la guerre en 1918. Les Légions Tchèques — 50 000 soldats d'élite — se révoltent et prennent Vladivostok. La France envoie 454 hommes du 9e RIC, embarqués à Hanoï sur le vapeur André Lebon, pour sécuriser leur retour, freiner l'avancée bolchevique et protéger les convois d'armes et de munitions le long du Transsibérien. Le bataillon remonte la voie ferrée de Vladivostok jusqu'à Oufa, repoussant les forces bolcheviques et sécurisant les nœuds ferroviaires stratégiques — du +35 °C du Tonkin au −40 °C de l'hiver sibérien.
+                La France envoie 454 hommes du 9e RIC en Sibérie pour sécuriser le retour des Légions Tchèques, repousser les bolcheviques et protéger les convois d'armes et de munitions. Baptisé du feu à Kraïevski (août 1918), le bataillon repousse ensuite 4 500 bolcheviques à Doukovskoïe. Puis il remonte le Transsibérien en train blindé sur 10 000 km — de Vladivostok à Oufa — du +35 °C du Tonkin au −40 °C de l'hiver sibérien.
               </p>
             </div>
           </section>
@@ -479,6 +479,84 @@ export default function SiberiePage() {
                 </div>
               </div>
             </div>
+          </section>
+        </FadeInSection>
+
+        <FadeInSection>
+          <section className="space-y-8" data-testid="bloc-batailles">
+            <div className="flex items-center gap-3 border-b-2 border-[#c0392b]/50 pb-4">
+              <Swords className="h-6 w-6 text-[#c0392b]" />
+              <h2 className="font-serif text-2xl md:text-3xl font-bold">Faits d'armes du bataillon</h2>
+            </div>
+
+            {siberieData.batailles.map((bataille, bIdx) => (
+              <motion.div
+                key={bataille.id}
+                className="relative overflow-hidden rounded-2xl border-2 border-[#c0392b]/20 bg-[#fdfbf7] shadow-lg"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: bIdx * 0.15 }}
+                data-testid={`bataille-${bataille.id}`}
+              >
+                <div className="bg-gradient-to-r from-[#c0392b] to-[#922b21] text-white p-5">
+                  <div className="flex items-center gap-3">
+                    <AlertTriangle className="h-5 w-5" />
+                    <div>
+                      <h3 className="font-serif text-lg md:text-xl font-bold">{bataille.title}</h3>
+                      <p className="text-sm opacity-80 mt-0.5">{bataille.date}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6 space-y-4">
+                  <div>
+                    <p className="text-xs uppercase tracking-widest font-bold text-[#c0392b] mb-1">Situation</p>
+                    <p className="text-sm leading-relaxed opacity-90">{bataille.situation}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-widest font-bold text-[#c0392b] mb-1">Combat</p>
+                    <p className="text-sm leading-relaxed opacity-90">{bataille.combat}</p>
+                  </div>
+                  <div className="bg-[#4a3b2a] text-[#e8dcc5] rounded-lg p-4">
+                    <p className="text-xs uppercase tracking-widest font-bold text-[#dcb575] mb-1">Bilan</p>
+                    <p className="text-sm font-medium">{bataille.bilan}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+
+            <motion.div
+              className="relative overflow-hidden rounded-2xl border border-[#4a3b2a]/20 bg-[#f5eedf] shadow-md"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              data-testid="bloc-suite-operations"
+            >
+              <div className="p-5 border-b border-[#4a3b2a]/10 bg-[#4a3b2a]/5">
+                <div className="flex items-center gap-2">
+                  <Train className="h-5 w-5 text-[#4a3b2a]" />
+                  <h3 className="font-serif font-bold text-lg">{siberieData.suiteOperations.title}</h3>
+                </div>
+              </div>
+              <div className="p-6 space-y-4">
+                {siberieData.suiteOperations.etapes.map((etape, eIdx) => (
+                  <motion.div
+                    key={eIdx}
+                    className="flex gap-4 items-start"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: eIdx * 0.15 + 0.2 }}
+                  >
+                    <span className="bg-[#4a3b2a] text-[#e8dcc5] text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap shrink-0">
+                      {etape.date}
+                    </span>
+                    <p className="text-sm leading-relaxed opacity-90">{etape.detail}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </section>
         </FadeInSection>
 
