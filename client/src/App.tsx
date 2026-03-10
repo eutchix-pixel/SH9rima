@@ -7,6 +7,7 @@ import ChinaExpedition1900Page from "./pages/asia/ChinaExpedition1900";
 import Tonkin1901Page from "./pages/asia/Tonkin1901";
 import SiberiePage from "./pages/asia/Siberie";
 import AnneesHeureusesPage from "./pages/asia/AnneesHeureuses";
+import TourmentePage from "./pages/asia/Tourmente";
 import ScanPage from "./pages/Scan";
 import NotFound from "./pages/not-found";
 
@@ -21,6 +22,7 @@ function Router() {
         <Route path="/asie/tonkin-1901-1914" component={Tonkin1901Page} />
         <Route path="/asie/siberie-ww1" component={SiberiePage} />
         <Route path="/asie/annees-heureuses" component={AnneesHeureusesPage} />
+        <Route path="/asie/tourmente-1940" component={TourmentePage} />
         <Route path="/scan" component={ScanPage} />
         <Route component={NotFound} />
       </Switch>

@@ -376,6 +376,11 @@ export default function AnneesHeureusesPage() {
                   <ArrowLeft className="mr-2 h-5 w-5" /> Sibérie
                 </Button>
               </Link>
+              <Link href="/asie/tourmente-1940">
+                <Button className="bg-[#4a3b2a] text-[#e8dcc5] hover:bg-[#4a3b2a]/90 px-8 py-6 text-lg" data-testid="button-next-tourmente">
+                  La Tourmente 1940–1946 <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
               <Link href="/#tonkin">
                 <Button variant="outline" className="border-[#4a3b2a] text-[#4a3b2a] hover:bg-[#4a3b2a]/10 px-8 py-6 text-lg" data-testid="button-back-themes">
                   Revenir aux thèmes

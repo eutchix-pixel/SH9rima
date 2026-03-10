@@ -37,7 +37,7 @@ export const museumData: Section[] = [
       { id: "tonkin-1900", title: "1900-1914", image: "/images/placeholder.png", content: "La pacification et l'organisation du territoire...", link: "/asie/tonkin-1901-1914" },
       { id: "tonkin-siberie", title: "Sibérie", image: "/images/placeholder.png", content: "L'expédition de Sibérie, une aventure méconnue...", link: "/asie/siberie-ww1" },
       { id: "tonkin-heureuses", title: "Années Heureuses", image: "/images/placeholder.png", content: "La vie de garnison dans les années 20 et 30...", link: "/asie/annees-heureuses" },
-      { id: "tonkin-tourmente", title: "Tourmente", image: "/images/placeholder.png", content: "La Seconde Guerre mondiale et le coup de force japonais..." }
+      { id: "tonkin-tourmente", title: "Tourmente", image: "/images/placeholder.png", content: "La Seconde Guerre mondiale et le coup de force japonais...", link: "/asie/tourmente-1940" }
     ]
   },
   {
