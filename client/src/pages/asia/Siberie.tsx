@@ -9,11 +9,8 @@ import {
   Thermometer, Award, AlertTriangle, Sword
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { motion, useScroll, useInView } from "framer-motion";
-import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from "react-leaflet";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
 
 type ReadingMode = 'comprendre' | 'recit' | 'archives';
 
@@ -93,152 +90,71 @@ function TimelineInteractive() {
   );
 }
 
-const mapLocations = [
-  { name: "Hanoï", lat: 21.028, lng: 105.854, date: "24 juil. 1917", type: "start" as const, desc: "Départ du bataillon (1ère & 8e Cies)" },
-  { name: "Vladivostok", lat: 43.116, lng: 131.874, date: "9 août 1918", type: "major" as const, desc: "Arrivée par le vapeur André Lebon" },
-  { name: "Oussourik", lat: 43.800, lng: 131.951, date: "Août 1918", type: "combat" as const, desc: "Premier combat contre les Bolcheviks" },
-  { name: "Doukoskoïe", lat: 44.05, lng: 132.3, date: "23-24 août 1918", type: "combat" as const, desc: "Combat — prise du village" },
-  { name: "Kharbine", lat: 45.75, lng: 126.65, date: "Sept. 1918", type: "etape" as const, desc: "Étape en Mandchourie" },
-  { name: "Tchita", lat: 52.034, lng: 113.500, date: "Oct. 1918", type: "etape" as const, desc: "Étape en Transbaïkalie" },
-  { name: "Irkoutsk", lat: 52.297, lng: 104.296, date: "Nov. 1918", type: "etape" as const, desc: "Étape près du lac Baïkal" },
-  { name: "Omsk", lat: 54.989, lng: 73.369, date: "Déc. 1918", type: "etape" as const, desc: "Capitale provisoire de Koltchak" },
-  { name: "Tchéliabinsk", lat: 55.160, lng: 61.403, date: "Janv.–mars 1919", type: "etape" as const, desc: "Cantonnement hivernal, −30 à −50 °C" },
-  { name: "Ourfa", lat: 37.167, lng: 38.800, date: "21 nov. 1918", type: "combat" as const, desc: "Destination finale — Turquie" },
-];
-
-const maritimeRoute: [number, number][] = [
-  [21.028, 105.854],
-  [16.0, 108.2],
-  [12.0, 109.3],
-  [8.0, 110.0],
-  [5.0, 114.0],
-  [7.0, 120.0],
-  [15.0, 120.5],
-  [22.0, 121.0],
-  [30.0, 125.0],
-  [35.0, 129.0],
-  [43.116, 131.874],
-];
-
-const transiberienRoute: [number, number][] = [
-  [43.116, 131.874],
-  [43.800, 131.951],
-  [44.05, 132.3],
-  [45.75, 126.65],
-  [52.034, 113.500],
-  [52.297, 104.296],
-  [54.989, 73.369],
-  [55.160, 61.403],
-];
-
-const cheliabToOurfa: [number, number][] = [
-  [55.160, 61.403],
-  [52.0, 55.0],
-  [48.0, 48.0],
-  [44.0, 43.0],
-  [41.0, 40.0],
-  [37.167, 38.800],
-];
-
-function createIcon(type: string) {
-  const color = type === "combat" ? "#c0392b" : type === "start" ? "#2c7a3a" : type === "major" ? "#dcb575" : "#4a3b2a";
-  const size = type === "start" || type === "major" || type === "combat" ? 14 : 10;
-  const border = type === "combat" ? "#8B0000" : "#4a3b2a";
-  return L.divIcon({
-    className: "custom-marker",
-    html: `<div style="width:${size}px;height:${size}px;border-radius:50%;background:${color};border:2px solid ${border};box-shadow:0 2px 6px rgba(0,0,0,0.4);"></div>`,
-    iconSize: [size, size],
-    iconAnchor: [size / 2, size / 2],
-  });
-}
-
-function FitBoundsOnMount() {
-  const map = useMap();
-  useEffect(() => {
-    const bounds = L.latLngBounds(
-      mapLocations.map(loc => [loc.lat, loc.lng] as [number, number])
-    );
-    map.fitBounds(bounds, { padding: [30, 30] });
-  }, [map]);
-  return null;
-}
-
 function TranssiberienMap() {
   return (
     <div className="relative bg-[#f5eedf] border-2 border-[#4a3b2a]/20 rounded-xl overflow-hidden shadow-lg">
       <div className="p-4 border-b border-[#4a3b2a]/10 bg-[#4a3b2a]/5">
         <div className="flex items-center gap-2">
           <MapIcon className="h-5 w-5 text-[#4a3b2a]" />
-          <h3 className="font-serif font-bold text-lg">Atlas — Déplacements du bataillon (1918–1919)</h3>
+          <h3 className="font-serif font-bold text-lg">Atlas — Déplacements du bataillon en Sibérie</h3>
         </div>
-        <p className="text-xs opacity-60 mt-1">Carte mondiale : route maritime, Transsibérien, et destination finale.</p>
+        <p className="text-xs opacity-60 mt-1">Croquis permettant de suivre les déplacements du bataillon. Soulignés, les lieux de combat.</p>
       </div>
 
-      <div className="relative h-[400px] md:h-[500px]" style={{ filter: "sepia(0.25) saturate(0.85)" }}>
-        <MapContainer
-          center={[45, 85]}
-          zoom={3}
-          scrollWheelZoom={false}
-          className="h-full w-full z-0"
-          style={{ background: "#f5eedf" }}
-        >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <FitBoundsOnMount />
+      <div className="relative h-72 md:h-96 p-4">
+        <svg viewBox="0 0 900 350" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
+          <rect x="0" y="0" width="900" height="350" fill="#f5eedf" />
 
-          <Polyline
-            positions={maritimeRoute}
-            pathOptions={{ color: "#4a7a9b", weight: 3, dashArray: "10 6", opacity: 0.8 }}
-          />
+          <path d="M80 260 Q200 320 340 240" stroke="#4a7a9b" strokeWidth="2" fill="none" strokeDasharray="6 3" />
+          <text x="200" y="300" fontSize="8" fill="#4a7a9b" opacity="0.7" textAnchor="middle">Route maritime (André Lebon)</text>
 
-          <Polyline
-            positions={transiberienRoute}
-            pathOptions={{ color: "#8B4513", weight: 4, opacity: 0.9 }}
-          />
+          <circle cx="80" cy="260" r="14" fill="#dcb575" stroke="#4a3b2a" strokeWidth="2" />
+          <text x="80" y="264" textAnchor="middle" fontSize="8" fill="#4a3b2a" fontWeight="bold">H</text>
+          <text x="80" y="290" textAnchor="middle" className="font-serif" fontSize="10" fill="#4a3b2a" fontWeight="bold">HANOÏ</text>
+          <text x="80" y="302" textAnchor="middle" fontSize="7" fill="#4a3b2a" opacity="0.5">24 juil. 1917</text>
 
-          <Polyline
-            positions={cheliabToOurfa}
-            pathOptions={{ color: "#c0392b", weight: 3, dashArray: "8 5", opacity: 0.7 }}
-          />
+          <circle cx="340" cy="240" r="16" fill="#dcb575" stroke="#4a3b2a" strokeWidth="2" />
+          <text x="340" y="244" textAnchor="middle" fontSize="8" fill="#4a3b2a" fontWeight="bold">V</text>
+          <text x="340" y="270" textAnchor="middle" className="font-serif" fontSize="10" fill="#4a3b2a" fontWeight="bold">VLADIVOSTOK</text>
+          <text x="340" y="282" textAnchor="middle" fontSize="7" fill="#4a3b2a" opacity="0.5">9 août 1918</text>
 
-          {mapLocations.map((loc, i) => (
-            <Marker key={i} position={[loc.lat, loc.lng]} icon={createIcon(loc.type)}>
-              <Popup>
-                <div className="text-xs" style={{ minWidth: 140 }}>
-                  <p className="font-bold text-sm" style={{ color: "#4a3b2a" }}>{loc.name}</p>
-                  <p style={{ color: "#dcb575", fontWeight: 600 }}>{loc.date}</p>
-                  <p style={{ color: "#4a3b2a", opacity: 0.8 }}>{loc.desc}</p>
-                  {loc.type === "combat" && <p style={{ color: "#c0392b", fontWeight: 700 }}>Lieu de combat</p>}
-                </div>
-              </Popup>
-            </Marker>
+          <line x1="356" y1="235" x2="830" y2="120" stroke="#8B4513" strokeWidth="3" strokeDasharray="8 4" />
+          <line x1="356" y1="235" x2="830" y2="120" stroke="#dcb575" strokeWidth="1.5" />
+
+          {[
+            { x: 390, y: 228, label: "Oussourik", sub: "Combat", combat: true },
+            { x: 430, y: 220, label: "Doukoskoïe", sub: "23-24 août", combat: true },
+            { x: 500, y: 200, label: "Kharbine", sub: "", combat: false },
+            { x: 560, y: 185, label: "Tchita", sub: "", combat: false },
+            { x: 620, y: 170, label: "Irkoutsk", sub: "Baïkal", combat: false },
+            { x: 680, y: 155, label: "Omsk", sub: "", combat: false },
+            { x: 740, y: 140, label: "Tchéliabinsk", sub: "janv.–mars 1919", combat: false },
+          ].map((pt, i) => (
+            <g key={i}>
+              <circle cx={pt.x} cy={pt.y} r="5" fill={pt.combat ? "#c0392b" : "#4a3b2a"} opacity={pt.combat ? 0.8 : 0.4} />
+              <text x={pt.x} y={pt.y - 12} textAnchor="middle" fontSize="8" fill="#4a3b2a" fontWeight="bold" textDecoration={pt.combat ? "underline" : "none"}>{pt.label}</text>
+              {pt.sub && <text x={pt.x} y={pt.y + 16} textAnchor="middle" fontSize="6.5" fill="#4a3b2a" opacity="0.5">{pt.sub}</text>}
+            </g>
           ))}
-        </MapContainer>
-      </div>
 
-      <div className="flex flex-wrap gap-4 p-4 bg-[#4a3b2a]/5 border-t border-[#4a3b2a]/10 text-xs">
-        <div className="flex items-center gap-2">
-          <div className="w-6 h-0.5 border-t-2 border-dashed border-[#4a7a9b]" />
-          <span>Route maritime</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-6 h-0.5 bg-[#8B4513]" />
-          <span>Transsibérien</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-6 h-0.5 border-t-2 border-dashed border-[#c0392b]" />
-          <span>Vers Ourfa</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-[#c0392b] border border-[#8B0000]" />
-          <span>Combat</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-[#4a3b2a] opacity-60 border border-[#4a3b2a]" />
-          <span>Étape</span>
-        </div>
+          <circle cx="830" cy="120" r="14" fill="#c0392b" stroke="#4a3b2a" strokeWidth="2" />
+          <text x="830" y="124" textAnchor="middle" fontSize="8" fill="white" fontWeight="bold">!</text>
+          <text x="830" y="105" textAnchor="middle" className="font-serif" fontSize="10" fill="#c0392b" fontWeight="bold">OURFA</text>
+          <text x="830" y="148" textAnchor="middle" fontSize="7" fill="#4a3b2a" opacity="0.5">21 nov. 1918</text>
+
+          <text x="590" y="155" textAnchor="middle" className="font-serif" fontSize="9" fill="#8B4513" fontWeight="bold" letterSpacing="4">TRANSSIBÉRIEN</text>
+
+          <rect x="15" y="15" width="170" height="95" rx="6" fill="white" opacity="0.8" stroke="#4a3b2a" strokeWidth="0.5" />
+          <text x="25" y="32" fontSize="8" fill="#4a3b2a" fontWeight="bold">LÉGENDE</text>
+          <line x1="25" y1="46" x2="50" y2="46" stroke="#4a7a9b" strokeWidth="2" strokeDasharray="4 2" />
+          <text x="55" y="49" fontSize="7" fill="#4a3b2a">Route maritime</text>
+          <line x1="25" y1="62" x2="50" y2="62" stroke="#dcb575" strokeWidth="2" />
+          <text x="55" y="65" fontSize="7" fill="#4a3b2a">Transsibérien</text>
+          <circle cx="32" cy="78" r="4" fill="#c0392b" />
+          <text x="55" y="81" fontSize="7" fill="#4a3b2a">Lieu de combat</text>
+          <circle cx="32" cy="93" r="4" fill="#4a3b2a" opacity="0.4" />
+          <text x="55" y="96" fontSize="7" fill="#4a3b2a">Étape</text>
+        </svg>
       </div>
     </div>
   );
