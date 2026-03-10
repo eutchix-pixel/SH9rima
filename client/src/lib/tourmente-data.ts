@@ -20,7 +20,6 @@ export interface TourmenteContent {
     etatDesLieux: {
       titre: string;
       organisation: string[];
-      armement: string[];
       dmb: string;
     };
     agression1940: {
@@ -107,12 +106,6 @@ export const tourmenteData: TourmenteContent = {
       organisation: [
         "Division du Tonkin — PC à Hanoï — 3 Bataillons",
         "Par bataillon : 3 compagnies de fusiliers voltigeurs, 1 compagnie de mitrailleuses, 1 compagnie de commandement (CC)",
-      ],
-      armement: [
-        "Mousqueton 1892, Fusil 1902, Fusil 86/93 avec tromblon V.B.",
-        "FM Chauchat (1915) et FM 1924/29. Mitrailleuses Hotchkiss.",
-        "Mortiers de 60 mm et 81 mm",
-        "Canons de 37 mm (1916) et 75 mm (1897)",
       ],
       dmb: "Détachement Motorisé de Brigade : chars Renault FT 17, automitrailleuses Panhard md 18, peloton de reconnaissance (motos et sides).",
     },

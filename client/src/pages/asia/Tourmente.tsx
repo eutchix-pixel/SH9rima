@@ -178,27 +178,15 @@ export default function TourmentePage() {
                   <Shield className="h-5 w-5 text-red-500" />
                   <h2 className="font-serif text-2xl md:text-3xl font-bold">{tourmenteData.sections.etatDesLieux.titre}</h2>
                 </div>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5 space-y-3">
-                    <h4 className="font-serif font-bold text-sm uppercase tracking-wide text-red-400">Organisation</h4>
-                    <ul className="space-y-2">
-                      {tourmenteData.sections.etatDesLieux.organisation.map((item, i) => (
-                        <li key={i} className="flex gap-2 text-xs leading-relaxed opacity-80">
-                          <ChevronRight className="h-3 w-3 shrink-0 text-red-500 mt-0.5" /> {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-5 space-y-3">
-                    <h4 className="font-serif font-bold text-sm uppercase tracking-wide text-red-400">Armement</h4>
-                    <ul className="space-y-2">
-                      {tourmenteData.sections.etatDesLieux.armement.map((item, i) => (
-                        <li key={i} className="flex gap-2 text-xs leading-relaxed opacity-80">
-                          <ChevronRight className="h-3 w-3 shrink-0 text-red-500 mt-0.5" /> {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-5 space-y-3">
+                  <h4 className="font-serif font-bold text-sm uppercase tracking-wide text-red-400">Organisation</h4>
+                  <ul className="space-y-2">
+                    {tourmenteData.sections.etatDesLieux.organisation.map((item, i) => (
+                      <li key={i} className="flex gap-2 text-xs leading-relaxed opacity-80">
+                        <ChevronRight className="h-3 w-3 shrink-0 text-red-500 mt-0.5" /> {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
                 <div className="bg-red-950/30 border border-red-900/30 rounded-xl p-5">
                   <h4 className="font-serif font-bold text-sm text-red-400 mb-2">Détachement Motorisé de Brigade</h4>
