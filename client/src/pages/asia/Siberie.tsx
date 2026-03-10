@@ -11,6 +11,8 @@ import {
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useState, useRef } from "react";
 import { motion, useScroll, useInView } from "framer-motion";
+import { MapContainer, TileLayer, Polyline, CircleMarker, Popup, Tooltip } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 type ReadingMode = 'comprendre' | 'recit' | 'archives';
 
@@ -157,6 +159,29 @@ function ItineraireTimeline() {
   );
 }
 
+const mapPoints = [
+  { lat: 21.0285, lng: 105.8542, label: "Hanoï", detail: "Départ — juil. 1918", color: "#dcb575" },
+  { lat: 43.1155, lng: 131.8855, label: "Vladivostok", detail: "Base arrière / débarquement", color: "#dcb575" },
+  { lat: 48.48, lng: 135.06, label: "Jonction Amour", detail: "Prise après 2 jours de combat", color: "#4a3b2a" },
+  { lat: 51.83, lng: 107.59, label: "Lac Baïkal", detail: "Traversée Transbaïkalie", color: "#4a3b2a" },
+  { lat: 56.0153, lng: 92.8932, label: "Krasnoïarsk", detail: "Steppe sibérienne", color: "#4a3b2a" },
+  { lat: 56.4884, lng: 84.9480, label: "Tomsk", detail: "Steppe sibérienne", color: "#4a3b2a" },
+  { lat: 54.9885, lng: 73.3242, label: "Omsk", detail: "Gouvernement « Blanc »", color: "#4a3b2a" },
+  { lat: 55.1644, lng: 61.4368, label: "Tchéliabinsk", detail: "Monts Oural", color: "#4a3b2a" },
+  { lat: 54.7388, lng: 55.9721, label: "Oufa", detail: "Point extrême — zone de front", color: "#c0392b" },
+];
+
+const maritimeRoute: [number, number][] = [
+  [21.0285, 105.8542], [16.0, 108.2], [12.0, 112.0], [10.0, 117.0],
+  [14.0, 121.0], [20.0, 125.0], [28.0, 130.0], [35.0, 132.0], [43.1155, 131.8855],
+];
+
+const landRoute: [number, number][] = [
+  [43.1155, 131.8855], [48.48, 135.06], [51.83, 107.59],
+  [56.0153, 92.8932], [56.4884, 84.9480], [54.9885, 73.3242],
+  [55.1644, 61.4368], [54.7388, 55.9721],
+];
+
 function TranssiberienMap() {
   return (
     <div className="relative bg-[#f5eedf] border-2 border-[#4a3b2a]/20 rounded-xl overflow-hidden shadow-lg">
@@ -165,61 +190,66 @@ function TranssiberienMap() {
           <MapIcon className="h-5 w-5 text-[#4a3b2a]" />
           <h3 className="font-serif font-bold text-lg">Atlas — Itinéraire du 9e RIC en Sibérie</h3>
         </div>
-        <p className="text-xs opacity-60 mt-1">Schéma non à l'échelle : Hanoï → Vladivostok → Transsibérien → Oufa.</p>
+        <p className="text-xs opacity-60 mt-1">Cliquez sur les points pour voir les détails. Route maritime (tirets bleus) et Transsibérien (trait brun).</p>
       </div>
+      <div className="h-[400px] md:h-[500px] w-full" style={{ filter: 'sepia(30%) saturate(80%)' }} data-testid="map-itineraire">
+        <MapContainer
+          center={[45, 90]}
+          zoom={3}
+          scrollWheelZoom={false}
+          attributionControl={false}
+          className="h-full w-full"
+        >
+          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-      <div className="relative h-72 md:h-96 p-4">
-        <svg viewBox="0 0 900 350" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
-          <rect x="0" y="0" width="900" height="350" fill="#f5eedf" />
+          <Polyline
+            positions={maritimeRoute}
+            pathOptions={{ color: '#4a7a9b', weight: 3, dashArray: '8, 6', opacity: 0.8 }}
+          />
 
-          <path d="M80 260 Q200 320 340 240" stroke="#4a7a9b" strokeWidth="2" fill="none" strokeDasharray="6 3" />
-          <text x="200" y="300" fontSize="8" fill="#4a7a9b" opacity="0.7" textAnchor="middle">Route maritime</text>
+          <Polyline
+            positions={landRoute}
+            pathOptions={{ color: '#8B4513', weight: 3, opacity: 0.9 }}
+          />
 
-          <circle cx="80" cy="260" r="14" fill="#dcb575" stroke="#4a3b2a" strokeWidth="2" />
-          <text x="80" y="264" textAnchor="middle" fontSize="8" fill="#4a3b2a" fontWeight="bold">H</text>
-          <text x="80" y="290" textAnchor="middle" className="font-serif" fontSize="10" fill="#4a3b2a" fontWeight="bold">HANOÏ</text>
-          <text x="80" y="302" textAnchor="middle" fontSize="7" fill="#4a3b2a" opacity="0.5">+35 °C</text>
-
-          <circle cx="340" cy="240" r="16" fill="#dcb575" stroke="#4a3b2a" strokeWidth="2" />
-          <text x="340" y="244" textAnchor="middle" fontSize="8" fill="#4a3b2a" fontWeight="bold">V</text>
-          <text x="340" y="270" textAnchor="middle" className="font-serif" fontSize="10" fill="#4a3b2a" fontWeight="bold">VLADIVOSTOK</text>
-          <text x="340" y="282" textAnchor="middle" fontSize="7" fill="#4a3b2a" opacity="0.5">Port d'entrée</text>
-
-          <line x1="356" y1="235" x2="830" y2="120" stroke="#8B4513" strokeWidth="3" strokeDasharray="8 4" />
-          <line x1="356" y1="235" x2="830" y2="120" stroke="#dcb575" strokeWidth="1.5" />
-
-          {[
-            { x: 420, y: 218, label: "Amour", sub: "Zone de combat" },
-            { x: 500, y: 200, label: "Baïkal", sub: "Transbaïkalie" },
-            { x: 580, y: 180, label: "Krasnoïarsk", sub: "" },
-            { x: 660, y: 162, label: "Omsk", sub: "Gouv. Blanc" },
-            { x: 740, y: 142, label: "Tchéliabinsk", sub: "Oural" },
-          ].map((pt, i) => (
-            <g key={i}>
-              <circle cx={pt.x} cy={pt.y} r="5" fill="#4a3b2a" opacity="0.4" />
-              <text x={pt.x} y={pt.y - 12} textAnchor="middle" fontSize="8" fill="#4a3b2a" fontWeight="bold">{pt.label}</text>
-              {pt.sub && <text x={pt.x} y={pt.y + 16} textAnchor="middle" fontSize="6.5" fill="#4a3b2a" opacity="0.5">{pt.sub}</text>}
-            </g>
-          ))}
-
-          <circle cx="830" cy="120" r="14" fill="#c0392b" stroke="#4a3b2a" strokeWidth="2" />
-          <text x="830" y="124" textAnchor="middle" fontSize="8" fill="white" fontWeight="bold">!</text>
-          <text x="830" y="105" textAnchor="middle" className="font-serif" fontSize="10" fill="#c0392b" fontWeight="bold">OUFA</text>
-          <text x="830" y="148" textAnchor="middle" fontSize="7" fill="#4a3b2a" opacity="0.5">Point extrême</text>
-
-          <text x="590" y="155" textAnchor="middle" className="font-serif" fontSize="9" fill="#8B4513" fontWeight="bold" letterSpacing="4">TRANSSIBÉRIEN</text>
-
-          <rect x="15" y="15" width="170" height="80" rx="6" fill="white" opacity="0.8" stroke="#4a3b2a" strokeWidth="0.5" />
-          <text x="25" y="32" fontSize="8" fill="#4a3b2a" fontWeight="bold">LÉGENDE</text>
-          <line x1="25" y1="46" x2="50" y2="46" stroke="#4a7a9b" strokeWidth="2" strokeDasharray="4 2" />
-          <text x="55" y="49" fontSize="7" fill="#4a3b2a">Route maritime</text>
-          <line x1="25" y1="62" x2="50" y2="62" stroke="#dcb575" strokeWidth="2" />
-          <text x="55" y="65" fontSize="7" fill="#4a3b2a">Transsibérien</text>
-          <circle cx="32" cy="78" r="4" fill="#c0392b" />
-          <text x="55" y="81" fontSize="7" fill="#4a3b2a">Zone de front</text>
-
-          <text x="600" y="340" textAnchor="middle" fontSize="8" fill="#4a3b2a" opacity="0.3" fontStyle="italic">−40 °C en hiver</text>
-        </svg>
+          {mapPoints.map((pt, i) => {
+            const isEndpoint = pt.color === '#c0392b';
+            const isStart = pt.label === 'Hanoï';
+            const radius = (isEndpoint || isStart) ? 8 : 5;
+            return (
+              <CircleMarker
+                key={i}
+                center={[pt.lat, pt.lng]}
+                radius={radius}
+                pathOptions={{ fillColor: pt.color, color: '#4a3b2a', weight: 2, fillOpacity: 0.9 }}
+              >
+                <Popup>
+                  <div style={{ fontFamily: 'serif', textAlign: 'center' }}>
+                    <strong>{pt.label}</strong><br />
+                    <span style={{ fontSize: '11px', opacity: 0.8 }}>{pt.detail}</span>
+                  </div>
+                </Popup>
+                {(isStart || isEndpoint) && (
+                  <Tooltip permanent direction={isStart ? 'bottom' : 'top'}>
+                    <strong>{pt.label}</strong>
+                  </Tooltip>
+                )}
+              </CircleMarker>
+            );
+          })}
+        </MapContainer>
+      </div>
+      <div className="absolute bottom-4 left-4 z-[1000] bg-white/90 rounded-lg p-3 border border-[#4a3b2a]/20 text-[11px] leading-relaxed">
+        <div className="font-bold mb-1 text-[10px] uppercase tracking-wider text-[#4a3b2a]">Légende</div>
+        <div className="flex items-center gap-2 mb-0.5">
+          <span className="inline-block w-5 h-0 border-t-2 border-dashed border-[#4a7a9b]" /> Route maritime
+        </div>
+        <div className="flex items-center gap-2 mb-0.5">
+          <span className="inline-block w-5 h-0.5 bg-[#8B4513]" /> Transsibérien
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="inline-block w-2 h-2 rounded-full bg-[#c0392b]" /> Zone de front
+        </div>
       </div>
     </div>
   );
