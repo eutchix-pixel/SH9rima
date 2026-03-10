@@ -75,7 +75,6 @@ export const heureusesData: HeureusesContent = {
     texte: "Le 9e RIC possédait à Hanoï une musique réputée. Il donna de nombreux concerts en ville dès sa création comme l'attestent les affiches à l'époque.",
     documents: [
       "Programme du 29 juillet 1894",
-      "ENGAGEZ‑VOUS DANS LES TROUPES COLONIALES",
     ],
     parenthese: "Même sans visuel, ces titres montrent une présence culturelle et une communication publique.",
   },
