@@ -62,7 +62,7 @@ export const heureusesData: HeureusesContent = {
   ],
   hanoiReperes: [
     { title: "Rue Paul‑Bert (rue de l'Opéra)", parenthese: "Une capitale coloniale, vitrine administrative et urbaine.", image: "/images/hanoi-rue-paul-bert.png", legende: "Tonkin — Hanoï, rue Paul‑Bert — carte postale d'époque" },
-    { title: "La gare de Hanoï", parenthese: "La mobilité, le contrôle et la logistique commencent souvent ici.", image: "/images/hanoi-gare.png", legende: "Gare de Hanoï — point de départ vers le Tonkin" },
+    { title: "La gare de Hanoï", parenthese: "La mobilité, le contrôle et la logistique commencent souvent ici.", image: "/images/hanoi-gare-real.png", legende: "Gare de Hanoï — voyageurs sur le quai" },
     { title: "Boulevard Henri Rivière", parenthese: "Les noms de lieux racontent aussi une mémoire.", image: "/images/hanoi-boulevard-riviere.png", legende: "Boulevard Henri Rivière, au bord du Petit Lac" },
   ],
   traditionsVisages: [
