@@ -214,6 +214,7 @@ export default function TourmentePage() {
                   <h2 className="font-serif text-2xl md:text-3xl font-bold">{tourmenteData.sections.agression1940.titre}</h2>
                 </div>
                 <p className="text-sm leading-relaxed opacity-85">{tourmenteData.sections.agression1940.texte}</p>
+                <p className="text-sm italic opacity-75 border-l-4 border-red-800 pl-4 py-1">{tourmenteData.sections.agression1940.choc}</p>
 
                 <div className="relative overflow-hidden rounded-2xl shadow-xl">
                   <div className="absolute inset-0 bg-gradient-to-br from-red-950 via-[#2a1f14] to-[#1a1a1a]" />
@@ -222,10 +223,22 @@ export default function TourmentePage() {
                       <Award className="h-5 w-5 text-red-400" />
                       <h3 className="font-serif text-lg font-bold">{tourmenteData.sections.agression1940.naCham.titre}</h3>
                     </div>
+                    <p className="text-xs uppercase tracking-wide text-red-400 font-bold">{tourmenteData.sections.agression1940.naCham.terrain}</p>
                     <p className="text-sm leading-relaxed opacity-85">{tourmenteData.sections.agression1940.naCham.texte}</p>
                     <div className="bg-red-900/30 border border-red-800/30 rounded-lg p-4">
                       <p className="text-sm font-bold text-red-300">{tourmenteData.sections.agression1940.naCham.bilan}</p>
                     </div>
+                  </div>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-4" data-testid="bloc-analyse-tactique">
+                  <div className="bg-white/5 border border-emerald-900/30 rounded-xl p-5 space-y-2">
+                    <h4 className="font-serif font-bold text-sm uppercase tracking-wide text-emerald-400">Points forts</h4>
+                    <p className="text-sm opacity-80 leading-relaxed">{tourmenteData.sections.agression1940.analyseTactique.pointsForts}</p>
+                  </div>
+                  <div className="bg-white/5 border border-red-900/30 rounded-xl p-5 space-y-2">
+                    <h4 className="font-serif font-bold text-sm uppercase tracking-wide text-red-400">Points faibles</h4>
+                    <p className="text-sm opacity-80 leading-relaxed">{tourmenteData.sections.agression1940.analyseTactique.pointsFaibles}</p>
                   </div>
                 </div>
               </section>

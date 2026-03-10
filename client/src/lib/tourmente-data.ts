@@ -26,10 +26,16 @@ export interface TourmenteContent {
     agression1940: {
       titre: string;
       texte: string;
+      choc: string;
       naCham: {
         titre: string;
+        terrain: string;
         texte: string;
         bilan: string;
+      };
+      analyseTactique: {
+        pointsForts: string;
+        pointsFaibles: string;
       };
     };
     guerreThai: {
@@ -103,12 +109,18 @@ export const tourmenteData: TourmenteContent = {
       dmb: "Détachement Motorisé de Brigade : chars Renault FT 17, automitrailleuses Panhard md 18, peloton de reconnaissance (motos et sides).",
     },
     agression1940: {
-      titre: "La première agression — Septembre 1940",
-      texte: "Le 22 septembre 1940, la 5e Division japonaise du général Nakamura franchit la frontière à Lang Son. Les 1re, 2e et 11e compagnies du 9e RIC sont rapidement encerclées.",
+      titre: "L'agression japonaise — Septembre 1940",
+      texte: "Le 22 septembre 1940, la 5e Division japonaise du général Nakamura franchit la frontière chinoise à Lang Son. Les 1re, 2e et 11e compagnies du 9e RIC sont immédiatement encerclées.",
+      choc: "Premier combat de grande envergure pour le régiment face à une armée moderne et aguerrie.",
       naCham: {
         titre: "Le fait d'armes de Na Cham — 24–25 septembre",
-        texte: "La 10e Compagnie du capitaine Carli défend le passage vers Lang Son depuis les pitons calcaires. Les sections Seguin et Battaglia sont engagées dans un combat acharné.",
-        bilan: "Plus de 1 000 Japonais hors de combat, 30 camions ennemis détruits par le feu. Citation à l'ordre de l'Armée.",
+        terrain: "Une défense acharnée dans les pitons calcaires — massifs rocheux escarpés dominant le passage vers Lang Son.",
+        texte: "C'est le moment de gloire de la 10e Compagnie du capitaine Carli. Les sections Seguin et Battaglia s'illustrent par leur ténacité face à un ennemi supérieur en nombre.",
+        bilan: "Plus de 1 000 Japonais mis hors de combat. 30 camions ennemis brûlés. La 10e Compagnie reçoit une citation à l'ordre de l'Armée.",
+      },
+      analyseTactique: {
+        pointsForts: "Excellente utilisation du relief (les pitons) et efficacité des armes automatiques (FM 24/29).",
+        pointsFaibles: "Infériorité numérique et manque de soutien aérien (avions Potez détruits au sol).",
       },
     },
     guerreThai: {
