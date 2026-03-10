@@ -201,23 +201,33 @@ export default function AnneesHeureusesPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               />
-              <p className="text-base leading-relaxed opacity-90">{heureusesData.musique.texte}</p>
-              <div className="grid sm:grid-cols-3 gap-3">
-                {heureusesData.musique.documents.map((doc, i) => (
-                  <motion.div
-                    key={i}
-                    className="bg-white/10 rounded-lg p-4 border border-white/10"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 + 0.2 }}
-                  >
-                    <div className="bg-white/5 rounded h-16 flex items-center justify-center mb-2">
-                      <Volume2 className="h-6 w-6 opacity-20" />
-                    </div>
-                    <p className="text-xs font-medium">{doc}</p>
-                  </motion.div>
-                ))}
+              <div className="flex flex-col md:flex-row gap-6 items-start">
+                <motion.div
+                  className="shrink-0 mx-auto md:mx-0"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <img
+                    src="/images/programme-musique-1894.png"
+                    alt="Programme musical du 9e Régiment d'Infanterie de Marine — 29 juillet 1894"
+                    className="h-72 md:h-80 object-contain rounded-lg shadow-lg border border-white/10"
+                    data-testid="img-programme-musique"
+                  />
+                  <p className="text-xs italic opacity-50 mt-2 text-center">Programme du 29 juillet 1894 — Chef de musique J. Simon</p>
+                </motion.div>
+                <div className="space-y-4">
+                  <p className="text-base leading-relaxed opacity-90">{heureusesData.musique.texte}</p>
+                  <div className="space-y-2">
+                    {heureusesData.musique.documents.map((doc, i) => (
+                      <div key={i} className="flex items-center gap-2 text-sm opacity-80">
+                        <Volume2 className="h-4 w-4 shrink-0 text-[#dcb575]" />
+                        <span>{doc}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </section>
