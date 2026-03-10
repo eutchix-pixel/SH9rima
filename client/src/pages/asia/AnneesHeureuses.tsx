@@ -186,7 +186,6 @@ export default function AnneesHeureusesPage() {
                   </div>
                   <div className="p-4 space-y-1.5">
                     <h4 className="font-serif font-bold text-sm">{repere.title}</h4>
-                    <p className="text-xs italic opacity-60">{repere.parenthese}</p>
                     <p className="text-[10px] opacity-40 pt-1">{repere.legende}</p>
                   </div>
                 </motion.div>
