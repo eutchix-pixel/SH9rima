@@ -161,20 +161,6 @@ export default function AnneesHeureusesPage() {
         </FadeInSection>
 
         <FadeInSection>
-          <section className="space-y-6" data-testid="bloc-album">
-            <div className="flex items-center gap-3 border-b-2 border-[#dcb575] pb-4">
-              <ImageIcon className="h-5 w-5" />
-              <h2 className="font-serif text-2xl md:text-3xl font-bold">Album de scènes</h2>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {heureusesData.albumScenes.map((scene, i) => (
-                <SceneCard key={i} title={scene.title} parenthese={scene.parenthese} index={i} />
-              ))}
-            </div>
-          </section>
-        </FadeInSection>
-
-        <FadeInSection>
           <section className="space-y-6" data-testid="bloc-hanoi">
             <div className="flex items-center gap-3 border-b-2 border-[#dcb575] pb-4">
               <MapPin className="h-5 w-5" />
