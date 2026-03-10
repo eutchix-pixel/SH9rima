@@ -250,7 +250,47 @@ export default function TourmentePage() {
                   <MapPin className="h-5 w-5 text-red-500" />
                   <h2 className="font-serif text-2xl md:text-3xl font-bold">{tourmenteData.sections.guerreThai.titre}</h2>
                 </div>
-                <p className="text-sm leading-relaxed opacity-85">{tourmenteData.sections.guerreThai.texte}</p>
+
+                <div className="space-y-3">
+                  <p className="text-sm leading-relaxed opacity-85">{tourmenteData.sections.guerreThai.contexte}</p>
+                  <p className="text-sm leading-relaxed opacity-85">{tourmenteData.sections.guerreThai.agression}</p>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="bg-white/5 border border-white/10 rounded-xl p-5 space-y-2">
+                    <h4 className="font-serif font-bold text-sm uppercase tracking-wide text-red-400">Le 9e RIC au Cambodge</h4>
+                    <p className="text-sm opacity-80 leading-relaxed">{tourmenteData.sections.guerreThai.engagement}</p>
+                  </div>
+                  <div className="bg-white/5 border border-white/10 rounded-xl p-5 space-y-2">
+                    <h4 className="font-serif font-bold text-sm uppercase tracking-wide text-red-400">Conditions de combat</h4>
+                    <p className="text-sm opacity-80 leading-relaxed">{tourmenteData.sections.guerreThai.conditions}</p>
+                  </div>
+                </div>
+
+                <div className="relative overflow-hidden rounded-2xl shadow-xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-red-950 via-[#2a1f14] to-[#1a1a1a]" />
+                  <div className="relative z-10 p-6 md:p-8 space-y-4">
+                    <h3 className="font-serif text-lg font-bold uppercase tracking-wide">Un dénouement amer</h3>
+                    <motion.div
+                      className="w-16 h-0.5 bg-red-700"
+                      initial={{ scaleX: 0 }}
+                      whileInView={{ scaleX: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8 }}
+                    />
+                    <div className="space-y-3">
+                      <div className="bg-emerald-900/20 border border-emerald-900/30 rounded-lg p-4">
+                        <h4 className="text-xs uppercase tracking-wide font-bold text-emerald-400 mb-1">Succès militaire</h4>
+                        <p className="text-sm opacity-85">{tourmenteData.sections.guerreThai.succesNaval}</p>
+                      </div>
+                      <div className="bg-red-900/20 border border-red-800/30 rounded-lg p-4">
+                        <h4 className="text-xs uppercase tracking-wide font-bold text-red-400 mb-1">Médiation japonaise</h4>
+                        <p className="text-sm opacity-85">{tourmenteData.sections.guerreThai.mediationJaponaise}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="bg-white/5 border border-white/10 rounded-xl p-5">
                   <p className="text-sm italic opacity-75 border-l-4 border-red-800 pl-4">{tourmenteData.sections.guerreThai.consequences}</p>
                 </div>

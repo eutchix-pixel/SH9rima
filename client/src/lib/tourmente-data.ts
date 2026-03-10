@@ -40,7 +40,12 @@ export interface TourmenteContent {
     };
     guerreThai: {
       titre: string;
-      texte: string;
+      contexte: string;
+      agression: string;
+      engagement: string;
+      conditions: string;
+      succesNaval: string;
+      mediationJaponaise: string;
       consequences: string;
     };
     coupDeForce: {
@@ -125,8 +130,13 @@ export const tourmenteData: TourmenteContent = {
     },
     guerreThai: {
       titre: "La guerre franco-thaïlandaise — 1940–1941",
-      texte: "La Thaïlande du colonel Luong Pibol Songram attaque la frontière du Laos et du Cambodge. Le 2e Bataillon du 9e RIC est envoyé en renfort au Cambodge. Le combat aéronaval de Koh Chang (17 janvier 1941) est une victoire française, mais la pression diplomatique japonaise impose ses conditions.",
-      consequences: "Traité du 11 mars 1941 : la France est contrainte de céder les provinces de Siem Reap et Battambang.",
+      contexte: "Profitant de l'affaiblissement de la France en Europe, le colonel Luong Pibol Songram, chef du gouvernement thaïlandais, revendique des territoires au Laos et au Cambodge.",
+      agression: "Dès fin 1940, des incidents de frontière éclatent, suivis d'une offensive générale siamoise.",
+      engagement: "Le 2e Bataillon du 9e RIC est envoyé en renfort sur le front du Cambodge pour stopper l'avance des troupes siamoises.",
+      conditions: "Les combats sont difficiles dans la jungle, face à une armée thaïlandaise bien équipée en matériel moderne (chars et avions).",
+      succesNaval: "Le 17 janvier 1941, la marine française remporte la victoire navale de Koh Chang, coulant une grande partie de la flotte adverse.",
+      mediationJaponaise: "Sous la pression du Japon — qui veut devenir le seul maître en Asie — la France est contrainte de signer le traité du 11 mars 1941.",
+      consequences: "L'Indochine perd les riches provinces de Siem Reap et Battambang, ainsi que des territoires au Laos.",
     },
     coupDeForce: {
       titre: "Le coup de force du 9 mars 1945",
