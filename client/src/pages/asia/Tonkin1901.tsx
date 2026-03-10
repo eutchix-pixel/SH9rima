@@ -508,7 +508,7 @@ export default function Tonkin1901Page() {
             </div>
 
             <div className="pt-8">
-              <Link href="/asie/siberie-ww1">
+              <Link href="/asie/siberie-1918-1919">
                 <Button size="lg" className="bg-[#4a3b2a] text-[#e8dcc5] hover:bg-[#4a3b2a]/90 h-14 px-8 text-lg shadow-lg" data-testid="button-next-page">
                   {tonkin1901Data.nextStep} <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>

@@ -1,0 +1,333 @@
+MASTER PROMPT — REPLIT AI
+Projet : “Museum Tour Guide — 9e RIMa”
+Nouvelle page à créer (ASIE) : “Sibérie (1918–1919) — Bataillon colonial sibérien”
++ Inclure en fin de page l’épisode “Les révoltés de Binh Lieu (1918–1919)”.
+Source : TONKIN 2 — pages 10 à 13 (scans). Replit n’a pas accès au PDF : TOUT le texte à afficher est ci‑dessous.
+
+OBJECTIF
+Page simple, claire, immersive, avec :
+- Contexte géopolitique (pour comprendre “pourquoi”)
+- Histoire / déroulé (pour comprendre “ce qui se passe”)
+- Archives (texte source intégral, citations, images)
+
+CONTRAINTES
+- Ne pas inventer de faits : s’en tenir au texte fourni + contexte géopolitique général (sans chiffres non sourcés).
+- Le texte affiché doit être EXACTEMENT celui de “CONTENU À AFFICHER” ci‑dessous (tu peux seulement ajouter micro‑copie UI : “Retour”, “Suivant”, “Agrandir”, etc.).
+- Mobile-first, lecture courte en mode “Comprendre”, détails en accordéons en mode “Archives”.
+- Slug : /asie/siberie-1918-1919
+
+À FAIRE DANS L’APP (FONCTIONNEL)
+1) ROUTE + NAV
+- Ajouter une sous-page ASIE : “Sibérie (1918–1919) — Bataillon colonial sibérien”
+- Boutons fixes : “Revenir aux thèmes”, “Retour ASIE”, “Continuer la visite”.
+- Lien depuis la frise ASIE après 1914/1918 (ou depuis la page 1901–1914).
+
+2) STRUCTURE UX (SIMPLE)
+- HERO + question directrice
+- 3 modes (segmented control) :
+  a) “Comprendre (5 min)” : Contexte géopolitique + Timeline courte + À retenir
+  b) “Récit (10–12 min)” : ajoute “Ce qui se passe” + Binh Lieu (résumé + carte)
+  c) “Archives (approfondir)” : affiche le TEXTE SOURCE intégral + Citation + galerie complète
+- Timeline cliquable (8–10 repères max)
+- Module “Atlas” (image / carte) avec zoom plein écran
+- Mini‑quiz (6 questions)
+
+3) MÉDIAS
+- Si les images n’existent pas dans le repo : placeholders OK mais afficher les légendes EXACTES.
+- Prévoir zoom plein écran (modal) + swipe mobile.
+
+4) DONNÉES
+- Stocker le contenu dans le format existant (JSON/TS/MD).
+- Coller le texte tel quel.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER (TEXTE DU SITE)
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Sibérie (1918–1919) — L’épopée du bataillon colonial sibérien
+
+SOUS‑TITRE (H2)
+Fin de Grande Guerre : révolution, guerre civile, alliances mouvantes. En Extrême‑Orient russe, Vladivostok et le Transsibérien deviennent des leviers géopolitiques.
+
+QUESTION DIRECTRICE
+Pourquoi des marsouins quittent-ils Hanoï pour Vladivostok, et comment une opération “loin d’Europe” devient-elle une affaire de logistique, d’alliances et d’influence ?
+
+BOUTONS (micro‑copie)
+- Comprendre (5 min)
+- Récit (10–12 min)
+- Archives (approfondir)
+
+────────────────────────────
+BLOC — CONTEXTE GÉOPOLITIQUE (pour comprendre)
+────────────────────────────
+1917–1919 : la Russie bascule. La fin de la guerre mondiale ne signifie pas la fin des crises : révolution, désorganisation de l’État, guerre civile, et compétition d’influences. Dans ce type de choc, les points d’entrée comptent : un port (Vladivostok) et un axe (le Transsibérien) peuvent décider de la capacité à déplacer des hommes, des armes et du pouvoir.
+
+L’intervention alliée en Extrême‑Orient russe se lit donc comme une géopolitique des axes :
+— sécuriser un point d’appui maritime ;
+— contrôler ou protéger une ligne de communication ;
+— gérer des forces en mouvement (dont les troupes tchécoslovaques mentionnées dans le récit ci‑dessous).
+
+(Parenthèse : en Sibérie, “tenir un axe” peut peser autant que “gagner un combat”.)
+
+À RETENIR (cartel)
+- Théâtre immense : la logistique devient politique.
+- Port + rail = capacité d’action.
+- Alliances : coopération… mais intérêts parfois divergents.
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+Le récit qui suit raconte une expédition hors‑normes : des marsouins quittent Hanoï pour Vladivostok, dans une mission liée au retour des troupes tchécoslovaques et à la lutte contre le bolchévisme. Le Transsibérien structure tout : les déplacements, la manœuvre, et la tenue du front. L’hiver, l’isolement et les distances imposent une endurance extrême.
+
+────────────────────────────
+TIMELINE (repères)
+────────────────────────────
+- 24 juillet 1917 : embarquement sur le vapeur « André Lebon » (direction Vladivostok).
+- 30 juin 1918 : Dietrich se saisit de Vladivostok et alerte l’Occident (récit ci‑dessous).
+- 9 août 1918 : arrivée à Vladivostock (détachement de 1136 hommes).
+- 15–19 août 1918 : offensive bolchévique.
+- 23–24 août 1918 : attaque à Doukoskoïe ; repli, contre‑attaque japonaise.
+- 1er octobre 1918 : début de l’avance vers l’ouest.
+- 21 novembre 1918 : arrivée à Ourfa.
+- 11 janvier – 3 mars 1919 : séjour à Tchéliabinsk.
+- 16 juillet – 14 septembre 1919 : retour vers Vladivostok.
+- 4 mars 1920 : retour à Tien Tsin ; disparition du bataillon (récit ci‑dessous).
+
+────────────────────────────
+BLOC — CE QUI SE PASSE (récit guidé)
+────────────────────────────
+Lis cette page comme un “film” en trois actes :
+
+ACTE 1 — Départ (Hanoï → Vladivostok)
+ACTE 2 — Le front (voie ferrée, positions, attaques)
+ACTE 3 — L’axe Transsibérien (avance vers l’ouest, hiver, retour)
+
+(Le texte source intégral est disponible en mode “Archives”.)
+
+────────────────────────────
+ACCORDÉON — TEXTE SOURCE (INTÉGRAL) : “L’ÉPOPÉE DU BATAILLON COLONIAL SIBÉRIEN (1918-1919)”
+────────────────────────────
+L’ÉPOPÉE DU BATAILLON COLONIAL SIBÉRIEN
+(1918-1919)
+
+Qui aurait imaginé quitter sa douce garnison d'Hanoï pour débarquer un beau jour en Sibérie, traverser ses plaines immenses et froides, longer l'Amour puis à partir du Baïkal, se remémorer Jules Vernes contant les aventures de Michel Strogoff au gré des villes de Krasnoïark, Tomsk, Omsk, les monts Oural, Tchéliabink, Ourfa ?
+
+Certes pas les 228 marsouins de la 1re compagnie du lieutenant Desaille ou les 226 marsouins de la 8e compagnie du capitaine Schill qui, un certain 24 juillet 1917, s'embarquèrent sur le vapeur « André Lebon », direction Vladivostok. Car ce sont bien eux qui partirent dans cette lointaine contrée.
+
+Cette intervention a deux buts : faciliter le retour des troupes tchécoslovaques qui combattaient l'Allemand au côté des Russes vers Vladivostok par le transsibérien, et lutter contre le bolchévisme.
+
+Quel est donc cet imbroglio ? En Russie, combattait aux côtés des troupes du Tsar une division tchécoslovaque. En 1917, sous Kerensky, cette division extrêmement soudée et motivée avait eu, sous les ordres du général Broussilov, une conduite héroïque, prenant 35 canons et faisant 6 000 prisonniers. La deuxième division était prête à être engagée, une troisième était en formation. La révolution bolchévique ne sut qu'en faire. La mission militaire française à Moscou proposa son désarmement et son transfert à Vladivostok d'où les Tchèques seraient rapatriés, d'autant plus qu'ils étaient hermétiques à la propagande bolchévique. Le transfert se réalise lorsque les premiers atteignent Vladivostock, les derniers sont à Kiev. A ce moment là, Moscou donne l'ordre de les désarmer totalement (seules des armes d'auto-défense avaient été conservées). Malgré l'isolement des différents convois, sans concertation, les tchèques ripostent et repoussent partout leur agresseur. Le 30 juin 1918, le général Dietrich, commandant la division, s'entend dire aux portes de Vladivostok qu'il est indésirable. La nuit suivante, il s'empare de la ville et donne l'alerte en Occident. Il décide de récupérer ses divisions, et donc de refaire en sens inverse le trajet. Il annexe la région de Vladivostock, remonte la voie ferrée et s'empare de la jonction Amour-Mandchourie après deux jours de combat.
+
+Entre temps, une intervention internationale a été décidée.
+
+En juillet, le chef de bataillon Mallet regroupe sous ses ordres les deux compagnies du 9e RIC, deux compagnies du 16e RIC (capitaine Desaille et de Vaux), et une compagnie du 3e Zouaves (capitaine Feneurstein). A Shangaï, un détache-ment serbe de deux officiers et dix-sept hommes est rattaché au bataillon. Le 4 août le vapeur fait escale à Takou ( Chine ) et embarque les unités du 16e RIC. C'est un détachement de 1136 hommes qui atteint Vladivostock le 9 août.
+
+A peine arrivé, le bataillon reçoit l'ordre de rejoindre le front de l'Oussourik à Kraïevski. Mallet divise ses troupes en deux groupes : le premier aux ordres du capitaine Feneurstein avec les deux compagnies du 16e RIC et une du 3e Zouaves, le second aux ordres du capitaine Schill, avec les deux compagnies du 9e RIC et deux sections de mitrailleuses.
+
+Le 10 août, les groupes partent vers leurs positions, atteintes le 13. A peine installés, ils subissent une offensive bolchévique du 15 au 19, faites de tirs d'artillerie, de manœuvres dilatoires et d'escarmouches. En fait, le bataillon subit son épreuve du feu sans réellement combattre. Dans la nuit, un coup de main bolchévique sur le poste de commandement russe ( cosaques du Tsar ) gardé entre autres par une douzaine de français provoque la disparition de 4 Zouaves.
+
+Le 20, le groupe Schill prend le train pour la ville de Doukovskoïe afin de stopper l'avance bolchévique. Le groupe Feneurstein le rejoint. La manœuvre générale est articulée autour de la voie ferrée. Les troupes tchèques, japonaises et anglaises prennent position aux côtés des Français. Un prisonnier bolchévik informe le commandant Mallet de l'imminence d'une attaque avec des forces évaluées à 4500 hommes.
+
+Celle-ci se déclenche le 23 août à 5 h 00 du matin. Le groupe Schill reçoit la première vague d'assaut mais il est évident qu'il ne pourra tenir longtemps, sa position de pointe le rend vulnérable. Ordre lui est donné de se replier sur les lisières de Doukoskoïe, sur sa position de rechange. Là, l'ensemble du bataillon a pour mission de défendre. Le 24, la contre-attaque est déclenchée et réalisée avec succès par le détachement japonais. L'affaire nous coûte deux tués et quinze blessés.
+
+L'avance vers l'ouest a débuté le 1er octobre. Auparavant, les tirailleurs tonkinois ont été regroupés en une compagnie destinée à garder la zone maritime de Vladivostock.
+
+Le bataillon est rejoint le 9 octobre par une batterie coloniale sibérienne, forte de 175 hommes des 4e et 5e RAC d'Indochine.
+
+Le train traverse Kharbine, Tchita, Irkoutsk, Omsk, Tcheliabinsk, et atteint Ourfa le 21 novembre 1918, sans combat. Le seul incident a lieu à Blelia le 2 novembre où l'explosion d'un train de munitions tue trois zouaves. Le bataillon y demeure jusqu'au 10 janvier 1919.
+
+Il séjourne à Tchéliabinsk du 11 janvier au 3 mars 1919. Pendant cette période, les mesures de démobilisation ont touché 6 officiers et 543 sous-officiers et soldats.
+
+Jusqu'au 15 juillet, le bataillon, du moins ce qu'il en reste, escorte les convois d'armes et de munitions sur le transsibérien. Son retour vers Vladivostok débute le 16 juillet, pour l'atteindre le 14 septembre 1919. Il y demeure jusqu'au 14 février 1920.
+
+Son aventure se termine à son retour à Tien Tsin le 4 mars 1920 où il disparaît. (la dissolution du bataillon avait été décidée le 4 mars 1919 et ses hommes rattachés au 16e RIC).
+
+Au total, le bataillon a subi les pertes suivantes : 5 tués, 16 blessés, 5 disparus, 5 morts à la suite de blessures, 6 morts de maladie et il enregistre 25 cas de gelures de pied.
+
+C'est avec courage et détermination que le bataillon vécut cette épopée, isolé dans l'immensité russe, sous le climat rude d'hiver où les températures vont de - 30 à - 50° C, bien loin des douceurs indochinoises !
+
+L'origine du fanion est inconnue. Ce dernier comporte d'ailleurs une anomalie mystérieuse dans sa mention " 1914 - 1919 ".
+
+CITATION
+
+Le bataillon colonial sibérien, par ordre du ministre de la guerre en date du 30 avril 1919, obtint la citation suivante, à l'ordre de l'armée, citation insérée au J.O.R.F. le 24 juin 1919.
+
+"  Le détachement français de Sibérie a, dès son débarquement en Sibérie orientale
+(août 1918), sous le commandement du chef de bataillon Mallet, pris une part active et
+brillante aux opérations des troupes tchécoslovaques et japonaises.
+
+Transporté par le transsibérien sur le front de Russie orientale, a coopéré efficacement
+avec l'armée sibérienne.
+
+Pendant toutes ces opérations exécutées dans des conditions matérielles et morales
+extrêmement pénibles par suite de la rigueur du climat sibérien et de l'éloignement de la
+mère patrie, a montré une endurance à toute épreuve et un inébranlable moral. A ainsi
+représenté dignement l'armée française au milieu des autres contingents étrangers.
+
+Hommage aux officiers, sous-officiers et hommes de troupe du bataillon colonial
+sibérien ".
+
+────────────────────────────
+MODULE — ATLAS (carte / croquis)
+────────────────────────────
+Titre
+Atlas — Déplacements du bataillon en Sibérie
+
+Légende (à afficher)
+Echelle 1/40 000 000
+
+Croquis permettant de suivre les déplacements du bataillon en Sibérie.
+
+Soulignés, les lieux de combat.
+
+ALT
+Carte / croquis des déplacements du bataillon en Sibérie.
+
+────────────────────────────
+GALERIE — IMAGES & LÉGENDES (placeholders OK)
+────────────────────────────
+1) “Croquis permettant de suivre les déplacements du bataillon en Sibérie.”
+ALT : Carte / croquis des déplacements du bataillon en Sibérie.
+
+2) “Tirailleur Tonkinois”
+ALT : Dessin d’un tirailleur tonkinois.
+
+3) “Capitaine Front d’Ourfa — Hiver 1918-1919”
+ALT : Dessin d’un capitaine au front d’Ourfa, hiver 1918-1919.
+
+4) “Fanion (photo / illustration)”
+ALT : Image d’un fanion associé au bataillon.
+
+5) “CITATION (encadré)”
+ALT : Encadré de citation officielle du bataillon colonial sibérien.
+
+────────────────────────────
+MINI‑QUIZ (6 questions)
+────────────────────────────
+Q1. L’intervention en Sibérie est présentée comme ayant deux buts : lesquels ?
+A. Faciliter le retour des troupes tchécoslovaques vers Vladivostok par le transsibérien, et lutter contre le bolchévisme.
+
+Q2. Quel axe structure la manœuvre et les déplacements ?
+A. La voie ferrée / le transsibérien.
+
+Q3. À quelle date le détachement atteint‑il Vladivostock (selon le texte) ?
+A. Le 9 août.
+
+Q4. Quelles conditions marquent fortement l’épopée ?
+A. L’isolement, les distances et le climat sibérien (jusqu’à −30/−50°C).
+
+Q5. Quel bilan de pertes est donné dans le texte ?
+A. 5 tués, 16 blessés, 5 disparus, 5 morts à la suite de blessures, 6 morts de maladie, 25 cas de gelures de pied.
+
+Q6. Qu’obtient le bataillon par ordre du ministre de la guerre (30 avril 1919) ?
+A. Une citation à l’ordre de l’armée (insérée au J.O.R.F. le 24 juin 1919).
+
+────────────────────────────────────────────────────────
+ÉPISODE AU TONKIN (1918–1919) — Les révoltés de Binh Lieu
+────────────────────────────────────────────────────────
+
+TITRE (H2)
+Les révoltés de Binh Lieu (14 novembre 1918 - 20 juin 1919)
+
+SOUS‑TITRE (H3)
+Une crise de sécurité sur un territoire frontalier : mutinerie, poursuite, et effet d’aimant de la proximité chinoise.
+
+RÉSUMÉ (30 secondes)
+Le texte ci‑dessous décrit une insurrection de tirailleurs chinois, puis une opération longue (sept mois) rendue plus difficile par la frontière : refuge, soutien et jonction avec des bandes pirates.
+
+ACCORDÉON — TEXTE SOURCE (INTÉGRAL)
+LES RÉVOLTÉS DE BINH LIEU
+(14 novembre 1918 - 20 juin 1919)
+
+Dans la nuit du 14 au 15 novembre 1918, le chef de bataillon Averlault, commandant le
+1er territoire militaire dont le siège est à Moncay, est averti de l'imminence d'une
+révolte des tirailleurs chinois des postes de Binh Deu, Ham No, Tien Yen, Ho Coi et Dam
+Ha. L'arrestation d'un caporal, le meneur,
+déclenche l'insurrection. quatre vingt
+tirailleurs s'emparent du poste de Binh-Lieu,
+volent les armes et s'enfuient.
+
+L'enquête mettra en évidence que ce sont
+des Allemands qui imaginèrent cette rébellion
+dès septembre 1918. Mais la fin de la guerre
+prit de court les initiateurs comme les acteurs.
+
+Rapidement, les renforts du Tonkin
+rejoignent la zone où près de 1 000 hommes
+se regroupent. Le 9e RIC fournit les 4e, 6e, 7e et
+8e compagnies avec des sections de
+mitrailleuses. Le reste provient des 2e, 3e et
+4e RTT, renforcé de miliciens et de sections
+d'artillerie de montagne.
+
+Sept mois sont nécessaires aux Français pour
+mettre à genoux les mutins. En effet, la proximité
+de la Chine leur procure non seulement sécurité
+et repos, mais aussi un soutien logistique et
+humain car vont se joindre à eux dans leurs
+exactions les bandes pirates chinoises.
+
+Le commandant Masse commande les
+opérations tactiques. Du 25 novembre au
+3 décembre, de longues et dures marches
+sont ponctuées par de violents combats. La
+7e compagnie du 9e RIC, du capitaine Mevel,
+rayonne à partir du col de Long Tu, et
+accroche les insurgés à Hoang Vau et Mi Dao.
+
+On croit la bande définitivement évanouie
+lorsqu'elle tombe en embuscade à Ping Ho
+le 22 décembre, où elle est disloquée.
+
+Le 7 janvier, le colonel Veron prend le
+commandement des opérations.
+
+Face aux pillages incessants, il réorganise
+ses forces en cinq groupes mobiles. Le jeu de
+cache cache dure jusqu'au 20 février 1919 où
+la bande est décimée à Duong Ha et dont le
+reliquat s'enfuit en Chine. Du 1er au 10 mars, le
+commandant Plailly (ancien du 9e RIMa,
+lieutenant lors de l'expédition du Siam en
+1893) décèle les rebelles devenus pirates à
+part entière à Than Son. Il les débusque dans
+les contreforts du massif du Ha Chan Son où
+ils se sont réfugiés. Appuyés par les
+mitrailleuses, les marsouins hachent la bande
+qui se réfugie dans des abrupts imprenables,
+profitant ensuite de la nuit pour fuir.
+
+Les opérations se poursuivent sous le
+commandement du général Nogues à
+compter du 11 mars. A cette date, les unités
+du 9 ont été retirées à l'exception de la
+4e Compagnie, avec 3 pelotons uniquement,
+sur un effectif total de 2000 hommes. Elle
+participe au bouclage du massif du Quang
+Yen le long de la frontière chinoise. Un point
+final à cette opération est mis le 20 juin 1919.
+
+IMAGE (carte) — légende
+Région de Binh Lien
+ALT : Carte de la région de Binh Lieu / Binh Lien.
+
+À RETENIR (cartel)
+- Frontière : refuge et soutien (logistique/humain).
+- Opération longue : sept mois.
+- Le 9e RIC fournit plusieurs compagnies et sections de mitrailleuses.
+
+────────────────────────────
+PROCHAINE ÉTAPE (bouton)
+────────────────────────────
+- Continuer vers : “ASIE — 1920–1939 (années heureuses)” (si page existante)
+
+──────────────────────────────────────────────────────────────────────────────
+FIN DU CONTENU
+──────────────────────────────────────────────────────────────────────────────
+
+NOTES UI (micro‑immersion)
+- Barre de progression de lecture.
+- Bouton “Écouter l’ambiance” (audio placeholder : “vent / train lointain / neige”).
+- Cartels : À retenir, Parenthèse utile, Repères.
+- Galerie : zoom plein écran + swipe mobile.

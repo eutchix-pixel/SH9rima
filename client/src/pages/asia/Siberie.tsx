@@ -5,8 +5,8 @@ import { Input } from "@/components/ui/input";
 import {
   ArrowLeft, ArrowRight, Clock, BookOpen, Scroll, Check, Search,
   Crosshair, Map as MapIcon, RotateCcw, Info,
-  Globe, Train, Anchor, Snowflake, Users, Compass, Ship,
-  Thermometer, Shield
+  Globe, Train, Snowflake, Users, Compass, Shield,
+  Thermometer, Award, AlertTriangle, Sword
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useState, useRef } from "react";
@@ -90,82 +90,15 @@ function TimelineInteractive() {
   );
 }
 
-const blocIcons: Record<string, React.ReactNode> = {
-  enjeu: <Globe className="h-5 w-5" />,
-  acteurs: <Users className="h-5 w-5" />,
-  transsiberien: <Train className="h-5 w-5" />,
-  consequences: <Compass className="h-5 w-5" />,
-};
-
-const etapeIcons = [Ship, Anchor, Crosshair, Train, Snowflake, MapIcon, Shield, Globe, Crosshair];
-
-function ItineraireTimeline() {
-  const [activeStep, setActiveStep] = useState<number | null>(null);
-
-  return (
-    <div data-testid="itineraire-timeline">
-      <div className="overflow-x-auto pb-4 -mx-2">
-        <div className="flex items-start gap-0 min-w-[900px] px-2">
-          {siberieData.itineraire.map((step, i) => {
-            const Icon = etapeIcons[i] || MapIcon;
-            const isActive = activeStep === i;
-            return (
-              <div key={i} className="flex items-start flex-1">
-                <div
-                  className="flex flex-col items-center cursor-pointer group"
-                  onClick={() => setActiveStep(isActive ? null : i)}
-                >
-                  <motion.div
-                    className={`w-12 h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300
-                      ${isActive
-                        ? 'bg-[#4a3b2a] border-[#dcb575] text-[#dcb575] scale-110'
-                        : 'bg-white border-[#4a3b2a]/20 text-[#4a3b2a]/60 group-hover:border-[#dcb575] group-hover:text-[#dcb575]'
-                      }`}
-                    initial={{ opacity: 0, y: -10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.08, duration: 0.3 }}
-                  >
-                    <Icon className="h-5 w-5" />
-                  </motion.div>
-                  <p className={`text-xs font-bold mt-2 text-center max-w-[90px] leading-tight transition-colors ${isActive ? 'text-[#4a3b2a]' : 'opacity-60'}`}>
-                    {step.etape}
-                  </p>
-                  {isActive && (
-                    <motion.div
-                      className="mt-2 bg-[#4a3b2a] text-[#e8dcc5] rounded-lg p-3 text-xs max-w-[140px] text-center shadow-lg"
-                      initial={{ opacity: 0, y: -5 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      {step.detail}
-                    </motion.div>
-                  )}
-                </div>
-                {i < siberieData.itineraire.length - 1 && (
-                  <div className="flex-1 flex items-center mt-6 px-1">
-                    <div className="w-full h-0.5 bg-[#dcb575]/40" style={{ backgroundImage: 'repeating-linear-gradient(90deg, #dcb575 0, #dcb575 8px, transparent 8px, transparent 14px)' }} />
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <p className="text-xs opacity-50 italic text-center mt-2">Cliquez sur une étape pour voir le détail. Faites défiler horizontalement si nécessaire.</p>
-    </div>
-  );
-}
-
 function TranssiberienMap() {
   return (
     <div className="relative bg-[#f5eedf] border-2 border-[#4a3b2a]/20 rounded-xl overflow-hidden shadow-lg">
       <div className="p-4 border-b border-[#4a3b2a]/10 bg-[#4a3b2a]/5">
         <div className="flex items-center gap-2">
           <MapIcon className="h-5 w-5 text-[#4a3b2a]" />
-          <h3 className="font-serif font-bold text-lg">Atlas — Itinéraire du 9e RIC en Sibérie</h3>
+          <h3 className="font-serif font-bold text-lg">Atlas — Déplacements du bataillon en Sibérie</h3>
         </div>
-        <p className="text-xs opacity-60 mt-1">Schéma non à l'échelle : Hanoï → Vladivostok → Transsibérien → Oufa.</p>
+        <p className="text-xs opacity-60 mt-1">Croquis permettant de suivre les déplacements du bataillon. Soulignés, les lieux de combat.</p>
       </div>
 
       <div className="relative h-72 md:h-96 p-4">
@@ -173,52 +106,54 @@ function TranssiberienMap() {
           <rect x="0" y="0" width="900" height="350" fill="#f5eedf" />
 
           <path d="M80 260 Q200 320 340 240" stroke="#4a7a9b" strokeWidth="2" fill="none" strokeDasharray="6 3" />
-          <text x="200" y="300" fontSize="8" fill="#4a7a9b" opacity="0.7" textAnchor="middle">Route maritime</text>
+          <text x="200" y="300" fontSize="8" fill="#4a7a9b" opacity="0.7" textAnchor="middle">Route maritime (André Lebon)</text>
 
           <circle cx="80" cy="260" r="14" fill="#dcb575" stroke="#4a3b2a" strokeWidth="2" />
           <text x="80" y="264" textAnchor="middle" fontSize="8" fill="#4a3b2a" fontWeight="bold">H</text>
           <text x="80" y="290" textAnchor="middle" className="font-serif" fontSize="10" fill="#4a3b2a" fontWeight="bold">HANOÏ</text>
-          <text x="80" y="302" textAnchor="middle" fontSize="7" fill="#4a3b2a" opacity="0.5">+35 °C</text>
+          <text x="80" y="302" textAnchor="middle" fontSize="7" fill="#4a3b2a" opacity="0.5">24 juil. 1917</text>
 
           <circle cx="340" cy="240" r="16" fill="#dcb575" stroke="#4a3b2a" strokeWidth="2" />
           <text x="340" y="244" textAnchor="middle" fontSize="8" fill="#4a3b2a" fontWeight="bold">V</text>
           <text x="340" y="270" textAnchor="middle" className="font-serif" fontSize="10" fill="#4a3b2a" fontWeight="bold">VLADIVOSTOK</text>
-          <text x="340" y="282" textAnchor="middle" fontSize="7" fill="#4a3b2a" opacity="0.5">Port d'entrée</text>
+          <text x="340" y="282" textAnchor="middle" fontSize="7" fill="#4a3b2a" opacity="0.5">9 août 1918</text>
 
           <line x1="356" y1="235" x2="830" y2="120" stroke="#8B4513" strokeWidth="3" strokeDasharray="8 4" />
           <line x1="356" y1="235" x2="830" y2="120" stroke="#dcb575" strokeWidth="1.5" />
 
           {[
-            { x: 420, y: 218, label: "Amour", sub: "Zone de combat" },
-            { x: 500, y: 200, label: "Baïkal", sub: "Transbaïkalie" },
-            { x: 580, y: 180, label: "Krasnoïarsk", sub: "" },
-            { x: 660, y: 162, label: "Omsk", sub: "Gouv. Blanc" },
-            { x: 740, y: 142, label: "Tchéliabinsk", sub: "Oural" },
+            { x: 390, y: 228, label: "Oussourik", sub: "Combat", combat: true },
+            { x: 430, y: 220, label: "Doukoskoïe", sub: "23-24 août", combat: true },
+            { x: 500, y: 200, label: "Kharbine", sub: "", combat: false },
+            { x: 560, y: 185, label: "Tchita", sub: "", combat: false },
+            { x: 620, y: 170, label: "Irkoutsk", sub: "Baïkal", combat: false },
+            { x: 680, y: 155, label: "Omsk", sub: "", combat: false },
+            { x: 740, y: 140, label: "Tchéliabinsk", sub: "janv.–mars 1919", combat: false },
           ].map((pt, i) => (
             <g key={i}>
-              <circle cx={pt.x} cy={pt.y} r="5" fill="#4a3b2a" opacity="0.4" />
-              <text x={pt.x} y={pt.y - 12} textAnchor="middle" fontSize="8" fill="#4a3b2a" fontWeight="bold">{pt.label}</text>
+              <circle cx={pt.x} cy={pt.y} r="5" fill={pt.combat ? "#c0392b" : "#4a3b2a"} opacity={pt.combat ? 0.8 : 0.4} />
+              <text x={pt.x} y={pt.y - 12} textAnchor="middle" fontSize="8" fill="#4a3b2a" fontWeight="bold" textDecoration={pt.combat ? "underline" : "none"}>{pt.label}</text>
               {pt.sub && <text x={pt.x} y={pt.y + 16} textAnchor="middle" fontSize="6.5" fill="#4a3b2a" opacity="0.5">{pt.sub}</text>}
             </g>
           ))}
 
           <circle cx="830" cy="120" r="14" fill="#c0392b" stroke="#4a3b2a" strokeWidth="2" />
           <text x="830" y="124" textAnchor="middle" fontSize="8" fill="white" fontWeight="bold">!</text>
-          <text x="830" y="105" textAnchor="middle" className="font-serif" fontSize="10" fill="#c0392b" fontWeight="bold">OUFA</text>
-          <text x="830" y="148" textAnchor="middle" fontSize="7" fill="#4a3b2a" opacity="0.5">Point extrême</text>
+          <text x="830" y="105" textAnchor="middle" className="font-serif" fontSize="10" fill="#c0392b" fontWeight="bold">OURFA</text>
+          <text x="830" y="148" textAnchor="middle" fontSize="7" fill="#4a3b2a" opacity="0.5">21 nov. 1918</text>
 
           <text x="590" y="155" textAnchor="middle" className="font-serif" fontSize="9" fill="#8B4513" fontWeight="bold" letterSpacing="4">TRANSSIBÉRIEN</text>
 
-          <rect x="15" y="15" width="170" height="80" rx="6" fill="white" opacity="0.8" stroke="#4a3b2a" strokeWidth="0.5" />
+          <rect x="15" y="15" width="170" height="95" rx="6" fill="white" opacity="0.8" stroke="#4a3b2a" strokeWidth="0.5" />
           <text x="25" y="32" fontSize="8" fill="#4a3b2a" fontWeight="bold">LÉGENDE</text>
           <line x1="25" y1="46" x2="50" y2="46" stroke="#4a7a9b" strokeWidth="2" strokeDasharray="4 2" />
           <text x="55" y="49" fontSize="7" fill="#4a3b2a">Route maritime</text>
           <line x1="25" y1="62" x2="50" y2="62" stroke="#dcb575" strokeWidth="2" />
           <text x="55" y="65" fontSize="7" fill="#4a3b2a">Transsibérien</text>
           <circle cx="32" cy="78" r="4" fill="#c0392b" />
-          <text x="55" y="81" fontSize="7" fill="#4a3b2a">Zone de front</text>
-
-          <text x="600" y="340" textAnchor="middle" fontSize="8" fill="#4a3b2a" opacity="0.3" fontStyle="italic">−40 °C en hiver</text>
+          <text x="55" y="81" fontSize="7" fill="#4a3b2a">Lieu de combat</text>
+          <circle cx="32" cy="93" r="4" fill="#4a3b2a" opacity="0.4" />
+          <text x="55" y="96" fontSize="7" fill="#4a3b2a">Étape</text>
         </svg>
       </div>
     </div>
@@ -284,18 +219,11 @@ export default function SiberiePage() {
             {siberieData.question}
           </p>
 
-          <div className="bg-[#4a3b2a]/5 border border-[#4a3b2a]/10 rounded-xl p-4 max-w-2xl">
-            <p className="text-xs uppercase tracking-widest font-bold opacity-50 mb-2">Repères</p>
-            <p className="text-sm opacity-80 leading-relaxed">
-              1917 : révolutions russes &bull; mars 1918 : Brest‑Litovsk &bull; 30 juin 1918 : les Tchèques prennent Vladivostok &bull; 24 juil. 1918 : départ du 9e RIC &bull; 1919–1920 : désengagement
-            </p>
-          </div>
-
           <div className="flex flex-wrap gap-3 pt-4">
             {([
-              { mode: 'comprendre' as ReadingMode, label: 'Essentiel (5 min)', icon: Clock },
-              { mode: 'recit' as ReadingMode, label: 'Visite complète', icon: Scroll },
-              { mode: 'archives' as ReadingMode, label: 'Archives', icon: BookOpen },
+              { mode: 'comprendre' as ReadingMode, label: 'Comprendre (5 min)', icon: Clock },
+              { mode: 'recit' as ReadingMode, label: 'Récit (10–12 min)', icon: Scroll },
+              { mode: 'archives' as ReadingMode, label: 'Archives (approfondir)', icon: BookOpen },
             ]).map(({ mode, label, icon: Icon }) => (
               <Button
                 key={mode}
@@ -319,7 +247,7 @@ export default function SiberiePage() {
           <section className="space-y-4" data-testid="bloc-timeline">
             <div className="flex items-center gap-2 border-b-2 border-[#dcb575] pb-3">
               <Clock className="h-5 w-5" />
-              <h2 className="font-serif text-2xl font-bold">Chronologie — 6 repères</h2>
+              <h2 className="font-serif text-2xl font-bold">Chronologie — 10 repères</h2>
             </div>
             <p className="text-sm opacity-60 italic">Cliquez sur un repère pour le mettre en avant.</p>
             <TimelineInteractive />
@@ -343,131 +271,76 @@ export default function SiberiePage() {
                 transition={{ duration: 0.8 }}
               />
               <p className="text-base leading-relaxed opacity-90">
-                La Sibérie devient un enjeu parce que la Russie s'effondre politiquement en 1917, puis sort de la guerre en 1918. Les Légions Tchèques — 50 000 soldats d'élite — se révoltent et prennent Vladivostok. La France envoie 454 hommes du 9e RIC, embarqués à Hanoï sur le vapeur André Lebon, pour sécuriser leur retour et peser sur le théâtre. Le bataillon remonte le Transsibérien de Vladivostok jusqu'à Oufa, traversant un continent entier — du +35 °C du Tonkin au −40 °C de l'hiver sibérien.
+                {siberieData.resume}
               </p>
             </div>
           </section>
         </FadeInSection>
 
-        {siberieData.blocs
-          .filter(bloc => {
-            if (bloc.mode === 'comprendre') return true;
-            if (bloc.mode === 'recit') return showRecit;
-            if (bloc.mode === 'archives') return showArchives;
-            return true;
-          })
-          .map((bloc, blocIdx) => (
-          <FadeInSection key={bloc.id} delay={blocIdx * 0.05}>
-            <section className="space-y-6" data-testid={`bloc-${bloc.id}`}>
-              <div className="flex items-center gap-3 border-b-2 border-[#dcb575] pb-4">
-                {blocIcons[bloc.id] || <Info className="h-5 w-5" />}
-                <h2 className="font-serif text-2xl md:text-3xl font-bold">
-                  {bloc.title}
-                </h2>
-              </div>
-
-              <div className="space-y-4">
-                {bloc.content.map((p, idx) => {
-                  const isParenthese = p.startsWith("(Parenthèse");
-                  return (
-                    <motion.p
-                      key={idx}
-                      className={`text-base leading-relaxed ${isParenthese ? 'italic opacity-70 border-l-4 border-[#dcb575]/40 pl-4' : 'opacity-90'}`}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: idx * 0.1, duration: 0.4 }}
-                    >
-                      {p}
-                    </motion.p>
-                  );
-                })}
-              </div>
-
-              {bloc.keyPoints.length > 0 && (
-                <motion.div
-                  className="bg-[#4a3b2a] text-[#e8dcc5] p-5 rounded-xl"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                >
-                  <h4 className="font-bold uppercase text-xs tracking-widest mb-3 text-[#dcb575]">À retenir</h4>
-                  <ul className="space-y-2">
-                    {bloc.keyPoints.map((kp, k) => (
-                      <motion.li
-                        key={k}
-                        className="flex gap-2 text-sm"
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: k * 0.15 + 0.3 }}
-                      >
-                        <Check className="h-4 w-4 shrink-0 text-[#dcb575] mt-0.5" /> {kp}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </motion.div>
-              )}
-            </section>
-          </FadeInSection>
-        ))}
-
         <FadeInSection>
-          <section className="relative overflow-hidden rounded-2xl shadow-2xl" data-testid="bloc-unite">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#2c3e50] via-[#34495e] to-[#2c3e50]" />
-            <div className="absolute inset-0 opacity-[0.04] bg-[url('data:image/svg+xml,%3Csvg%20width%3D%228%22%20height%3D%228%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%200h8v8H0z%22%20fill%3D%22none%22%20stroke%3D%22%23ecf0f1%22%20stroke-width%3D%220.5%22/%3E%3C/svg%3E')]" />
-            <div className="relative z-10 text-[#ecf0f1] p-8 md:p-12 space-y-6">
-              <div className="flex items-center gap-3">
-                <Shield className="h-6 w-6 text-[#dcb575]" />
-                <h2 className="font-serif text-xl md:text-2xl font-bold uppercase tracking-widest">Le bataillon de marche du 9e RIC</h2>
-              </div>
-              <motion.div
-                className="w-20 h-0.5 bg-[#dcb575]"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-              />
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div className="space-y-3">
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <p className="text-xs uppercase tracking-widest text-[#dcb575] font-bold mb-1">Effectifs</p>
-                    <p className="text-lg font-bold">{siberieData.unite.effectifs}</p>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <p className="text-xs uppercase tracking-widest text-[#dcb575] font-bold mb-1">Commandant</p>
-                    <p className="text-sm">{siberieData.unite.commandant}</p>
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <p className="text-xs uppercase tracking-widest text-[#dcb575] font-bold mb-2">Composition</p>
-                    {siberieData.unite.detail.map((d, i) => (
-                      <p key={i} className="text-sm flex items-center gap-2">
-                        <Check className="h-3 w-3 text-[#dcb575] shrink-0" /> {d}
-                      </p>
-                    ))}
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <p className="text-xs uppercase tracking-widest text-[#dcb575] font-bold mb-1">Départ</p>
-                    <p className="text-sm">{siberieData.unite.depart}</p>
-                  </div>
-                </div>
-              </div>
+          <section className="space-y-6" data-testid="bloc-contexte">
+            <div className="flex items-center gap-3 border-b-2 border-[#dcb575] pb-4">
+              <Globe className="h-5 w-5" />
+              <h2 className="font-serif text-2xl md:text-3xl font-bold">Contexte géopolitique</h2>
             </div>
+            <div className="space-y-4">
+              {siberieData.contexte.text.map((p, idx) => {
+                const isParenthese = p.startsWith("(Parenthèse");
+                return (
+                  <motion.p
+                    key={idx}
+                    className={`text-base leading-relaxed ${isParenthese ? 'italic opacity-70 border-l-4 border-[#dcb575]/40 pl-4' : 'opacity-90'}`}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.1, duration: 0.4 }}
+                  >
+                    {p}
+                  </motion.p>
+                );
+              })}
+            </div>
+            <motion.div
+              className="bg-[#4a3b2a] text-[#e8dcc5] p-5 rounded-xl"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <h4 className="font-bold uppercase text-xs tracking-widest mb-3 text-[#dcb575]">À retenir</h4>
+              <ul className="space-y-2">
+                {siberieData.contexte.keyPoints.map((kp, k) => (
+                  <motion.li
+                    key={k}
+                    className="flex gap-2 text-sm"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: k * 0.15 + 0.3 }}
+                  >
+                    <Check className="h-4 w-4 shrink-0 text-[#dcb575] mt-0.5" /> {kp}
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
           </section>
         </FadeInSection>
 
         {showRecit && (
           <>
             <FadeInSection>
-              <section className="space-y-6" data-testid="bloc-itineraire">
+              <section className="space-y-6" data-testid="bloc-recit-intro">
                 <div className="flex items-center gap-3 border-b-2 border-[#dcb575] pb-4">
-                  <Train className="h-5 w-5" />
-                  <h2 className="font-serif text-2xl md:text-3xl font-bold">Itinéraire — Hanoï → Oufa</h2>
+                  <Scroll className="h-5 w-5" />
+                  <h2 className="font-serif text-2xl md:text-3xl font-bold">Ce qui se passe</h2>
                 </div>
-                <ItineraireTimeline />
+                <div className="bg-[#fdfbf7] border border-[#4a3b2a]/10 rounded-xl p-6 space-y-3">
+                  {siberieData.recitIntro.split('\n').filter(l => l.trim()).map((line, i) => (
+                    <p key={i} className={`text-sm leading-relaxed ${line.startsWith('ACTE') ? 'font-bold text-[#4a3b2a]' : 'opacity-80 italic'}`}>
+                      {line}
+                    </p>
+                  ))}
+                </div>
               </section>
             </FadeInSection>
 
@@ -478,47 +351,36 @@ export default function SiberiePage() {
             </FadeInSection>
 
             <FadeInSection>
-              <section className="relative overflow-hidden rounded-2xl shadow-xl" data-testid="bloc-choc-thermique">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#e74c3c]/10 via-transparent to-[#3498db]/10" />
-                <div className="relative bg-[#fdfbf7] border border-[#4a3b2a]/10 rounded-2xl p-8 md:p-10 space-y-4">
+              <section className="relative overflow-hidden rounded-2xl shadow-xl" data-testid="bloc-pertes">
+                <div className="bg-[#fdfbf7] border border-[#4a3b2a]/10 rounded-2xl p-8 md:p-10 space-y-4">
                   <div className="flex items-center gap-3">
-                    <Thermometer className="h-6 w-6 text-[#e74c3c]" />
-                    <h2 className="font-serif text-xl md:text-2xl font-bold">{siberieData.chocThermique.title}</h2>
+                    <Shield className="h-6 w-6 text-[#c0392b]" />
+                    <h2 className="font-serif text-xl md:text-2xl font-bold">Bilan des pertes</h2>
                   </div>
-                  <div className="flex items-center gap-4 justify-center py-4">
-                    <motion.div
-                      className="text-center"
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <p className="text-3xl font-bold text-[#e74c3c]">+35 °C</p>
-                      <p className="text-xs opacity-60 mt-1">Tonkin</p>
-                    </motion.div>
-                    <motion.div
-                      className="flex flex-col items-center"
-                      initial={{ opacity: 0, scale: 0.5 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.3 }}
-                    >
-                      <ArrowRight className="h-8 w-8 text-[#4a3b2a]/30" />
-                      <p className="text-xs opacity-40 mt-1">75° d'écart</p>
-                    </motion.div>
-                    <motion.div
-                      className="text-center"
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.6 }}
-                    >
-                      <p className="text-3xl font-bold text-[#3498db]">−40 °C</p>
-                      <p className="text-xs opacity-60 mt-1">Sibérie</p>
-                    </motion.div>
+                  <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 py-4">
+                    {[
+                      { n: "5", label: "Tués" },
+                      { n: "16", label: "Blessés" },
+                      { n: "5", label: "Disparus" },
+                      { n: "5", label: "Morts (blessures)" },
+                      { n: "6", label: "Morts (maladie)" },
+                      { n: "25", label: "Gelures" },
+                    ].map((stat, i) => (
+                      <motion.div
+                        key={i}
+                        className="text-center bg-[#4a3b2a]/5 rounded-lg p-3"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.1 }}
+                      >
+                        <p className="text-2xl font-bold text-[#c0392b]">{stat.n}</p>
+                        <p className="text-xs opacity-60 mt-1">{stat.label}</p>
+                      </motion.div>
+                    ))}
                   </div>
-                  <p className="text-base leading-relaxed opacity-85 italic text-center max-w-2xl mx-auto">
-                    {siberieData.chocThermique.text}
+                  <p className="text-sm opacity-70 italic text-center">
+                    Climat : de −30 à −50 °C, bien loin des douceurs indochinoises.
                   </p>
                 </div>
               </section>
@@ -529,12 +391,58 @@ export default function SiberiePage() {
         {showArchives && (
           <>
             <FadeInSection>
+              <section data-testid="bloc-texte-source">
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="source" className="border border-[#4a3b2a]/20 rounded-xl bg-[#fdfbf7] px-6 shadow-sm">
+                    <AccordionTrigger className="font-serif text-xl md:text-2xl font-bold py-5 hover:no-underline">
+                      <div className="flex items-center gap-2">
+                        <BookOpen className="h-5 w-5" /> Texte source intégral
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="space-y-4 pb-6 text-sm leading-relaxed opacity-85">
+                        {siberieData.texteSource.map((p, i) => (
+                          <p key={i}>{p}</p>
+                        ))}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </section>
+            </FadeInSection>
+
+            <FadeInSection>
+              <section className="relative overflow-hidden rounded-2xl shadow-2xl" data-testid="bloc-citation">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#2c3e50] via-[#34495e] to-[#2c3e50]" />
+                <div className="relative z-10 text-[#ecf0f1] p-8 md:p-12 space-y-6">
+                  <div className="flex items-center gap-3">
+                    <Award className="h-6 w-6 text-[#dcb575]" />
+                    <h2 className="font-serif text-lg md:text-xl font-bold uppercase tracking-widest">Citation à l'ordre de l'armée</h2>
+                  </div>
+                  <p className="text-xs opacity-50">Ordre du ministre de la guerre, 30 avril 1919 — J.O.R.F. 24 juin 1919</p>
+                  <motion.div
+                    className="w-20 h-0.5 bg-[#dcb575]"
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                  />
+                  <blockquote className="text-base leading-relaxed opacity-90 italic border-l-4 border-[#dcb575] pl-6">
+                    {siberieData.citation.split('\n\n').map((para, i) => (
+                      <p key={i} className={i > 0 ? 'mt-4' : ''}>{para}</p>
+                    ))}
+                  </blockquote>
+                </div>
+              </section>
+            </FadeInSection>
+
+            <FadeInSection>
               <section data-testid="bloc-gallery">
                 <Accordion type="single" collapsible>
                   <AccordionItem value="cartes" className="border border-[#4a3b2a]/20 rounded-xl bg-[#fdfbf7] px-6 shadow-sm">
                     <AccordionTrigger className="font-serif text-xl md:text-2xl font-bold py-5 hover:no-underline">
                       <div className="flex items-center gap-2">
-                        <MapIcon className="h-5 w-5" /> Cartes & photos
+                        <MapIcon className="h-5 w-5" /> Images & légendes
                       </div>
                     </AccordionTrigger>
                     <AccordionContent>
@@ -579,6 +487,74 @@ export default function SiberiePage() {
               </section>
             </FadeInSection>
           </>
+        )}
+
+        {showRecit && (
+          <FadeInSection>
+            <section className="relative overflow-hidden rounded-2xl shadow-2xl" data-testid="bloc-binh-lieu">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1a1208] via-[#2a1f14] to-[#4a3b2a]" />
+              <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%226%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20fill%3D%22%23dcb575%22/%3E%3C/svg%3E')]" />
+              <div className="relative z-10 p-8 md:p-12 space-y-6">
+                <div className="flex items-center gap-3">
+                  <AlertTriangle className="h-6 w-6 text-[#e74c3c]" />
+                  <div>
+                    <h2 className="font-serif text-xl md:text-2xl font-bold text-[#e8dcc5] uppercase tracking-widest">{siberieData.binhLieu.title}</h2>
+                    <p className="text-sm text-[#dcb575]/70 mt-1">{siberieData.binhLieu.subtitle}</p>
+                  </div>
+                </div>
+                <motion.div
+                  className="w-20 h-0.5 bg-[#dcb575]"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                />
+                <p className="text-sm text-[#e8dcc5]/80 italic">
+                  {siberieData.binhLieu.resume}
+                </p>
+
+                {showArchives ? (
+                  <div className="space-y-4 pt-4">
+                    {siberieData.binhLieu.texteSource.map((p, i) => (
+                      <motion.p
+                        key={i}
+                        className="text-sm text-[#e8dcc5]/85 leading-relaxed"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.05, duration: 0.4 }}
+                      >
+                        {p}
+                      </motion.p>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="bg-white/5 border border-[#dcb575]/20 rounded-xl p-4">
+                    <p className="text-xs text-[#dcb575]/60 italic text-center">
+                      Texte source intégral disponible en mode « Archives (approfondir) ».
+                    </p>
+                  </div>
+                )}
+
+                <motion.div
+                  className="bg-white/10 text-[#e8dcc5] p-5 rounded-xl border border-[#dcb575]/20"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  <h4 className="font-bold uppercase text-xs tracking-widest mb-3 text-[#dcb575]">À retenir</h4>
+                  <ul className="space-y-2">
+                    {siberieData.binhLieu.keyPoints.map((kp, k) => (
+                      <li key={k} className="flex gap-2 text-sm">
+                        <Check className="h-4 w-4 shrink-0 text-[#dcb575] mt-0.5" /> {kp}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </div>
+            </section>
+          </FadeInSection>
         )}
 
         {showRecit && (

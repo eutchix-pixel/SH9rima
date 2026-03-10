@@ -18,7 +18,7 @@ function Router() {
         <Route path="/asie/naissance-du-9-tonkin" component={TonkinOriginsPage} />
         <Route path="/asie/chine-1900-expedition" component={ChinaExpedition1900Page} />
         <Route path="/asie/tonkin-1901-1914" component={Tonkin1901Page} />
-        <Route path="/asie/siberie-ww1" component={SiberiePage} />
+        <Route path="/asie/siberie-1918-1919" component={SiberiePage} />
         <Route path="/scan" component={ScanPage} />
         <Route component={NotFound} />
       </Switch>

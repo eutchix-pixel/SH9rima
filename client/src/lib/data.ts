@@ -35,7 +35,7 @@ export const museumData: Section[] = [
       },
       { id: "tonkin-chine", title: "Chine", image: "/images/placeholder.png", content: "L'intervention en Chine jusqu'à Pekin ...", link: "/asie/chine-1900-expedition" },
       { id: "tonkin-1900", title: "1900-1914", image: "/images/placeholder.png", content: "La pacification et l'organisation du territoire...", link: "/asie/tonkin-1901-1914" },
-      { id: "tonkin-siberie", title: "Sibérie", image: "/images/placeholder.png", content: "L'expédition de Sibérie, une aventure méconnue...", link: "/asie/siberie-ww1" },
+      { id: "tonkin-siberie", title: "Sibérie", image: "/images/placeholder.png", content: "L'expédition de Sibérie, une aventure méconnue...", link: "/asie/siberie-1918-1919" },
       { id: "tonkin-heureuses", title: "Années Heureuses", image: "/images/placeholder.png", content: "La vie de garnison dans les années 20 et 30..." },
       { id: "tonkin-tourmente", title: "Tourmente", image: "/images/placeholder.png", content: "La Seconde Guerre mondiale et le coup de force japonais..." }
     ]
