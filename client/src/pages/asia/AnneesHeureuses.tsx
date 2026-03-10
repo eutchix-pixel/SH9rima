@@ -64,7 +64,6 @@ export default function AnneesHeureusesPage() {
         className="fixed top-0 left-0 right-0 h-1.5 bg-[#dcb575] origin-left z-50"
         style={{ scaleX: scrollYProgress }}
       />
-
       <header className="relative pt-12 pb-20 px-6 overflow-hidden bg-[#dcb575]/20 border-b border-[#4a3b2a]/10">
         <div className="absolute inset-0 bg-gradient-to-b from-[#4a3b2a]/5 to-transparent" />
 
@@ -124,7 +123,6 @@ export default function AnneesHeureusesPage() {
           </div>
         </motion.div>
       </header>
-
       <div className="max-w-4xl mx-auto px-6 py-12 space-y-16">
 
         <FadeInSection>
@@ -134,7 +132,7 @@ export default function AnneesHeureusesPage() {
             <div className="relative z-10 text-[#e8dcc5] p-8 md:p-12 space-y-6">
               <div className="flex items-center gap-3">
                 <TreePine className="h-6 w-6 text-[#dcb575]" />
-                <h2 className="font-serif text-xl md:text-2xl font-bold uppercase tracking-widest">Résumé — 45 secondes</h2>
+                <h2 className="font-serif text-xl md:text-2xl font-bold uppercase tracking-widest">Résumé </h2>
               </div>
               <motion.div
                 className="w-20 h-0.5 bg-[#dcb575]"
