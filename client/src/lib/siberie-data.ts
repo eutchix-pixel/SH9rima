@@ -60,7 +60,7 @@ export const siberieData: SiberieContent = {
       mode: 'comprendre',
       content: [
         "Les Légions Tchèques : 50 000 soldats d'élite (ex-armée du Tsar) veulent rejoindre la France via Vladivostok. Moscou ordonne leur désarmement total. Les Tchèques refusent, se révoltent et s'emparent de Vladivostok le 30 juin 1918 sous les ordres du Général Dietrich.",
-        "La France envoie le 9e RIC pour sécuriser leur retour et freiner la révolution bolchevique. Le Japon et les États‑Unis sont également présents en Asie‑Pacifique, avec des objectifs propres sur l'équilibre régional.",
+        "La France envoie le 9e RIC avec une triple mission : sécuriser le retour des Tchèques, repousser les forces bolcheviques et protéger les convois d'armes et de munitions acheminés le long du Transsibérien. Le Japon et les États‑Unis sont également présents, avec leurs propres objectifs.",
         "(Parenthèse : dans une intervention « multinationale », la coalition n'a pas toujours une stratégie unique. L'alliance existe… mais les intérêts divergent.)"
       ],
       keyPoints: [
@@ -89,13 +89,13 @@ export const siberieData: SiberieContent = {
       title: "Conséquences : ce que ça change (et ce que ça ne change pas)",
       mode: 'recit',
       content: [
-        "Une intervention en Sibérie est d'abord un signal : présence, influence, sécurisation d'axes. Elle peut stabiliser localement, protéger un point d'appui, ou soutenir un acteur — mais elle ne résout pas à elle seule une guerre civile à l'échelle d'un continent.",
-        "(Parenthèse : dans les théâtres immenses, la « victoire » est souvent politique avant d'être militaire.)"
+        "Concrètement, le bataillon du 9e RIC a repoussé les forces bolcheviques sur plusieurs points du Transsibérien et sécurisé des convois d'armes et de munitions essentiels pour les Alliés et les Légions Tchèques. Ces actions ont stabilisé localement les nœuds ferroviaires stratégiques.",
+        "Mais à l'échelle d'un continent, l'intervention ne résout pas la guerre civile russe. Le désengagement progressif (1919–1920) reflète cette réalité : la « victoire » en Sibérie est politique avant d'être militaire."
       ],
       keyPoints: [
-        "Effet principal : influence et contrôle local d'axes.",
-        "Limite : un territoire‑continent ne se « stabilise » pas vite.",
-        "Le temps et l'endurance pèsent autant que la force."
+        "Le 9e RIC repousse les bolcheviques et sécurise les convois d'armes.",
+        "Stabilisation locale des axes, mais pas de résolution du conflit continental.",
+        "Le désengagement illustre les limites d'une intervention à si grande échelle."
       ]
     },
   ],

@@ -366,7 +366,7 @@ export default function SiberiePage() {
                 transition={{ duration: 0.8 }}
               />
               <p className="text-base leading-relaxed opacity-90">
-                La Sibérie devient un enjeu parce que la Russie s'effondre politiquement en 1917, puis sort de la guerre en 1918. Les Légions Tchèques — 50 000 soldats d'élite — se révoltent et prennent Vladivostok. La France envoie 454 hommes du 9e RIC, embarqués à Hanoï sur le vapeur André Lebon, pour sécuriser leur retour et peser sur le théâtre. Le bataillon remonte le Transsibérien de Vladivostok jusqu'à Oufa, traversant un continent entier — du +35 °C du Tonkin au −40 °C de l'hiver sibérien.
+                La Sibérie devient un enjeu parce que la Russie s'effondre politiquement en 1917, puis sort de la guerre en 1918. Les Légions Tchèques — 50 000 soldats d'élite — se révoltent et prennent Vladivostok. La France envoie 454 hommes du 9e RIC, embarqués à Hanoï sur le vapeur André Lebon, pour sécuriser leur retour, freiner l'avancée bolchevique et protéger les convois d'armes et de munitions le long du Transsibérien. Le bataillon remonte la voie ferrée de Vladivostok jusqu'à Oufa, repoussant les forces bolcheviques et sécurisant les nœuds ferroviaires stratégiques — du +35 °C du Tonkin au −40 °C de l'hiver sibérien.
               </p>
             </div>
           </section>
