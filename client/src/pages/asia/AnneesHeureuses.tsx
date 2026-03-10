@@ -334,8 +334,13 @@ export default function AnneesHeureusesPage() {
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="pb-4 space-y-4">
-                      <div className="bg-[#4a3b2a]/10 rounded-lg h-32 flex items-center justify-center">
-                        <Award className="h-12 w-12 opacity-20" />
+                      <div className="flex justify-center">
+                        <img
+                          src="/images/insigne-9ric-1939.png"
+                          alt="Insigne du 9e RIC — 1939 — Marsouin Toujours"
+                          className="h-64 object-contain rounded-lg shadow-md"
+                          data-testid="img-insigne-1939"
+                        />
                       </div>
                       <p className="text-sm leading-relaxed opacity-85 whitespace-pre-line">
                         {heureusesData.archives.insigne1939}
