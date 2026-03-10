@@ -1,14 +1,14 @@
-import { tonkin1901Data } from "@/lib/tonkin-1901-data";
+import { siberieData } from "@/lib/siberie-data";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
   ArrowLeft, ArrowRight, Clock, BookOpen, Scroll, Check, Search,
-  Crosshair, Map as MapIcon, Shield, ChevronDown, RotateCcw, Info,
-  AlertTriangle, Eye, Skull, Target, Users, Compass
+  Crosshair, Map as MapIcon, ChevronDown, RotateCcw, Info,
+  Globe, Train, Anchor, Snowflake, Users, Compass, FileQuestion
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { motion, useScroll, useInView } from "framer-motion";
 
 type ReadingMode = 'comprendre' | 'recit' | 'archives';
@@ -64,10 +64,10 @@ function TimelineInteractive() {
     <div className="space-y-4" data-testid="timeline-interactive">
       <div className="relative">
         <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-[#dcb575]" />
-        {tonkin1901Data.reperes.map((rep, i) => (
+        {siberieData.reperes.map((rep, i) => (
           <motion.div
             key={i}
-            className={`relative pl-12 pb-6 cursor-pointer group`}
+            className="relative pl-12 pb-6 cursor-pointer group"
             onClick={() => setActiveIndex(activeIndex === i ? null : i)}
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -100,18 +100,73 @@ function TimelineInteractive() {
 }
 
 const blocIcons: Record<string, React.ReactNode> = {
-  calme: <Shield className="h-5 w-5" />,
-  tension: <AlertTriangle className="h-5 w-5" />,
-  leviers: <Target className="h-5 w-5" />,
-  carrefour: <Compass className="h-5 w-5" />,
+  enjeu: <Globe className="h-5 w-5" />,
+  acteurs: <Users className="h-5 w-5" />,
+  transsiberien: <Train className="h-5 w-5" />,
+  consequences: <Compass className="h-5 w-5" />,
 };
 
-export default function Tonkin1901Page() {
+function TranssiberienMap() {
+  return (
+    <div className="relative bg-[#f5eedf] border-2 border-[#4a3b2a]/20 rounded-xl overflow-hidden shadow-lg">
+      <div className="p-4 border-b border-[#4a3b2a]/10 bg-[#4a3b2a]/5">
+        <div className="flex items-center gap-2">
+          <MapIcon className="h-5 w-5 text-[#4a3b2a]" />
+          <h3 className="font-serif font-bold text-lg">Atlas — Sibérie & Transsibérien</h3>
+        </div>
+        <p className="text-xs opacity-60 mt-1">Schéma non à l'échelle : l'objectif est de comprendre les distances, les points d'entrée et l'axe ferroviaire.</p>
+      </div>
+
+      <div className="relative h-64 md:h-80 p-6">
+        <svg viewBox="0 0 800 300" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
+          <rect x="0" y="0" width="800" height="300" fill="#f5eedf" />
+
+          <ellipse cx="80" cy="150" rx="60" ry="80" fill="#4a3b2a" opacity="0.08" stroke="#4a3b2a" strokeWidth="1" strokeDasharray="4 2" />
+          <text x="80" y="145" textAnchor="middle" className="font-serif" fontSize="12" fill="#4a3b2a" fontWeight="bold">EUROPE</text>
+          <text x="80" y="162" textAnchor="middle" fontSize="9" fill="#4a3b2a" opacity="0.6">(point de départ</text>
+          <text x="80" y="173" textAnchor="middle" fontSize="9" fill="#4a3b2a" opacity="0.6">politique)</text>
+
+          <line x1="140" y1="150" x2="680" y2="150" stroke="#8B4513" strokeWidth="3" strokeDasharray="8 4" />
+          <line x1="140" y1="150" x2="680" y2="150" stroke="#dcb575" strokeWidth="1.5" />
+
+          {[200, 340, 500].map((x, i) => (
+            <g key={i}>
+              <rect x={x - 3} y="143" width="6" height="14" fill="#4a3b2a" opacity="0.3" rx="1" />
+              <line x1={x} y1="155" x2={x} y2="165" stroke="#4a3b2a" strokeWidth="0.5" opacity="0.3" />
+            </g>
+          ))}
+
+          <text x="400" y="130" textAnchor="middle" className="font-serif" fontSize="11" fill="#8B4513" fontWeight="bold" letterSpacing="6">TRANSSIBÉRIEN</text>
+          <text x="400" y="180" textAnchor="middle" fontSize="9" fill="#4a3b2a" opacity="0.5">≈ 9 000 km</text>
+
+          <text x="400" y="240" textAnchor="middle" fontSize="10" fill="#4a3b2a" opacity="0.4" fontStyle="italic">« Profondeur continentale »</text>
+
+          <circle cx="720" cy="150" r="18" fill="#dcb575" stroke="#4a3b2a" strokeWidth="2" />
+          <circle cx="720" cy="150" r="6" fill="#4a3b2a" />
+          <text x="720" y="185" textAnchor="middle" className="font-serif" fontSize="11" fill="#4a3b2a" fontWeight="bold">VLADIVOSTOK</text>
+          <text x="720" y="198" textAnchor="middle" fontSize="8" fill="#4a3b2a" opacity="0.6">(port / entrée)</text>
+
+          <path d="M720 132 Q730 110 750 105" stroke="#4a7a9b" strokeWidth="1.5" fill="none" strokeDasharray="3 2" />
+          <text x="755" y="100" fontSize="8" fill="#4a7a9b" opacity="0.7">Pacifique</text>
+
+          <g>
+            <line x1="690" y1="60" x2="710" y2="60" stroke="#dcb575" strokeWidth="2" />
+            <text x="715" y="63" fontSize="8" fill="#4a3b2a" opacity="0.7">Transsibérien</text>
+            <circle cx="700" cy="78" r="4" fill="#dcb575" stroke="#4a3b2a" strokeWidth="1" />
+            <text x="715" y="82" fontSize="8" fill="#4a3b2a" opacity="0.7">Port / point clé</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  );
+}
+
+export default function SiberiePage() {
   const [readingMode, setReadingMode] = useState<ReadingMode>('comprendre');
   const { scrollYProgress } = useScroll();
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredGlossary = tonkin1901Data.glossary.filter(item =>
+  const filteredGlossary = siberieData.glossary.filter(item =>
     item.term.toLowerCase().includes(searchQuery.toLowerCase()) ||
     item.def.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -135,7 +190,7 @@ export default function Tonkin1901Page() {
               <ArrowLeft className="mr-2 h-4 w-4" /> Accueil
             </Button>
           </Link>
-          <Link href="/asie/chine-1900-expedition">
+          <Link href="/asie/tonkin-1901-1914">
             <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#4a3b2a]/10" data-testid="link-back-asie">
               <RotateCcw className="mr-2 h-4 w-4" /> Retour ASIE
             </Button>
@@ -151,15 +206,27 @@ export default function Tonkin1901Page() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          <div className="flex items-center gap-3 mb-2">
+            <Snowflake className="h-8 w-8 text-[#4a3b2a]/60" />
+            <span className="text-xs uppercase tracking-[0.3em] font-bold opacity-50">ASIE — Grande Guerre</span>
+          </div>
           <h1 className="font-serif text-3xl md:text-5xl font-bold leading-tight" data-testid="text-page-title">
-            {tonkin1901Data.title}
+            {siberieData.title}
           </h1>
           <p className="text-lg md:text-xl opacity-85 leading-relaxed max-w-3xl">
-            {tonkin1901Data.subtitle}
+            {siberieData.subtitle}
           </p>
           <p className="text-base italic opacity-75 border-l-4 border-[#dcb575] pl-4 py-1 max-w-2xl">
-            {tonkin1901Data.question}
+            {siberieData.question}
           </p>
+
+          <div className="bg-[#4a3b2a]/5 border border-[#4a3b2a]/10 rounded-xl p-4 max-w-2xl">
+            <p className="text-xs uppercase tracking-widest font-bold opacity-50 mb-2">Repères</p>
+            <p className="text-sm opacity-80 leading-relaxed">
+              1917 : révolutions russes &bull; mars 1918 : Brest‑Litovsk &bull; 1918 : chaos et guerre civile &bull; 1918–1919 : interventions alliées en Russie &bull; 1919–1920 : désengagement progressif
+            </p>
+          </div>
+
           <div className="flex flex-wrap gap-3 pt-4">
             {([
               { mode: 'comprendre' as ReadingMode, label: 'Essentiel (5 min)', icon: Clock },
@@ -188,7 +255,7 @@ export default function Tonkin1901Page() {
           <section className="space-y-4" data-testid="bloc-timeline">
             <div className="flex items-center gap-2 border-b-2 border-[#dcb575] pb-3">
               <Clock className="h-5 w-5" />
-              <h2 className="font-serif text-2xl font-bold">Chronologie — 8 repères</h2>
+              <h2 className="font-serif text-2xl font-bold">Chronologie — 5 repères</h2>
             </div>
             <p className="text-sm opacity-60 italic">Cliquez sur un repère pour le mettre en avant.</p>
             <TimelineInteractive />
@@ -201,7 +268,7 @@ export default function Tonkin1901Page() {
             <div className="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%224%22%20height%3D%224%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%200v4M0%201h4%22%20stroke%3D%22%23dcb575%22%20stroke-width%3D%220.5%22%20fill%3D%22none%22/%3E%3C/svg%3E')]" />
             <div className="relative z-10 text-[#e8dcc5] p-8 md:p-12 space-y-6">
               <div className="flex items-center gap-3">
-                <Eye className="h-6 w-6 text-[#dcb575]" />
+                <Snowflake className="h-6 w-6 text-[#dcb575]" />
                 <h2 className="font-serif text-xl md:text-2xl font-bold uppercase tracking-widest">Résumé — 60 secondes</h2>
               </div>
               <motion.div
@@ -212,13 +279,20 @@ export default function Tonkin1901Page() {
                 transition={{ duration: 0.8 }}
               />
               <p className="text-base leading-relaxed opacity-90">
-                {tonkin1901Data.conclusion}
+                La Sibérie devient un enjeu parce que la Russie s'effondre politiquement en 1917, puis sort de la guerre en 1918. Les Alliés craignent alors une cascade d'effets : stocks et équipements militaires laissés sans contrôle, extension du chaos, et rivalités entre puissances en Asie du Nord‑Est. La clef, c'est la logistique : la Sibérie n'est pas « une bataille », c'est un réseau d'axes — surtout le Transsibérien — qui permet de déplacer hommes, armes et influence sur un continent entier.
               </p>
             </div>
           </section>
         </FadeInSection>
 
-        {tonkin1901Data.blocs.map((bloc, blocIdx) => (
+        {siberieData.blocs
+          .filter(bloc => {
+            if (bloc.mode === 'comprendre') return true;
+            if (bloc.mode === 'recit') return showRecit;
+            if (bloc.mode === 'archives') return showArchives;
+            return true;
+          })
+          .map((bloc, blocIdx) => (
           <FadeInSection key={bloc.id} delay={blocIdx * 0.05}>
             <section className="space-y-6" data-testid={`bloc-${bloc.id}`}>
               <div className="flex items-center gap-3 border-b-2 border-[#dcb575] pb-4">
@@ -229,18 +303,21 @@ export default function Tonkin1901Page() {
               </div>
 
               <div className="space-y-4">
-                {bloc.content.map((p, idx) => (
-                  <motion.p
-                    key={idx}
-                    className="text-base leading-relaxed opacity-90"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.1, duration: 0.4 }}
-                  >
-                    {p}
-                  </motion.p>
-                ))}
+                {bloc.content.map((p, idx) => {
+                  const isParenthese = p.startsWith("(Parenthèse");
+                  return (
+                    <motion.p
+                      key={idx}
+                      className={`text-base leading-relaxed ${isParenthese ? 'italic opacity-70 border-l-4 border-[#dcb575]/40 pl-4' : 'opacity-90'}`}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: idx * 0.1, duration: 0.4 }}
+                    >
+                      {p}
+                    </motion.p>
+                  );
+                })}
               </div>
 
               {bloc.keyPoints.length > 0 && (
@@ -273,118 +350,30 @@ export default function Tonkin1901Page() {
         ))}
 
         {showRecit && (
-          <>
-            {tonkin1901Data.episodes.map((episode, epIdx) => (
-              <FadeInSection key={episode.id} delay={epIdx * 0.05}>
-                <section className="space-y-6" data-testid={`episode-${episode.id}`}>
-                  <div className="flex items-center gap-3 border-b-2 border-[#dcb575] pb-4">
-                    {episode.id === 'datura' ? <Skull className="h-5 w-5 text-red-700" /> : <Users className="h-5 w-5" />}
-                    <h2 className="font-serif text-2xl md:text-3xl font-bold">
-                      {episode.title}
-                    </h2>
-                  </div>
-
-                  <div className="space-y-4">
-                    {episode.content.map((p, idx) => (
-                      <motion.p
-                        key={idx}
-                        className="text-base leading-relaxed opacity-90"
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: idx * 0.1, duration: 0.4 }}
-                      >
-                        {p}
-                      </motion.p>
-                    ))}
-                  </div>
-
-                </section>
-              </FadeInSection>
-            ))}
-
-          </>
+          <FadeInSection>
+            <section data-testid="bloc-carte">
+              <TranssiberienMap />
+            </section>
+          </FadeInSection>
         )}
 
         <FadeInSection>
-          <section className="relative overflow-hidden rounded-2xl shadow-2xl" data-testid="bloc-detham-portrait">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#1a1208] via-[#2a1f14] to-[#4a3b2a]" />
-            <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%226%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20fill%3D%22%23dcb575%22/%3E%3C/svg%3E')]" />
-
-            <div className="relative z-10 p-8 md:p-12 space-y-8">
+          <section className="relative overflow-hidden rounded-2xl shadow-lg border border-[#4a3b2a]/10" data-testid="bloc-role9">
+            <div className="bg-[#fdfbf7] p-8 md:p-10 space-y-4">
+              <div className="flex items-center gap-3">
+                <FileQuestion className="h-6 w-6 text-[#dcb575]" />
+                <h2 className="font-serif text-xl md:text-2xl font-bold">Rôle du 9 — À compléter</h2>
+              </div>
               <motion.div
-                className="flex items-center gap-3"
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <Skull className="h-7 w-7 text-red-500" />
-                <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#e8dcc5] uppercase tracking-widest">La fin du Dê Tham</h2>
-              </motion.div>
-
-              <motion.div
-                className="w-24 h-0.5 bg-red-500/60"
+                className="w-16 h-0.5 bg-[#dcb575]"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.3 }}
+                transition={{ duration: 0.8 }}
               />
-
-              <motion.div
-                className="bg-white/5 border border-[#dcb575]/20 rounded-xl p-6 space-y-3"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <Users className="h-4 w-4 text-[#dcb575]" />
-                  <span className="text-xs uppercase tracking-widest text-[#dcb575] font-bold">Qui est le Dê Tham ?</span>
-                </div>
-                <p className="text-sm text-[#e8dcc5]/85 leading-relaxed">
-                  Chef de guerre insaisissable, le Dê Tham est la figure emblématique de la résistance anti-française au Tonkin. Depuis les massifs du Yen Thê, il mène des embuscades, rallie des bandes et échappe à toutes les colonnes lancées contre lui. Sa tête est mise à prix dès 1909 — mais personne ne parvient à le capturer.
-                </p>
-              </motion.div>
-
-              <div className="space-y-6 pt-2">
-                {[
-                  { year: "1909", text: "Sa tête est mise à prix. Les colonnes militaires ratissent le Yen Thê sans succès.", icon: "🎯" },
-                  { year: "1909–1912", text: "Il échappe à chaque opération. La population le protège, le terrain le cache.", icon: "🌿" },
-                  { year: "Fév. 1913", text: "Deux Chinois, alléchés par la prime, gagnent sa confiance… pour mieux l'abattre.", icon: "⚔️" },
-                ].map((step, i) => (
-                  <motion.div
-                    key={i}
-                    className="flex gap-4 items-start"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.25 + 0.5, duration: 0.5 }}
-                  >
-                    <div className="flex flex-col items-center">
-                      <span className="text-2xl">{step.icon}</span>
-                      {i < 2 && <div className="w-0.5 h-8 bg-[#dcb575]/30 mt-2" />}
-                    </div>
-                    <div>
-                      <span className="font-serif font-bold text-[#dcb575] text-sm">{step.year}</span>
-                      <p className="text-sm text-[#e8dcc5]/85 leading-relaxed mt-1">{step.text}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              <motion.div
-                className="bg-red-900/20 border border-red-500/30 rounded-xl p-6 text-center space-y-3 mt-4"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 1.3, duration: 0.6, type: "spring" }}
-              >
-                <p className="font-serif text-xl md:text-2xl font-bold text-[#e8dcc5] italic">
-                  « Sa mort marque le retour définitif au calme dans cette région. »
-                </p>
-                <p className="text-xs text-[#dcb575]/70 uppercase tracking-widest">Février 1913 — Yen Thê, Tonkin</p>
-              </motion.div>
+              <p className="text-base leading-relaxed opacity-80 italic">
+                {siberieData.role9}
+              </p>
             </div>
           </section>
         </FadeInSection>
@@ -402,7 +391,7 @@ export default function Tonkin1901Page() {
                     </AccordionTrigger>
                     <AccordionContent>
                       <div className="grid sm:grid-cols-2 gap-4 pb-4">
-                        {tonkin1901Data.gallery.map((item, i) => (
+                        {siberieData.gallery.map((item, i) => (
                           <div key={i} className="bg-white/50 border border-[#4a3b2a]/10 rounded-lg overflow-hidden">
                             <div className="bg-[#4a3b2a]/10 h-32 flex items-center justify-center" title={item.alt}>
                               <MapIcon className="h-10 w-10 opacity-20" />
@@ -444,27 +433,6 @@ export default function Tonkin1901Page() {
           </>
         )}
 
-        <FadeInSection>
-          <section className="relative overflow-hidden rounded-2xl shadow-2xl" data-testid="bloc-revelation">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#4a3b2a] via-[#3a2e1f] to-[#2a1f14]" />
-            <div className="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%224%22%20height%3D%224%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%200v4M0%201h4%22%20stroke%3D%22%23dcb575%22%20stroke-width%3D%220.5%22%20fill%3D%22none%22/%3E%3C/svg%3E')]" />
-            <div className="relative z-10 text-[#e8dcc5] p-8 md:p-12 space-y-6">
-              <Compass className="h-8 w-8 text-[#dcb575]" />
-              <h2 className="font-serif text-2xl md:text-3xl font-bold uppercase tracking-widest">Ce que ça révèle</h2>
-              <motion.div
-                className="w-20 h-0.5 bg-[#dcb575]"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-              />
-              <p className="text-base leading-relaxed opacity-90">
-                {tonkin1901Data.revelation.text}
-              </p>
-            </div>
-          </section>
-        </FadeInSection>
-
         {showRecit && (
           <FadeInSection>
             <section className="space-y-6" data-testid="bloc-quiz">
@@ -474,7 +442,7 @@ export default function Tonkin1901Page() {
               </div>
               <p className="text-sm opacity-60">Cliquez sur une carte pour voir la réponse.</p>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {tonkin1901Data.quiz.map((q, i) => (
+                {siberieData.quiz.map((q, i) => (
                   <QuizCard key={i} question={q.question} answer={q.answer} index={i} />
                 ))}
               </div>
@@ -483,40 +451,47 @@ export default function Tonkin1901Page() {
         )}
 
         <FadeInSection>
+          <section className="relative overflow-hidden rounded-2xl shadow-2xl" data-testid="bloc-conclusion">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#4a3b2a] via-[#3a2e1f] to-[#2a1f14]" />
+            <div className="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%224%22%20height%3D%224%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%200v4M0%201h4%22%20stroke%3D%22%23dcb575%22%20stroke-width%3D%220.5%22%20fill%3D%22none%22/%3E%3C/svg%3E')]" />
+            <div className="relative z-10 text-[#e8dcc5] p-8 md:p-12 space-y-6">
+              <Compass className="h-8 w-8 text-[#dcb575]" />
+              <h2 className="font-serif text-2xl md:text-3xl font-bold uppercase tracking-widest">Conclusion</h2>
+              <motion.div
+                className="w-20 h-0.5 bg-[#dcb575]"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              />
+              <p className="text-base leading-relaxed opacity-90">
+                {siberieData.conclusion}
+              </p>
+            </div>
+          </section>
+        </FadeInSection>
+
+        <FadeInSection>
           <section className="text-center space-y-8 py-12 border-t-2 border-[#4a3b2a]/10">
             <motion.div
               className="w-16 h-1 bg-[#4a3b2a] mx-auto"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
             />
-            <h2 className="font-serif text-2xl font-bold uppercase tracking-widest">Ce qu'il faut retenir</h2>
-            <div className="max-w-3xl mx-auto text-left space-y-3">
-              {tonkin1901Data.revelation.points.map((point, i) => (
-                <motion.div
-                  key={i}
-                  className="flex gap-3 text-base"
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                >
-                  <Check className="h-5 w-5 shrink-0 text-[#dcb575] mt-0.5" />
-                  <span className="opacity-85">{point}</span>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="pt-8">
-              <Link href="/asie/siberie-ww1">
-                <Button size="lg" className="bg-[#4a3b2a] text-[#e8dcc5] hover:bg-[#4a3b2a]/90 h-14 px-8 text-lg shadow-lg" data-testid="button-next-page">
-                  {tonkin1901Data.nextStep} <ArrowRight className="ml-2 h-5 w-5" />
+            <p className="font-serif text-xl md:text-2xl font-bold text-[#4a3b2a]">
+              {siberieData.nextStep}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/#tonkin">
+                <Button variant="outline" className="border-[#4a3b2a] text-[#4a3b2a] hover:bg-[#4a3b2a]/10 px-8 py-6 text-lg" data-testid="button-back-themes">
+                  <ArrowLeft className="mr-2 h-5 w-5" /> Revenir aux thèmes
                 </Button>
               </Link>
             </div>
           </section>
         </FadeInSection>
-
       </div>
     </div>
   );

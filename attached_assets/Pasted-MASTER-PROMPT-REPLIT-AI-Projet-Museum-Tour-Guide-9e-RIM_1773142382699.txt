@@ -1,0 +1,230 @@
+MASTER PROMPT — REPLIT AI
+Projet : “Museum Tour Guide — 9e RIMa”
+Nouvelle page à créer : ASIE → “Sibérie (Grande Guerre) — Intervention alliée”
+Slug conseillé : /asie/siberie-ww1
+
+IMPORTANT (lecture avant de coder)
+- Replit n’a pas accès à mes sources. La page doit rester FACTUELLE.
+- Tu ne dois PAS inventer de détails sur le 9e (effectifs, dates exactes, lieux précis, pertes, décorations) sans texte fourni.
+- Cette page est volontairement orientée “GÉOPOLITIQUE” : comprendre les intérêts, acteurs, leviers, et conséquences — puis relier au 9 si on dispose d’éléments.
+- Le texte affiché sur la page doit être EXACTEMENT celui de “CONTENU À AFFICHER”. Tu peux seulement ajouter de la micro‑copie UI (“Retour”, “Suivant”, etc.).
+- Si l’utilisateur fournit ensuite un PDF/texte “Sibérie”, tu remplaceras uniquement la section “RÔLE DU 9 — À COMPLÉTER” par le texte exact fourni.
+
+OBJECTIF VISITEUR
+Comprendre pourquoi des forces françaises/alliées se retrouvent en Sibérie à la fin de la Première Guerre mondiale : enjeux internationaux, chaos russe, logistique (Transsibérien), et rôle politique d’une intervention militaire.
+
+À FAIRE DANS L’APP (FONCTIONNEL)
+1) ROUTE + NAV
+- Ajouter la page dans ASIE, après “1901–1914” (et/ou dans le fil 1914–1919).
+- Boutons fixes : “Revenir aux thèmes”, “Retour ASIE”, “Continuer la visite”.
+
+2) STRUCTURE UX (simple + immersive)
+- HERO + “Question directrice”
+- 3 modes :
+  a) Comprendre (5 min) : Géopolitique + acteurs + carte + à retenir
+  b) Récit (10–15 min) : ajoute chronologie + moments clés
+  c) Archives (approfondir) : glossaire complet + galerie + citations (placeholders)
+- Timeline (8 repères max, cliquable)
+- 4 blocs principaux :
+  1) “Pourquoi la Sibérie devient un enjeu ?”
+  2) “Qui intervient, et pour quoi faire ?”
+  3) “Le levier clé : le Transsibérien (logistique = politique)”
+  4) “Conséquences : ce que ça change (et ce que ça ne change pas)”
+- Module “Carte” en style atlas (SVG simple) : Europe → Vladivostok + ligne Transsibérien + points clés
+- Mini‑quiz (6 questions)
+
+3) DONNÉES
+- Stocker le contenu dans le format existant (JSON/TS/MD).
+- Coller le texte tel quel.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER (TEXTE DU SITE)
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Sibérie (Grande Guerre) — Pourquoi une intervention alliée ?
+
+SOUS‑TITRE (H2)
+1918–1920 : la guerre mondiale se termine, mais l’ordre international vacille. En Russie, révolution et guerre civile transforment la Sibérie en enjeu géopolitique.
+
+QUESTION DIRECTRICE
+Pourquoi des forces françaises et alliées se retrouvent-elles à Vladivostok et le long du Transsibérien, alors que l’Europe sort de la Première Guerre mondiale ?
+
+ENCADRÉ “REPÈRES” (cartel)
+1917 : révolutions russes • mars 1918 : Brest‑Litovsk • 1918 : chaos et guerre civile • 1918–1919 : interventions alliées en Russie • 1919–1920 : désengagement progressif
+
+BOUTONS (micro‑copie)
+- Comprendre (5 min)
+- Récit (10–15 min)
+- Archives (approfondir)
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+La Sibérie devient un enjeu parce que la Russie s’effondre politiquement en 1917, puis sort de la guerre en 1918. Les Alliés craignent alors une cascade d’effets : stocks et équipements militaires laissés sans contrôle, extension du chaos, et rivalités entre puissances en Asie du Nord‑Est. La clef, c’est la logistique : la Sibérie n’est pas “une bataille”, c’est un réseau d’axes — surtout le Transsibérien — qui permet de déplacer hommes, armes et influence. L’intervention alliée vise moins à conquérir qu’à peser sur l’équilibre régional, protéger des points d’appui et éviter que la région ne bascule entièrement sous un seul contrôle.
+
+────────────────────────────
+BLOC 1 — Pourquoi la Sibérie devient un enjeu ?
+────────────────────────────
+Ce qui bascule, ce n’est pas seulement un régime : c’est un espace‑continent.
+La Russie entre dans une zone de rupture (révolution, guerre civile, fragmentation du pouvoir). Pour les puissances étrangères, la question devient : qui contrôle les ports, les stocks, et les voies de communication ?
+
+Dans ce type de crise, la géographie impose ses règles :
+- distances immenses ;
+- infrastructures rares ;
+- dépendance à quelques points d’entrée (ports) et à une colonne vertébrale ferroviaire.
+
+(Parenthèse utile : en Sibérie, “tenir un axe” peut compter davantage que “gagner une bataille”.)
+
+À retenir (cartel)
+- Enjeu = contrôle des axes + influence, pas seulement terrain.
+- Crise russe = vide de pouvoir et compétition internationale.
+- Sibérie = distances → la logistique devient politique.
+
+────────────────────────────
+BLOC 2 — Qui intervient, et pour quoi faire ?
+────────────────────────────
+Plusieurs acteurs interviennent ou cherchent à peser :
+- Les puissances alliées (dont la France) : protéger des intérêts, sécuriser des points d’appui, éviter l’extension du chaos et maintenir une capacité d’influence.
+- Les forces russes opposées aux bolcheviks : acteurs internes de la guerre civile, avec des agendas et des zones d’autorité variables.
+- Les bolcheviks : cherchent à consolider un pouvoir central et à reprendre le contrôle des axes.
+- Le Japon et les États‑Unis : présents en Asie‑Pacifique, avec des objectifs et des inquiétudes propres, notamment sur l’équilibre régional.
+
+(Parenthèse : dans une intervention “multinationale”, la coalition n’a pas toujours une stratégie unique. L’alliance existe… mais les intérêts divergent.)
+
+À retenir (cartel)
+- Plusieurs agendas coexistent : sécurité, influence, équilibre régional.
+- La coopération alliée n’efface pas la concurrence entre puissances.
+- La guerre civile russe reconfigure le théâtre.
+
+────────────────────────────
+BLOC 3 — Le levier clé : le Transsibérien (logistique = politique)
+────────────────────────────
+Le Transsibérien n’est pas seulement une ligne de train : c’est l’ossature d’un continent.
+Contrôler une gare, un pont, un nœud ferroviaire, c’est contrôler :
+- le déplacement des troupes ;
+- l’acheminement des vivres et munitions ;
+- la circulation de l’information et de l’autorité.
+
+La Sibérie se lit donc comme une carte d’axes :
+Vladivostok (entrée maritime) → réseau ferroviaire → profondeur continentale.
+
+(Parenthèse : plus les distances sont grandes, plus la “chaîne logistique” devient fragile — et plus elle devient un objectif.)
+
+À retenir (cartel)
+- Un port + un rail = capacité d’intervention.
+- Les nœuds logistiques ont une valeur stratégique disproportionnée.
+- L’axe structure les opérations et la politique.
+
+────────────────────────────
+MODULE — Carte (atlas, SVG interne)
+────────────────────────────
+Titre
+Atlas — Sibérie & Transsibérien
+
+Texte d’intro
+Schéma non à l’échelle : l’objectif est de comprendre les distances, les points d’entrée et l’axe ferroviaire.
+
+Repères à afficher
+- Europe (point de départ “politique”)
+- Vladivostok (port / entrée)
+- Ligne du Transsibérien (axe)
+- “Profondeur continentale” (sans détailler de villes si non sourcé)
+
+Boutons
+- Plein écran
+- Revenir au récit
+
+────────────────────────────
+BLOC 4 — Conséquences : ce que ça change (et ce que ça ne change pas)
+────────────────────────────
+Une intervention en Sibérie est d’abord un signal : présence, influence, sécurisation d’axes.
+Elle peut stabiliser localement, protéger un point d’appui, ou soutenir un acteur — mais elle ne résout pas à elle seule une guerre civile à l’échelle d’un continent.
+
+(Parenthèse : dans les théâtres immenses, la “victoire” est souvent politique avant d’être militaire.)
+
+À retenir (cartel)
+- Effet principal : influence et contrôle local d’axes.
+- Limite : un territoire‑continent ne se “stabilise” pas vite.
+- Le temps et l’endurance pèsent autant que la force.
+
+────────────────────────────
+RÔLE DU 9 — À COMPLÉTER (NE PAS INVENTER)
+────────────────────────────
+Remplacer cette section uniquement si l’utilisateur fournit un texte/source sur le 9 en Sibérie.
+Texte attendu : dates, unités, lieux, missions, bilan, héritage (si mentionné).
+En attendant, afficher :
+“Des éléments du 9 ont été associés à l’histoire ‘Asie’ du régiment. Pour une version exhaustive (dates, missions, lieux), cette section sera complétée à partir des documents régimentaires.”
+
+────────────────────────────
+TIMELINE (8 repères max, cliquable)
+────────────────────────────
+- 1917 : révolutions en Russie → bascule politique
+- 1918 : sortie de la guerre (Brest‑Litovsk) → rupture stratégique
+- 1918 : montée de la guerre civile → fragmentation du pouvoir
+- 1918–1919 : interventions alliées → sécurisation de points/axes
+- 1919–1920 : désengagement progressif → priorité au nouvel ordre européen
+
+────────────────────────────
+GALERIE — Archives (placeholders OK)
+────────────────────────────
+1) “Carte schématique du Transsibérien.”
+2) “Vladivostok — port d’entrée.”
+3) “Train militaire / logistique ferroviaire.”
+4) “Hiver sibérien : contrainte de théâtre.”
+5) “Coalition : diversité des forces.”
+
+ALT‑TEXT (à utiliser)
+1) Carte du Transsibérien.
+2) Vue du port de Vladivostok.
+3) Train et wagons logistiques.
+4) Paysage enneigé, froid extrême.
+5) Groupes de soldats de différentes nations.
+
+────────────────────────────
+GLOSSAIRE (recherche)
+────────────────────────────
+- Brest‑Litovsk : traité de 1918 marquant la sortie de la Russie de la guerre.
+- Guerre civile : conflit interne entre forces rivales pour le contrôle du pouvoir.
+- Bolcheviks : mouvement politique qui prend le pouvoir et cherche à consolider l’État.
+- Intervention alliée : présence militaire extérieure visant à peser sur un équilibre stratégique.
+- Transsibérien : axe ferroviaire structurant la mobilité et l’autorité en Sibérie.
+- Vladivostok : port d’entrée et point d’appui en Extrême‑Orient russe.
+
+────────────────────────────
+MINI‑QUIZ (6 questions)
+────────────────────────────
+Q1. En Sibérie, l’enjeu principal est souvent…
+A. Le contrôle des axes et de l’influence
+
+Q2. Quelle infrastructure structure la mobilité en Sibérie ?
+A. Le Transsibérien
+
+Q3. Pourquoi un port compte autant dans ce théâtre ?
+A. Parce qu’il conditionne l’entrée, le ravitaillement et la présence
+
+Q4. Une coalition multinationale signifie toujours…
+A. Des intérêts parfois divergents malgré l’alliance
+
+Q5. Dans un territoire immense, la “victoire” est souvent…
+A. Politique avant d’être militaire
+
+Q6. Quel est l’effet majeur d’une intervention limitée ?
+A. Peser localement (points d’appui, axes), sans régler seul un conflit continental
+
+────────────────────────────
+CONCLUSION (2 lignes)
+────────────────────────────
+La Sibérie, à la fin de la Grande Guerre, est un test de puissance : distance, logistique, influence, coalition. Comprendre ce théâtre, c’est comprendre que la géopolitique se joue autant sur des axes que sur des batailles.
+
+PROCHAINE ÉTAPE (bouton)
+
+
+──────────────────────────────────────────────────────────────────────────────
+FIN DU CONTENU
+──────────────────────────────────────────────────────────────────────────────
+
+NOTES UI (micro‑immersion)
+- Barre de progression de lecture.
+- Cartels : Repères, À retenir, Parenthèses utiles.
+- Timeline cliquable : panneau latéral.
