@@ -168,18 +168,27 @@ export default function AnneesHeureusesPage() {
               {heureusesData.hanoiReperes.map((repere, i) => (
                 <motion.div
                   key={i}
-                  className="bg-[#4a3b2a] text-[#e8dcc5] rounded-xl p-5 shadow-lg"
+                  className="bg-[#4a3b2a] text-[#e8dcc5] rounded-xl overflow-hidden shadow-lg"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.12, duration: 0.4 }}
                   data-testid={`hanoi-repere-${i}`}
                 >
-                  <div className="bg-white/10 rounded-lg h-20 flex items-center justify-center mb-3">
-                    <Landmark className="h-8 w-8 opacity-30" />
+                  <div className="relative h-40 overflow-hidden">
+                    <img
+                      src={repere.image}
+                      alt={repere.legende}
+                      className="w-full h-full object-cover sepia-[0.3] brightness-90"
+                      data-testid={`img-hanoi-${i}`}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#4a3b2a] via-transparent to-transparent" />
                   </div>
-                  <h4 className="font-serif font-bold text-sm">{repere.title}</h4>
-                  <p className="text-xs italic opacity-60 mt-1">{repere.parenthese}</p>
+                  <div className="p-4 space-y-1.5">
+                    <h4 className="font-serif font-bold text-sm">{repere.title}</h4>
+                    <p className="text-xs italic opacity-60">{repere.parenthese}</p>
+                    <p className="text-[10px] opacity-40 pt-1">{repere.legende}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>

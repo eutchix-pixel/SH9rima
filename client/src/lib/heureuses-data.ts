@@ -61,9 +61,9 @@ export const heureusesData: HeureusesContent = {
     { title: "Dans l'arrière‑pays, franchissement en pirogue", parenthese: "Ici, l'eau est une route — et parfois une frontière." },
   ],
   hanoiReperes: [
-    { title: "Boulevard Dong Khanh", parenthese: "Une capitale coloniale, vitrine administrative et urbaine." },
-    { title: "La gare", parenthese: "La mobilité, le contrôle et la logistique commencent souvent ici." },
-    { title: "Boulevard Henri Rivière", parenthese: "Les noms de lieux racontent aussi une mémoire." },
+    { title: "Boulevard Dong Khanh", parenthese: "Une capitale coloniale, vitrine administrative et urbaine.", image: "/images/hanoi-boulevard-dong-khanh.png", legende: "Boulevard Dong Khanh, Hanoï — années 1920" },
+    { title: "La gare de Hanoï", parenthese: "La mobilité, le contrôle et la logistique commencent souvent ici.", image: "/images/hanoi-gare.png", legende: "Gare de Hanoï — point de départ vers le Tonkin" },
+    { title: "Boulevard Henri Rivière", parenthese: "Les noms de lieux racontent aussi une mémoire.", image: "/images/hanoi-boulevard-riviere.png", legende: "Boulevard Henri Rivière, au bord du Petit Lac" },
   ],
   traditionsVisages: [
     { title: "Pagode de Kinh Loc", parenthese: "Un repère spirituel et architectural, ancré dans le quotidien." },
