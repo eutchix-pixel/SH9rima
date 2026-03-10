@@ -37,6 +37,8 @@ Preferred communication style: Simple, everyday language.
 - **Detail** (`/detail/:id`) — Generic detail page for subsections
 - **Asia/Tonkin** (`/asie/naissance-du-9-tonkin`) — Detailed Tonkin origins page
 - **Asia/China 1900** (`/asie/chine-1900-expedition`) — China expedition page
+- **Asia/Tourmente** (`/asie/tourmente-1940`) — WWII Tonkin page (1940-1946)
+- **Algérie/Renaissance** (`/algerie/renaissance`) — Algeria Kabylie 1956 page with interactive map
 - **AI Assistant** (`/ai-assistant`) — Chat-style assistant (currently client-side simulation using museum data)
 
 ### Backend (Express)

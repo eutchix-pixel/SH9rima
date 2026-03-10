@@ -48,7 +48,7 @@ export const museumData: Section[] = [
     colorClass: "bg-[#dcb575] text-[#333333]", // Ocre / Sable
     bgImage: "/images/bg-algeria.png",
     subsections: [
-      { id: "algerie-renaissance", title: "Renaissance", image: "/images/placeholder.png", content: "La reconstitution du régiment pour l'Algérie..." },
+      { id: "algerie-renaissance", title: "Renaissance", image: "/images/placeholder.png", content: "La reconstitution du régiment pour l'Algérie...", link: "/algerie/renaissance" },
       { id: "algerie-palestro", title: "Palestro", image: "/images/placeholder.png", content: "Le secteur de Palestro et ses défis..." },
       { id: "algerie-contre", title: "Contre-insurrection", image: "/images/placeholder.png", content: "Les techniques de guerre contre-révolutionnaire..." },
       { id: "algerie-kj25", title: "KJ 25", image: "/images/placeholder.png", content: "Les opérations majeures dans le secteur..." },

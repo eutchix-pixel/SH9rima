@@ -1,0 +1,55 @@
+MASTER PROMPT — REPLIT (ALGERIE PARTIE 1 : RENAISSANCE & QUADRILLAGE)
+CONTEXTE & RÔLE
+Tu es l'historien numérique du 9e RIMa. Ta mission est de coder une interface intitulée « 1956 : Le 9e RIC en Kabylie - Renaissance et Missions ». La page doit refléter la transition entre la fin de l'Indochine et l'arrivée dans le secteur montagneux de la Kabylie.
+
+CONTENU À CODER (Source : Algerie.pdf)
+
+1. Identité et Symbolique : L'Insigne de la Renaissance
+
+Le Colonel Viguié : Prend le commandement le 18 avril 1956 dans une période "orageuse" (post-Indochine). Il impose un nouvel insigne pour souder ses bataillons.
+
+L'Insigne (Agréé le 17 mai 1956) :
+
+Description : Pagode Mot Côt d'Hanoï sur une onde d'azur, brochant sur l'ancre coloniale d'or.
+
+Symbolique : L'ancre pour l'appartenance aux Troupes de Marine et la pagode pour honorer le sacrifice récent en Indochine.
+
+Le Drapeau : Porte les gloires de l'Empire (Alma, Palikao, Tonkin, etc.) pour inspirer les nouveaux appelés et rappelés.
+
+2. Dispositif Militaire et Implantation (Mai - Juin 1956)
+
+Le régiment est articulé en trois bataillons principaux et des unités détachées en Kabylie :
+
+ÉTAT-MAJOR (PC Régimentaire) : Installé à Dra El Mizan.
+
+1er BATAILLON : Opère dans la zone de Dra El Mizan.
+
+2e BATAILLON : - PC de compagnie basé à Berni Amrane.
+
+Zones de surveillance (Douars) : Beni Chemacha, Ouled Chendes, Yaya Mourira.
+
+3e BATAILLON : - Secteur clé de Tizi Gheniff.
+
+Mission : Contrôle des axes et protection du secteur contre l'infiltration des rebelles.
+
+4e COMPAGNIE (Indépendante) : Sous le commandement du Lieutenant Preteveille, installée à Rebeval dès mai 1956.
+
+3. Missions de Pacification et Vie Quotidienne
+
+Le document souligne que les Marsouins ne sont pas que des combattants, mais des acteurs sociaux.
+
+L'Instituteur en Uniforme : - À l'école de Bon Ighzer, l'insécurité fait fuir l'instituteur civil le 16 janvier 1956.
+
+Le 6 juin 1956, le Sergent Tesch rouvre l'école et reprend les cours pour les enfants du village.
+
+La Protection des Moissons : - Le 31 juillet 1956, à la Ferme Bonnet (3 km de Rebeval), les Marsouins Martin et Kaim (rappelés) surveillent et aident aux travaux des champs pour éviter les sabotages.
+
+Le Contrôle de Zone : - Opérations de contrôle d'identité massives à Dra El Mizan (juin 1956) pour sécuriser les centres urbains.
+
+INSTRUCTIONS UI/UX POUR REPLIT
+
+Carte Interactive de Kabylie : Créer un composant Map où l'on peut cliquer sur Dra El Mizan (PC/1er Bat), Tizi Gheniff (3e Bat), Berni Amrane (2e Bat) et Rebeval (4e Cie).
+
+Galerie "Portraits de Marsouins" : Fiches cliquables pour le Colonel Viguié, le Sergent Tesch (instituteur) et le Lieutenant Preteveille.
+
+Style Visuel : Fond "papier journal" 1956, photos d'époque en noir et blanc, typographie de machine à écrire.

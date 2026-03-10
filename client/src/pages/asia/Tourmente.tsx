@@ -441,6 +441,11 @@ export default function TourmentePage() {
                   <ArrowLeft className="mr-2 h-5 w-5" /> Années Heureuses
                 </Button>
               </Link>
+              <Link href="/algerie/renaissance">
+                <Button className="bg-[#dcb575] text-[#4a3b2a] hover:bg-[#dcb575]/90 px-8 py-6 text-lg" data-testid="button-next-algerie">
+                  Algérie : Renaissance <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
               <Link href="/#tonkin">
                 <Button variant="outline" className="border-[#e8dcc5]/30 text-[#e8dcc5] hover:bg-white/10 px-8 py-6 text-lg" data-testid="button-back-themes">
                   Revenir aux thèmes
