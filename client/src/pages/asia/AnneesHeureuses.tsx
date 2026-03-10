@@ -226,22 +226,37 @@ export default function AnneesHeureusesPage() {
         </FadeInSection>
 
         <FadeInSection>
-          <section className="flex flex-col items-center space-y-4 py-4" data-testid="bloc-insigne">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <img
-                src="/images/insigne-9ric.png"
-                alt="Insigne du 9e RIC — Marsouin Toujours"
-                className="h-48 md:h-56 object-contain drop-shadow-lg"
-                data-testid="img-insigne-corps"
-              />
-            </motion.div>
-            <p className="font-serif text-lg md:text-xl font-bold text-center tracking-wide">« Marsouin Toujours »</p>
-            <p className="text-sm italic opacity-70 text-center max-w-md">Insigne de corps du 9e RIC, créé en 1939 par le lieutenant‑colonel Marc.</p>
+          <section className="relative overflow-hidden rounded-2xl shadow-xl" data-testid="bloc-insigne">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#4a3b2a] via-[#3a2e1f] to-[#2a1f14]" />
+            <div className="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%224%22%20height%3D%224%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%200v4M0%201h4%22%20stroke%3D%22%23dcb575%22%20stroke-width%3D%220.5%22%20fill%3D%22none%22/%3E%3C/svg%3E')]" />
+            <div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+              <motion.div
+                className="shrink-0"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <img
+                  src="/images/insigne-9ric.png"
+                  alt="Insigne du 9e RIC — Marsouin Toujours"
+                  className="h-48 md:h-56 object-contain drop-shadow-[0_4px_20px_rgba(220,181,117,0.3)]"
+                  data-testid="img-insigne-corps"
+                />
+              </motion.div>
+              <div className="text-[#e8dcc5] space-y-4 text-center md:text-left">
+                <motion.div
+                  className="w-16 h-0.5 bg-[#dcb575] mx-auto md:mx-0"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                />
+                <h3 className="font-serif text-2xl md:text-3xl font-bold tracking-wide">« Marsouin Toujours »</h3>
+                <p className="text-base leading-relaxed opacity-85 max-w-lg">Insigne de corps du 9e RIC, créé en 1939 par le lieutenant‑colonel Marc. Forme pentagonale, ancre de marine rouge et or, marsouin doré enlacé autour du jas — devise gravée au bas.</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#dcb575] font-bold">9e Régiment d'Infanterie Coloniale</p>
+              </div>
+            </div>
           </section>
         </FadeInSection>
 
