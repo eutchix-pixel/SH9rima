@@ -49,14 +49,11 @@ export const siberieData: SiberieContent = {
       title: "Pourquoi la Sibérie devient un enjeu ?",
       mode: 'comprendre',
       content: [
-        "Ce qui bascule, ce n'est pas seulement un régime : c'est un espace‑continent. La Russie entre dans une zone de rupture (révolution, guerre civile, fragmentation du pouvoir). Pour les puissances étrangères, la question devient : qui contrôle les ports, les stocks, et les voies de communication ?",
-        "Dans ce type de crise, la géographie impose ses règles : distances immenses ; infrastructures rares ; dépendance à quelques points d'entrée (ports) et à une colonne vertébrale ferroviaire.",
-        "(Parenthèse utile : en Sibérie, « tenir un axe » peut compter davantage que « gagner une bataille ».)"
+        "En 1917, la Russie s'effondre : révolution, guerre civile, vide de pouvoir. Pour les puissances étrangères, la question devient : qui contrôle les ports et le Transsibérien ? En Sibérie, tenir un axe compte plus que gagner une bataille."
       ],
       keyPoints: [
-        "Enjeu = contrôle des axes + influence, pas seulement terrain.",
-        "Crise russe = vide de pouvoir et compétition internationale.",
-        "Sibérie = distances → la logistique devient politique."
+        "Crise russe = vide de pouvoir → compétition internationale.",
+        "Enjeu central : contrôle des axes ferroviaires et portuaires."
       ]
     },
     {
