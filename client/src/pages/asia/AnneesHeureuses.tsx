@@ -219,7 +219,6 @@ export default function AnneesHeureusesPage() {
                   </motion.div>
                 ))}
               </div>
-              <p className="text-xs italic opacity-50">{heureusesData.musique.parenthese}</p>
             </div>
           </section>
         </FadeInSection>
