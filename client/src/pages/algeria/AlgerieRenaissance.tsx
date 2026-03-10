@@ -57,7 +57,7 @@ export default function AlgerieRenaissancePage() {
       <div className="fixed inset-0 opacity-[0.02] pointer-events-none bg-[url('data:image/svg+xml,%3Csvg%20width%3D%222%22%20height%3D%222%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Crect%20width%3D%221%22%20height%3D%221%22%20fill%3D%22%23000%22/%3E%3C/svg%3E')]" />
 
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-[#4a6741] origin-left z-50"
+        className="fixed top-0 left-0 right-0 h-1 bg-[#2563eb] origin-left z-50"
         style={{ scaleX: scrollYProgress }}
       />
 
@@ -94,7 +94,7 @@ export default function AlgerieRenaissancePage() {
           transition={{ duration: 0.8 }}
         >
           <div className="flex items-center gap-3 mb-2">
-            <Anchor className="h-6 w-6 text-[#1e3a5f]" />
+            <Anchor className="h-6 w-6 text-[#2563eb]" />
             <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-[#4a3b2a]/50" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
               CONFIDENTIEL — SECTEUR KABYLIE — 1956
             </span>
@@ -109,7 +109,7 @@ export default function AlgerieRenaissancePage() {
           <p className="text-sm md:text-base text-[#4a3b2a]/80 leading-relaxed max-w-3xl" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
             {algerieRenaissanceData.subtitle}
           </p>
-          <p className="text-sm italic text-[#4a3b2a]/60 border-l-4 border-[#4a6741] pl-4 py-1 max-w-2xl" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
+          <p className="text-sm italic text-[#4a3b2a]/60 border-l-4 border-[#2563eb] pl-4 py-1 max-w-2xl" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
             {algerieRenaissanceData.accroche}
           </p>
 
@@ -123,7 +123,7 @@ export default function AlgerieRenaissancePage() {
                 key={mode}
                 variant={readingMode === mode ? 'default' : 'outline'}
                 className={readingMode === mode
-                  ? "bg-[#4a6741] text-[#e8dcc5] border-[#4a6741] text-xs"
+                  ? "bg-[#1e40af] text-white border-[#1e40af] text-xs"
                   : "border-[#4a3b2a]/30 text-[#4a3b2a] hover:bg-[#dcb575]/20 text-xs"}
                 style={{ fontFamily: "'IBM Plex Mono', monospace" }}
                 onClick={() => setReadingMode(mode)}
@@ -183,7 +183,7 @@ export default function AlgerieRenaissancePage() {
             <FadeInSection>
               <section className="space-y-6" data-testid="bloc-insigne">
                 <div className="flex items-center gap-3 border-b border-dashed border-[#4a3b2a]/30 pb-4">
-                  <Award className="h-5 w-5 text-[#1e3a5f]" />
+                  <Award className="h-5 w-5 text-[#2563eb]" />
                   <h2
                     className="text-xl md:text-2xl font-normal text-[#4a3b2a]"
                     style={{ fontFamily: "'Special Elite', cursive" }}
@@ -268,7 +268,7 @@ export default function AlgerieRenaissancePage() {
             <FadeInSection>
               <section className="space-y-6" data-testid="bloc-dispositif">
                 <div className="flex items-center gap-3 border-b border-dashed border-[#4a3b2a]/30 pb-4">
-                  <MapPin className="h-5 w-5 text-[#4a6741]" />
+                  <MapPin className="h-5 w-5 text-[#2563eb]" />
                   <h2
                     className="text-xl md:text-2xl font-normal text-[#4a3b2a]"
                     style={{ fontFamily: "'Special Elite', cursive" }}
@@ -312,7 +312,7 @@ export default function AlgerieRenaissancePage() {
                         key={i}
                         className={`border-2 p-4 space-y-1 transition-colors hover:bg-[#dcb575]/10 ${
                           isTizi
-                            ? "border-[#4a6741]/40 bg-[#4a6741]/5 col-span-1 sm:col-span-2"
+                            ? "border-[#2563eb]/40 bg-[#2563eb]/5 col-span-1 sm:col-span-2"
                             : "border-[#4a3b2a]/15 bg-white/30"
                         }`}
                         initial={{ opacity: 0, y: 15 }}
@@ -322,7 +322,7 @@ export default function AlgerieRenaissancePage() {
                         data-testid={`implantation-${i}`}
                       >
                         <div className="flex items-center gap-2">
-                          <MapPin className={`h-3 w-3 ${isTizi ? "text-[#4a6741]" : "text-[#dcb575]"}`} />
+                          <MapPin className={`h-3 w-3 ${isTizi ? "text-[#2563eb]" : "text-[#dcb575]"}`} />
                           <h4
                             className="text-sm text-[#4a3b2a]"
                             style={{ fontFamily: "'Special Elite', cursive" }}
@@ -330,12 +330,12 @@ export default function AlgerieRenaissancePage() {
                             {imp.nom}
                           </h4>
                           {isTizi && (
-                            <span className="ml-auto text-[9px] uppercase tracking-wider bg-[#4a6741] text-white px-2 py-0.5" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
+                            <span className="ml-auto text-[9px] uppercase tracking-wider bg-[#1e40af] text-white px-2 py-0.5" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
                               SECTEUR CLÉ
                             </span>
                           )}
                         </div>
-                        <p className="text-[10px] font-bold text-[#4a6741] uppercase tracking-wide" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
+                        <p className="text-[10px] font-bold text-[#2563eb] uppercase tracking-wide" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
                           {imp.role}
                         </p>
                         <p className="text-[11px] text-[#4a3b2a]/70 leading-relaxed" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
@@ -351,7 +351,7 @@ export default function AlgerieRenaissancePage() {
             <FadeInSection>
               <section className="space-y-6" data-testid="bloc-missions">
                 <div className="flex items-center gap-3 border-b border-dashed border-[#4a3b2a]/30 pb-4">
-                  <Users className="h-5 w-5 text-[#4a6741]" />
+                  <Users className="h-5 w-5 text-[#2563eb]" />
                   <h2
                     className="text-xl md:text-2xl font-normal text-[#4a3b2a]"
                     style={{ fontFamily: "'Special Elite', cursive" }}
@@ -359,7 +359,7 @@ export default function AlgerieRenaissancePage() {
                     {algerieRenaissanceData.missions.titre}
                   </h2>
                 </div>
-                <p className="text-xs italic text-[#4a3b2a]/60 border-l-4 border-[#4a6741] pl-4 py-1" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
+                <p className="text-xs italic text-[#4a3b2a]/60 border-l-4 border-[#2563eb] pl-4 py-1" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
                   {algerieRenaissanceData.missions.intro}
                 </p>
 
@@ -373,7 +373,7 @@ export default function AlgerieRenaissancePage() {
                         key={i}
                         className={`p-5 space-y-2 ${
                           isTesch
-                            ? "border-2 border-dashed border-[#4a6741]/40 bg-[#4a6741]/5 relative"
+                            ? "border-2 border-dashed border-[#2563eb]/40 bg-[#2563eb]/5 relative"
                             : "border-2 border-[#4a3b2a]/15 bg-white/30"
                         }`}
                         initial={{ opacity: 0, x: -20 }}
@@ -383,14 +383,14 @@ export default function AlgerieRenaissancePage() {
                         data-testid={`mission-${i}`}
                       >
                         {isTesch && (
-                          <div className="absolute -top-3 left-4 bg-[#4a6741] text-white px-3 py-0.5">
+                          <div className="absolute -top-3 left-4 bg-[#1e40af] text-white px-3 py-0.5">
                             <span className="text-[9px] uppercase tracking-[0.2em]" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
                               ACTION SOCIALE
                             </span>
                           </div>
                         )}
                         <div className="flex items-center gap-2">
-                          <MissionIcon className={`h-4 w-4 ${isTesch ? "text-[#4a6741]" : "text-[#dcb575]"}`} />
+                          <MissionIcon className={`h-4 w-4 ${isTesch ? "text-[#2563eb]" : "text-[#dcb575]"}`} />
                           <h4
                             className="text-sm text-[#4a3b2a]"
                             style={{ fontFamily: "'Special Elite', cursive" }}
@@ -417,7 +417,7 @@ export default function AlgerieRenaissancePage() {
           <FadeInSection>
             <section className="space-y-6" data-testid="bloc-portraits">
               <div className="flex items-center gap-3 border-b border-dashed border-[#4a3b2a]/30 pb-4">
-                <Users className="h-5 w-5 text-[#1e3a5f]" />
+                <Users className="h-5 w-5 text-[#2563eb]" />
                 <h2
                   className="text-xl md:text-2xl font-normal text-[#4a3b2a]"
                   style={{ fontFamily: "'Special Elite', cursive" }}
