@@ -233,6 +233,26 @@ export default function AnneesHeureusesPage() {
           </section>
         </FadeInSection>
 
+        <FadeInSection>
+          <section className="flex flex-col items-center space-y-4 py-4" data-testid="bloc-insigne">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <img
+                src="/images/insigne-9ric.png"
+                alt="Insigne du 9e RIC — Marsouin Toujours"
+                className="h-48 md:h-56 object-contain drop-shadow-lg"
+                data-testid="img-insigne-corps"
+              />
+            </motion.div>
+            <p className="font-serif text-lg md:text-xl font-bold text-center tracking-wide">« Marsouin Toujours »</p>
+            <p className="text-sm italic opacity-70 text-center max-w-md">Insigne de corps du 9e RIC, créé en 1939 par le lieutenant‑colonel Marc.</p>
+          </section>
+        </FadeInSection>
+
         {showArchives && (
           <FadeInSection>
             <section className="space-y-8" data-testid="bloc-archives">
