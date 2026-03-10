@@ -1,10 +1,17 @@
 import { museumData } from "@/lib/data";
 import { Link } from "wouter";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { ChevronDown, Map, ArrowRight } from "lucide-react";
 
 export default function Home() {
+  useEffect(() => {
+    const el = document.getElementById("tonkin");
+    if (el) {
+      el.scrollIntoView({ behavior: "instant" });
+    }
+  }, []);
+
   return (
       <div className="bg-background text-foreground">
           {/* Hero / Intro */}
