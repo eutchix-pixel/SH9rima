@@ -357,27 +357,6 @@ export default function SiberiePage() {
           </FadeInSection>
         )}
 
-        <FadeInSection>
-          <section className="relative overflow-hidden rounded-2xl shadow-lg border border-[#4a3b2a]/10" data-testid="bloc-role9">
-            <div className="bg-[#fdfbf7] p-8 md:p-10 space-y-4">
-              <div className="flex items-center gap-3">
-                <FileQuestion className="h-6 w-6 text-[#dcb575]" />
-                <h2 className="font-serif text-xl md:text-2xl font-bold">Rôle du 9 — À compléter</h2>
-              </div>
-              <motion.div
-                className="w-16 h-0.5 bg-[#dcb575]"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-              />
-              <p className="text-base leading-relaxed opacity-80 italic">
-                {siberieData.role9}
-              </p>
-            </div>
-          </section>
-        </FadeInSection>
-
         {showArchives && (
           <>
             <FadeInSection>
