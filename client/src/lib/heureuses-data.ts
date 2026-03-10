@@ -74,7 +74,6 @@ export const heureusesData: HeureusesContent = {
   musique: {
     texte: "Le 9e RIC possédait à Hanoï une musique réputée. Il donna de nombreux concerts en ville dès sa création comme l'attestent les affiches à l'époque.",
     documents: [
-      "Programme du 28 août 1894 — Square Paul‑Bert",
       "Programme du 29 juillet 1894",
       "ENGAGEZ‑VOUS DANS LES TROUPES COLONIALES",
     ],
