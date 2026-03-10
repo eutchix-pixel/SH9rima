@@ -184,9 +184,8 @@ export default function AnneesHeureusesPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#4a3b2a] via-transparent to-transparent" />
                   </div>
-                  <div className="p-4 space-y-1.5">
+                  <div className="p-4">
                     <h4 className="font-serif font-bold text-sm">{repere.title}</h4>
-                    <p className="text-[10px] opacity-40 pt-1">{repere.legende}</p>
                   </div>
                 </motion.div>
               ))}
