@@ -738,6 +738,11 @@ export default function SiberiePage() {
                   <ArrowLeft className="mr-2 h-5 w-5" /> Revenir aux thèmes
                 </Button>
               </Link>
+              <Link href="/asie/annees-heureuses">
+                <Button className="bg-[#4a3b2a] text-[#e8dcc5] hover:bg-[#4a3b2a]/90 px-8 py-6 text-lg" data-testid="button-next-heureuses">
+                  Les Années Heureuses <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </div>
           </section>
         </FadeInSection>
