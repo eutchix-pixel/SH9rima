@@ -223,37 +223,6 @@ export default function AnneesHeureusesPage() {
           </section>
         </FadeInSection>
 
-        <FadeInSection>
-          <section className="space-y-6" data-testid="bloc-1934">
-            <div className="flex items-center gap-3 border-b-2 border-[#dcb575] pb-4">
-              <Users className="h-5 w-5" />
-              <h2 className="font-serif text-2xl md:text-3xl font-bold">Tonkin 1934 — terrain & hommes</h2>
-            </div>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {heureusesData.tonkin1934.cartes.map((carte, i) => (
-                <motion.div
-                  key={i}
-                  className="bg-white/50 border border-[#4a3b2a]/10 rounded-xl overflow-hidden"
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                >
-                  <div className="bg-[#4a3b2a]/10 h-24 flex items-center justify-center">
-                    <ImageIcon className="h-8 w-8 opacity-20" />
-                  </div>
-                  <p className="text-sm font-serif font-bold p-3">{carte}</p>
-                </motion.div>
-              ))}
-            </div>
-            <div className="bg-[#f5eedf] border border-[#4a3b2a]/10 rounded-xl p-5 space-y-3">
-              <p className="text-sm leading-relaxed opacity-90">{heureusesData.tonkin1934.texte}</p>
-              <p className="text-xs italic opacity-70 border-l-4 border-[#dcb575]/40 pl-3">{heureusesData.tonkin1934.legende}</p>
-            </div>
-            <p className="text-xs italic opacity-50">{heureusesData.tonkin1934.parenthese}</p>
-          </section>
-        </FadeInSection>
-
         {showArchives && (
           <FadeInSection>
             <section className="space-y-8" data-testid="bloc-archives">
