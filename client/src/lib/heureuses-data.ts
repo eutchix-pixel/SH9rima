@@ -50,7 +50,6 @@ export const heureusesData: HeureusesContent = {
     "Le quotidien (ville, marchés, campagnes) façonne l'expérience.",
     "La musique et les traditions participent à l'identité.",
     "1932 : parole de chef (archive).",
-    "1939 : premier insigne de corps (archive).",
   ],
   albumScenes: [
     { title: "La vie aux champs, le repiquage du riz", parenthese: "Une scène qui rappelle que le Tonkin, c'est d'abord un territoire vécu par ses habitants." },
