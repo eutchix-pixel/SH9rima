@@ -37,6 +37,11 @@ export interface TourmenteContent {
         pointsForts: string;
         pointsFaibles: string;
       };
+      consequences: {
+        accordStationnement: string;
+        isolement: string;
+        preparationSecrete: string;
+      };
     };
     guerreThai: {
       titre: string;
@@ -126,6 +131,11 @@ export const tourmenteData: TourmenteContent = {
       analyseTactique: {
         pointsForts: "Excellente utilisation du relief (les pitons) et efficacité des armes automatiques (FM 24/29).",
         pointsFaibles: "Infériorité numérique et manque de soutien aérien (avions Potez détruits au sol).",
+      },
+      consequences: {
+        accordStationnement: "Suite à l'invasion, la France est contrainte de signer un accord autorisant le stationnement de troupes japonaises au Tonkin. Cela marque le début d'une cohabitation sous haute tension, où la souveraineté française est maintenue en façade mais sous contrôle nippon.",
+        isolement: "Cette invasion confirme la coupure totale entre l'Indochine et la métropole (occupée par l'Allemagne). Le 9e RIC se retrouve seul pour assurer la défense d'un territoire immense.",
+        preparationSecrete: "Sentant le conflit inévitable, le régiment constitue clandestinement des dépôts de munitions et de vivres dans la jungle pour une future résistance.",
       },
     },
     guerreThai: {

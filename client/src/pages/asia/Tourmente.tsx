@@ -241,6 +241,33 @@ export default function TourmentePage() {
                     <p className="text-sm opacity-80 leading-relaxed">{tourmenteData.sections.agression1940.analyseTactique.pointsFaibles}</p>
                   </div>
                 </div>
+
+                <Accordion type="multiple" className="space-y-3" data-testid="bloc-consequences-1940">
+                  <AccordionItem value="accord" className="border border-white/10 rounded-xl bg-white/5 px-6 shadow-sm">
+                    <AccordionTrigger className="font-serif text-base font-bold py-4 hover:no-underline text-[#e8dcc5]">
+                      L'accord de stationnement
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-sm opacity-80 leading-relaxed pb-4">{tourmenteData.sections.agression1940.consequences.accordStationnement}</p>
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="isolement" className="border border-white/10 rounded-xl bg-white/5 px-6 shadow-sm">
+                    <AccordionTrigger className="font-serif text-base font-bold py-4 hover:no-underline text-[#e8dcc5]">
+                      L'isolement de la colonie
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-sm opacity-80 leading-relaxed pb-4">{tourmenteData.sections.agression1940.consequences.isolement}</p>
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="preparation" className="border border-red-900/30 rounded-xl bg-red-950/20 px-6 shadow-sm">
+                    <AccordionTrigger className="font-serif text-base font-bold py-4 hover:no-underline text-[#e8dcc5]">
+                      Préparation secrète
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-sm opacity-80 leading-relaxed pb-4">{tourmenteData.sections.agression1940.consequences.preparationSecrete}</p>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </section>
             </FadeInSection>
 
