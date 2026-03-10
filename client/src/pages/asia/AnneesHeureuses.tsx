@@ -196,6 +196,27 @@ export default function AnneesHeureusesPage() {
         </FadeInSection>
 
         <FadeInSection>
+          <section className="space-y-6" data-testid="bloc-carte-hanoi">
+            <div className="flex items-center gap-3 border-b-2 border-[#dcb575] pb-4">
+              <MapPin className="h-5 w-5" />
+              <h2 className="font-serif text-2xl md:text-3xl font-bold">Plan de Hanoï</h2>
+            </div>
+            <div className="relative rounded-xl overflow-hidden shadow-lg border border-[#4a3b2a]/20">
+              <img
+                src="/images/carte-hanoi.png"
+                alt="Plan de la ville de Hanoï — Grand Lac (Tây Hồ), Fleuve Rouge, citadelle et quartiers"
+                className="w-full object-contain"
+                data-testid="img-carte-hanoi"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#4a3b2a]/90 to-transparent p-4 pt-8">
+                <p className="text-[#e8dcc5] font-serif text-sm md:text-base font-bold">Plan de Hanoï — entre Grand Lac et Fleuve Rouge</p>
+                <p className="text-[#e8dcc5]/70 text-xs mt-1">La citadelle, les lacs, les quartiers coloniaux et le fleuve dessinent la géographie du quotidien des marsouins.</p>
+              </div>
+            </div>
+          </section>
+        </FadeInSection>
+
+        <FadeInSection>
           <section className="relative overflow-hidden rounded-2xl shadow-xl" data-testid="bloc-musique">
             <div className="absolute inset-0 bg-gradient-to-br from-[#2c3e50] via-[#34495e] to-[#2c3e50]" />
             <div className="relative z-10 text-[#ecf0f1] p-8 md:p-12 space-y-6">
