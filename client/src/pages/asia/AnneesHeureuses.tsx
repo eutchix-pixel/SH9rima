@@ -187,20 +187,6 @@ export default function AnneesHeureusesPage() {
         </FadeInSection>
 
         <FadeInSection>
-          <section className="space-y-6" data-testid="bloc-traditions">
-            <div className="flex items-center gap-3 border-b-2 border-[#dcb575] pb-4">
-              <Users className="h-5 w-5" />
-              <h2 className="font-serif text-2xl md:text-3xl font-bold">Traditions & Visages</h2>
-            </div>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {heureusesData.traditionsVisages.map((item, i) => (
-                <SceneCard key={i} title={item.title} parenthese={item.parenthese} index={i} />
-              ))}
-            </div>
-          </section>
-        </FadeInSection>
-
-        <FadeInSection>
           <section className="relative overflow-hidden rounded-2xl shadow-xl" data-testid="bloc-musique">
             <div className="absolute inset-0 bg-gradient-to-br from-[#2c3e50] via-[#34495e] to-[#2c3e50]" />
             <div className="relative z-10 text-[#ecf0f1] p-8 md:p-12 space-y-6">
