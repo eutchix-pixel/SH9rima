@@ -9,6 +9,7 @@ import SiberiePage from "./pages/asia/Siberie";
 import AnneesHeureusesPage from "./pages/asia/AnneesHeureuses";
 import TourmentePage from "./pages/asia/Tourmente";
 import AlgerieRenaissancePage from "./pages/algeria/AlgerieRenaissance";
+import AlgeriePalestroPage from "./pages/algeria/AlgeriePalestro";
 import ScanPage from "./pages/Scan";
 import NotFound from "./pages/not-found";
 
@@ -25,6 +26,7 @@ function Router() {
         <Route path="/asie/annees-heureuses" component={AnneesHeureusesPage} />
         <Route path="/asie/tourmente-1940" component={TourmentePage} />
         <Route path="/algerie/renaissance" component={AlgerieRenaissancePage} />
+        <Route path="/algerie/palestro" component={AlgeriePalestroPage} />
         <Route path="/scan" component={ScanPage} />
         <Route component={NotFound} />
       </Switch>

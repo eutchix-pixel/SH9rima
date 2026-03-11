@@ -1,0 +1,110 @@
+
+MASTER PROMPT — REPLIT AI
+Projet : « Museum Tour Guide — 9e RIMa »
+Nouvelle page à créer : AFRIQUE → « Algérie — Palestro (18 mai 1956) »
+Slug conseillé : /afrique/algerie-palestro
+
+IMPORTANT (lecture avant de coder)
+- La page doit rester factuelle ; base‑toi sur les sources fournies, en particulier le récit de l’embuscade de Palestro et son contextehttps://en.wikipedia.org/wiki/Palestro_ambush#:~:text=Algerian%20War%20%2C%20near%20the,by%20Second%20Lieutenant%20Herv%C3%A9%20Arturhttps://en.wikipedia.org/wiki/Palestro_ambush#:~:text=After%201%20November%201954%2C%20Algeria,It%20was%20also%20the%20first. N’invente pas de chiffres ou de détails sur les unités.
+- Le public doit comprendre la signification de l’embuscade de Palestro : symbole d’un conflit asymétrique et choc pour l’opinion. Raconte l’événement avec sobriété et décris le contexte (Kabylie, tactiques du FLN, réactions françaises).
+- Le texte affiché doit être celui de « CONTENU À AFFICHER ». Micro‑copie d’interface autorisée.
+- Si je fournis ultérieurement un texte sur le rôle du 9e RIC, remplace la section correspondante.
+
+OBJECTIF VISITEUR
+Vivre et comprendre l’embuscade de Palestro du 18 mai 1956, en situant son lieu (dans les gorges entre Palestro/Lakhdaria et Djerrah), ses acteurs (section du 9e RIC et moudjahidine de l’ALN) et son impact sur l’Algérie et la métropole.
+
+À FAIRE DANS L’APP
+1) ROUTE + NAVIGATION
+  - Ajouter la page « Palestro » dans la rubrique Algérie, après la page « Renaissance ».
+  - Boutons fixes : « Retour Algérie », « Revenir aux thèmes », « Continuer la visite ».
+
+2) STRUCTURE UX
+  - HERO + « Question directrice ».
+  - Modes : Comprendre, Récit, Archives.
+  - Timeline (max 5 repères).
+  - 4 blocs :
+    1) « Un terrain difficile : gorges et djebels ».
+    2) « L’embuscade : 18 mai 1956 ».
+    3) « Réactions et conséquences ».
+    4) « Hommages et mémoire ».
+  - Carte stylisée pour situer Palestro (Lakhdaria) et l’itinéraire du convoi.
+  - Mini‑quiz (4 questions).
+
+3) DONNÉES
+  - Intégrer le texte tel quel.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER (TEXTE DU SITE)
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Algérie — Palestro (18 mai 1956)
+
+SOUS‑TITRE (H2)
+Au cœur des gorges de Kabylie, une patrouille du 9e RIC est décimée par une embuscade. L’événement, largement relayé, devient un symbole de la guerre d’Algérie et du courage des soldats.
+
+QUESTION DIRECTRICE
+Comment la topographie et la tactique ont‑elles conduit à la destruction d’une section du 9e RIC, et pourquoi cet épisode résonne‑t‑il encore aujourd’hui ?
+
+ENCADRÉ « REPÈRES »
+18 mai 1956 : embuscade de Palestro • 19 mai 1956 : récupération des corps • 1956 : multiplication des attaques de l’ALN en Kabylie • 1957 : renforcement des effectifs français • 1958 : retour de De Gaulle.
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+Le 18 mai 1956, une section de vingt‑et‑un hommes du 9e régiment d’infanterie coloniale, commandée par le sous‑lieutenant Hervé Artur, se rend au douar Djerrah dans les montagnes de Kabylie pour soutenir un poste isolé. Dans la gorge, quarante moudjahidine de l’ALN, menés par Ali Khodja, tendent une embuscade. Pris sous un feu croisé, les soldats n’ont aucune possibilité de repli. Vingt soldats, dont Artur, sont tués ; un seul survivant est capturé et relâché ensuitehttps://en.wikipedia.org/wiki/Palestro_ambush#:~:text=Algerian%20War%20%2C%20near%20the,by%20Second%20Lieutenant%20Herv%C3%A9%20Arturhttps://en.wikipedia.org/wiki/Palestro_ambush#:~:text=After%201%20November%201954%2C%20Algeria,It%20was%20also%20the%20first. Cette embuscade provoque un choc en France et entraîne un durcissement de la répression.
+
+────────────────────────────
+BLOC 1 — Un terrain difficile : gorges et djebels
+────────────────────────────
+La Kabylie est un massif montagneux aux pentes abruptes et aux gorges profondes. Les pistes sont étroites et dominées par des crêtes boisées, ce qui favorise les embuscades. Palestro (aujourd’hui Lakhdaria) est un bourg situé au pied des djebels de l’Atlas tellien. Les unités françaises utilisent des pistes comme celle de Djerrah pour relier les postes.
+
+À retenir
+- La configuration du terrain rend le convoi vulnérable ; les combattants de l’ALN utilisent la végétation et la hauteur pour se dissimuler.
+- Les soldats du 9e RIC avancent en file indienne, exposés à une attaque sur leur flanc gauche.
+
+────────────────────────────
+BLOC 2 — L’embuscade : 18 mai 1956
+────────────────────────────
+Le sous‑lieutenant Hervé Artur dirige la deuxième section de la 2e compagnie du 9e RIC. Le matin du 18 mai, il reçoit l’ordre de rejoindre le poste d’Ouled Djerrah. Arrivés dans la gorge, ses hommes sont pris sous un feu nourri. Des grenades et des rafales de mitraillettes fauchent l’avant et l’arrière de la colonne. Les survivants tentent de se mettre à couvert mais la pente escarpée empêche toute manœuvre. L’assaut dure moins d’une heure. Vingt soldats sont tués, dont Artur ; un seul soldat est capturé puis relâchéhttps://en.wikipedia.org/wiki/Palestro_ambush#:~:text=Algerian%20War%20%2C%20near%20the,by%20Second%20Lieutenant%20Herv%C3%A9%20Arturhttps://en.wikipedia.org/wiki/Palestro_ambush#:~:text=After%201%20November%201954%2C%20Algeria,It%20was%20also%20the%20first.
+
+À retenir
+- Le déséquilibre numérique (21 vs 40) et la surprise sont déterminants.
+- Les communications et renforts arrivent trop tard.
+
+────────────────────────────
+BLOC 3 — Réactions et conséquences
+────────────────────────────
+Le surlendemain, des renforts récupèrent les corps et constatent la brutalité de l’attaque. En France, l’opinion publique prend conscience de la gravité du conflit. L’armée renforce sa présence en Kabylie ; des opérations de ratissage visent à traquer les groupes responsables. L’embuscade accentue la volonté de certains politiciens de négocier, tandis que d’autres réclament un durcissement. Pour l’ALN, cette victoire renforce le moral et démontre l’efficacité des coups de main.
+
+────────────────────────────
+BLOC 4 — Hommages et mémoire
+────────────────────────────
+Les noms des soldats tombés à Palestro sont inscrits sur des monuments du 9e RIMa. Des cérémonies annuelles leur rendent hommage. L’événement est aussi l’occasion de rappeler les souffrances de la population algérienne, prise dans la spirale des violences. La toponymie a évolué : Palestro s’appelle aujourd’hui Lakhdaria.
+
+────────────────────────────
+CHRONOLOGIE
+────────────────────────────
+• 18 mai 1956 : embuscade de Palestrohttps://en.wikipedia.org/wiki/Palestro_ambush#:~:text=Algerian%20War%20%2C%20near%20the,by%20Second%20Lieutenant%20Herv%C3%A9%20Artur.
+• 19 mai 1956 : récupération des corps et obsèques à Alger.
+• Été 1956 : multiplication des embuscades de l’ALN en Kabylie.
+• 1957 : renforcement des opérations de ratissage.
+• 1958 : crise du 13 mai et retour de De Gaulle.
+
+────────────────────────────
+GLOSSAIRE
+────────────────────────────
+• Palestro/Lakhdaria : localité de Kabylie, théâtre de l’embuscade du 18 mai 1956.
+• Hervé Artur : sous‑lieutenant du 9e RIC, commandant de la section attaquée.
+• Ali Khodja : chef de groupe de l’ALN qui mène l’embuscadehttps://en.wikipedia.org/wiki/Palestro_ambush#:~:text=After%201%20November%201954%2C%20Algeria,It%20was%20also%20the%20first.
+• ALN : Armée de libération nationale, bras armé du FLN.
+
+────────────────────────────
+MINI‑QUIZ
+────────────────────────────
+1) Combien de soldats composent la section du 9e RIC attaquée à Palestro ? Réponse : 21.
+2) Qui commande la section française ? Réponse : le sous‑lieutenant Hervé Artur.
+3) Quel est le nom du chef de l’ALN qui tend l’embuscade ? Réponse : Ali Khodjahttps://en.wikipedia.org/wiki/Palestro_ambush#:~:text=After%201%20November%201954%2C%20Algeria,It%20was%20also%20the%20first.
+4) Quelle est la conséquence majeure de cette embuscade en France ? Réponse : prise de conscience de la gravité du conflit et renforcement des opérations de ratissage.
+
+──────────────────────────────────────────────────────────────────────────────

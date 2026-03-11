@@ -461,17 +461,20 @@ export default function AlgerieRenaissancePage() {
         )}
 
         <FadeInSection>
-          <section className="relative overflow-hidden border-2 border-[#4a3b2a]/30 shadow-xl" data-testid="bloc-conclusion">
-            <div className="absolute inset-0 bg-[#4a3b2a]" />
-            <div className="relative z-10 text-[#e8dcc5] p-8 md:p-12 space-y-4">
-              <p
-                className="text-xl md:text-2xl font-normal uppercase tracking-[0.15em]"
-                style={{ fontFamily: "'Special Elite', cursive" }}
-              >
-                {algerieRenaissanceData.nextStep}
-              </p>
-            </div>
-          </section>
+          <Link href="/algerie/palestro">
+            <section className="relative overflow-hidden border-2 border-[#4a3b2a]/30 shadow-xl cursor-pointer group hover:border-[#dcb575]/40 transition-colors" data-testid="bloc-conclusion">
+              <div className="absolute inset-0 bg-[#4a3b2a]" />
+              <div className="relative z-10 text-[#e8dcc5] p-8 md:p-12 space-y-4 flex items-center justify-between">
+                <p
+                  className="text-xl md:text-2xl font-normal uppercase tracking-[0.15em]"
+                  style={{ fontFamily: "'Special Elite', cursive" }}
+                >
+                  {algerieRenaissanceData.nextStep}
+                </p>
+                <ArrowRight className="h-6 w-6 text-[#dcb575] group-hover:translate-x-1 transition-transform" />
+              </div>
+            </section>
+          </Link>
         </FadeInSection>
 
         <FadeInSection>
@@ -495,6 +498,15 @@ export default function AlgerieRenaissancePage() {
                   data-testid="button-back-themes"
                 >
                   Revenir aux thèmes
+                </Button>
+              </Link>
+              <Link href="/algerie/palestro">
+                <Button
+                  className="bg-[#1e40af] text-white hover:bg-[#1e3a8a] px-8 py-6 text-sm"
+                  style={{ fontFamily: "'IBM Plex Mono', monospace" }}
+                  data-testid="button-next-palestro"
+                >
+                  Palestro <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
             </div>
