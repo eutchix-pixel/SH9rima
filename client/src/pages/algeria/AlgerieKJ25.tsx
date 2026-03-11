@@ -1,19 +1,19 @@
-import { algerieContreInsurrectionData } from "@/lib/algerie-contre-insurrection-data";
+import { algerieKJ25Data } from "@/lib/algerie-kj25-data";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import {
   ArrowLeft, ArrowRight, Clock, BookOpen, Check,
-  Shield, HeartHandshake, Landmark, Swords, Scale,
-  ChevronRight, ChevronDown, FileText, HelpCircle, BookMarked,
-  Eye, Lightbulb, Target, Layers
+  Shield, MapPin, Target, Activity, ClipboardList,
+  ChevronDown, FileText, HelpCircle, BookMarked,
+  Eye, Lightbulb, Layers, Crosshair
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { motion, useScroll, useSpring, useInView, AnimatePresence, useMotionValueEvent } from "framer-motion";
 
 type ReadingMode = 'comprendre' | 'recit' | 'archives';
 
-const ACCENT = "#1e3a5f";
-const ACCENT_LIGHT = "#2a5a8f";
+const ACCENT = "#6b4c2a";
+const ACCENT_DARK = "#4a3520";
 const KRAFT = "#d4c5a0";
 const INK = "#4a3b2a";
 const GOLD = "#dcb575";
@@ -36,18 +36,18 @@ function FadeInSection({ children, className = "", delay = 0 }: { children: Reac
 
 function SectionNumber({ num }: { num: number }) {
   return (
-    <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-[#1e3a5f]/30 bg-[#1e3a5f]/5 shrink-0">
-      <span className="text-sm font-bold text-[#1e3a5f]" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
+    <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-[#6b4c2a]/30 bg-[#6b4c2a]/5 shrink-0">
+      <span className="text-sm font-bold text-[#6b4c2a]" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
         {String(num).padStart(2, '0')}
       </span>
     </div>
   );
 }
 
-const blocIcons = [HeartHandshake, Landmark, Swords, Scale];
-const blocLabels = ["DOCTRINE", "POLITIQUE", "OFFENSIVE MAJEURE", "TOURNANT"];
+const blocIcons = [MapPin, Target, Activity, ClipboardList];
+const blocLabels = ["CONTEXTE", "DISPOSITIF", "ACTION", "BILAN"];
 
-export default function AlgerieContreInsurrectionPage() {
+export default function AlgerieKJ25Page() {
   const [readingMode, setReadingMode] = useState<ReadingMode>('comprendre');
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
@@ -75,7 +75,7 @@ export default function AlgerieContreInsurrectionPage() {
 
       <motion.div
         className="fixed top-0 left-0 right-0 h-[3px] origin-left z-50"
-        style={{ scaleX, background: `linear-gradient(90deg, ${ACCENT}, ${ACCENT_LIGHT})` }}
+        style={{ scaleX, background: `linear-gradient(90deg, ${ACCENT}, ${ACCENT_DARK})` }}
       />
 
       <AnimatePresence>
@@ -89,13 +89,13 @@ export default function AlgerieContreInsurrectionPage() {
           >
             <div className="max-w-5xl mx-auto px-4 h-12 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <Link href="/algerie/palestro">
+                <Link href="/algerie/contre-insurrection">
                   <button className="text-[#4a3b2a]/60 hover:text-[#4a3b2a] transition-colors text-[10px] uppercase tracking-widest flex items-center gap-1" data-testid="sticky-link-back">
-                    <ArrowLeft className="h-3 w-3" /> Palestro
+                    <ArrowLeft className="h-3 w-3" /> Contre‑insurrection
                   </button>
                 </Link>
                 <span className="text-[#4a3b2a]/20 mx-1">/</span>
-                <span className="text-[10px] uppercase tracking-widest text-[#1e3a5f] font-bold">Contre‑insurrection</span>
+                <span className="text-[10px] uppercase tracking-widest text-[#6b4c2a] font-bold">KJ 25</span>
               </div>
               <div className="flex items-center gap-1">
                 {(['comprendre', 'recit', 'archives'] as ReadingMode[]).map((m) => (
@@ -104,7 +104,7 @@ export default function AlgerieContreInsurrectionPage() {
                     onClick={() => setReadingMode(m)}
                     className={`px-3 py-1 text-[9px] uppercase tracking-wider rounded-full transition-all ${
                       readingMode === m
-                        ? 'bg-[#1e3a5f] text-white'
+                        ? 'bg-[#6b4c2a] text-white'
                         : 'text-[#4a3b2a]/50 hover:text-[#4a3b2a] hover:bg-[#4a3b2a]/5'
                     }`}
                     data-testid={`sticky-mode-${m}`}
@@ -118,24 +118,24 @@ export default function AlgerieContreInsurrectionPage() {
         )}
       </AnimatePresence>
 
-      <header className="relative overflow-hidden" style={{ background: `linear-gradient(180deg, ${INK} 0%, #3d3225 60%, ${KRAFT} 100%)` }}>
-        <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 30h60M30 0v60' stroke='%23dcb575' stroke-width='0.5' fill='none'/%3E%3C/svg%3E")` }} />
+      <header className="relative overflow-hidden" style={{ background: `linear-gradient(180deg, #3a3020 0%, ${INK} 50%, ${KRAFT} 100%)` }}>
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40h80M40 0v80' stroke='%23dcb575' stroke-width='0.3' fill='none'/%3E%3Cpath d='M0 0l80 80M80 0l-80 80' stroke='%23dcb575' stroke-width='0.15' fill='none'/%3E%3C/svg%3E")` }} />
 
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] opacity-[0.03]">
-          <svg viewBox="0 0 400 400" fill="none" stroke="#dcb575" strokeWidth="1">
-            <circle cx="200" cy="200" r="180" />
-            <circle cx="200" cy="200" r="140" />
-            <circle cx="200" cy="200" r="100" />
-            <line x1="200" y1="0" x2="200" y2="400" />
-            <line x1="0" y1="200" x2="400" y2="200" />
+        <div className="absolute top-10 right-10 w-[200px] h-[200px] opacity-[0.04]">
+          <svg viewBox="0 0 200 200" fill="none" stroke="#dcb575" strokeWidth="1.5">
+            <circle cx="100" cy="100" r="80" />
+            <circle cx="100" cy="100" r="40" />
+            <line x1="100" y1="20" x2="100" y2="180" />
+            <line x1="20" y1="100" x2="180" y2="100" />
+            <circle cx="100" cy="100" r="4" fill="#dcb575" />
           </svg>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 pt-8 pb-24 md:pb-32">
           <div className="flex justify-between items-center mb-16">
-            <Link href="/algerie/palestro">
-              <button className="text-[#e8dcc5]/50 hover:text-[#e8dcc5] transition-colors text-[10px] uppercase tracking-widest flex items-center gap-2" data-testid="link-back-palestro">
-                <ArrowLeft className="h-3 w-3" /> Palestro
+            <Link href="/algerie/contre-insurrection">
+              <button className="text-[#e8dcc5]/50 hover:text-[#e8dcc5] transition-colors text-[10px] uppercase tracking-widest flex items-center gap-2" data-testid="link-back-contre">
+                <ArrowLeft className="h-3 w-3" /> Contre‑insurrection
               </button>
             </Link>
             <Link href="/#algerie">
@@ -154,7 +154,7 @@ export default function AlgerieContreInsurrectionPage() {
             <div className="flex items-center gap-3">
               <div className="w-8 h-[1px] bg-[#dcb575]/40" />
               <span className="text-[10px] uppercase tracking-[0.5em] text-[#dcb575]/60">
-                1956 — 1959
+                23 décembre 1957
               </span>
             </div>
 
@@ -163,12 +163,12 @@ export default function AlgerieContreInsurrectionPage() {
               style={{ fontFamily: "'Special Elite', cursive" }}
               data-testid="text-page-title"
             >
-              Contre‑insurrection<br />
-              <span className="text-[#dcb575]/70">&amp; politique</span>
+              {algerieKJ25Data.title}<br />
+              <span className="text-[#dcb575]/60 text-3xl md:text-4xl">Cordon &amp; fouille en Kabylie</span>
             </h1>
 
             <p className="text-sm md:text-base text-[#e8dcc5]/60 leading-relaxed max-w-2xl">
-              {algerieContreInsurrectionData.subtitle}
+              {algerieKJ25Data.subtitle}
             </p>
 
             <motion.div
@@ -177,16 +177,16 @@ export default function AlgerieContreInsurrectionPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <Lightbulb className="absolute -left-[13px] top-0 h-5 w-5 text-[#dcb575] bg-[#4a3b2a] p-0.5 rounded-full" />
+              <Crosshair className="absolute -left-[13px] top-0 h-5 w-5 text-[#dcb575] bg-[#4a3b2a] p-0.5 rounded-full" />
               <p className="text-xs italic text-[#e8dcc5]/50 leading-relaxed pt-1">
-                {algerieContreInsurrectionData.questionDirectrice}
+                {algerieKJ25Data.questionDirectrice}
               </p>
             </motion.div>
 
             <div className="flex flex-wrap gap-2 pt-4">
               {([
                 { mode: 'comprendre' as ReadingMode, label: 'Comprendre', sub: '3 min', icon: Eye },
-                { mode: 'recit' as ReadingMode, label: 'Récit complet', sub: '15 min', icon: BookOpen },
+                { mode: 'recit' as ReadingMode, label: 'Récit complet', sub: '12 min', icon: BookOpen },
                 { mode: 'archives' as ReadingMode, label: 'Archives', sub: 'Quiz', icon: FileText },
               ]).map(({ mode, label, sub, icon: Icon }) => (
                 <button
@@ -194,7 +194,7 @@ export default function AlgerieContreInsurrectionPage() {
                   onClick={() => setReadingMode(mode)}
                   className={`group relative px-5 py-3 rounded-lg transition-all duration-300 ${
                     readingMode === mode
-                      ? 'bg-[#1e3a5f] shadow-lg shadow-[#1e3a5f]/20'
+                      ? 'bg-[#6b4c2a] shadow-lg shadow-[#6b4c2a]/20'
                       : 'bg-[#e8dcc5]/5 hover:bg-[#e8dcc5]/10 border border-[#e8dcc5]/10'
                   }`}
                   data-testid={`button-mode-${mode}`}
@@ -221,16 +221,16 @@ export default function AlgerieContreInsurrectionPage() {
 
         <FadeInSection>
           <section className="relative" data-testid="bloc-reperes">
-            <div className="flex items-start gap-4 p-6 md:p-8 rounded-xl bg-gradient-to-br from-[#1e3a5f]/8 to-[#1e3a5f]/3 border border-[#1e3a5f]/15">
-              <div className="w-10 h-10 rounded-lg bg-[#1e3a5f]/10 flex items-center justify-center shrink-0">
-                <Target className="h-5 w-5 text-[#1e3a5f]" />
+            <div className="flex items-start gap-4 p-6 md:p-8 rounded-xl bg-gradient-to-br from-[#6b4c2a]/8 to-[#6b4c2a]/3 border border-[#6b4c2a]/15">
+              <div className="w-10 h-10 rounded-lg bg-[#6b4c2a]/10 flex items-center justify-center shrink-0">
+                <Target className="h-5 w-5 text-[#6b4c2a]" />
               </div>
               <div className="space-y-2">
-                <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1e3a5f]">
+                <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#6b4c2a]">
                   Repères
                 </h3>
                 <p className="text-xs leading-relaxed text-[#4a3b2a]/75">
-                  {algerieContreInsurrectionData.reperes}
+                  {algerieKJ25Data.reperes}
                 </p>
               </div>
             </div>
@@ -264,7 +264,7 @@ export default function AlgerieContreInsurrectionPage() {
                   transition={{ duration: 1, delay: 0.2 }}
                 />
                 <p className="text-sm leading-[1.9] text-[#e8dcc5]/80">
-                  {algerieContreInsurrectionData.resume}
+                  {algerieKJ25Data.resume}
                 </p>
               </div>
             </div>
@@ -274,21 +274,21 @@ export default function AlgerieContreInsurrectionPage() {
         <FadeInSection>
           <section className="space-y-8" data-testid="bloc-timeline">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-lg bg-[#1e3a5f]/10 flex items-center justify-center">
-                <Clock className="h-5 w-5 text-[#1e3a5f]" />
+              <div className="w-10 h-10 rounded-lg bg-[#6b4c2a]/10 flex items-center justify-center">
+                <Clock className="h-5 w-5 text-[#6b4c2a]" />
               </div>
               <div>
                 <h2 className="text-xl md:text-2xl font-normal text-[#4a3b2a]" style={{ fontFamily: "'Special Elite', cursive" }}>
                   Chronologie
                 </h2>
-                <div className="w-12 h-[2px] bg-[#1e3a5f]/20 mt-1 rounded-full" />
+                <div className="w-12 h-[2px] bg-[#6b4c2a]/20 mt-1 rounded-full" />
               </div>
             </div>
 
             <div className="relative">
-              <div className="absolute left-[19px] top-4 bottom-4 w-[2px] bg-gradient-to-b from-[#1e3a5f]/40 via-[#1e3a5f]/20 to-transparent" />
+              <div className="absolute left-[19px] top-4 bottom-4 w-[2px] bg-gradient-to-b from-[#6b4c2a]/40 via-[#6b4c2a]/20 to-transparent" />
               <div className="space-y-3">
-                {algerieContreInsurrectionData.timeline.map((event, i) => (
+                {algerieKJ25Data.timeline.map((event, i) => (
                   <motion.div
                     key={i}
                     className="relative flex items-start gap-5 group"
@@ -299,10 +299,10 @@ export default function AlgerieContreInsurrectionPage() {
                     data-testid={`timeline-event-${i}`}
                   >
                     <div className="relative z-10 mt-4">
-                      <div className="w-[10px] h-[10px] rounded-full bg-[#1e3a5f] ring-4 ring-[#d4c5a0] group-hover:ring-[#1e3a5f]/20 transition-all duration-300" />
+                      <div className="w-[10px] h-[10px] rounded-full bg-[#6b4c2a] ring-4 ring-[#d4c5a0] group-hover:ring-[#6b4c2a]/20 transition-all duration-300" />
                     </div>
-                    <div className="flex-1 p-4 rounded-lg bg-white/40 border border-[#4a3b2a]/8 group-hover:bg-white/60 group-hover:border-[#1e3a5f]/15 group-hover:shadow-md transition-all duration-300">
-                      <span className="text-[10px] font-bold text-[#1e3a5f] uppercase tracking-wider block mb-1">
+                    <div className="flex-1 p-4 rounded-lg bg-white/40 border border-[#4a3b2a]/8 group-hover:bg-white/60 group-hover:border-[#6b4c2a]/15 group-hover:shadow-md transition-all duration-300">
+                      <span className="text-[10px] font-bold text-[#6b4c2a] uppercase tracking-wider block mb-1">
                         {event.date}
                       </span>
                       <p className="text-xs text-[#4a3b2a]/75 leading-relaxed">
@@ -316,7 +316,7 @@ export default function AlgerieContreInsurrectionPage() {
           </section>
         </FadeInSection>
 
-        {algerieContreInsurrectionData.blocs.map((bloc, i) => {
+        {algerieKJ25Data.blocs.map((bloc, i) => {
           const BlocIcon = blocIcons[i] || Shield;
           const isHighlighted = i === 2;
           return (
@@ -325,19 +325,19 @@ export default function AlgerieContreInsurrectionPage() {
                 <div className="flex items-center gap-4">
                   <SectionNumber num={i + 1} />
                   <div className="flex-1">
-                    <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#1e3a5f]/50 block mb-1">
+                    <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#6b4c2a]/50 block mb-1">
                       {blocLabels[i]}
                     </span>
                     <h2 className="text-lg md:text-xl font-normal text-[#4a3b2a]" style={{ fontFamily: "'Special Elite', cursive" }}>
                       {bloc.titre}
                     </h2>
                   </div>
-                  <BlocIcon className="h-5 w-5 text-[#1e3a5f]/30" />
+                  <BlocIcon className="h-5 w-5 text-[#6b4c2a]/30" />
                 </div>
 
                 {isHighlighted ? (
                   <div className="relative overflow-hidden rounded-xl shadow-2xl">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#1e3a5f] to-[#0f2640]" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#6b4c2a] to-[#4a3520]" />
                     <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0v40M0 20h40' stroke='%23fff' stroke-width='0.3' fill='none'/%3E%3C/svg%3E")` }} />
                     <div className="absolute top-4 right-4">
                       <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-white/20 bg-white/5 px-3 py-1 rounded-full border border-white/10">
@@ -371,17 +371,17 @@ export default function AlgerieContreInsurrectionPage() {
                     <p className="text-sm leading-[1.9] text-[#4a3b2a]/80">
                       {bloc.texte}
                     </p>
-                    <div className="relative p-5 rounded-lg bg-gradient-to-r from-[#dcb575]/10 to-transparent border-l-[3px] border-[#1e3a5f]/30">
+                    <div className="relative p-5 rounded-lg bg-gradient-to-r from-[#dcb575]/10 to-transparent border-l-[3px] border-[#6b4c2a]/30">
                       <div className="flex items-center gap-2 mb-3">
-                        <Lightbulb className="h-3.5 w-3.5 text-[#1e3a5f]" />
-                        <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1e3a5f]">
+                        <Lightbulb className="h-3.5 w-3.5 text-[#6b4c2a]" />
+                        <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#6b4c2a]">
                           À retenir
                         </h4>
                       </div>
                       <ul className="space-y-2">
                         {bloc.aRetenir.map((item, j) => (
                           <li key={j} className="flex gap-3 text-xs text-[#4a3b2a]/70 leading-relaxed">
-                            <Check className="h-3.5 w-3.5 shrink-0 text-[#1e3a5f]/60 mt-0.5" />
+                            <Check className="h-3.5 w-3.5 shrink-0 text-[#6b4c2a]/60 mt-0.5" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -413,7 +413,7 @@ export default function AlgerieContreInsurrectionPage() {
                         Glossaire
                       </h2>
                       <span className="text-[9px] text-[#dcb575]/40 bg-[#dcb575]/5 px-2 py-0.5 rounded-full">
-                        {algerieContreInsurrectionData.glossaire.length} termes
+                        {algerieKJ25Data.glossaire.length} termes
                       </span>
                     </div>
                     <motion.div
@@ -434,7 +434,7 @@ export default function AlgerieContreInsurrectionPage() {
                         className="overflow-hidden"
                       >
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-6 mt-6 border-t border-[#dcb575]/10">
-                          {algerieContreInsurrectionData.glossaire.map((entry, i) => (
+                          {algerieKJ25Data.glossaire.map((entry, i) => (
                             <div
                               key={i}
                               className="p-3 rounded-lg bg-[#e8dcc5]/5 border border-[#e8dcc5]/5 hover:border-[#dcb575]/20 transition-colors"
@@ -463,25 +463,25 @@ export default function AlgerieContreInsurrectionPage() {
             <section className="space-y-8" data-testid="bloc-quiz">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#1e3a5f]/10 flex items-center justify-center">
-                    <HelpCircle className="h-5 w-5 text-[#1e3a5f]" />
+                  <div className="w-10 h-10 rounded-lg bg-[#6b4c2a]/10 flex items-center justify-center">
+                    <HelpCircle className="h-5 w-5 text-[#6b4c2a]" />
                   </div>
                   <div>
                     <h2 className="text-xl md:text-2xl font-normal text-[#4a3b2a]" style={{ fontFamily: "'Special Elite', cursive" }}>
                       Mini‑Quiz
                     </h2>
-                    <div className="w-12 h-[2px] bg-[#1e3a5f]/20 mt-1 rounded-full" />
+                    <div className="w-12 h-[2px] bg-[#6b4c2a]/20 mt-1 rounded-full" />
                   </div>
                 </div>
-                <div className="flex items-center gap-2 bg-[#1e3a5f]/5 px-3 py-1.5 rounded-full">
-                  <span className="text-[10px] font-bold text-[#1e3a5f]">
-                    {quizScore}/{algerieContreInsurrectionData.quiz.length}
+                <div className="flex items-center gap-2 bg-[#6b4c2a]/5 px-3 py-1.5 rounded-full">
+                  <span className="text-[10px] font-bold text-[#6b4c2a]">
+                    {quizScore}/{algerieKJ25Data.quiz.length}
                   </span>
                   <div className="flex gap-0.5">
-                    {algerieContreInsurrectionData.quiz.map((_, i) => (
+                    {algerieKJ25Data.quiz.map((_, i) => (
                       <div
                         key={i}
-                        className={`w-2 h-2 rounded-full transition-colors ${quizRevealed[i] ? 'bg-[#1e3a5f]' : 'bg-[#4a3b2a]/15'}`}
+                        className={`w-2 h-2 rounded-full transition-colors ${quizRevealed[i] ? 'bg-[#6b4c2a]' : 'bg-[#4a3b2a]/15'}`}
                       />
                     ))}
                   </div>
@@ -489,7 +489,7 @@ export default function AlgerieContreInsurrectionPage() {
               </div>
 
               <div className="space-y-4">
-                {algerieContreInsurrectionData.quiz.map((q, i) => (
+                {algerieKJ25Data.quiz.map((q, i) => (
                   <motion.div
                     key={i}
                     className="relative overflow-hidden rounded-xl border border-[#4a3b2a]/10 bg-white/40 backdrop-blur-sm"
@@ -500,12 +500,12 @@ export default function AlgerieContreInsurrectionPage() {
                     data-testid={`quiz-question-${i}`}
                   >
                     {quizRevealed[i] && (
-                      <div className="absolute top-0 left-0 w-1 h-full bg-[#1e3a5f]" />
+                      <div className="absolute top-0 left-0 w-1 h-full bg-[#6b4c2a]" />
                     )}
                     <div className="p-5 space-y-3">
                       <div className="flex items-start gap-3">
                         <span className={`flex-shrink-0 w-7 h-7 rounded-lg text-xs flex items-center justify-center font-bold transition-colors ${
-                          quizRevealed[i] ? 'bg-[#1e3a5f] text-white' : 'bg-[#1e3a5f]/10 text-[#1e3a5f]'
+                          quizRevealed[i] ? 'bg-[#6b4c2a] text-white' : 'bg-[#6b4c2a]/10 text-[#6b4c2a]'
                         }`}>
                           {i + 1}
                         </span>
@@ -519,13 +519,13 @@ export default function AlgerieContreInsurrectionPage() {
                           <input
                             type="text"
                             placeholder="Votre réponse..."
-                            className="w-full bg-transparent border-b border-[#4a3b2a]/15 text-xs py-2 px-1 text-[#4a3b2a] placeholder:text-[#4a3b2a]/25 focus:outline-none focus:border-[#1e3a5f] transition-colors"
+                            className="w-full bg-transparent border-b border-[#4a3b2a]/15 text-xs py-2 px-1 text-[#4a3b2a] placeholder:text-[#4a3b2a]/25 focus:outline-none focus:border-[#6b4c2a] transition-colors"
                             value={quizAnswers[i] || ""}
                             onChange={(e) => setQuizAnswers(prev => ({ ...prev, [i]: e.target.value }))}
                             data-testid={`input-quiz-${i}`}
                           />
                           <button
-                            className="mt-3 text-[10px] uppercase tracking-wider text-[#1e3a5f] hover:text-[#1e3a5f]/80 font-bold transition-colors"
+                            className="mt-3 text-[10px] uppercase tracking-wider text-[#6b4c2a] hover:text-[#6b4c2a]/80 font-bold transition-colors"
                             onClick={() => setQuizRevealed(prev => ({ ...prev, [i]: true }))}
                             data-testid={`button-quiz-reveal-${i}`}
                           >
@@ -539,8 +539,8 @@ export default function AlgerieContreInsurrectionPage() {
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.3 }}
                         >
-                          <div className="p-3 rounded-lg bg-[#1e3a5f]/5 border border-[#1e3a5f]/10">
-                            <span className="text-[9px] font-bold text-[#1e3a5f] uppercase tracking-wider block mb-1">
+                          <div className="p-3 rounded-lg bg-[#6b4c2a]/5 border border-[#6b4c2a]/10">
+                            <span className="text-[9px] font-bold text-[#6b4c2a] uppercase tracking-wider block mb-1">
                               Réponse
                             </span>
                             <p className="text-xs text-[#4a3b2a]/80 leading-relaxed">
@@ -563,13 +563,13 @@ export default function AlgerieContreInsurrectionPage() {
               <div className="w-16 h-[1px] bg-[#4a3b2a]/20 mx-auto" />
               <p className="text-[10px] uppercase tracking-[0.4em] text-[#4a3b2a]/40">Navigation</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link href="/algerie/palestro">
+                <Link href="/algerie/contre-insurrection">
                   <Button
                     variant="outline"
                     className="border-[#4a3b2a]/15 text-[#4a3b2a]/70 hover:bg-white/40 hover:text-[#4a3b2a] px-6 py-5 text-xs rounded-lg"
-                    data-testid="button-back-palestro"
+                    data-testid="button-back-contre"
                   >
-                    <ArrowLeft className="mr-2 h-3.5 w-3.5" /> Palestro
+                    <ArrowLeft className="mr-2 h-3.5 w-3.5" /> Contre‑insurrection
                   </Button>
                 </Link>
                 <Link href="/#algerie">
@@ -581,12 +581,12 @@ export default function AlgerieContreInsurrectionPage() {
                     <Layers className="mr-2 h-3.5 w-3.5" /> Thèmes
                   </Button>
                 </Link>
-                <Link href="/algerie/kj25">
+                <Link href="/#algerie">
                   <Button
-                    className="bg-[#1e3a5f] text-white hover:bg-[#152d4a] px-6 py-5 text-xs rounded-lg shadow-lg shadow-[#1e3a5f]/20"
+                    className="bg-[#6b4c2a] text-white hover:bg-[#4a3520] px-6 py-5 text-xs rounded-lg shadow-lg shadow-[#6b4c2a]/20"
                     data-testid="button-continue-visit"
                   >
-                    Opération KJ 25 <ArrowRight className="ml-2 h-3.5 w-3.5" />
+                    Continuer la visite <ArrowRight className="ml-2 h-3.5 w-3.5" />
                   </Button>
                 </Link>
               </div>

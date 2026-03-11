@@ -1,0 +1,104 @@
+
+MASTER PROMPT — REPLIT AI
+Projet : « Museum Tour Guide — 9e RIMa »
+Nouvelle page à créer : AFRIQUE → « Algérie — Opération KJ 25 (23 décembre 1957) »
+Slug conseillé : /afrique/algerie-kj25
+
+IMPORTANT
+- Cette page détaille une opération spécifique du plan de sécurisation autour de Tizi Ouzou. Basée sur le PDF, elle doit expliquer le dispositif, le déroulement et les résultats de l’opération KJ 25, sans inventer de chiffres.
+- Situer le contexte : montées des attaques en 1957, réaction des forces françaises (cordon, fouilles). Mettre en avant le caractère coordonné des unités (commandos de chasse, sections de voltigeurs, blindés) et la résistance de l’ALN.
+- Le texte affiché est celui de la section « CONTENU À AFFICHER ».
+
+OBJECTIF VISITEUR
+Visualiser une opération type de ratissage en Algérie à travers KJ 25, comprendre les tactiques utilisées et le rôle du 9e RIC et des unités alliées dans cette action précise.
+
+À FAIRE DANS L’APP
+1) ROUTE + NAVIGATION
+  - Insérer la page « KJ 25 » après « Contre‑insurrection » dans la rubrique Algérie.
+  - Boutons : « Retour Algérie », « Revenir aux thèmes », « Continuer la visite ».
+
+2) STRUCTURE UX
+  - HERO et question directrice.
+  - Modes habituels (Comprendre/Récit/Archives).
+  - Timeline (5 repères maximum).
+  - 4 blocs :
+    1) « Contexte : sécuriser le corridor Tizi Ouzou – Bouira ».
+    2) « Le dispositif KJ 25 : cordon et fouilles ».
+    3) « Déroulement de l’opération ».
+    4) « Bilan et leçons ».
+  - Mini‑quiz (4 questions).
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER (TEXTE DU SITE)
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Algérie — Opération KJ 25 (23 décembre 1957)
+
+SOUS‑TITRE (H2)
+Le 23 décembre 1957, les forces françaises mettent en œuvre une opération de cordon et de fouille autour de l’axe Tizi Ouzou – Haizer – Bouira. Cette action, connue sous le nom de KJ 25, illustre les méthodes de ratissage et la coordination entre unités.
+
+QUESTION DIRECTRICE
+Comment la manoeuvre KJ 25 s’est‑elle déroulée, et quels enseignements tire‑t‑on d’une opération qui mobilise diverses unités pour isoler et neutraliser les maquisards ?
+
+ENCADRÉ « REPÈRES »
+1956‑1957 : intensification des attaques en Kabylie • décembre 1957 : opération KJ 25 • 1958 : plan de Constantine • 1959 : plan Challe et opération Jumelles.
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+Au cours de l’hiver 1957, la RN12 reliant Tizi Ouzou à Bouira est régulièrement attaquée par l’ALN. Les forces françaises planifient KJ 25 : une opération de bouclage destinée à piéger les maquisards entre un cordon de compagnies et la route. Le 23 décembre, à 6 heures, des unités du 9e RIC, des commandos de chasse, des blindés et de l’artillerie se déploient simultanément. L’objectif : fouiller les villages et bloquer les issues. Malgré quelques prises (armes et suspects), la plupart des combattants parviennent à s’échapper par les forêts et les reliefs. L’opération montre les limites du ratissage sans renseignement précis.
+
+────────────────────────────
+BLOC 1 — Contexte : sécuriser le corridor Tizi Ouzou – Bouira
+────────────────────────────
+La RN12 traverse le cœur de la Kabylie et relie la côte (Tizi Ouzou) à la plaine de la Mitidja (Bouira). C’est une artère vitale pour l’armée et les colons. En 1957, des embuscades et attentats minent la circulation. Le commandement décide de renforcer la sécurité par des opérations coordonnées.
+
+À retenir
+- La route est un enjeu logistique ; sa sécurisation est une priorité.
+- Les maquisards connaissent parfaitement les sentiers permettant de s’enfoncer dans les djebels.
+
+────────────────────────────
+BLOC 2 — Le dispositif KJ 25 : cordon et fouilles
+────────────────────────────
+L’opération KJ 25 prévoit de déployer plusieurs unités le long d’un périmètre : compagnies du 9e RIC, commandos de chasse, sections de blindés, appui d’artillerie. Le plan consiste à former un cordon qui se resserre pendant que des équipes fouillent les villages et contrôlent les habitants. Des barrages sur la RN12 empêchent les fuyards de rejoindre Tizi Ouzou ou Bouira. Un poste de commandement coordonne les mouvements et la communication radio.
+
+À retenir
+- La synchronisation des unités est cruciale pour éviter les échappatoires.
+- Les fouilles s’accompagnent de visites médicales et de distributions, comme dans les centres de rayonnement.
+
+────────────────────────────
+BLOC 3 — Déroulement de l’opération
+────────────────────────────
+Le 23 décembre à l’aube, les unités se mettent en place. Des commandos de chasse partent en reconnaissance, signalent des traces récentes mais peu de contacts. Les compagnies du 9e RIC avancent en ligne, perquisitionnant des douars. Des blindés barrent la RN12. Vers midi, quelques échanges de tirs ont lieu à proximité du col de Tizi N’Kachna ; des combattants de l’ALN ripostent avant de se replier dans les forêts. Les commandos tentent de les poursuivre mais le terrain leur permet de disparaître rapidement. En fin de journée, le bilan officiel mentionne la capture de quelques suspects et des caches d’armes ; aucun soldat français n’est tué.
+
+────────────────────────────
+BLOC 4 — Bilan et leçons
+────────────────────────────
+KJ 25 montre l’efficacité logistique des forces françaises : coordination, déploiement rapide et contrôle des axes. Toutefois, la difficulté de fixer les maquisards souligne les limites d’un ratissage sans renseignement précis. L’ALN dispose d’un réseau de chemins et d’abris qui lui permettent d’éviter les encerclements. Pour le 9e RIC, ces opérations constituent un entraînement avant les grandes offensives du plan Challe.
+
+────────────────────────────
+CHRONOLOGIE
+────────────────────────────
+• Début décembre 1957 : planification de l’opération KJ 25.
+• 23 décembre 1957 : déploiement du cordon et fouilles.
+• Fin décembre 1957 : bilans et rapports remis au commandement.
+• 1958 : l’expérience sert à préparer les opérations du plan Challe.
+
+────────────────────────────
+GLOSSAIRE
+────────────────────────────
+• RN12 : route nationale reliant Tizi Ouzou à Bouira.
+• Cordon : dispositif militaire visant à encercler une zone pour y mener des fouilles.
+• Commando de chasse : unité légère destinée à repérer et poursuivre les combattants de l’ALNhttps://en.wikipedia.org/wiki/Commandos_de_Chasse#:~:text=French%20Air%20Force%20%20General,other%20French%20%2071%20colonial.
+• Ratissage : opération de recherche et de neutralisation dans une zone définie.
+
+────────────────────────────
+MINI‑QUIZ
+────────────────────────────
+1) Quel est l’objectif principal de l’opération KJ 25 ? Réponse : sécuriser l’axe Tizi Ouzou – Bouira en encerclant et fouillant les villages.
+2) Quels types d’unités participent à l’opération ? Réponse : compagnies du 9e RIC, commandos de chasse, blindés, artillerie.
+3) Pourquoi l’opération ne permet‑elle pas de neutraliser les maquisards ? Réponse : manque de renseignement et capacité des combattants à se replier dans les djebels.
+4) Que signifie « ratissage » ? Réponse : opération de recherche et de neutralisation dans une zone donnée.
+
+──────────────────────────────────────────────────────────────────────────────
