@@ -29,6 +29,7 @@ Preferred communication style: Simple, everyday language.
   - `client/src/lib/asia-data.ts` — Detailed Tonkin/Asia content (timeline, glossary, quiz, gallery)
   - `client/src/lib/china-1900-data.ts` — China 1900 expedition content
   - `client/src/lib/algerie-palestro-data.ts` — Palestro ambush 1956 content (timeline, blocs, map markers, glossary, quiz)
+  - `client/src/lib/algerie-contre-insurrection-data.ts` — Contre-insurrection 1956-1959 content (timeline, blocs, glossary, quiz)
 - Each content page has multiple reading modes: "Essential (5 min)", "Full Visit (20-30 min)", "Archives (deep reading)"
 - Pages feature: interactive timelines, accordion sections, image galleries with placeholders, glossaries, mini-quizzes
 
@@ -41,6 +42,7 @@ Preferred communication style: Simple, everyday language.
 - **Asia/Tourmente** (`/asie/tourmente-1940`) — WWII Tonkin page (1940-1946)
 - **Algérie/Renaissance** (`/algerie/renaissance`) — Algeria Kabylie 1956 page with interactive map
 - **Algérie/Palestro** (`/algerie/palestro`) — Palestro ambush (18 May 1956) page with timeline, content blocs, map, glossary, and quiz
+- **Algérie/Contre-insurrection** (`/algerie/contre-insurrection`) — Counter-insurgency & politics (1956-1959): SAS, Constantine Plan, Challe Plan, autodetermination
 - **AI Assistant** (`/ai-assistant`) — Chat-style assistant (currently client-side simulation using museum data)
 
 ### Backend (Express)
