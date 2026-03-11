@@ -1,9 +1,9 @@
-import { algerieCommandosData } from "@/lib/algerie-commandos-data";
+import { algerieDisparitionData } from "@/lib/algerie-disparition-data";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import {
   ArrowLeft, ArrowRight, Clock, BookOpen, Check,
-  Shield, Compass, Users, Radio, Award,
+  Shield, TrendingDown, Vote, Bomb, Ship,
   ChevronDown, FileText, HelpCircle, BookMarked,
   Eye, Lightbulb, Layers, Crosshair
 } from "lucide-react";
@@ -12,8 +12,8 @@ import { motion, useScroll, useSpring, useInView, AnimatePresence, useMotionValu
 
 type ReadingMode = 'comprendre' | 'recit' | 'archives';
 
-const ACCENT = "#5c6b2a";
-const ACCENT_DARK = "#3d4a1a";
+const ACCENT = "#7a2e2e";
+const ACCENT_DARK = "#5a1a1a";
 const KRAFT = "#d4c5a0";
 const INK = "#4a3b2a";
 const GOLD = "#dcb575";
@@ -36,18 +36,18 @@ function FadeInSection({ children, className = "", delay = 0 }: { children: Reac
 
 function SectionNumber({ num }: { num: number }) {
   return (
-    <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-[#5c6b2a]/30 bg-[#5c6b2a]/5 shrink-0">
-      <span className="text-sm font-bold text-[#5c6b2a]" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
+    <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-[#7a2e2e]/30 bg-[#7a2e2e]/5 shrink-0">
+      <span className="text-sm font-bold text-[#7a2e2e]" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
         {String(num).padStart(2, '0')}
       </span>
     </div>
   );
 }
 
-const blocIcons = [Compass, Users, Radio, Award];
-const blocLabels = ["GENÈSE", "EFFECTIFS", "TERRAIN", "HÉRITAGE"];
+const blocIcons = [TrendingDown, Vote, Bomb, Ship];
+const blocLabels = ["DÉCLIN", "TOURNANT", "CRISE", "ÉPILOGUE"];
 
-export default function AlgerieCommandosPage() {
+export default function AlgerieDisparitionPage() {
   const [readingMode, setReadingMode] = useState<ReadingMode>('comprendre');
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
@@ -89,13 +89,13 @@ export default function AlgerieCommandosPage() {
           >
             <div className="max-w-5xl mx-auto px-4 h-12 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <Link href="/algerie/kj25">
+                <Link href="/algerie/commandos-chasse">
                   <button className="text-[#4a3b2a]/60 hover:text-[#4a3b2a] transition-colors text-[10px] uppercase tracking-widest flex items-center gap-1" data-testid="sticky-link-back">
-                    <ArrowLeft className="h-3 w-3" /> KJ 25
+                    <ArrowLeft className="h-3 w-3" /> Commandos
                   </button>
                 </Link>
                 <span className="text-[#4a3b2a]/20 mx-1">/</span>
-                <span className="text-[10px] uppercase tracking-widest text-[#5c6b2a] font-bold">Commandos de chasse</span>
+                <span className="text-[10px] uppercase tracking-widest text-[#7a2e2e] font-bold">Disparition</span>
               </div>
               <div className="flex items-center gap-1">
                 {(['comprendre', 'recit', 'archives'] as ReadingMode[]).map((m) => (
@@ -104,7 +104,7 @@ export default function AlgerieCommandosPage() {
                     onClick={() => setReadingMode(m)}
                     className={`px-3 py-1 text-[9px] uppercase tracking-wider rounded-full transition-all ${
                       readingMode === m
-                        ? 'bg-[#5c6b2a] text-white'
+                        ? 'bg-[#7a2e2e] text-white'
                         : 'text-[#4a3b2a]/50 hover:text-[#4a3b2a] hover:bg-[#4a3b2a]/5'
                     }`}
                     data-testid={`sticky-mode-${m}`}
@@ -118,22 +118,23 @@ export default function AlgerieCommandosPage() {
         )}
       </AnimatePresence>
 
-      <header className="relative overflow-hidden" style={{ background: `linear-gradient(180deg, #2a3018 0%, #3a3b25 50%, ${KRAFT} 100%)` }}>
-        <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 30h60M30 0v60' stroke='%23dcb575' stroke-width='0.3' fill='none'/%3E%3C/svg%3E")` }} />
+      <header className="relative overflow-hidden" style={{ background: `linear-gradient(180deg, #2a1a1a 0%, #3d2a20 50%, ${KRAFT} 100%)` }}>
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 30h60M30 0v60' stroke='%23dcb575' stroke-width='0.3' fill='none'/%3E%3C/svg%3E")` }} />
 
-        <div className="absolute top-8 right-8 w-[220px] h-[220px] opacity-[0.03]">
-          <svg viewBox="0 0 220 220" fill="none" stroke="#dcb575" strokeWidth="1">
-            <path d="M110 20 L200 180 L20 180 Z" />
-            <circle cx="110" cy="130" r="40" />
-            <line x1="110" y1="20" x2="110" y2="180" />
+        <div className="absolute top-8 right-8 w-[200px] h-[200px] opacity-[0.03]">
+          <svg viewBox="0 0 200 200" fill="none" stroke="#dcb575" strokeWidth="1">
+            <rect x="30" y="30" width="140" height="140" />
+            <line x1="30" y1="30" x2="170" y2="170" />
+            <line x1="170" y1="30" x2="30" y2="170" />
+            <circle cx="100" cy="100" r="20" />
           </svg>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 pt-8 pb-24 md:pb-32">
           <div className="flex justify-between items-center mb-16">
-            <Link href="/algerie/kj25">
-              <button className="text-[#e8dcc5]/50 hover:text-[#e8dcc5] transition-colors text-[10px] uppercase tracking-widest flex items-center gap-2" data-testid="link-back-kj25">
-                <ArrowLeft className="h-3 w-3" /> KJ 25
+            <Link href="/algerie/commandos-chasse">
+              <button className="text-[#e8dcc5]/50 hover:text-[#e8dcc5] transition-colors text-[10px] uppercase tracking-widest flex items-center gap-2" data-testid="link-back-commandos">
+                <ArrowLeft className="h-3 w-3" /> Commandos de chasse
               </button>
             </Link>
             <Link href="/#algerie">
@@ -152,7 +153,7 @@ export default function AlgerieCommandosPage() {
             <div className="flex items-center gap-3">
               <div className="w-8 h-[1px] bg-[#dcb575]/40" />
               <span className="text-[10px] uppercase tracking-[0.5em] text-[#dcb575]/60">
-                1958 — 1962
+                1960 — 1962
               </span>
             </div>
 
@@ -161,11 +162,12 @@ export default function AlgerieCommandosPage() {
               style={{ fontFamily: "'Special Elite', cursive" }}
               data-testid="text-page-title"
             >
-              {algerieCommandosData.title}
+              {algerieDisparitionData.title}<br />
+              <span className="text-[#dcb575]/50 text-3xl md:text-4xl">La fin d'une guerre</span>
             </h1>
 
             <p className="text-sm md:text-base text-[#e8dcc5]/60 leading-relaxed max-w-2xl">
-              {algerieCommandosData.subtitle}
+              {algerieDisparitionData.subtitle}
             </p>
 
             <motion.div
@@ -174,16 +176,16 @@ export default function AlgerieCommandosPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <Crosshair className="absolute -left-[13px] top-0 h-5 w-5 text-[#dcb575] bg-[#3a3b25] p-0.5 rounded-full" />
+              <Crosshair className="absolute -left-[13px] top-0 h-5 w-5 text-[#dcb575] bg-[#3d2a20] p-0.5 rounded-full" />
               <p className="text-xs italic text-[#e8dcc5]/50 leading-relaxed pt-1">
-                {algerieCommandosData.questionDirectrice}
+                {algerieDisparitionData.questionDirectrice}
               </p>
             </motion.div>
 
             <div className="flex flex-wrap gap-2 pt-4">
               {([
                 { mode: 'comprendre' as ReadingMode, label: 'Comprendre', sub: '3 min', icon: Eye },
-                { mode: 'recit' as ReadingMode, label: 'Récit complet', sub: '12 min', icon: BookOpen },
+                { mode: 'recit' as ReadingMode, label: 'Récit complet', sub: '15 min', icon: BookOpen },
                 { mode: 'archives' as ReadingMode, label: 'Archives', sub: 'Quiz', icon: FileText },
               ]).map(({ mode, label, sub, icon: Icon }) => (
                 <button
@@ -191,7 +193,7 @@ export default function AlgerieCommandosPage() {
                   onClick={() => setReadingMode(mode)}
                   className={`group relative px-5 py-3 rounded-lg transition-all duration-300 ${
                     readingMode === mode
-                      ? 'bg-[#5c6b2a] shadow-lg shadow-[#5c6b2a]/20'
+                      ? 'bg-[#7a2e2e] shadow-lg shadow-[#7a2e2e]/20'
                       : 'bg-[#e8dcc5]/5 hover:bg-[#e8dcc5]/10 border border-[#e8dcc5]/10'
                   }`}
                   data-testid={`button-mode-${mode}`}
@@ -218,16 +220,16 @@ export default function AlgerieCommandosPage() {
 
         <FadeInSection>
           <section className="relative" data-testid="bloc-reperes">
-            <div className="flex items-start gap-4 p-6 md:p-8 rounded-xl bg-gradient-to-br from-[#5c6b2a]/8 to-[#5c6b2a]/3 border border-[#5c6b2a]/15">
-              <div className="w-10 h-10 rounded-lg bg-[#5c6b2a]/10 flex items-center justify-center shrink-0">
-                <Shield className="h-5 w-5 text-[#5c6b2a]" />
+            <div className="flex items-start gap-4 p-6 md:p-8 rounded-xl bg-gradient-to-br from-[#7a2e2e]/8 to-[#7a2e2e]/3 border border-[#7a2e2e]/15">
+              <div className="w-10 h-10 rounded-lg bg-[#7a2e2e]/10 flex items-center justify-center shrink-0">
+                <Shield className="h-5 w-5 text-[#7a2e2e]" />
               </div>
               <div className="space-y-2">
-                <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#5c6b2a]">
+                <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#7a2e2e]">
                   Repères
                 </h3>
                 <p className="text-xs leading-relaxed text-[#4a3b2a]/75">
-                  {algerieCommandosData.reperes}
+                  {algerieDisparitionData.reperes}
                 </p>
               </div>
             </div>
@@ -261,7 +263,7 @@ export default function AlgerieCommandosPage() {
                   transition={{ duration: 1, delay: 0.2 }}
                 />
                 <p className="text-sm leading-[1.9] text-[#e8dcc5]/80">
-                  {algerieCommandosData.resume}
+                  {algerieDisparitionData.resume}
                 </p>
               </div>
             </div>
@@ -271,21 +273,21 @@ export default function AlgerieCommandosPage() {
         <FadeInSection>
           <section className="space-y-8" data-testid="bloc-timeline">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-lg bg-[#5c6b2a]/10 flex items-center justify-center">
-                <Clock className="h-5 w-5 text-[#5c6b2a]" />
+              <div className="w-10 h-10 rounded-lg bg-[#7a2e2e]/10 flex items-center justify-center">
+                <Clock className="h-5 w-5 text-[#7a2e2e]" />
               </div>
               <div>
                 <h2 className="text-xl md:text-2xl font-normal text-[#4a3b2a]" style={{ fontFamily: "'Special Elite', cursive" }}>
                   Chronologie
                 </h2>
-                <div className="w-12 h-[2px] bg-[#5c6b2a]/20 mt-1 rounded-full" />
+                <div className="w-12 h-[2px] bg-[#7a2e2e]/20 mt-1 rounded-full" />
               </div>
             </div>
 
             <div className="relative">
-              <div className="absolute left-[19px] top-4 bottom-4 w-[2px] bg-gradient-to-b from-[#5c6b2a]/40 via-[#5c6b2a]/20 to-transparent" />
+              <div className="absolute left-[19px] top-4 bottom-4 w-[2px] bg-gradient-to-b from-[#7a2e2e]/40 via-[#7a2e2e]/20 to-transparent" />
               <div className="space-y-3">
-                {algerieCommandosData.timeline.map((event, i) => (
+                {algerieDisparitionData.timeline.map((event, i) => (
                   <motion.div
                     key={i}
                     className="relative flex items-start gap-5 group"
@@ -296,10 +298,10 @@ export default function AlgerieCommandosPage() {
                     data-testid={`timeline-event-${i}`}
                   >
                     <div className="relative z-10 mt-4">
-                      <div className="w-[10px] h-[10px] rounded-full bg-[#5c6b2a] ring-4 ring-[#d4c5a0] group-hover:ring-[#5c6b2a]/20 transition-all duration-300" />
+                      <div className="w-[10px] h-[10px] rounded-full bg-[#7a2e2e] ring-4 ring-[#d4c5a0] group-hover:ring-[#7a2e2e]/20 transition-all duration-300" />
                     </div>
-                    <div className="flex-1 p-4 rounded-lg bg-white/40 border border-[#4a3b2a]/8 group-hover:bg-white/60 group-hover:border-[#5c6b2a]/15 group-hover:shadow-md transition-all duration-300">
-                      <span className="text-[10px] font-bold text-[#5c6b2a] uppercase tracking-wider block mb-1">
+                    <div className="flex-1 p-4 rounded-lg bg-white/40 border border-[#4a3b2a]/8 group-hover:bg-white/60 group-hover:border-[#7a2e2e]/15 group-hover:shadow-md transition-all duration-300">
+                      <span className="text-[10px] font-bold text-[#7a2e2e] uppercase tracking-wider block mb-1">
                         {event.date}
                       </span>
                       <p className="text-xs text-[#4a3b2a]/75 leading-relaxed">
@@ -313,28 +315,28 @@ export default function AlgerieCommandosPage() {
           </section>
         </FadeInSection>
 
-        {algerieCommandosData.blocs.map((bloc, i) => {
+        {algerieDisparitionData.blocs.map((bloc, i) => {
           const BlocIcon = blocIcons[i] || Shield;
-          const isHighlighted = i === 2;
+          const isHighlighted = i === 3;
           return (
             <FadeInSection key={i}>
               <section className="space-y-6" data-testid={`bloc-content-${i}`}>
                 <div className="flex items-center gap-4">
                   <SectionNumber num={i + 1} />
                   <div className="flex-1">
-                    <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#5c6b2a]/50 block mb-1">
+                    <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#7a2e2e]/50 block mb-1">
                       {blocLabels[i]}
                     </span>
                     <h2 className="text-lg md:text-xl font-normal text-[#4a3b2a]" style={{ fontFamily: "'Special Elite', cursive" }}>
                       {bloc.titre}
                     </h2>
                   </div>
-                  <BlocIcon className="h-5 w-5 text-[#5c6b2a]/30" />
+                  <BlocIcon className="h-5 w-5 text-[#7a2e2e]/30" />
                 </div>
 
                 {isHighlighted ? (
                   <div className="relative overflow-hidden rounded-xl shadow-2xl">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#5c6b2a] to-[#3d4a1a]" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#7a2e2e] to-[#5a1a1a]" />
                     <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0v40M0 20h40' stroke='%23fff' stroke-width='0.3' fill='none'/%3E%3C/svg%3E")` }} />
                     <div className="absolute top-4 right-4">
                       <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-white/20 bg-white/5 px-3 py-1 rounded-full border border-white/10">
@@ -368,17 +370,17 @@ export default function AlgerieCommandosPage() {
                     <p className="text-sm leading-[1.9] text-[#4a3b2a]/80">
                       {bloc.texte}
                     </p>
-                    <div className="relative p-5 rounded-lg bg-gradient-to-r from-[#dcb575]/10 to-transparent border-l-[3px] border-[#5c6b2a]/30">
+                    <div className="relative p-5 rounded-lg bg-gradient-to-r from-[#dcb575]/10 to-transparent border-l-[3px] border-[#7a2e2e]/30">
                       <div className="flex items-center gap-2 mb-3">
-                        <Lightbulb className="h-3.5 w-3.5 text-[#5c6b2a]" />
-                        <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#5c6b2a]">
+                        <Lightbulb className="h-3.5 w-3.5 text-[#7a2e2e]" />
+                        <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#7a2e2e]">
                           À retenir
                         </h4>
                       </div>
                       <ul className="space-y-2">
                         {bloc.aRetenir.map((item, j) => (
                           <li key={j} className="flex gap-3 text-xs text-[#4a3b2a]/70 leading-relaxed">
-                            <Check className="h-3.5 w-3.5 shrink-0 text-[#5c6b2a]/60 mt-0.5" />
+                            <Check className="h-3.5 w-3.5 shrink-0 text-[#7a2e2e]/60 mt-0.5" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -410,7 +412,7 @@ export default function AlgerieCommandosPage() {
                         Glossaire
                       </h2>
                       <span className="text-[9px] text-[#dcb575]/40 bg-[#dcb575]/5 px-2 py-0.5 rounded-full">
-                        {algerieCommandosData.glossaire.length} termes
+                        {algerieDisparitionData.glossaire.length} termes
                       </span>
                     </div>
                     <motion.div
@@ -431,7 +433,7 @@ export default function AlgerieCommandosPage() {
                         className="overflow-hidden"
                       >
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-6 mt-6 border-t border-[#dcb575]/10">
-                          {algerieCommandosData.glossaire.map((entry, i) => (
+                          {algerieDisparitionData.glossaire.map((entry, i) => (
                             <div
                               key={i}
                               className="p-3 rounded-lg bg-[#e8dcc5]/5 border border-[#e8dcc5]/5 hover:border-[#dcb575]/20 transition-colors"
@@ -460,25 +462,25 @@ export default function AlgerieCommandosPage() {
             <section className="space-y-8" data-testid="bloc-quiz">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#5c6b2a]/10 flex items-center justify-center">
-                    <HelpCircle className="h-5 w-5 text-[#5c6b2a]" />
+                  <div className="w-10 h-10 rounded-lg bg-[#7a2e2e]/10 flex items-center justify-center">
+                    <HelpCircle className="h-5 w-5 text-[#7a2e2e]" />
                   </div>
                   <div>
                     <h2 className="text-xl md:text-2xl font-normal text-[#4a3b2a]" style={{ fontFamily: "'Special Elite', cursive" }}>
                       Mini‑Quiz
                     </h2>
-                    <div className="w-12 h-[2px] bg-[#5c6b2a]/20 mt-1 rounded-full" />
+                    <div className="w-12 h-[2px] bg-[#7a2e2e]/20 mt-1 rounded-full" />
                   </div>
                 </div>
-                <div className="flex items-center gap-2 bg-[#5c6b2a]/5 px-3 py-1.5 rounded-full">
-                  <span className="text-[10px] font-bold text-[#5c6b2a]">
-                    {quizScore}/{algerieCommandosData.quiz.length}
+                <div className="flex items-center gap-2 bg-[#7a2e2e]/5 px-3 py-1.5 rounded-full">
+                  <span className="text-[10px] font-bold text-[#7a2e2e]">
+                    {quizScore}/{algerieDisparitionData.quiz.length}
                   </span>
                   <div className="flex gap-0.5">
-                    {algerieCommandosData.quiz.map((_, i) => (
+                    {algerieDisparitionData.quiz.map((_, i) => (
                       <div
                         key={i}
-                        className={`w-2 h-2 rounded-full transition-colors ${quizRevealed[i] ? 'bg-[#5c6b2a]' : 'bg-[#4a3b2a]/15'}`}
+                        className={`w-2 h-2 rounded-full transition-colors ${quizRevealed[i] ? 'bg-[#7a2e2e]' : 'bg-[#4a3b2a]/15'}`}
                       />
                     ))}
                   </div>
@@ -486,7 +488,7 @@ export default function AlgerieCommandosPage() {
               </div>
 
               <div className="space-y-4">
-                {algerieCommandosData.quiz.map((q, i) => (
+                {algerieDisparitionData.quiz.map((q, i) => (
                   <motion.div
                     key={i}
                     className="relative overflow-hidden rounded-xl border border-[#4a3b2a]/10 bg-white/40 backdrop-blur-sm"
@@ -497,12 +499,12 @@ export default function AlgerieCommandosPage() {
                     data-testid={`quiz-question-${i}`}
                   >
                     {quizRevealed[i] && (
-                      <div className="absolute top-0 left-0 w-1 h-full bg-[#5c6b2a]" />
+                      <div className="absolute top-0 left-0 w-1 h-full bg-[#7a2e2e]" />
                     )}
                     <div className="p-5 space-y-3">
                       <div className="flex items-start gap-3">
                         <span className={`flex-shrink-0 w-7 h-7 rounded-lg text-xs flex items-center justify-center font-bold transition-colors ${
-                          quizRevealed[i] ? 'bg-[#5c6b2a] text-white' : 'bg-[#5c6b2a]/10 text-[#5c6b2a]'
+                          quizRevealed[i] ? 'bg-[#7a2e2e] text-white' : 'bg-[#7a2e2e]/10 text-[#7a2e2e]'
                         }`}>
                           {i + 1}
                         </span>
@@ -516,13 +518,13 @@ export default function AlgerieCommandosPage() {
                           <input
                             type="text"
                             placeholder="Votre réponse..."
-                            className="w-full bg-transparent border-b border-[#4a3b2a]/15 text-xs py-2 px-1 text-[#4a3b2a] placeholder:text-[#4a3b2a]/25 focus:outline-none focus:border-[#5c6b2a] transition-colors"
+                            className="w-full bg-transparent border-b border-[#4a3b2a]/15 text-xs py-2 px-1 text-[#4a3b2a] placeholder:text-[#4a3b2a]/25 focus:outline-none focus:border-[#7a2e2e] transition-colors"
                             value={quizAnswers[i] || ""}
                             onChange={(e) => setQuizAnswers(prev => ({ ...prev, [i]: e.target.value }))}
                             data-testid={`input-quiz-${i}`}
                           />
                           <button
-                            className="mt-3 text-[10px] uppercase tracking-wider text-[#5c6b2a] hover:text-[#5c6b2a]/80 font-bold transition-colors"
+                            className="mt-3 text-[10px] uppercase tracking-wider text-[#7a2e2e] hover:text-[#7a2e2e]/80 font-bold transition-colors"
                             onClick={() => setQuizRevealed(prev => ({ ...prev, [i]: true }))}
                             data-testid={`button-quiz-reveal-${i}`}
                           >
@@ -536,8 +538,8 @@ export default function AlgerieCommandosPage() {
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.3 }}
                         >
-                          <div className="p-3 rounded-lg bg-[#5c6b2a]/5 border border-[#5c6b2a]/10">
-                            <span className="text-[9px] font-bold text-[#5c6b2a] uppercase tracking-wider block mb-1">
+                          <div className="p-3 rounded-lg bg-[#7a2e2e]/5 border border-[#7a2e2e]/10">
+                            <span className="text-[9px] font-bold text-[#7a2e2e] uppercase tracking-wider block mb-1">
                               Réponse
                             </span>
                             <p className="text-xs text-[#4a3b2a]/80 leading-relaxed">
@@ -560,13 +562,13 @@ export default function AlgerieCommandosPage() {
               <div className="w-16 h-[1px] bg-[#4a3b2a]/20 mx-auto" />
               <p className="text-[10px] uppercase tracking-[0.4em] text-[#4a3b2a]/40">Navigation</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link href="/algerie/kj25">
+                <Link href="/algerie/commandos-chasse">
                   <Button
                     variant="outline"
                     className="border-[#4a3b2a]/15 text-[#4a3b2a]/70 hover:bg-white/40 hover:text-[#4a3b2a] px-6 py-5 text-xs rounded-lg"
-                    data-testid="button-back-kj25"
+                    data-testid="button-back-commandos"
                   >
-                    <ArrowLeft className="mr-2 h-3.5 w-3.5" /> KJ 25
+                    <ArrowLeft className="mr-2 h-3.5 w-3.5" /> Commandos de chasse
                   </Button>
                 </Link>
                 <Link href="/#algerie">
@@ -578,12 +580,12 @@ export default function AlgerieCommandosPage() {
                     <Layers className="mr-2 h-3.5 w-3.5" /> Thèmes
                   </Button>
                 </Link>
-                <Link href="/algerie/disparition">
+                <Link href="/#guyane">
                   <Button
-                    className="bg-[#5c6b2a] text-white hover:bg-[#3d4a1a] px-6 py-5 text-xs rounded-lg shadow-lg shadow-[#5c6b2a]/20"
+                    className="bg-[#7a2e2e] text-white hover:bg-[#5a1a1a] px-6 py-5 text-xs rounded-lg shadow-lg shadow-[#7a2e2e]/20"
                     data-testid="button-continue-visit"
                   >
-                    Disparition <ArrowRight className="ml-2 h-3.5 w-3.5" />
+                    Guyane <ArrowRight className="ml-2 h-3.5 w-3.5" />
                   </Button>
                 </Link>
               </div>

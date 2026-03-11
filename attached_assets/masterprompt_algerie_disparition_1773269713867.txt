@@ -1,0 +1,84 @@
+
+MASTER PROMPT — REPLIT AI
+Projet : « Museum Tour Guide — 9e RIMa »
+Nouvelle page à créer : AFRIQUE → « Algérie — Disparition (1960‑1962) »
+Slug conseillé : /afrique/algerie-disparition
+
+IMPORTANT
+- Cette page relate la phase finale de la présence du 9e RIC en Algérie et la transition vers l’indépendance. Présenter le contexte géopolitique : plan Challe en déclin, autodétermination, négociations d’Évian, putsch des généraux (avril 1961), référendum sur l’indépendance (juillet 1962) et départ des troupes. Utiliser les sources disponibleshttps://en.wikipedia.org/wiki/Challe_Plan#:~:text=Challe%20Plan%20,domestically%20in%20France%20and%20internationallyhttps://en.wikipedia.org/wiki/Challe_Plan#:~:text=National%20Liberation%20Front%20%20,establish%20the%20French%20Fifth%20Republichttps://en.wikipedia.org/wiki/Challe_Plan#:~:text=Plan%20Challe%20began%20with%20the,6https://www.musee-armee.fr/ExpositionAlgerie/de-gaulle-algeria-and-the-military-1958-1962.html#:~:text=By%20early%201958%2C%20the%20Fourth,the%20help%20of%20some%20servicemenhttps://history.state.gov/historicaldocuments/frus1961-63v21/d36#:~:text=De%20Gaulle%20had%20offered%20self,in%20metropolitan%20France%20and%20Algeria.
+- Ne pas exagérer le rôle du 9e RIC ; expliquer simplement qu’il continue ses missions jusqu’à la fin et qu’il se retire après la signature des accords d’Évian.
+
+OBJECTIF VISITEUR
+Comprendre comment la guerre s’achève, comment la politique de De Gaulle évolue, et comment le 9e RIC quitte l’Algérie au moment de l’indépendance.
+
+À FAIRE DANS L’APP
+1) Navigation : insérer la page « Disparition » en dernier dans la rubrique Algérie. Boutons habituels.
+2) Structure : HERO + modes, 4 blocs : « L’usure du plan Challe », « Vers l’autodétermination », « Négociations et tensions », « Indépendance et départ du 9e RIC ». Timeline (6 repères). Mini‑quiz (5 questions).
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER (TEXTE DU SITE)
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Algérie — Disparition (1960‑1962)
+
+SOUS‑TITRE (H2)
+Après des années de guerre, la France choisit de laisser le peuple algérien décider de son avenir. Le plan Challe s’essouffle, De Gaulle parle d’autodétermination, les négociations s’ouvrent puis la souveraineté est proclamée. Pour le 9e RIC, c’est la fin d’une longue présence outre‑mer.
+
+QUESTION DIRECTRICE
+Comment la combinaison de victoires militaires et d’évolutions politiques aboutit‑elle à l’indépendance de l’Algérie, et comment le 9e RIC vit‑il cette transition ?
+
+ENCADRÉ « REPÈRES »
+1960 : fin de l’opération Jumelles • 16 septembre 1959 : De Gaulle propose l’autodéterminationhttps://history.state.gov/historicaldocuments/frus1961-63v21/d36#:~:text=De%20Gaulle%20had%20offered%20self,in%20metropolitan%20France%20and%20Algeria • Janvier 1961 : référendum d’autodéterminationhttps://history.state.gov/historicaldocuments/frus1961-63v21/d36#:~:text=De%20Gaulle%20had%20offered%20self,in%20metropolitan%20France%20and%20Algeria • 21–26 avril 1961 : putsch des généraux • 18 mars 1962 : accords d’Évian • 1er juillet 1962 : référendum sur l’indépendance • Été 1962 : départ du 9e RIC.
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+À partir de 1960, la guerre d’Algérie change de visage. L’opération Jumelles prend fin et le plan Challe montre ses limiteshttps://en.wikipedia.org/wiki/Challe_Plan#:~:text=Challe%20Plan%20,domestically%20in%20France%20and%20internationally. De Gaulle, conscient que la victoire militaire ne suffira pas, propose le droit à l’autodéterminationhttps://history.state.gov/historicaldocuments/frus1961-63v21/d36#:~:text=De%20Gaulle%20had%20offered%20self,in%20metropolitan%20France%20and%20Algeria. Le référendum de janvier 1961 confirme cette orientationhttps://history.state.gov/historicaldocuments/frus1961-63v21/d36#:~:text=De%20Gaulle%20had%20offered%20self,in%20metropolitan%20France%20and%20Algeria. Tandis que des négociations secrètes s’ouvrent avec le FLN, une fraction de l’armée et des colons se rebelle (putsch des généraux, avril 1961)https://www.musee-armee.fr/ExpositionAlgerie/de-gaulle-algeria-and-the-military-1958-1962.html#:~:text=By%20early%201958%2C%20the%20Fourth,the%20help%20of%20some%20servicemen. Les accords d’Évian, signés le 18 mars 1962, prévoient un cessez‑le‑feu et l’organisation d’un référendum. Le 1er juillet 1962, les Algériens votent massivement pour l’indépendance. Le 9e RIC, qui a continué à tenir des postes et à accompagner les SAS, quitte ses positions durant l’été 1962. La présence française en Algérie prend fin.
+
+────────────────────────────
+BLOC 1 — L’usure du plan Challe
+────────────────────────────
+À partir de 1960, l’offensive du plan Challe perd en intensité. Les victoires tactiques n’ont pas réduit l’ALN à néant. La guerre est devenue politique ; chaque succès militaire se traduit par une radicalisation de l’opinion internationalehttps://en.wikipedia.org/wiki/Challe_Plan#:~:text=Challe%20Plan%20,domestically%20in%20France%20and%20internationally. Les commandos de chasse sont dissous ou réaffectés. Pour le 9e RIC, cette période est marquée par la routine des patrouilles et par la préparation à un départ possible.
+
+────────────────────────────
+BLOC 2 — Vers l’autodétermination
+────────────────────────────
+Le 16 septembre 1959, De Gaulle prononce un discours proposant l’autodéterminationhttps://history.state.gov/historicaldocuments/frus1961-63v21/d36#:~:text=De%20Gaulle%20had%20offered%20self,in%20metropolitan%20France%20and%20Algeria. Un référendum organisé du 6 au 8 janvier 1961 confirme l’option d’un choix algérien : environ 70 % des votants en Algérie l’approuventhttps://history.state.gov/historicaldocuments/frus1961-63v21/d36#:~:text=De%20Gaulle%20had%20offered%20self,in%20metropolitan%20France%20and%20Algeria. Cette voie politique alarme les colons et certains officiers, mais prépare la négociation. Le 9e RIC, fidèle au pouvoir civil, reste en position malgré la contestation.
+
+────────────────────────────
+BLOC 3 — Négociations et tensions
+────────────────────────────
+Les négociations d’Évian se déroulent en plusieurs sessions entre 1961 et 1962. Pendant ce temps, des actions terroristes de l’OAS (Organisation de l’armée secrète) et l’insurrection continue de l’ALN rendent la situation explosive. En avril 1961, un groupe de généraux tente un putsch à Algerhttps://www.musee-armee.fr/ExpositionAlgerie/de-gaulle-algeria-and-the-military-1958-1962.html#:~:text=By%20early%201958%2C%20the%20Fourth,the%20help%20of%20some%20servicemen; il échoue grâce à la fidélité de la plupart des unités et à l’appel de De Gaulle. Pour le 9e RIC, ces événements créent des tensions : les soldats doivent empêcher la sédition tout en se protégeant des attentats.
+
+────────────────────────────
+BLOC 4 — Indépendance et départ du 9e RIC
+────────────────────────────
+Les accords d’Évian sont signés le 18 mars 1962. Ils prévoient le cessez‑le‑feu, un référendum et l’organisation d’une période de transition. Le 1er juillet 1962, plus de 99 % des électeurs algériens votent en faveur de l’indépendance. En métropole, le référendum est également approuvé. L’indépendance est proclamée le 5 juillet 1962. Le 9e RIC se retire progressivement ; ses unités embarquent pour la France durant l’été. Certaines installations sont cédées aux autorités algériennes. Le régiment tourne ainsi la page de plus d’un siècle de présence en Afrique du Nord.
+
+────────────────────────────
+CHRONOLOGIE
+────────────────────────────
+• 1960 : fin de l’opération Jumelles et essoufflement du plan Challehttps://en.wikipedia.org/wiki/Challe_Plan#:~:text=Challe%20Plan%20,domestically%20in%20France%20and%20internationally.
+• 16 septembre 1959 : discours de De Gaulle pour l’autodéterminationhttps://history.state.gov/historicaldocuments/frus1961-63v21/d36#:~:text=De%20Gaulle%20had%20offered%20self,in%20metropolitan%20France%20and%20Algeria.
+• 6–8 janvier 1961 : référendum d’autodétermination (70 % pour en Algérie)https://history.state.gov/historicaldocuments/frus1961-63v21/d36#:~:text=De%20Gaulle%20had%20offered%20self,in%20metropolitan%20France%20and%20Algeria.
+• 21–26 avril 1961 : putsch des généraux à Algerhttps://www.musee-armee.fr/ExpositionAlgerie/de-gaulle-algeria-and-the-military-1958-1962.html#:~:text=By%20early%201958%2C%20the%20Fourth,the%20help%20of%20some%20servicemen.
+• 18 mars 1962 : accords d’Évian.
+• 1er juillet 1962 : référendum sur l’indépendance ; 99 % pour.
+• Été 1962 : départ du 9e RIC ; dissolution progressive des SAS.
+
+────────────────────────────
+GLOSSAIRE
+────────────────────────────
+• Putsch des généraux : tentative de coup d’État menée par des officiers opposés à l’indépendance en avril 1961https://www.musee-armee.fr/ExpositionAlgerie/de-gaulle-algeria-and-the-military-1958-1962.html#:~:text=By%20early%201958%2C%20the%20Fourth,the%20help%20of%20some%20servicemen.
+• OAS : Organisation de l’armée secrète, groupe clandestin de colons et de militaires ultra.
+• Accords d’Évian : accords de cessez‑le‑feu et de transition signés le 18 mars 1962.
+• Référendum de juillet 1962 : vote massif pour l’indépendance.
+
+────────────────────────────
+MINI‑QUIZ
+────────────────────────────
+1) Quel plan militaire s’essouffle en 1960 ? Réponse : le plan Challehttps://en.wikipedia.org/wiki/Challe_Plan#:~:text=Challe%20Plan%20,domestically%20in%20France%20and%20internationally.
+2) Que propose De Gaulle dans son discours du 16 septembre 1959 ? Réponse : l’autodétermination pour l’Algériehttps://history.state.gov/historicaldocuments/frus1961-63v21/d36#:~:text=De%20Gaulle%20had%20offered%20self,in%20metropolitan%20France%20and%20Algeria.
+3) Quel événement de 1961 oppose une fraction de l’armée au pouvoir civil ? Réponse : le putsch des généraux d’avril 1961https://www.musee-armee.fr/ExpositionAlgerie/de-gaulle-algeria-and-the-military-1958-1962.html#:~:text=By%20early%201958%2C%20the%20Fourth,the%20help%20of%20some%20servicemen.
+4) Quel est le résultat du référendum d’autodétermination en janvier 1961 ? Réponse : environ 70 % des votants en Algérie (et 75 % en France) approuvent la politique de De Gaullehttps://history.state.gov/historicaldocuments/frus1961-63v21/d36#:~:text=De%20Gaulle%20had%20offered%20self,in%20metropolitan%20France%20and%20Algeria.
