@@ -12,6 +12,7 @@ import AlgerieRenaissancePage from "./pages/algeria/AlgerieRenaissance";
 import AlgeriePalestroPage from "./pages/algeria/AlgeriePalestro";
 import AlgerieContreInsurrectionPage from "./pages/algeria/AlgerieContreInsurrection";
 import AlgerieKJ25Page from "./pages/algeria/AlgerieKJ25";
+import AlgerieCommandosPage from "./pages/algeria/AlgerieCommandos";
 import ScanPage from "./pages/Scan";
 import NotFound from "./pages/not-found";
 
@@ -31,6 +32,7 @@ function Router() {
         <Route path="/algerie/palestro" component={AlgeriePalestroPage} />
         <Route path="/algerie/contre-insurrection" component={AlgerieContreInsurrectionPage} />
         <Route path="/algerie/kj25" component={AlgerieKJ25Page} />
+        <Route path="/algerie/commandos-chasse" component={AlgerieCommandosPage} />
         <Route path="/scan" component={ScanPage} />
         <Route component={NotFound} />
       </Switch>

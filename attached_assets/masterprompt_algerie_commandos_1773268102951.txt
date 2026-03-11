@@ -1,0 +1,87 @@
+
+MASTER PROMPT — REPLIT AI
+Projet : « Museum Tour Guide — 9e RIMa »
+Nouvelle page à créer : AFRIQUE → « Algérie — Commandos de chasse »
+Slug conseillé : /afrique/algerie-commandos-chasse
+
+IMPORTANT
+- Expliquer l’origine et le fonctionnement des commandos de chasse, unités créées par le général Challe en décembre 1958 pour traquer l’ALN. Décrire leur composition (70–140 hommes, 30–60 % de volontaires musulmans) et leur mission (reconnaissance, poursuite, insertion d’éclaireurs, captation du renseignement)https://en.wikipedia.org/wiki/Commandos_de_Chasse#:~:text=French%20Air%20Force%20%20General,other%20French%20%2071%20colonialhttps://en.wikipedia.org/wiki/Commandos_de_Chasse#:~:text=The%20Commandos%27%20task%20was%20to,special%20reconnaissance%20to%20intelligence%20gathering.
+- Ne pas inventer de détails sur leur intervention en dehors des informations fournies ; situer leur action dans les opérations du plan Challe et d’Opération Jumelles. Évoquer leur impact sur la population et sur la réputation du 9e RIC.
+
+OBJECTIF VISITEUR
+Comprendre ce qui distingue les commandos de chasse des unités régulières, pourquoi ils ont été créés et comment leur utilisation reflète l’évolution de la guerre d’Algérie.
+
+À FAIRE DANS L’APP
+1) Navigation : ajouter la page « Commandos de chasse » après « KJ 25 ». Boutons habituels.
+2) Structure : HERO + modes (Comprendre/Récit/Archives), 4 blocs : « Origine », « Organisation », « Missions », « Bilan et héritage ». Timeline (4 repères). Mini‑quiz (4 questions).
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER (TEXTE DU SITE)
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Algérie — Commandos de chasse
+
+SOUS‑TITRE (H2)
+Face à un ennemi insaisissable, l’armée française créé des unités légères et mobiles : les commandos de chasse. Mélange de volontaires français et musulmans, ils sillonnent les djebels pour repérer et fixer les groupes de l’ALN.
+
+QUESTION DIRECTRICE
+Pourquoi les commandos de chasse sont‑ils devenus un outil central de la stratégie contre‑insurrectionnelle, et qu’apportent‑ils de nouveau par rapport aux unités classiques ?
+
+ENCADRÉ « REPÈRES »
+Décembre 1958 : création des commandos de chassehttps://en.wikipedia.org/wiki/Commandos_de_Chasse#:~:text=French%20Air%20Force%20%20General,other%20French%20%2071%20colonial • 1959 : opération Jumelles • 1959–1961 : plan Challe • 1961–1962 : fin progressive des commandos.
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+Les commandos de chasse naissent de la nécessité de trouver et d’engager les unités de l’ALN. En décembre 1958, Maurice Challe ordonne leur formation. Chaque commando compte 70 à 140 hommes ; 30 à 60 % sont des volontaires musulmans (harkis ou anciens rebelles ralliés)https://en.wikipedia.org/wiki/Commandos_de_Chasse#:~:text=French%20Air%20Force%20%20General,other%20French%20%2071%20colonial. Leur mission : patrouiller dans les zones difficiles, détecter les traces, fixer l’ennemi et guider l’intervention des unités lourdes. Loin d’être des forces spéciales technologiques, ils reposent sur l’expérience du terrain et la connaissance des réseaux. Ils opèrent durant le plan Challe et l’opération Jumelles, obtenant des succès tactiques mais aussi des critiques quant à leur relation avec les populations.
+
+────────────────────────────
+BLOC 1 — Origine
+────────────────────────────
+La guerre d’Algérie met en évidence les limites des régiments classiques face à des unités mobiles et dispersées. Le général Challe, inspiré par les expériences indochinoises et par les armées alliées, propose fin 1958 de créer des commandos de chasse. Ceux‑ci dépendent des secteurs opérationnels et ne sont pas liés à un régiment spécifique.
+
+────────────────────────────
+BLOC 2 — Organisation
+────────────────────────────
+Chaque commando compte entre 70 et 140 hommes. Le recrutement est mixte : soldats professionnels, appelés, harkis et anciens combattants de l’ALN ralliés. Cette proportion de 30 à 60 % de volontaires musulmans favorise l’infiltration des réseaux et la connaissance du terrainhttps://en.wikipedia.org/wiki/Commandos_de_Chasse#:~:text=French%20Air%20Force%20%20General,other%20French%20%2071%20colonialhttps://en.wikipedia.org/wiki/Commandos_de_Chasse#:~:text=The%20Commandos%27%20task%20was%20to,special%20reconnaissance%20to%20intelligence%20gathering. Les commandos sont dotés d’armes légères, de radios et de véhicules tout‑terrain. Ils reçoivent un entraînement intensif en pistage et en déplacement nocturne.
+
+────────────────────────────
+BLOC 3 — Missions
+────────────────────────────
+Les commandos de chasse ont pour tâches principales :
+• repérer des traces d’ALN et suivre des pistes ;
+• guider l’intervention des unités héliportées et motorisées en communiquant en temps réel ;
+• effectuer des embuscades, des raids et des coups de main pour désorganiser les maquis ;
+• collecter du renseignement auprès des populations et des anciens rebelles. 
+Ils passent plusieurs jours en autonomie, campant dans les djebels et gardant un contact radio permanent.
+
+────────────────────────────
+BLOC 4 — Bilan et héritage
+────────────────────────────
+Les commandos de chasse contribuent à la temporisation de la guerre en Kabylie et en Aurès. Ils obtiennent des résultats significatifs en fixant des katibas et en limitant les infiltrations. Toutefois, leur impact politique est limité ; l’insurrection continue malgré tout. Après l’annonce de l’autodétermination, ces unités sont progressivement dissoutes et leurs cadres réaffectés. Pour le 9e RIC, travailler avec des commandos de chasse signifie opérer en complémentarité, apprendre d’eux et parfois intégrer leurs anciens dans ses rangs. L’héritage de ces unités se retrouve dans les forces spéciales modernes.
+
+────────────────────────────
+CHRONOLOGIE
+────────────────────────────
+• Décembre 1958 : création des commandos de chassehttps://en.wikipedia.org/wiki/Commandos_de_Chasse#:~:text=French%20Air%20Force%20%20General,other%20French%20%2071%20colonial.
+• 1959 : engagement dans l’opération Jumelles.
+• 1961 : réduction progressive de leurs effectifs.
+• 1962 : dissolution et fin de leurs missions.
+
+────────────────────────────
+GLOSSAIRE
+────────────────────────────
+• Harkis : supplétifs musulmans engagés aux côtés de l’armée française.
+• Katiba : unité de combat de l’ALN.
+• Commandos de chasse : unités mobiles de 70 à 140 hommes, créées pour traquer l’ALNhttps://en.wikipedia.org/wiki/Commandos_de_Chasse#:~:text=French%20Air%20Force%20%20General,other%20French%20%2071%20colonial.
+
+────────────────────────────
+MINI‑QUIZ
+────────────────────────────
+1) En quelle année les commandos de chasse ont‑ils été créés ? Réponse : décembre 1958https://en.wikipedia.org/wiki/Commandos_de_Chasse#:~:text=French%20Air%20Force%20%20General,other%20French%20%2071%20colonial.
+2) Quelle est la proportion approximative de volontaires musulmans dans ces unités ? Réponse : entre 30 % et 60 %https://en.wikipedia.org/wiki/Commandos_de_Chasse#:~:text=French%20Air%20Force%20%20General,other%20French%20%2071%20colonial.
+3) Quel est l’objectif principal des commandos de chasse ? Réponse : repérer, fixer et guider les forces contre les unités de l’ALN.
+4) Que deviennent les commandos de chasse après 1961 ? Réponse : ils sont progressivement dissous alors que la France se dirige vers l’autodétermination.
+
+──────────────────────────────────────────────────────────────────────────────

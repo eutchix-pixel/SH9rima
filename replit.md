@@ -31,6 +31,7 @@ Preferred communication style: Simple, everyday language.
   - `client/src/lib/algerie-palestro-data.ts` — Palestro ambush 1956 content (timeline, blocs, map markers, glossary, quiz)
   - `client/src/lib/algerie-contre-insurrection-data.ts` — Contre-insurrection 1956-1959 content (timeline, blocs, glossary, quiz)
   - `client/src/lib/algerie-kj25-data.ts` — Operation KJ 25 content (timeline, blocs, glossary, quiz)
+  - `client/src/lib/algerie-commandos-data.ts` — Commandos de chasse content (timeline, blocs, glossary, quiz)
 - Each content page has multiple reading modes: "Essential (5 min)", "Full Visit (20-30 min)", "Archives (deep reading)"
 - Pages feature: interactive timelines, accordion sections, image galleries with placeholders, glossaries, mini-quizzes
 
@@ -45,6 +46,7 @@ Preferred communication style: Simple, everyday language.
 - **Algérie/Palestro** (`/algerie/palestro`) — Palestro ambush (18 May 1956) page with timeline, content blocs, map, glossary, and quiz
 - **Algérie/Contre-insurrection** (`/algerie/contre-insurrection`) — Counter-insurgency & politics (1956-1959): SAS, Constantine Plan, Challe Plan, autodetermination
 - **Algérie/KJ 25** (`/algerie/kj25`) — Operation KJ 25 (23 Dec 1957): cordon & search along Tizi Ouzou–Bouira axis
+- **Algérie/Commandos de chasse** (`/algerie/commandos-chasse`) — Hunting commandos (1958-1962): origin, organization, missions, legacy
 - **AI Assistant** (`/ai-assistant`) — Chat-style assistant (currently client-side simulation using museum data)
 
 ### Backend (Express)

@@ -52,7 +52,7 @@ export const museumData: Section[] = [
       { id: "algerie-palestro", title: "Palestro", image: "/images/placeholder.png", content: "Le secteur de Palestro et ses défis...", link: "/algerie/palestro" },
       { id: "algerie-contre", title: "Contre-insurrection", image: "/images/placeholder.png", content: "Les techniques de guerre contre-révolutionnaire...", link: "/algerie/contre-insurrection" },
       { id: "algerie-kj25", title: "KJ 25", image: "/images/placeholder.png", content: "Les opérations majeures dans le secteur...", link: "/algerie/kj25" },
-      { id: "algerie-commando", title: "Commando de Chasse", image: "/images/placeholder.png", content: "L'action des commandos de chasse..." },
+      { id: "algerie-commando", title: "Commando de Chasse", image: "/images/placeholder.png", content: "L'action des commandos de chasse...", link: "/algerie/commandos-chasse" },
       { id: "algerie-disparition", title: "Disparition", image: "/images/placeholder.png", content: "La fin de la guerre et la dissolution..." }
     ]
   },
