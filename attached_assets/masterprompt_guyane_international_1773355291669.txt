@@ -1,0 +1,148 @@
+
+MASTER PROMPT — REPLIT AI
+Projet : « Museum Tour Guide — 9e RIMa »
+Nouvelle page à créer : GUYANE → « International »
+Slug conseillé : `/guyane/international`
+
+IMPORTANT
+- Restituer les informations de manière factuelle ; ne pas inventer de dates ni de noms. Cette page montre l’ouverture internationale du 9e RIMa : coopérations avec les pays voisins, stages dans d’autres jungles, missions de formation et d’assistance.
+- Le texte doit rester identique au contenu fourni, à l’exception de la micro‑copie UI.
+
+OBJECTIF VISITEUR
+Montrer que le 9e RIMa n’est pas isolé en Guyane : il collabore avec les armées du **Suriname**, du **Brésil**, du **Guyana**, des **Antilles** et même avec des unités néerlandaises et américaines. Cette coopération renforce ses compétences et tisse des liens diplomatiques.
+
+À FAIRE DANS L’APP
+1) **Position** : placer cette page après « Jungle » et avant « Harpie ». Boutons de navigation habituels.
+2) **UX / UI**
+   - **HERO** : photo ou montage de marsouins du 9e RIMa en entraînement à l’étranger (Brésil, Suriname) avec la **question directrice**.
+   - **Modes** :
+      a) **Comprendre** : vue d’ensemble des pays partenaires et des types de coopération (stages, exercices conjoints).
+      b) **Récit** : carnet de voyage détaillant un stage au centre de jungle de Manaus (Brésil) et un exercice au Suriname.
+      c) **Archives** : galerie de photos de délégations étrangères en Guyane et de marsouins à l’étranger.
+   - **Carte** : carte des Caraïbes et de l’Amérique du Sud mettant en évidence les pays visités (Brésil, Suriname, Guyana, Aruba, Curaçao, Martinique, Guadeloupe). Cliquer sur un pays affiche une fiche descriptive.
+   - **Timeline** : 5 repères (premiers échanges fin 1970, stage à Manaus, coopération avec le Suriname après 1990, participation aux manœuvres Antilles, compétitions internationales).
+   - **Mini‑quiz** : 4 questions sur les partenaires et les objectifs des missions.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Guyane — International
+
+SOUS‑TITRE (H2)
+Au-delà des fleuves, le 9e RIMa échange et coopère avec ses voisins sud‑américains et caribéens. Formations, exercices conjoints et compétitions sportives renforcent les liens et enrichissent les savoir‑faire.
+
+QUESTION DIRECTRICE
+Quels pays accueillent les marsouins du 9e RIMa pour des stages et des entraînements, et comment ces coopérations internationales améliorent‑elles leurs compétences et leur intégration régionale ?
+
+ENCADRÉ « REPÈRES »
+• Fin des années 1970 : premières missions de coopération avec le **Guyana** et le **Suriname** (patrouilles fluviales conjointes).
+• Début des années 1980 : stage des cadres au **centre de jungle de Manaus** (Brésil) ; introduction des techniques brésiliennes de survie et de combat en jungle.
+• 1990 : première **Curaçao challenge** : compétition sportive et militaire réunissant des équipes des Antilles, du Suriname et des Pays‑Bas.
+• Années 2000 : participation aux manœuvres **Tradewinds** et exercices de coopération régionale dans les Caraïbes (Guadeloupe, Martinique, Aruba).
+• Années 2010 : développement des programmes d’instruction croisée avec le Suriname et le Brésil ; échanges de stagiaires et d’instructeurs.
+
+BOUTONS
+- Comprendre (5 min)
+- Récit (10–15 min)
+- Archives (approfondir)
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+Depuis sa recréation, le 9e RIMa cherche à s’ouvrir à ses voisins. Des délégations de marsouins traversent les frontières pour s’entraîner et partager leurs savoir‑faire. À **Manaus**, au Brésil, les cadres suivent un stage intensif à l’école de jungle de l’armée brésilienne (CIGS), apprenant l’escalade, le franchissement de rivières et la survie avancée. Au **Suriname** et au **Guyana**, les patrouilles mixtes et les exercices fluviaux renforcent la sécurité commune. Les Antilles (Guadeloupe, Martinique) accueillent des exercices conjoints et des compétitions sportives telles que le **Curaçao challenge**, où les marsouins affrontent les marines néerlandais et américains. Ces échanges améliorent les compétences en milieu tropical et cultivent un esprit de coopération régionale.
+
+────────────────────────────
+BLOC 1 — Stages et échanges avec le Brésil
+────────────────────────────
+**Texte :**
+L’école de jungle du **Centro de Instrução de Guerra na Selva (CIGS)** de Manaus est mondialement reconnue. Depuis les années 1980, des instructeurs et des cadres du 9e RIMa y suivent des cours de **combat en jungle**. Ils apprennent à franchir des ravins en tyrolienne, à construire des radeaux avec des lianes et à piéger des lignes de circulation. Ces stages permettent également de comparer les techniques françaises et brésiliennes et de renforcer la coopération militaire bilatérale. En retour, le 9e RIMa accueille des stagiaires brésiliens au Centre d’entraînement en forêt équatoriale de Guyane, créant une communauté de pratiques.
+
+**À retenir (cartel)**
+- Le CIGS de Manaus est un partenaire clé pour la formation jungle.
+- Les échanges France–Brésil sont réciproques et favorisent l’interopérabilité.
+- Les techniques brésiliennes enrichissent le répertoire des marsouins.
+
+────────────────────────────
+BLOC 2 — Patrouilles et manœuvres avec le Suriname et le Guyana
+────────────────────────────
+**Texte :**
+Le Maroni marque la frontière avec le **Suriname**, pays devenu indépendant en 1975. Pour sécuriser les deux rives et lutter contre les trafics, le 9e RIMa effectue des **patrouilles conjointes** avec l’armée surinamaise : surveillance du fleuve, contrôles de pirogues, échanges de renseignements. Plus à l’est, le régiment s’entraîne avec la force de défense du **Guyana** (ex‑Guyane britannique) lors d’exercices baptisés **Amazon Express**. Les marsouins y apprennent de nouvelles techniques de survie en savane et partagent leur expertise de la jungle. Ces coopérations renforcent la confiance régionale et permettent de prévenir les tensions frontalières.
+
+**À retenir (cartel)**
+- Les patrouilles mixtes assurent la sécurité et la lutte contre les trafics sur le Maroni.
+- La coopération avec le Guyana ouvre le 9e RIMa à de nouveaux environnements (savane et mangrove).
+- Ces échanges contribuent à la stabilité régionale.
+
+────────────────────────────
+BLOC 3 — Antilles et Caraïbes : exercices et compétitions
+────────────────────────────
+**Texte :**
+Au‑delà du continent, le 9e RIMa participe à des **manœuvres dans les Antilles françaises**. En Guadeloupe et en Martinique, les marsouins s’entraînent aux opérations amphibies, à la lutte contre les catastrophes naturelles et à l’aide à la population. Ces exercices se déroulent souvent dans le cadre des manœuvres **Tradewinds**, sous l’égide de l’United States Southern Command, et réunissent des forces caribéennes et nord‑américaines. Parallèlement, les marsouins prennent part à des compétitions sportives telles que le **Curaçao challenge**, une épreuve d’endurance et de tir opposant des équipes du Suriname, des Pays‑Bas, de Curaçao et des États‑Unis. Ces événements renforcent la cohésion, l’esprit de compétition et la visibilité du régiment à l’échelle régionale.
+
+**À retenir (cartel)**
+- Les manœuvres Tradewinds testent la capacité du régiment à opérer en milieu amphibie et à participer à des secours d’urgence.
+- Les compétitions sportives (Curaçao challenge) favorisent l’esprit d’équipe et la coopération internationale.
+- La présence du 9e RIMa dans les Antilles élargit son champ d’action au-delà de la Guyane.
+
+────────────────────────────
+BLOC 4 — Échanges culturels et diplomatie militaire
+────────────────────────────
+**Texte :**
+La coopération internationale ne se limite pas à l’entraînement. Chaque mission est l’occasion de découvrir d’autres cultures et d’entretenir des liens diplomatiques. Lors des échanges avec le Suriname et le Guyana, les marsouins sont reçus dans des casernes locales et participent à des cérémonies et à des fêtes traditionnelles. Ils apprennent à cuisiner des plats locaux, jouent au football contre leurs homologues et découvrent des langues et des musiques nouvelles. En retour, le 9e RIMa organise des journées d’accueil en Guyane pour présenter son histoire et ses traditions aux invités étrangers. Ces échanges renforcent la compréhension mutuelle et la coopération régionale.
+
+**À retenir (cartel)**
+- La diplomatie militaire repose sur le respect et le partage culturel.
+- Les échanges sportifs et culinaires créent des liens au-delà des entraînements.
+- Le 9e RIMa se présente comme un ambassadeur de la France en Amérique du Sud et dans les Caraïbes.
+
+────────────────────────────
+TIMELINE (5 repères)
+────────────────────────────
+- **Fin des années 1970 : Premiers échanges régionaux** — patrouilles conjointes avec le Suriname et missions exploratoires au Guyana.
+- **Début des années 1980 : Stages à Manaus** — premier contingent de marsouins au CIGS et accueil des instructeurs brésiliens en Guyane.
+- **1990 : Première Curaçao challenge** — le 9e RIMa participe à la compétition d’endurance et de tir.
+- **Années 2000 : Exercices Tradewinds** — intégration aux manœuvres caribéennes sous l’égide du SOUTHCOM.
+- **Années 2010 : Intensification des patrouilles mixtes** — programmes d’instruction croisée et d’échanges culturels avec le Suriname et le Brésil.
+
+────────────────────────────
+GLOSSAIRE
+────────────────────────────
+**CIGS (Centro de Instrução de Guerra na Selva)** : école de guerre en jungle de l’armée brésilienne située à Manaus.
+**Tradewinds** : exercice multinational organisé par le commandement sud des États‑Unis (SOUTHCOM) pour améliorer la coopération en matière de sécurité dans les Caraïbes.
+**Curaçao challenge** : compétition sportive et militaire annuelle réunissant des forces armées de plusieurs pays caribéens et néerlandais.
+**Patrouille mixte** : opération menée conjointement par deux armées pour surveiller une frontière ou un territoire commun.
+**Guyana** : pays anglophone voisin de la Guyane, également appelé Guyane britannique jusqu’en 1966.
+
+────────────────────────────
+QUIZ (4 questions)
+────────────────────────────
+1. Quel pays abrite le **CIGS**, école de jungle fréquentée par les cadres du 9e RIMa ?
+   A) Suriname
+   B) Brésil
+   C) Guyana
+   D) États‑Unis
+
+2. Quel exercice multinational des Caraïbes teste la capacité du 9e RIMa à intervenir en cas de catastrophe naturelle ?
+   A) Tradewinds
+   B) Curaçao challenge
+   C) Amazon Express
+   D) Harpie
+
+3. Dans quel type d’événement les marsouins se mesurent‑ils aux soldats néerlandais, surinamais et américains ?
+   A) Une mission d’infiltration
+   B) Une compétition sportive appelée Curaçao challenge
+   C) Une course de pirogues sur le Maroni
+   D) Un exercice de tir en Guyane
+
+4. Quel est l’un des objectifs des patrouilles mixtes menées sur le Maroni avec l’armée surinamaise ?
+   A) Construire des routes asphaltées
+   B) Surveiller les trafics et sécuriser la frontière
+   C) Creuser des mines d’or légales
+   D) Organiser des spectacles folkloriques
+
+────────────────────────────
+CONCLUSION / TRANSITION
+────────────────────────────
+En dehors des frontières de la Guyane, les marsouins se forgent une expérience et des amitiés internationales. Ces échanges éclairent l’importance stratégique du 9e RIMa dans la coopération régionale. La page suivante, **Harpie**, mettra en lumière l’une des missions interarmées les plus emblématiques du régiment : la lutte contre l’orpaillage illégal.

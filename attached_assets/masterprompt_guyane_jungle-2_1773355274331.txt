@@ -1,0 +1,160 @@
+
+MASTER PROMPT — REPLIT AI
+Projet : « Museum Tour Guide — 9e RIMa »
+Nouvelle page à créer : GUYANE → « Jungle »
+Slug conseillé : `/guyane/jungle`
+
+IMPORTANT
+- Les informations doivent rester factuelles ; n’invente pas de détails. Cette page décrit la vie et les opérations en forêt équatoriale : climat, topographie, missions de reconnaissance et de balisage des frontières.
+- Le texte doit être respecté à la lettre, avec seulement des micro‑copies d’interface.
+
+OBJECTIF VISITEUR
+Plonger le visiteur dans l’univers de la jungle guyanaise, en montrant comment les marsouins y survivent et y opèrent : balisage de la frontière franco‑brésilienne, expéditions vers les bornes, topographie extrême, climat équatorial, faune et flore. Expliquer les techniques utilisées (topofil, portage, abattis) et les défis humains.
+
+À FAIRE DANS L’APP
+1) **Position** : place cette page après « CRAJ » et avant « International ». Boutons fixes habituels.
+2) **UX / UI**
+   - **HERO** : photo immersive de marsouins marchant sous la canopée ou campant dans la jungle, avec la **question directrice**.
+   - **Modes** : « Comprendre » (climat, géographie), « Récit » (expédition vers une borne), « Archives » (cartes des bornes, photos d’expéditions, carnets de mission).
+   - **Carte interactive** : carte simplifiée de la frontière franco‑brésilienne avec les bornes numérotées (0 à 8). Chaque point affiche la date de la mission et des anecdotes.
+   - **Timeline** : 6 repères (premières missions 1977, expéditions 1980, coopération avec l’ethnologue Hurault 1994–1995, reoccupation de Maripasoula 1996).
+   - **Galerie** : série de photos montrant le franchissement de criques, l’utilisation de machettes, la pose de bornes, la rencontre avec des ethnies amérindiennes.
+   - **Mini‑quiz** : 4 questions sur la jungle, le climat, les techniques et les missions.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Guyane — Jungle
+
+SOUS‑TITRE (H2)
+Sous la canopée, la jungle guyanaise est à la fois majestueuse et hostile. La mission des marsouins : arpenter cette forêt pour baliser la frontière, rencontrer les populations et maintenir la souveraineté française.
+
+QUESTION DIRECTRICE
+Comment les soldats du 9e RIMa se repèrent‑ils et survivent‑ils en forêt équatoriale tout en assurant le contrôle des bornes frontières et la relation avec les communautés locales ?
+
+ENCADRÉ « REPÈRES »
+• Climat : une région équatoriale avec deux saisons sèches (août–novembre, mars) et deux saisons des pluies (décembre–février, avril–juillet). Températures entre 25 et 30 °C, pluies annuelles de 2,5 à 3 m.
+• 1977 : mission vers les bornes 2 et 5 à la frontière brésilienne ; succès partiel : borne 2 atteinte, borne 5 inaccessible.
+• 1994–1995 : missions de reconnaissance pour aider l’ethnologue Hurault à revisiter les bornes et étudier les peuples Boni et Wayana.
+• 1996 : réoccupation du camp de Maripasoula et nettoyage de pistes vers les bornes.
+• 2023 : expédition Maufrais : quatre sous‑lieutenants de Saint‑Cyr traversent la Guyane en vingt‑et‑un jours de Maripasoula à Camopi pour rendre hommage à Raymond Maufrais.
+
+BOUTONS
+- Comprendre (5 min)
+- Récit (10–15 min)
+- Archives (approfondir)
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+Au sud du Maroni s’étend une jungle dense et humide. Les marsouins y opèrent pour **repérer et entretenir les bornes frontières**, surveiller les activités clandestines et maintenir le contact avec les peuples amérindiens et bushinengue. Les conditions y sont difficiles : chaleur, humidité, moustiques, serpents et distances immenses. En 1977, une mission tente de rejoindre les bornes 5 et 2 : après des jours de marche et de navigation, la borne 2 est atteinte mais la borne 5 demeure inaccessible. Les années suivantes, des expéditions régulières permettent d’installer des **campements avancés** et de débroussailler des pistes. La coopération avec l’ethnologue **Hurault** dans les années 1990 témoigne de l’engagement du régiment pour soutenir la recherche et préserver le patrimoine local. La jungle forge ainsi un esprit de camaraderie et de respect envers la nature.
+
+────────────────────────────
+BLOC 1 — Un climat et un milieu extrêmes
+────────────────────────────
+**Texte :**
+La Guyane possède un climat équatorial marqué par deux saisons humides et deux saisons sèches. Les pluies annuelles dépassent 2,5 mètres et la température oscille entre 25 et 30 °C. Sous les arbres géants, l’humidité et la moiteur règnent. Le sol est souvent boueux ou parsemé de racines, rendant la progression pénible. Les insectes, les serpents et la densité de la végétation exigent une vigilance permanente. Pour se protéger, les marsouins portent des filets à moustiques, des bottes et des vêtements anti‑moustiques. Ils boivent l’eau filtrée de la rivière et construisent des abris de fortune appelés **carbets**. Malgré ces conditions, la forêt offre aussi des ressources : fruits, poissons, gibier. Les soldats apprennent à reconnaître les plantes utiles et à vivre au rythme de la nature.
+
+**À retenir (cartel)**
+- Climat équatorial : chaleur, humidité et pluies abondantes.
+- Terrain difficile : boue, racines et végétation dense.
+- Adaptation : équipements spécifiques et connaissance de la faune et de la flore.
+
+────────────────────────────
+BLOC 2 — Repérage des bornes et missions de balisage
+────────────────────────────
+**Texte :**
+Après la mise en place du détachement de Saint‑Jean, l’une des priorités est de **contrôler la frontière franco‑brésilienne**. Celle‑ci est matérialisée par des bornes numérotées installées en pleine forêt. En 1977, deux missions distinctes partent de **Saint‑Jean** pour atteindre les **bornes 5 et 2**. La progression se fait à pied et en pirogue. Les hommes utilisent un **topofil** pour mesurer la distance parcourue et conserver la direction. La borne 2 est finalement atteinte, mais la borne 5 reste inaccessible en raison des reliefs et du manque de pistes. Par la suite, les marsouins effectuent régulièrement des expéditions pour vérifier l’état des bornes, les débroussailler et les repeindre. Ils sont parfois rejoints par des gendarmes, des ingénieurs géographes ou des chercheurs.
+
+**À retenir (cartel)**
+- La frontière est jalonnée de bornes numérotées difficilement accessibles.
+- Le topofil et la machette sont indispensables pour progresser et mesurer la distance.
+- Les missions de balisage demandent endurance et précision.
+
+────────────────────────────
+BLOC 3 — Tracer, défricher, construire
+────────────────────────────
+**Texte :**
+Pour avancer en forêt, il faut souvent **ouvrir un chemin**. Les sections de jungle utilisent des machettes, des tronçonneuses et parfois des explosifs pour abattre les arbres morts, dégager les troncs et aménager des passages. Par endroits, la progression n’est possible qu’en suivant le lit asséché d’une crique ou en escaladant des contreforts rocheux. Une fois la piste ouverte, les marsouins installent un **BOA** (base opérationnelle avancée) où ils peuvent se reposer, stocker du matériel et recueillir des renseignements. Dans certaines missions, ils posent des câbles en acier pour traverser les rivières ou construisent des ponts de fortune. La collaboration avec les populations amérindiennes est fréquente : guides et porteurs partagent leur connaissance du terrain et enseignent des techniques traditionnelles (orientation au chant des animaux, fabrication de paniers).
+
+**À retenir (cartel)**
+- Ouvrir une piste demande des outils (machette, tronçonneuse, explosifs).
+- Les BOA servent de bases temporaires au cœur de la forêt.
+- Les habitants locaux apportent un savoir indispensable pour la progression.
+
+────────────────────────────
+BLOC 4 — Rencontre avec les peuples de la forêt
+────────────────────────────
+**Texte :**
+La jungle n’est pas un désert : elle abrite des **peuples bushinengue** (descendants d’esclaves fugitifs), des **Amérindiens** (Wayana, Wayampi, Teko…) et des migrants brésiliens appelés **garimpeiros** lorsqu’ils pratiquent l’orpaillage. Les marsouins tissent des relations de confiance avec ces populations. Ils organisent des consultations médicales, transportent des familles en pirogue, participent à des fêtes et partagent des connaissances sur les dangers de l’orpaillage. Dans les années 1990, le régiment accompagne l’ethnologue **Hurault** pour revisiter les villages Wayana et Boni afin de repositionner certaines bornes et compléter ses études. Ces interactions enrichissent la mission militaire d’une dimension humaine et anthropologique.
+
+**À retenir (cartel)**
+- La jungle est habitée par des communautés diverses et attachantes.
+- La mission militaire inclut l’aide médicale, le transport et le dialogue culturel.
+- La collaboration avec les chercheurs renforce la connaissance du territoire.
+
+────────────────────────────
+BLOC 5 — Expédition Maufrais (2023)
+────────────────────────────
+**Texte :**
+En 2023, quatre sous‑lieutenants de l’École spéciale militaire de Saint‑Cyr ont décidé de rendre hommage à l’explorateur **Raymond Maufrais**, disparu en 1950. Sans autre expérience que leur stage de survie, ils ont traversé la Guyane d’ouest en est, de **Maripasoula** à **Camopi**, en **vingt‑et‑un jours**. Leur périple combinait **pirogue**, marche et **kayak gonflable** et fut réalisé avec l’appui du **9e RIMa**. Sur le **sentier des Émerillons**, ils ont installé une **plaque commémorative** à l’endroit où Maufrais aurait disparu. Cette aventure illustre l’endurance et l’esprit d’initiative de jeunes officiers qui perpétuent la mémoire des anciens tout en se préparant aux défis de la jungle.
+
+**À retenir (cartel)**
+- Quatre sous‑lieutenants de Saint‑Cyr traversent la Guyane en 21 jours en 2023.
+- Le trajet, de Maripasoula à Camopi, combine pirogue, marche et kayak.
+- Une plaque est posée en hommage à Raymond Maufrais sur le sentier des Émerillons.
+- Le 9e RIMa appuie l’expédition, témoignant de la continuité entre passé et présent.
+
+────────────────────────────
+TIMELINE (7 repères)
+────────────────────────────
+- **1977 : Missions vers les bornes 5 et 2** — première tentative de balisage de la frontière.
+- **1980 : Ouverture de pistes vers les bornes** — début des travaux de débroussaillage et d’installation de BOA.
+- **1994–1995 : Missions Hurault** — accompagnement de l’ethnologue pour revisiter les bornes et étudier les peuples Boni et Wayana.
+- **1996 : Réoccupation de Maripasoula** — relance des expéditions dans le sud profond.
+- **2023 : Expédition Maufrais** — quatre sous‑lieutenants de Saint‑Cyr traversent la Guyane en 21 jours, posant une plaque en hommage à Raymond Maufrais et bénéficiant de l’appui du 9e RIMa.
+- **Années 2000 : Intégration de la lutte contre l’orpaillage** — missions combinées avec le CRAJ et les gendarmes.
+- **Années 2010 : Coopérations transfrontalières** — patrouilles conjointes avec le Brésil et le Suriname pour entretenir les bornes.
+
+────────────────────────────
+GLOSSAIRE
+────────────────────────────
+**Carbet** : abri en bois sur pilotis utilisé comme logement ou lieu de repos dans la forêt.
+**Topofil** : fil de nylon enroulé sur une bobine utilisé pour mesurer des distances et conserver un azimut.
+**BOA (base opérationnelle avancée)** : campement temporaire aménagé en forêt lors des expéditions.
+**Borne frontière** : repère matérialisant la limite territoriale entre la Guyane et le Brésil, numéroté et entretenu par les forces françaises.
+**Hurault** : ethnologue spécialiste des peuples amérindiens qui collabora avec le 9e RIMa pour revisiter certaines bornes dans les années 1990.
+
+────────────────────────────
+QUIZ (4 questions)
+────────────────────────────
+1. Quel instrument simple les marsouins utilisent‑ils pour mesurer la distance parcourue en forêt ?
+   A) Un podomètre GPS
+   B) Un topofil
+   C) Une corde d’escalade
+   D) Une boussole solaire
+
+2. Quelle mission de 1977 a partiellement réussi en atteignant la borne 2 mais pas la borne 5 ?
+   A) Expédition Hurault
+   B) Mission de la CRAJ
+   C) Mission de balisage vers les bornes frontière
+   D) Patrouille fluviale vers Charvein
+
+3. Comment appelle‑t‑on les abris temporaires construits en forêt par les marsouins ?
+   A) BOA
+   B) Pagodes
+   C) Burettes
+   D) Pagodes
+
+4. Quelle communauté figure parmi les peuples rencontrés par les marsouins en jungle ?
+   A) Les Touaregs
+   B) Les Bushinengue (Busshnégros)
+   C) Les Samis
+   D) Les Masaï
+
+────────────────────────────
+CONCLUSION / TRANSITION
+────────────────────────────
+La jungle guyanaise est un monde à part. Elle soumet les soldats à des épreuves physiques et morales tout en les enrichissant par le contact avec les peuples de la forêt. Après cette immersion, le visiteur est invité à découvrir la page **International**, qui montre comment le 9e RIMa s’ouvre au monde en coopérant avec ses voisins et en participant à des missions à l’étranger.
