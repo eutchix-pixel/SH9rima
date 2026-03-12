@@ -611,12 +611,12 @@ export default function TraditionsDrapeauPage() {
                     <Layers className="mr-2 h-3.5 w-3.5" /> Thèmes
                   </Button>
                 </Link>
-                <Link href="/#traditions">
+                <Link href="/traditions/insignes">
                   <Button
                     className="bg-[#6b1a2a] text-white hover:bg-[#3d0d18] px-6 py-5 text-xs rounded-lg shadow-lg shadow-[#6b1a2a]/20"
                     data-testid="button-continue-visit"
                   >
-                    Continuer la visite <ArrowRight className="ml-2 h-3.5 w-3.5" />
+                    Insignes <ArrowRight className="ml-2 h-3.5 w-3.5" />
                   </Button>
                 </Link>
               </div>

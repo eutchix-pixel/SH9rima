@@ -1,0 +1,132 @@
+
+MASTER PROMPT — REPLIT AI
+Projet : « Museum Tour Guide — 9e RIMa »
+Nouvelle page à créer : TRADITIONS → « Pagode »
+Slug conseillé : `/traditions/pagode`
+
+IMPORTANT
+- Cette page est consacrée à la **Pagode** du 9e RIMa, un petit temple asiatique édifié au quartier Loubère puis déplacé à la Madeleine. Elle sert de lieu de mémoire pour les marsouins et rappelle leur passé en Indochine. Ne pas inventer de rites : se limiter aux éléments documentés dans les sources.
+- Toutes les dates, noms de personnes et symboles doivent être exacts ; ne pas ajouter d’images fantaisistes.
+
+OBJECTIF VISITEUR
+Offrir aux visiteurs une immersion dans le patrimoine immatériel du régiment à travers la Pagode. Expliquer son origine, sa symbolique, son rôle dans les cérémonies (fête du régiment le 10 mars, commémoration de Bazeilles, hommage aux héros). Montrer comment ce lieu incarne la continuité entre le Tonkin et la Guyane.
+
+À FAIRE DANS L’APP
+1) **Placement** : onglet **Pagode** dans la section **Traditions**, après « Insignes » et avant « Chant ».
+2) **UX / UI**
+   - **HERO** : panorama de la Pagode reconstituée au quartier de La Madeleine, au coucher du soleil. Inclure une question en surimpression du type : « Pourquoi une pagode au cœur d’un régiment de marine ? »
+   - **Modes** : « Histoire » (construction et origine de la pagode), « Cérémonies » (récits des prises d’armes et de la fête du régiment), « Symboles » (analogie avec l’Asie, explications sur les objets exposés).
+   - **Navigation** : permettre de cliquer sur des éléments de la pagode (autel, toit en pagode, stèles) pour obtenir des infobulles contextuelles (nom des héros, signification de l’autel).
+   - **Timeline** : 4 repères (création du 9e RIC en 1890, construction de la pagode à Cayenne après 1976, transfert au quartier de La Madeleine en 2012, fête annuelle le 10 mars). Afficher sous forme de frise animée.
+   - **Carte interactive** : placer la pagode sur un plan du quartier Loubère puis sur celui de La Madeleine pour montrer son déplacement. Ajouter un bouton pour passer de l’un à l’autre.
+   - **Mini‑quiz** : 3 questions sur la signification de la pagode et son lien avec le passé du régiment.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Traditions — Pagode
+
+SOUS‑TITRE (H2)
+Un temple asiatique au cœur de Cayenne : symbole vivant de l’histoire et de l’âme du 9e RIMa.
+
+QUESTION DIRECTRICE
+Pourquoi le 9e Régiment d’infanterie de marine conserve‑t‑il une pagode dans son quartier et que raconte‑t‑elle sur ses origines et ses traditions ?
+
+ENCADRÉ « REPÈRES »
+• **1890 :** création du **9e régiment d’infanterie de marine** (9e RIC) au Tonkin, en Indochine. Ses marsouins combattent en Cochinchine et à **Bazeilles** et se familiarisent avec l’architecture asiatique.
+• **1976 :** recréation du régiment en Guyane. Pour rappeler son passé indochinois, l’insigne du 9e BIMa comporte deux tamanoirs pour symboliser Cayenne et **une pagode pour rappeler son glorieux passé et sa vaillance**.
+• **Années 1980 :** construction d’une réplique de pagode au **quartier Loubère** à Cayenne. Elle sert de lieu de recueillement et de décor pour la fête du régiment.
+• **10 mars :** chaque année, le régiment célèbre son anniversaire avec une **prise d’armes et une soirée de prestige** dans un décor de pagode, rappelant les tirailleurs tonkinois et les jeunes années du régiment.
+
+BOUTONS
+- Histoire (5 min)
+- Cérémonies (10 min)
+- Symboles (5 min)
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+Bien avant d’arriver en Guyane, le 9e Régiment d’infanterie de marine naît au Tonkin et combat en Asie. Lors de sa recréation en Guyane en **1976**, ses marsouins choisissent de conserver ce lien oriental. L’insigne du régiment associe ainsi deux tamanoirs, animaux emblématiques de Cayenne, à une **pagode** pour rappeler leur passé glorieux. Rapidement, les marsouins édifient au quartier Loubère une **réplique de pagode**, véritable lieu de mémoire. C’est là que se déroulent les cérémonies : la **fête du régiment le 10 mars**, qui associe prise d’armes et soirée de prestige avec décor asiatique, mais aussi les commémorations de Bazeilles. En 2012, la pagode est déplacée au nouveau quartier de **La Madeleine**. Aujourd’hui encore, elle raconte l’histoire des marsouins, de **Tonkin à la Guyane**, et sert de point d’ancrage aux traditions.
+
+────────────────────────────
+BLOC 1 — Origines de la pagode et lien avec le Tonkin
+────────────────────────────
+**Texte :**
+À la fin du XIXᵉ siècle, le 9e RIC combat en **Indochine**. Ses marsouins participent à l’occupation du **Tonkin**, patrouillent sur le fleuve Rouge et s’imprègnent des paysages et des temples asiatiques. Quand le régiment est dissous après l’Algérie et recréé en **Guyane** en **1976**, les anciens souhaitent conserver ce patrimoine. C’est pourquoi l’insigne adopté par le **9e BIMa** représente deux tamanoirs encadrant **une pagode**. Ce symbole manifeste la continuité entre l’Indochine et l’Amazonie : il rappelle les campagnes anciennes tout en s’ancrant dans le nouvel environnement guyanais.
+
+**À retenir (cartel)**
+- La pagode figure sur l’insigne pour rappeler l’héritage indochinois et la vaillance des marsouins.
+- La continuité entre **Tonkin** et **Guyane** est au cœur de l’identité du régiment.
+
+────────────────────────────
+BLOC 2 — La construction de la pagode à Cayenne
+────────────────────────────
+**Texte :**
+Au début des années 1980, les marsouins du quartier **Loubère** décident de donner corps au symbole. Ils construisent, avec l’aide de charpentiers locaux, une **réplique de pagode** au sein de la caserne. Le bâtiment en bois peint, coiffé d’un toit oriental et orné de lanternes, abrite un autel sur lequel sont gravés les noms de **Carli, Berthelin et Journet**, héros du régiment. La pagode devient un lieu de recueillement : on y vient saluer les anciens avant les missions. Elle sert aussi de cadre aux cérémonies du **10 mars**, l’anniversaire de la création du 9e RIC. Une partie de la caserne est décorée à la manière des villages tonkinois afin de plonger les visiteurs dans l’ambiance d’Asie.
+
+**À retenir (cartel)**
+- La pagode de Loubère est construite par les marsouins eux‑mêmes comme symbole vivant.
+- Elle abrite un autel portant les noms des héros du régiment et sert de lieu de mémoire.
+- Son décor tonkinois plonge les visiteurs au cœur des traditions marines.
+
+────────────────────────────
+BLOC 3 — Cérémonies et fêtes régimentaires
+────────────────────────────
+**Texte :**
+Chaque **10 mars**, le régiment célèbre son anniversaire. La cérémonie associe une **prise d’armes**, au cours de laquelle le drapeau est présenté et les nouvelles recrues prêtent serment, à une **soirée de prestige**. Pour cette fête, la cour du quartier est transformée : une pagode est montée comme décor, des silhouettes de **tirailleurs tonkinois** défilent et des danseuses asiatiques rappellent la nostalgie des jeunes années. Les marsouins portent leurs tenues d’époque et chantent le chant du régiment. Ces moments renforcent la cohésion et transmettent aux nouvelles générations l’esprit du 9e.
+
+**À retenir (cartel)**
+- La fête du 10 mars associe prise d’armes et soirée de prestige dans un décor asiatique.
+- Tirailleurs tonkinois et danseuses viennent rappeler les origines du régiment.
+- Ces cérémonies renforcent la cohésion et la transmission des traditions.
+
+────────────────────────────
+BLOC 4 — Transfert à la Madeleine et maintien des traditions
+────────────────────────────
+**Texte :**
+En **2012**, l’état‑major et les compagnies permanentes quittent le **quartier Loubère** pour s’installer sur le site de **La Madeleine**. La pagode est démontée puis reconstruite à l’identique dans ce nouveau quartier. Cette opération symbolise la volonté de perpétuer les traditions malgré les déménagements. La pagode continue d’accueillir des cérémonies (prise d’armes, célébration de **Bazeilles** le 31 août – 1ᵉʳ septembre) et reste un lieu de mémoire accessible aux familles et aux visiteurs. Elle témoigne de l’ancrage du régiment en Guyane et de son attachement à ses racines.
+
+**À retenir (cartel)**
+- La pagode est transférée au quartier de La Madeleine en 2012.
+- Malgré le déménagement, elle conserve son rôle de lieu de mémoire et de cérémonies.
+- Elle symbolise l’adaptation du régiment tout en préservant ses traditions.
+
+────────────────────────────
+TIMELINE (4 repères)
+────────────────────────────
+- **1890 : Création du 9e RIC** — naissance des traditions asiatiques du régiment.
+- **1976 : Recréation en Guyane et adoption de l’insigne avec la pagode**.
+- **Années 1980 : Construction de la pagode au quartier Loubère**.
+- **2012 : Transfert de la pagode au quartier de La Madeleine**.
+
+────────────────────────────
+GLOSSAIRE
+────────────────────────────
+**Pagode** : temple bouddhiste ou taoïste d’Asie, ici répliqué à Cayenne pour rappeler le passé du 9e RIC.
+**Tirailleur tonkinois** : soldat vietnamien servant dans l’infanterie coloniale française au Tonkin, figuré lors des fêtes régimentaires.
+**Prise d’armes** : cérémonie militaire où l’on présente le drapeau et où les troupes défilent.
+**Bazeilles** : village des Ardennes où les marsouins se battent en 1870, commémoré chaque 31 août – 1ᵉʳ septembre.
+**La Madeleine** : nouveau quartier du 9e RIMa à Cayenne, inauguré en 2012, où la pagode a été reconstruite.
+
+────────────────────────────
+QUIZ (3 questions)
+────────────────────────────
+1. Pourquoi l’insigne du 9e RIMa comporte‑t‑il une pagode ?
+   A) Pour représenter l’orpaillage en Guyane
+   B) Pour rappeler le passé indochinois du régiment et sa vaillance
+   C) Pour symboliser la jungle amazonienne
+   D) Pour décorer le quartier
+
+2. Quelle date marque la fête annuelle du régiment célébrée dans un décor de pagode ?
+   A) 14 juillet
+   B) 10 mars
+   C) 11 novembre
+   D) 1ᵉʳ mai
+
+3. Où se trouve aujourd’hui la pagode du 9e RIMa ?
+   A) Au quartier Loubère
+   B) Dans la jungle au bord du Maroni
+   C) Au quartier de La Madeleine, après son transfert en 2012
+   D) À Fort‑de‑France

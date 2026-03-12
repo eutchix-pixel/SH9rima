@@ -1,0 +1,137 @@
+
+MASTER PROMPT — REPLIT AI
+Projet : « Museum Tour Guide — 9e RIMa »
+Nouvelle page à créer : TRADITIONS → « Esprit du 9 »
+Slug conseillé : `/traditions/esprit`
+
+IMPORTANT
+- Cette page expose l’**esprit du 9e RIMa** : ses valeurs, sa devise, la diversité de ses soldats et l’importance des cérémonies comme Bazeilles et la fête régimentaire. Ne pas inventer de traditions : se baser sur les sources disponibles.
+- Souligner la devise « Marsouin toujours ! », la fête de Bazeilles et la diversité des hommes et des missions. Éviter toute description caricaturale.
+
+OBJECTIF VISITEUR
+Faire comprendre ce qui unit les marsouins du 9e RIMa au‑delà des générations : leurs valeurs de courage, de solidarité, d’adaptabilité et de respect des traditions. Mettre en avant la diversité de leurs origines et l’influence de l’histoire (Tonkin, Algérie, Guyane) sur l’identité régimentaire.
+
+À FAIRE DANS L’APP
+1) **Placement** : dernier onglet de la section **Traditions**, après « Chant ».
+2) **UX / UI**
+   - **HERO** : mosaïque de portraits de marsouins de différentes origines (métropole, Antilles, Océan Indien, Outre‑mer), superposée à la devise « Marsouin toujours ! » et à une carte reliant Tonkin et Guyane.
+   - **Modes** : « Valeurs » (présenter la devise et les valeurs), « Diversité » (organigramme et origines des soldats), « Cérémonies » (Bazeilles, fête du régiment, traditions), « Patrimoine vivant » (témoignages de marsouins, rôle des anciens).
+   - **Infographie interactive** : montrer l’organigramme du régiment (CCL, compagnie jungle, compagnie fluviale, réserve et EM) pour comprendre ses structures et missions.
+   - **Timeline** : repères clés comme la devise adoptée en 1890, la célébration de Bazeilles en 1870, la recréation en Guyane en 1976 et la fête de Bazeilles aujourd’hui.
+   - **Mini‑quiz** : 3 questions sur la devise, les valeurs et les cérémonies.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Traditions — Esprit du 9
+
+SOUS‑TITRE (H2)
+Marsouin toujours : valeurs et diversité au cœur du 9e RIMa.
+
+QUESTION DIRECTRICE
+Qu’est‑ce qui constitue l’esprit du 9e RIMa et comment les traditions, la devise et la diversité des marsouins façonnent‑elles l’identité du régiment ?
+
+ENCADRÉ « REPÈRES »
+• **Devise :** « Marsouin toujours ! » — la devise officielle du 9e RIMa, héritée du 9e RIC, rappelle la fidélité et la persévérance des troupes de marine.
+• **Bazeilles (31 août – 1ᵉʳ septembre 1870)** : bataille emblématique durant laquelle les marsouins combattent avec bravoure contre les Prussiens. Elle est commémorée chaque année par les troupes de marine.
+• **1976 :** recréation du 9e BIMa en Guyane. Loin de la métropole, le régiment développe une culture de la débrouillardise et de la solidarité entre métropolitains et Ultramarins.
+• **Diversité :** le 9e RIMa accueille des soldats de toutes origines et de toutes spécialités. L’organigramme comprend une compagnie commandement et logistique, une compagnie jungle, une compagnie fluviale, une compagnie réserve et un état‑major. Cette diversité reflète l’adaptabilité du régiment.
+
+BOUTONS
+- Valeurs (5 min)
+- Diversité (5 min)
+- Cérémonies (7 min)
+- Patrimoine vivant (5 min)
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+L’esprit du 9e RIMa repose sur une devise simple mais puissante : **« Marsouin toujours ! »**. Cette phrase rappelle la fidélité et la persévérance des soldats des troupes de marine. Héritier du 9e RIC, le régiment s’est forgé une identité dans les campagnes d’Extrême‑Orient, en Algérie et aujourd’hui en Guyane. Chaque année, les marsouins commémorent la bataille de **Bazeilles** et leur fête régimentaire du 10 mars avec des cérémonies riches en symboles. Mais l’esprit du 9e ne se limite pas au passé : il vit au quotidien dans la diversité de ses hommes (métropolitains, Antillais, Mahorais, Polynésiens, Surinamais) et dans ses structures adaptées à la jungle (compagnie fluviale, compagnie jungle, compagnie réserve). Cohésion, courage, adaptation au milieu amazonien et respect des anciens sont les piliers de cet esprit. Il inspire les marsouins engagés dans les opérations Harpie, Titan et les missions internationales.
+
+────────────────────────────
+BLOC 1 — La devise et les valeurs fondamentales
+────────────────────────────
+**Texte :**
+La devise **« Marsouin toujours ! »** résume l’esprit du 9e RIMa. Adoptée par le 9e RIC au XIXᵉ siècle et conservée après la recréation en Guyane, elle rappelle la fidélité et la pugnacité des marsouins. Elle se décline en valeurs : **courage** face aux combats et aux contraintes de la jungle, **solidarité** entre les hommes quelles que soient leurs origines, **sens du service** et **ouverture sur le monde**. À chaque prise d’armes, le drapeau est présenté et la devise est scandée, soulignant l’attachement à l’institution. Les marsouins adoptent également la devise des troupes de marine : « Et au nom de Dieu, vive la coloniale ! », cri de ralliement traditionnel depuis Bazeilles.
+
+**À retenir (cartel)**
+- La devise « Marsouin toujours ! » symbolise fidélité et persévérance.
+- Le courage, la solidarité et l’ouverture sont les valeurs clés du 9e RIMa.
+- Les cérémonies régimentaires sont l’occasion de rappeler ces valeurs.
+
+────────────────────────────
+BLOC 2 — Diversité des structures et des hommes
+────────────────────────────
+**Texte :**
+Le 9e RIMa est un régiment singulier par la diversité de ses **missions** et de ses **hommes**. Son organigramme se compose d’une **compagnie commandement et logistique (CCL)**, chargée des transmissions et de la logistique, d’une **compagnie jungle**, spécialisée dans le combat en forêt équatoriale, d’une **compagnie fluviale**, experte dans la navigation des pirogues sur le Maroni et l’Oyapock, d’une **compagnie de réserve** et d’un **état‑major**. Cette pluralité de compétences reflète la polyvalence nécessaire en Guyane. Les effectifs rassemblent des marsouins originaires de métropole mais aussi de **Guyane**, des **Antilles**, de **La Réunion**, de **Mayotte** et du **Pacifique**. Chaque culture apporte sa richesse, mais l’uniforme et la devise les unissent.
+
+**À retenir (cartel)**
+- Les structures du régiment sont variées : CCL, compagnie jungle, compagnie fluviale, compagnie réserve.
+- Les marsouins viennent de métropole et d’outre‑mer, reflétant la diversité de la France et de la Guyane.
+- Cette diversité est une force pour les missions en jungle et sur les fleuves.
+
+────────────────────────────
+BLOC 3 — Cérémonies et mémoire collective
+────────────────────────────
+**Texte :**
+Les marsouins entretiennent leur esprit de corps à travers des **cérémonies** régulières. Les plus marquantes sont :
+• **Bazeilles** : le 31 août et le 1ᵉʳ septembre, les troupes de marine commémorent la défense héroïque du village de Bazeilles en 1870. Le 9e RIMa organise une prise d’armes où l’ordre du jour du colonel de Liniers est lu et où la devise « Et au nom de Dieu, vive la coloniale ! » est proclamée.
+• **Fête du régiment** (10 mars) : anniversaire de la création du 9e RIC en 1890 et date de recréation du 9e BIMa en 1976. La cérémonie se déroule devant la **pagode**, avec remise de décorations et repas de cohésion.
+• **Baptêmes de promotions** : les jeunes marsouins reçoivent leur fourragère ou leur képi lors de cérémonies où les anciens témoignent. Les noms de **Carli, Berthelin et Journet** sont rappelés pour inspirer les nouvelles générations.
+Ces moments solennels entretiennent la mémoire et renforcent l’esprit du 9e.
+
+**À retenir (cartel)**
+- Bazeilles et la fête du régiment sont les cérémonies phares.
+- Les ordres du jour et la devise sont proclamés chaque année.
+- Les baptêmes de promotions renforcent la transmission intergénérationnelle.
+
+────────────────────────────
+BLOC 4 — L’esprit du 9 aujourd’hui et demain
+────────────────────────────
+**Texte :**
+Si les traditions du 9e RIMa s’enracinent dans le passé, elles s’expriment aussi dans les missions actuelles. Les marsouins sont engagés au quotidien dans **l’opération Harpie** contre l’orpaillage illégal, dans **l’opération Titan** pour protéger le Centre spatial guyanais, et dans des missions internationales. Ces défis exigent de l’adaptation, de l’innovation et un fort esprit d’équipe. La diversité des origines enrichit le régiment : les musiques créoles ou polynésiennes résonnent au mess, tandis que le créole, le français et le sranan tongo se mêlent. L’esprit du 9 est donc un mélange de **tradition et de modernité**, nourri par l’histoire et ouvert sur l’avenir.
+
+**À retenir (cartel)**
+- Les marsouins poursuivent leur engagement dans Harpie, Titan et les missions internationales.
+- La diversité culturelle enrichit le régiment et renforce sa cohésion.
+- L’esprit du 9 associe tradition et modernité, passé et futur.
+
+────────────────────────────
+TIMELINE (4 repères)
+────────────────────────────
+- **1890 : Adoption de la devise « Marsouin toujours ! »** et création du 9e RIC.
+- **1870 : Bataille de Bazeilles** — événement fondateur commémoré chaque année.
+- **1976 : Recréation du régiment en Guyane** et adaptation aux missions amazoniennes.
+- **Aujourd’hui : Engagement dans Harpie, Titan et missions internationales** — l’esprit du 9 se projette vers l’avenir.
+
+────────────────────────────
+GLOSSAIRE
+────────────────────────────
+**Marsouin** : surnom des soldats des troupes de marine, symbolisant leur lien avec la mer et leur capacité à servir outre‑mer.
+**Devise** : phrase résumant la philosophie du régiment. « Marsouin toujours ! » est celle du 9e RIMa.
+**Bazeilles** : village ardennais où les troupes de marine se distinguèrent en 1870 et qu’elles commémorent chaque année.
+**Diversité** : mélange des origines et des spécialités qui composent le régiment (métropole, DOM‑TOM, spécialistes jungle, fluvial, réserve).
+**Harpie / Titan** : opérations menées en Guyane contre l’orpaillage illégal (Harpie) et pour sécuriser le Centre spatial (Titan).
+
+────────────────────────────
+QUIZ (3 questions)
+────────────────────────────
+1. Quelle est la devise officielle du 9e RIMa ?
+   A) « Toujours prêts ! »
+   B) « Marsouin toujours ! »
+   C) « Semper fidelis »
+   D) « Par la foi et la force »
+
+2. Quelle cérémonie du 9e RIMa commémore la bataille de Bazeilles ?
+   A) La fête du 14 juillet
+   B) La fête de Bazeilles les 31 août et 1ᵉʳ septembre
+   C) Noël des enfants
+   D) La prise d’armes de la Madeleine
+
+3. Quelle est la particularité de la composition humaine du 9e RIMa ?
+   A) Il est exclusivement composé de métropolitains
+   B) Il rassemble des marsouins issus de métropole et d’outre‑mer, avec des compagnies spécialisées (jungle, fluvial, réserve)
+   C) Il ne compte que des réservistes
+   D) Il se compose uniquement d’officiers mariniers

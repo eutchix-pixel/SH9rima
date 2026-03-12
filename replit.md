@@ -42,6 +42,11 @@ Preferred communication style: Simple, everyday language.
   - `client/src/lib/guyane-harpie-data.ts` — Guyane Harpie content (timeline, blocs, glossary, MCQ quiz)
   - `client/src/lib/guyane-titan-data.ts` — Guyane Titan content (timeline, blocs, glossary, MCQ quiz)
   - `client/src/lib/traditions-drapeau-data.ts` — Traditions Drapeau content (timeline, blocs, glossary, MCQ quiz)
+  - `client/src/lib/traditions-insignes-data.ts` — Traditions Insignes content (timeline, blocs, glossary, MCQ quiz)
+  - `client/src/lib/traditions-pagode-data.ts` — Traditions Pagode content (timeline, blocs, glossary, MCQ quiz)
+  - `client/src/lib/traditions-chant-data.ts` — Traditions Chant content (timeline, blocs, glossary, MCQ quiz)
+  - `client/src/lib/traditions-esprit-data.ts` — Traditions Esprit du 9 content (timeline, blocs, glossary, MCQ quiz)
+  - `client/src/pages/traditions/TraditionsPageTemplate.tsx` — Shared template component for all Traditions pages
 - Each content page has multiple reading modes: "Essential (5 min)", "Full Visit (20-30 min)", "Archives (deep reading)"
 - Pages feature: interactive timelines, accordion sections, image galleries with placeholders, glossaries, mini-quizzes
 
@@ -67,6 +72,10 @@ Preferred communication style: Simple, everyday language.
 - **Guyane/Harpie** (`/guyane/harpie`) — Operation Harpie (2008-present): illegal gold mining, interagency response, CRAJ infiltrations, results and evolution
 - **Guyane/Titan** (`/guyane/titan`) — Operation Titan: securing the CSG (Centre Spatial Guyanais), launch-day operations, QRF, anti-drone evolution
 - **Traditions/Drapeau** (`/traditions/drapeau`) — The regimental flag: origins (1831), Bazeilles, Crimea, WWI decorations, 1992 transfer to Guyane, Carli/Berthelin/Journet
+- **Traditions/Insignes** (`/traditions/insignes`) — Regimental insignia evolution: 9e RIC (1956), 9e BIMa (1976, Desmottes), 9e RIMa (1992)
+- **Traditions/Pagode** (`/traditions/pagode`) — The Pagode: Tonkin origins, Loubère construction, 10 mars ceremonies, 2012 transfer to La Madeleine
+- **Traditions/Chant** (`/traditions/chant`) — Regimental anthem (1996, Athéo/Sauvin) and "Soldats bleus" poem (1909, Gazel)
+- **Traditions/Esprit** (`/traditions/esprit`) — Spirit of the 9: "Marsouin toujours!" motto, Bazeilles, diversity, current operations
 - **AI Assistant** (`/ai-assistant`) — Chat-style assistant (currently client-side simulation using museum data)
 
 ### Backend (Express)

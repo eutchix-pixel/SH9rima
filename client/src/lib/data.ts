@@ -83,10 +83,10 @@ export const museumData: Section[] = [
     bgImage: "/images/bg-traditions.png",
     subsections: [
       { id: "traditions-drapeau", title: "Drapeau", image: "/images/placeholder.png", content: "L'histoire et les décorations du drapeau...", link: "/traditions/drapeau" },
-      { id: "traditions-insignes", title: "Insignes", image: "/images/placeholder.png", content: "La symbolique de l'insigne du régiment..." },
-      { id: "traditions-pagode", title: "Pagode", image: "/images/placeholder.png", content: "La Pagode, lieu de mémoire et de tradition..." },
-      { id: "traditions-chant", title: "Chant", image: "/images/placeholder.png", content: "Les chants de marche et de bivouac..." },
-      { id: "traditions-esprit", title: "Esprit du 9", image: "/images/placeholder.png", content: "Ce qui fait l'âme du régiment..." }
+      { id: "traditions-insignes", title: "Insignes", image: "/images/placeholder.png", content: "La symbolique de l'insigne du régiment...", link: "/traditions/insignes" },
+      { id: "traditions-pagode", title: "Pagode", image: "/images/placeholder.png", content: "La Pagode, lieu de mémoire et de tradition...", link: "/traditions/pagode" },
+      { id: "traditions-chant", title: "Chant", image: "/images/placeholder.png", content: "Les chants de marche et de bivouac...", link: "/traditions/chant" },
+      { id: "traditions-esprit", title: "Esprit du 9", image: "/images/placeholder.png", content: "Ce qui fait l'âme du régiment...", link: "/traditions/esprit" }
     ]
   }
 ];

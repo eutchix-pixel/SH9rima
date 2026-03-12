@@ -1,0 +1,140 @@
+
+MASTER PROMPT — REPLIT AI
+Projet : « Museum Tour Guide — 9e RIMa »
+Nouvelle page à créer : TRADITIONS → « Chant du régiment »
+Slug conseillé : `/traditions/chant`
+
+IMPORTANT
+- Cette page présente le **chant du 9e RIMa**, créé en 1996. Ne pas inventer de couplets ou de paroles : utiliser ceux retranscrits dans les sources disponibles. Mentionner l’origine polynésienne de la musique et les co‑auteurs des paroles.
+- Inclure également le poème « Soldats bleus » de 1909 et rappeler le rôle des chants et poèmes dans la cohésion du régiment. Ne pas modifier les textes.
+
+OBJECTIF VISITEUR
+Comprendre le rôle du chant dans la vie du régiment : comment il forge l’esprit de corps, rappelle les campagnes du 9e de marine et unit les générations de marsouins. Offrir la possibilité d’écouter le chant et de lire ses paroles traduites.
+
+À FAIRE DANS L’APP
+1) **Placement** : onglet **Chant** dans la section **Traditions**, après « Pagode » et avant « Esprit du 9 ».
+2) **UX / UI**
+   - **HERO** : photographie d’un piquet d’honneur chantant devant le drapeau, avec une question comme « Du Tonkin à la Guyane : que raconte le chant du 9e RIMa ? »
+   - **Modes** : « Paroles & musique » (afficher les couplets et écouter le chant), « Origines » (contexte de création en 1996, auteurs, inspirations), « Poème Soldats bleus » (poème de Louis Gazel écrit en 1909 à Hanoï), « Rôle dans la cohésion » (importance des chants dans la vie quotidienne).
+   - **Audio** : intégrer un lecteur audio avec l’enregistrement du chant et un karaoké synchronisé sur les paroles. Permettre d’activer une traduction en créole.
+   - **Timeline** : repérer la création du chant en 1996, la rédaction du poème en 1909, et les grandes campagnes évoquées dans les paroles (Tonkin, Maroni, missions Harpie). Utiliser une frise déroulante interactive.
+   - **Mini‑quiz** : 3 questions sur l’origine du chant et ses références.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Traditions — Chant du régiment
+
+SOUS‑TITRE (H2)
+Un hymne qui relie les marsouins, d’Hanoï à Cayenne.
+
+QUESTION DIRECTRICE
+Comment le chant du 9e RIMa raconte‑t‑il l’histoire du régiment et participe‑t‑il à la cohésion des marsouins ?
+
+ENCADRÉ « REPÈRES »
+• **1909 :** le caporal **Louis Gazel**, en garnison à Hanoï, écrit le poème **« Soldats bleus »**, première évocation poétique de l’esprit marsouin. Ce texte célèbre la camaraderie et la fidélité des « marsouins bleus », surnom donné aux soldats coloniaux.
+• **1996 :** le lieutenant‑colonel **Turpin** lance la création du **chant du régiment**. La musique, d’inspiration polynésienne, est composée par l’adjudant **Athéo** et les paroles sont écrites par Athéo avec le capitaine **Sauvin**, alors chef de la 1ᵉʳᵉ compagnie. Les couplets évoquent le **Tonkin**, le **Maroni**, les missions et la devise du régiment.
+• **1996** (suite) : le refrain met en avant l’**ancre d’or du chiffre neuf**, symbole du régiment, et la référence aux missions de **trijonction à borne six** dans la jungle amazonienne.
+• **Aujourd’hui :** le chant est entonné lors de chaque prise d’armes, des départs en mission et des cérémonies. Il renforce la cohésion et perpétue le souvenir des campagnes du régiment. Le poème « Soldats bleus » reste également récité pour rappeler les racines historiques.
+
+BOUTONS
+- Paroles & musique (5 min)
+- Origines (5 min)
+- Poème Soldats bleus (3 min)
+- Rôle dans la cohésion (7 min)
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+Le 9e RIMa entretient une longue tradition de chants et de poèmes. En **1909**, le caporal **Louis Gazel** compose à Hanoï le poème **« Soldats bleus »**, véritable déclaration d’amour aux marsouins, célébrant leur fidélité et leur camaraderie. Presque un siècle plus tard, en **1996**, le lieutenant‑colonel **Turpin** commande un **chant officiel** pour le régiment. L’adjudant **Athéo** compose une musique polynésienne et, avec le capitaine **Sauvin**, écrit des paroles qui relient les lieux de mémoire : « Du Tonkin à la Guyane, de Hanoï à l’île Cayenne… », « Sur les jonques du fleuve Rouge aux pirogues du Maroni ». Le refrain célèbre l’**ancre d’or du chiffre neuf** et les missions de **trijonction à borne six**, rappelant l’engagement des marsouins en Amazonie. Aujourd’hui, ce chant est entonné lors de chaque prise d’armes, départ en opération ou cérémonie. Il renforce la cohésion des soldats et transmet l’esprit du 9e aux nouvelles générations.
+
+────────────────────────────
+BLOC 1 — Les origines du chant et ses auteurs
+────────────────────────────
+**Texte :**
+Dans les années 1990, le 9e RIMa ressent le besoin de se doter d’un hymne fédérateur. Le lieutenant‑colonel **Turpin**, alors chef de corps, confie cette mission à l’adjudant **Athéo**, musicien d’origine polynésienne. Celui‑ci compose une mélodie inspirée des chants traditionnels de Tahiti et écrit les paroles avec le **capitaine Sauvin**, commandant la 1ᵉʳᵉ compagnie. Ils veulent relier le passé indochinois et le présent guyanais. Le premier couplet évoque le voyage des marsouins : « Du Tonkin à la Guyane, de Hanoï à l’île Cayenne ». L’ancre d’or du chiffre neuf, l’emblème du régiment, est célébrée comme fil conducteur du refrain.
+
+**À retenir (cartel)**
+- La musique est composée par l’adjudant Athéo, d’origine polynésienne.
+- Les paroles sont coécrites par Athéo et le capitaine Sauvin en 1996.
+- Le chant relie le Tonkin et la Guyane dans un seul récit.
+
+────────────────────────────
+BLOC 2 — Analyse des paroles
+────────────────────────────
+**Texte :**
+Le chant se compose de plusieurs couplets et refrains. Le **premier couplet** retrace l’itinéraire historique du régiment : **Tonkin**, **Hanoï**, **fleuve Rouge** et **Maroni**, symbolisant le passage des jonques aux pirogues. Le **refrain** rappelle la **devise : « Marsouin toujours ! »** et souligne la place de l’**ancre d’or du chiffre neuf** en terre amazonienne. Le **deuxième couplet** rend hommage aux anciens : « Sur la piste de nos anciens, aujourd’hui nous avançons », et affirme la fierté de servir au 9e de marine. Dans certaines versions, un **troisième couplet** ajoute des références aux missions modernes et à la métropole inconnue, mentionnant l’engagement en Asie et pour **Harpie**.
+
+**Paroles (extrait)**
+| Élément | Paroles |
+|---|---|
+| 1ᵉʳ couplet | Du Tonkin à la Guyane / De Hanoï à l’île Cayenne / Sur les jonques du fleuve Rouge / Aux pirogues du Maroni |
+| Refrain | L’ancre d’or du chiffre neuf / En terre amazonienne / De trijonction à borne six / L’enfer vert du marsouin |
+| 2ᵉ couplet | Sur la piste de nos anciens / Aujourd’hui nous avançons / Nous sommes fiers de servir / Au neuvième de Marine |
+
+**À retenir (cartel)**
+- Les paroles relient les fleuves d’Asie et d’Amazonie.
+- Le refrain met en avant l’ancre et la devise « Marsouin toujours ! ».
+- Le chant évoque la fierté de servir et l’héritage des anciens.
+
+────────────────────────────
+BLOC 3 — Le poème « Soldats bleus »
+────────────────────────────
+**Texte :**
+Le 9e RIMa possède un patrimoine littéraire plus ancien. En **1909**, le caporal **Louis Gazel** rédige à **Hanoï** le poème **« Soldats bleus »**. Il s’adresse à ses camarades marsouins, qu’il surnomme « soldats bleus » en référence à la couleur de leur uniforme. Le poème, écrit en alexandrins, célèbre leur courage, leur esprit fraternel et leur fidélité dans les lointaines garnisons. Transmis de génération en génération, il est souvent récité lors des prises d’armes et fait écho au chant contemporain.
+
+**À retenir (cartel)**
+- « Soldats bleus » est écrit en 1909 par Louis Gazel à Hanoï.
+- Le poème glorifie la camaraderie et la fidélité des marsouins.
+- Il précède et inspire le chant officiel du régiment.
+
+────────────────────────────
+BLOC 4 — Le chant au service de la cohésion
+────────────────────────────
+**Texte :**
+Au 9e RIMa, chanter est bien plus qu’une formalité : c’est un acte de cohésion. Lors des **prises d’armes**, des départs en opération ou des célébrations (Bazeilles, fête régimentaire le 10 mars), les marsouins se rassemblent autour du drapeau et entonnent leur hymne. Ces moments partagés réaffirment l’appartenance au régiment et transmettent les valeurs de courage, de solidarité et d’ouverture. Le chant rappelle que le 9e unit des hommes venus de métropole et d’outre‑mer et qu’il lutte aujourd’hui encore dans la jungle amazonienne. Il est parfois chanté en version créole ou traduite pour inclure les familles locales.
+
+**À retenir (cartel)**
+- Le chant est entonné lors de chaque prise d’armes et départ en mission.
+- Il renforce la cohésion en transmettant les valeurs de courage et de solidarité.
+- Des versions créoles permettent d’inclure les familles et les communautés locales.
+
+────────────────────────────
+TIMELINE (4 repères)
+────────────────────────────
+- **1909 : Rédaction du poème « Soldats bleus »** par Louis Gazel à Hanoï.
+- **1996 : Création du chant officiel** à l’initiative du lieutenant‑colonel Turpin, composition par l’adjudant Athéo, paroles avec le capitaine Sauvin.
+- **1996 : Adoption et première interprétation du chant** lors d’une prise d’armes au quartier Loubère.
+- **Aujourd’hui : Utilisation régulière du chant et du poème** lors des cérémonies et missions.
+
+────────────────────────────
+GLOSSAIRE
+────────────────────────────
+**Marsouin** : surnom des soldats des troupes de marine de l’armée de terre française.
+**Ancre d’or** : symbole des troupes de marine figurant dans l’emblème du 9e RIMa, célébré dans le chant.
+**Trijonction et borne six** : zones frontière dans la forêt amazonienne où se déroulent des missions du régiment, mentionnées dans le refrain.
+**Poème** : texte littéraire souvent récité lors des cérémonies pour transmettre des valeurs.
+**Prise d’armes** : cérémonie militaire au cours de laquelle on chante l’hymne régimentaire et on présente le drapeau.
+
+────────────────────────────
+QUIZ (3 questions)
+────────────────────────────
+1. Qui a composé la musique du chant du 9e RIMa en 1996 ?
+   A) Lieutenant‑colonel Turpin
+   B) Adjudant Athéo
+   C) Capitaine Sauvin
+   D) Louis Gazel
+
+2. Quelle localisation relie le premier couplet du chant ?
+   A) De Cayenne à Fort‑de‑France
+   B) Du Tonkin à la Guyane
+   C) De Paris à Marseille
+   D) Du Maroni à l’Amazone
+
+3. Quel texte poétique plus ancien est toujours récité au 9e RIMa ?
+   A) « La Marseillaise »
+   B) « Soldats bleus » écrit en 1909 par Louis Gazel
+   C) « La Chanson de Craonne »
+   D) « Le Chant des partisans »

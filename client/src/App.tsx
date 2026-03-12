@@ -23,6 +23,10 @@ import GuyaneInternationalPage from "./pages/guyane/GuyaneInternational";
 import GuyaneHarpiePage from "./pages/guyane/GuyaneHarpie";
 import GuyaneTitanPage from "./pages/guyane/GuyaneTitan";
 import TraditionsDrapeauPage from "./pages/traditions/TraditionsDrapeau";
+import TraditionsInsignesPage from "./pages/traditions/TraditionsInsignes";
+import TraditionsPagodePage from "./pages/traditions/TraditionsPagode";
+import TraditionsChantPage from "./pages/traditions/TraditionsChant";
+import TraditionsEspritPage from "./pages/traditions/TraditionsEsprit";
 import ScanPage from "./pages/Scan";
 import NotFound from "./pages/not-found";
 
@@ -53,6 +57,10 @@ function Router() {
         <Route path="/guyane/harpie" component={GuyaneHarpiePage} />
         <Route path="/guyane/titan" component={GuyaneTitanPage} />
         <Route path="/traditions/drapeau" component={TraditionsDrapeauPage} />
+        <Route path="/traditions/insignes" component={TraditionsInsignesPage} />
+        <Route path="/traditions/pagode" component={TraditionsPagodePage} />
+        <Route path="/traditions/chant" component={TraditionsChantPage} />
+        <Route path="/traditions/esprit" component={TraditionsEspritPage} />
         <Route path="/scan" component={ScanPage} />
         <Route component={NotFound} />
       </Switch>
