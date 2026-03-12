@@ -1,0 +1,14 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "yqLbx2HULMCg38lVlzgYv"
+uri = "file://museum-9rima-static-light.tar.gz"
+type = "unspecified"
+title = "Build statique (HTML/CSS/JS sans images) — 367 Ko"
+
+[[outputs]]
+id = "rx8kxCrEDeLctUQdtBBHF"
+uri = "file://museum-9rima-static.tar.gz"
+type = "unspecified"
+title = "Build statique complet (avec images) — 54 Mo"
