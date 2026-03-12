@@ -1,4 +1,5 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
+import { useEffect } from "react";
 import { Layout } from "./components/layout";
 import Home from "./pages/Home";
 import DetailPage from "./pages/Detail";
@@ -30,9 +31,20 @@ import TraditionsEspritPage from "./pages/traditions/TraditionsEsprit";
 import ScanPage from "./pages/Scan";
 import NotFound from "./pages/not-found";
 
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+  return null;
+}
+
 function Router() {
   return (
     <Layout>
+      <ScrollToTop />
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/detail/:id" component={DetailPage} />
