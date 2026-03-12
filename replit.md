@@ -53,7 +53,6 @@ Preferred communication style: Simple, everyday language.
 ### Key Pages
 - **Home** (`/`) — Vertical timeline with era sections, immersive scroll
 - **Scan** (`/scan`) — QR code scanner (currently simulated) that redirects to content by ID
-- **Detail** (`/detail/:id`) — Generic detail page for subsections
 - **Asia/Tonkin** (`/asie/naissance-du-9-tonkin`) — Detailed Tonkin origins page
 - **Asia/China 1900** (`/asie/chine-1900-expedition`) — China expedition page
 - **Asia/Tourmente** (`/asie/tourmente-1940`) — WWII Tonkin page (1940-1946)
@@ -76,7 +75,14 @@ Preferred communication style: Simple, everyday language.
 - **Traditions/Pagode** (`/traditions/pagode`) — The Pagode: Tonkin origins, Loubère construction, 10 mars ceremonies, 2012 transfer to La Madeleine
 - **Traditions/Chant** (`/traditions/chant`) — Regimental anthem (1996, Athéo/Sauvin) and "Soldats bleus" poem (1909, Gazel)
 - **Traditions/Esprit** (`/traditions/esprit`) — Spirit of the 9: "Marsouin toujours!" motto, Bazeilles, diversity, current operations
-- **AI Assistant** (`/ai-assistant`) — Chat-style assistant (currently client-side simulation using museum data)
+### Navigation System
+- **Unified navigation** across all content pages using shared components:
+  - `client/src/lib/navigation.ts` — Central config mapping all pages to their section, prev/next links
+  - `client/src/hooks/usePageNav.ts` — Hook that auto-derives navigation from current route
+  - `client/src/components/PageNavHeader.tsx` — Shared header breadcrumb (`← Prev` | `Section`)
+  - `client/src/components/PageNavFooter.tsx` — Shared footer nav (3 buttons: `← Prev` | `Thèmes` | `Next →`)
+- Section accent colors: Asia=#4a3b2a, Algeria=#6b4c2a, Guyane=#0d6b3d, Traditions=per-page
+- `ScrollToTop` component resets scroll on route change + saves last page to localStorage (`lastVisitedPage`)
 
 ### Backend (Express)
 - **Runtime:** Node.js with Express, using tsx for TypeScript execution
@@ -95,12 +101,15 @@ Preferred communication style: Simple, everyday language.
 ```
 client/               # Frontend React app
   src/
-    components/       # Shared components (layout, maps, artwork cards)
+    components/       # Shared components (layout, maps, artwork cards, PageNavHeader, PageNavFooter)
       ui/             # shadcn/ui components
-    hooks/            # Custom React hooks
-    lib/              # Data files, utilities, context, query client
-    pages/            # Page components (Home, Detail, Scan, AI, etc.)
-      asia/           # Asia-specific content pages
+    hooks/            # Custom React hooks (usePageNav)
+    lib/              # Data files, utilities, context, query client, navigation.ts
+    pages/            # Page components (Home, Scan, etc.)
+      asia/           # Asia content pages (6 pages)
+      algeria/        # Algeria content pages (6 pages)
+      guyane/         # Guyane content pages (8 pages)
+      traditions/     # Traditions content pages (5 pages + TraditionsPageTemplate)
   public/             # Static assets
   index.html          # HTML entry point
 server/               # Express backend

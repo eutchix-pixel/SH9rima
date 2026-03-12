@@ -1,3 +1,6 @@
+import { usePageNav } from "@/hooks/usePageNav";
+import PageNavHeader from "@/components/PageNavHeader";
+import PageNavFooter from "@/components/PageNavFooter";
 import { algeriePalestroData } from "@/lib/algerie-palestro-data";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -47,6 +50,7 @@ const kraftBg = "bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3
 const blocIcons = [Mountain, Crosshair, Newspaper, Landmark];
 
 export default function AlgeriePalestroPage() {
+  const nav = usePageNav()!;
   const [readingMode, setReadingMode] = useState<ReadingMode>('comprendre');
   const { scrollYProgress } = useScroll();
   const [quizAnswers, setQuizAnswers] = useState<Record<number, string>>({});
@@ -82,17 +86,8 @@ export default function AlgeriePalestroPage() {
           </svg>
         </div>
 
-        <div className="flex justify-between items-center absolute top-4 left-4 right-4 z-10">
-          <Link href="/algerie/renaissance">
-            <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#dcb575]/20 text-xs" style={{ fontFamily: "'IBM Plex Mono', monospace" }} data-testid="link-back-renaissance">
-              <ArrowLeft className="mr-2 h-3 w-3" /> RENAISSANCE
-            </Button>
-          </Link>
-          <Link href="/#algerie">
-            <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#dcb575]/20 text-xs" style={{ fontFamily: "'IBM Plex Mono', monospace" }} data-testid="link-back-algerie">
-              ALGÉRIE
-            </Button>
-          </Link>
+        <div className="relative z-10 max-w-5xl mx-auto px-0 pt-0">
+          <PageNavHeader {...nav} lightText={false} />
         </div>
 
         <motion.div
@@ -518,39 +513,7 @@ export default function AlgeriePalestroPage() {
         )}
 
         <FadeInSection>
-          <section className="text-center space-y-8 py-12 border-t border-dashed border-[#4a3b2a]/20">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/algerie/renaissance">
-                <Button
-                  variant="outline"
-                  className="border-[#4a3b2a]/30 text-[#4a3b2a] hover:bg-[#dcb575]/20 px-8 py-6 text-sm"
-                  style={{ fontFamily: "'IBM Plex Mono', monospace" }}
-                  data-testid="button-back-renaissance"
-                >
-                  <ArrowLeft className="mr-2 h-4 w-4" /> Retour Algérie
-                </Button>
-              </Link>
-              <Link href="/#algerie">
-                <Button
-                  variant="outline"
-                  className="border-[#4a3b2a]/30 text-[#4a3b2a] hover:bg-[#dcb575]/20 px-8 py-6 text-sm"
-                  style={{ fontFamily: "'IBM Plex Mono', monospace" }}
-                  data-testid="button-back-themes"
-                >
-                  Revenir aux thèmes
-                </Button>
-              </Link>
-              <Link href="/algerie/contre-insurrection">
-                <Button
-                  className="bg-[#8b0000] text-white hover:bg-[#6b0000] px-8 py-6 text-sm"
-                  style={{ fontFamily: "'IBM Plex Mono', monospace" }}
-                  data-testid="button-continue-visit"
-                >
-                  Contre‑insurrection <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
-          </section>
+          <PageNavFooter {...nav} accent="#6b4c2a" />
         </FadeInSection>
       </div>
     </div>

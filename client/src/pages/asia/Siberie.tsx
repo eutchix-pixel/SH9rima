@@ -1,3 +1,6 @@
+import { usePageNav } from "@/hooks/usePageNav";
+import PageNavHeader from "@/components/PageNavHeader";
+import PageNavFooter from "@/components/PageNavFooter";
 import { siberieData } from "@/lib/siberie-data";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -256,6 +259,7 @@ function TranssiberienMap() {
 }
 
 export default function SiberiePage() {
+  const nav = usePageNav()!;
   const [readingMode, setReadingMode] = useState<ReadingMode>('comprendre');
   const { scrollYProgress } = useScroll();
   const [searchQuery, setSearchQuery] = useState("");
@@ -278,20 +282,8 @@ export default function SiberiePage() {
       <header className="relative pt-12 pb-20 px-6 overflow-hidden bg-[#dcb575]/20 border-b border-[#4a3b2a]/10">
         <div className="absolute inset-0 bg-gradient-to-b from-[#4a3b2a]/5 to-transparent" />
 
-        <div className="flex justify-between items-center absolute top-4 left-4 right-4 z-10">
-          <Link href="/#tonkin">
-            <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#4a3b2a]/10" data-testid="link-back-themes">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Accueil
-            </Button>
-          </Link>
-          <Link href="/asie/tonkin-1901-1914">
-            <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#4a3b2a]/10" data-testid="link-back-asie">
-              <RotateCcw className="mr-2 h-4 w-4" /> Retour ASIE
-            </Button>
-          </Link>
-          <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#4a3b2a]/10" data-testid="link-continue" onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}>
-            Continuer la visite <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+        <div className="absolute top-4 left-4 right-4 z-10">
+          <PageNavHeader {...nav} lightText={false} />
         </div>
 
         <motion.div
@@ -721,30 +713,7 @@ export default function SiberiePage() {
         </FadeInSection>
 
         <FadeInSection>
-          <section className="text-center space-y-8 py-12 border-t-2 border-[#4a3b2a]/10">
-            <motion.div
-              className="w-16 h-1 bg-[#4a3b2a] mx-auto"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            />
-            <p className="font-serif text-xl md:text-2xl font-bold text-[#4a3b2a]">
-              {siberieData.nextStep}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/#tonkin">
-                <Button variant="outline" className="border-[#4a3b2a] text-[#4a3b2a] hover:bg-[#4a3b2a]/10 px-8 py-6 text-lg" data-testid="button-back-themes">
-                  <ArrowLeft className="mr-2 h-5 w-5" /> Revenir aux thèmes
-                </Button>
-              </Link>
-              <Link href="/asie/annees-heureuses">
-                <Button className="bg-[#4a3b2a] text-[#e8dcc5] hover:bg-[#4a3b2a]/90 px-8 py-6 text-lg" data-testid="button-next-heureuses">
-                  Les Années Heureuses <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-            </div>
-          </section>
+          <PageNavFooter {...nav} accent="#4a3b2a" />
         </FadeInSection>
       </div>
     </div>

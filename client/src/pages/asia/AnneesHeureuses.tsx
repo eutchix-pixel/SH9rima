@@ -1,3 +1,6 @@
+import { usePageNav } from "@/hooks/usePageNav";
+import PageNavHeader from "@/components/PageNavHeader";
+import PageNavFooter from "@/components/PageNavFooter";
 import { heureusesData } from "@/lib/heureuses-data";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -53,6 +56,7 @@ function SceneCard({ title, parenthese, index }: { title: string; parenthese: st
 }
 
 export default function AnneesHeureusesPage() {
+  const nav = usePageNav()!;
   const [readingMode, setReadingMode] = useState<ReadingMode>('decouvrir');
   const { scrollYProgress } = useScroll();
 
@@ -67,22 +71,9 @@ export default function AnneesHeureusesPage() {
       <header className="relative pt-12 pb-20 px-6 overflow-hidden bg-[#dcb575]/20 border-b border-[#4a3b2a]/10">
         <div className="absolute inset-0 bg-gradient-to-b from-[#4a3b2a]/5 to-transparent" />
 
-        <div className="flex justify-between items-center absolute top-4 left-4 right-4 z-10">
-          <Link href="/#tonkin">
-            <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#4a3b2a]/10" data-testid="link-back-themes">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Accueil
-            </Button>
-          </Link>
-          <Link href="/asie/siberie-ww1">
-            <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#4a3b2a]/10" data-testid="link-back-asie">
-              <RotateCcw className="mr-2 h-4 w-4" /> Retour ASIE
-            </Button>
-          </Link>
-          <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#4a3b2a]/10" data-testid="link-continue" onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}>
-            Continuer la visite <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+        <div className="absolute top-4 left-4 right-4 z-10">
+          <PageNavHeader {...nav} lightText={false} />
         </div>
-
         <motion.div
           className="max-w-4xl mx-auto space-y-6 pt-10 relative z-10"
           initial={{ opacity: 0, y: 20 }}
@@ -357,25 +348,7 @@ export default function AnneesHeureusesPage() {
         )}
 
         <FadeInSection>
-          <section className="text-center space-y-8 py-12 border-t-2 border-[#4a3b2a]/10">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/asie/siberie-ww1">
-                <Button variant="outline" className="border-[#4a3b2a] text-[#4a3b2a] hover:bg-[#4a3b2a]/10 px-8 py-6 text-lg" data-testid="button-back-siberie">
-                  <ArrowLeft className="mr-2 h-5 w-5" /> Sibérie
-                </Button>
-              </Link>
-              <Link href="/asie/tourmente-1940">
-                <Button className="bg-[#4a3b2a] text-[#e8dcc5] hover:bg-[#4a3b2a]/90 px-8 py-6 text-lg" data-testid="button-next-tourmente">
-                  La Tourmente 1940–1946 <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/#tonkin">
-                <Button variant="outline" className="border-[#4a3b2a] text-[#4a3b2a] hover:bg-[#4a3b2a]/10 px-8 py-6 text-lg" data-testid="button-back-themes">
-                  Revenir aux thèmes
-                </Button>
-              </Link>
-            </div>
-          </section>
+          <PageNavFooter {...nav} accent="#4a3b2a" />
         </FadeInSection>
       </div>
     </div>

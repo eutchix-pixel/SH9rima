@@ -1,3 +1,6 @@
+import { usePageNav } from "@/hooks/usePageNav";
+import PageNavHeader from "@/components/PageNavHeader";
+import PageNavFooter from "@/components/PageNavFooter";
 import { algerieContreInsurrectionData } from "@/lib/algerie-contre-insurrection-data";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -48,6 +51,7 @@ const blocIcons = [HeartHandshake, Landmark, Swords, Scale];
 const blocLabels = ["DOCTRINE", "POLITIQUE", "OFFENSIVE MAJEURE", "TOURNANT"];
 
 export default function AlgerieContreInsurrectionPage() {
+  const nav = usePageNav()!;
   const [readingMode, setReadingMode] = useState<ReadingMode>('comprendre');
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
@@ -89,9 +93,9 @@ export default function AlgerieContreInsurrectionPage() {
           >
             <div className="max-w-5xl mx-auto px-4 h-12 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <Link href="/algerie/palestro">
+                <Link href={nav.prevLink}>
                   <button className="text-[#4a3b2a]/60 hover:text-[#4a3b2a] transition-colors text-[10px] uppercase tracking-widest flex items-center gap-1" data-testid="sticky-link-back">
-                    <ArrowLeft className="h-3 w-3" /> Palestro
+                    <ArrowLeft className="h-3 w-3" /> {nav.prevLabel}
                   </button>
                 </Link>
                 <span className="text-[#4a3b2a]/20 mx-1">/</span>
@@ -132,18 +136,7 @@ export default function AlgerieContreInsurrectionPage() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 pt-8 pb-24 md:pb-32">
-          <div className="flex justify-between items-center mb-16">
-            <Link href="/algerie/palestro">
-              <button className="text-[#e8dcc5]/50 hover:text-[#e8dcc5] transition-colors text-[10px] uppercase tracking-widest flex items-center gap-2" data-testid="link-back-palestro">
-                <ArrowLeft className="h-3 w-3" /> Palestro
-              </button>
-            </Link>
-            <Link href="/#algerie">
-              <button className="text-[#e8dcc5]/50 hover:text-[#e8dcc5] transition-colors text-[10px] uppercase tracking-widest" data-testid="link-back-algerie">
-                Algérie
-              </button>
-            </Link>
-          </div>
+          <PageNavHeader {...nav} />
 
           <motion.div
             className="space-y-8"
@@ -558,40 +551,7 @@ export default function AlgerieContreInsurrectionPage() {
         )}
 
         <FadeInSection>
-          <section className="py-16">
-            <div className="text-center space-y-6">
-              <div className="w-16 h-[1px] bg-[#4a3b2a]/20 mx-auto" />
-              <p className="text-[10px] uppercase tracking-[0.4em] text-[#4a3b2a]/40">Navigation</p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link href="/algerie/palestro">
-                  <Button
-                    variant="outline"
-                    className="border-[#4a3b2a]/15 text-[#4a3b2a]/70 hover:bg-white/40 hover:text-[#4a3b2a] px-6 py-5 text-xs rounded-lg"
-                    data-testid="button-back-palestro"
-                  >
-                    <ArrowLeft className="mr-2 h-3.5 w-3.5" /> Palestro
-                  </Button>
-                </Link>
-                <Link href="/#algerie">
-                  <Button
-                    variant="outline"
-                    className="border-[#4a3b2a]/15 text-[#4a3b2a]/70 hover:bg-white/40 hover:text-[#4a3b2a] px-6 py-5 text-xs rounded-lg"
-                    data-testid="button-back-themes"
-                  >
-                    <Layers className="mr-2 h-3.5 w-3.5" /> Thèmes
-                  </Button>
-                </Link>
-                <Link href="/algerie/kj25">
-                  <Button
-                    className="bg-[#1e3a5f] text-white hover:bg-[#152d4a] px-6 py-5 text-xs rounded-lg shadow-lg shadow-[#1e3a5f]/20"
-                    data-testid="button-continue-visit"
-                  >
-                    Opération KJ 25 <ArrowRight className="ml-2 h-3.5 w-3.5" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </section>
+          <PageNavFooter {...nav} accent="#6b4c2a" />
         </FadeInSection>
       </div>
     </div>

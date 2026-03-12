@@ -1,3 +1,6 @@
+import { usePageNav } from "@/hooks/usePageNav";
+import PageNavHeader from "@/components/PageNavHeader";
+import PageNavFooter from "@/components/PageNavFooter";
 import { tonkinOriginsData } from "@/lib/asia-data";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -11,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import GlobalMapChronology from "@/components/GlobalMapChronology";
 
 export default function TonkinOriginsPage() {
+  const nav = usePageNav()!;
   const [readingMode, setReadingMode] = useState<'essential' | 'complete' | 'archives'>('complete');
   const [searchQuery, setSearchQuery] = useState("");
   const { scrollYProgress } = useScroll();
@@ -30,18 +34,8 @@ export default function TonkinOriginsPage() {
 
       {/* Header / Hero */}
       <header className="relative pt-12 pb-16 px-6 overflow-hidden bg-[#dcb575]/20 border-b border-[#4a3b2a]/10">
-        <div className="flex justify-between items-center absolute top-4 left-4 right-4 z-10">
-            <Link href="/#tonkin">
-            <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#4a3b2a]/10">
-                <ArrowLeft className="mr-2 h-4 w-4" /> Accueil
-            </Button>
-            </Link>
-            
-            <Link href="/asie/chine-1900-expedition">
-             <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#4a3b2a]/10">
-                Continuer : Chine 1900 <ArrowRight className="ml-2 h-4 w-4" />
-             </Button>
-            </Link>
+        <div className="absolute top-4 left-4 right-4 z-10">
+          <PageNavHeader {...nav} lightText={false} />
         </div>
 
         <div className="max-w-4xl mx-auto space-y-6 pt-8">
@@ -365,13 +359,7 @@ export default function TonkinOriginsPage() {
                 "{tonkinOriginsData.conclusion.text}"
               </p>
               
-              <div className="pt-8">
-                <Link href="/asie/chine-1900-expedition">
-                  <Button size="lg" className="bg-[#4a3b2a] text-[#e8dcc5] hover:bg-[#4a3b2a]/90 h-14 px-8 text-lg shadow-lg">
-                    Continuer : Chine (1900) <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-              </div>
+              <PageNavFooter {...nav} accent="#4a3b2a" />
             </section>
           </>
         )}

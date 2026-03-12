@@ -1,3 +1,6 @@
+import { usePageNav } from "@/hooks/usePageNav";
+import PageNavHeader from "@/components/PageNavHeader";
+import PageNavFooter from "@/components/PageNavFooter";
 import { tourmenteData } from "@/lib/tourmente-data";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -30,6 +33,7 @@ function FadeInSection({ children, className = "", delay = 0 }: { children: Reac
 }
 
 export default function TourmentePage() {
+  const nav = usePageNav()!;
   const [readingMode, setReadingMode] = useState<ReadingMode>('essentiel');
   const { scrollYProgress } = useScroll();
   const [quizRevealed, setQuizRevealed] = useState<Record<number, boolean>>({});
@@ -47,20 +51,8 @@ export default function TourmentePage() {
       <header className="relative pt-12 pb-20 px-6 overflow-hidden bg-gradient-to-b from-red-950/30 to-[#1a1a1a] border-b border-red-900/20">
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent" />
 
-        <div className="flex justify-between items-center absolute top-4 left-4 right-4 z-10">
-          <Link href="/#tonkin">
-            <Button variant="ghost" className="text-[#e8dcc5] hover:bg-white/10" data-testid="link-back-themes">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Accueil
-            </Button>
-          </Link>
-          <Link href="/asie/annees-heureuses">
-            <Button variant="ghost" className="text-[#e8dcc5] hover:bg-white/10" data-testid="link-back-asie">
-              <RotateCcw className="mr-2 h-4 w-4" /> Années Heureuses
-            </Button>
-          </Link>
-          <Button variant="ghost" className="text-[#e8dcc5] hover:bg-white/10" data-testid="link-continue" onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}>
-            Continuer <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+        <div className="absolute top-4 left-4 right-4 z-10">
+          <PageNavHeader {...nav} />
         </div>
 
         <motion.div
@@ -434,25 +426,7 @@ export default function TourmentePage() {
         </FadeInSection>
 
         <FadeInSection>
-          <section className="text-center space-y-8 py-12 border-t-2 border-red-900/20">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/asie/annees-heureuses">
-                <Button variant="outline" className="border-[#e8dcc5]/30 text-[#e8dcc5] hover:bg-white/10 px-8 py-6 text-lg" data-testid="button-back-heureuses">
-                  <ArrowLeft className="mr-2 h-5 w-5" /> Années Heureuses
-                </Button>
-              </Link>
-              <Link href="/algerie/renaissance">
-                <Button className="bg-[#dcb575] text-[#4a3b2a] hover:bg-[#dcb575]/90 px-8 py-6 text-lg" data-testid="button-next-algerie">
-                  Algérie : Renaissance <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/#tonkin">
-                <Button variant="outline" className="border-[#e8dcc5]/30 text-[#e8dcc5] hover:bg-white/10 px-8 py-6 text-lg" data-testid="button-back-themes">
-                  Revenir aux thèmes
-                </Button>
-              </Link>
-            </div>
-          </section>
+          <PageNavFooter {...nav} accent="#4a3b2a" />
         </FadeInSection>
       </div>
     </div>

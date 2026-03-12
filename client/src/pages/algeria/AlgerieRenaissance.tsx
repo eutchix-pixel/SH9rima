@@ -1,3 +1,6 @@
+import { usePageNav } from "@/hooks/usePageNav";
+import PageNavHeader from "@/components/PageNavHeader";
+import PageNavFooter from "@/components/PageNavFooter";
 import { algerieRenaissanceData } from "@/lib/algerie-renaissance-data";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -44,6 +47,7 @@ function FadeInSection({ children, className = "", delay = 0 }: { children: Reac
 const kraftBg = "bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Cfilter%20id%3D%22n%22%3E%3CfeTurbulence%20baseFrequency%3D%220.65%22%20numOctaves%3D%224%22%20stitchTiles%3D%22stitch%22/%3E%3CfeColorMatrix%20values%3D%220%200%200%200%200.82%200%200%200%200%200.75%200%200%200%200%200.62%200%200%200%200.06%200%22/%3E%3C/filter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url(%23n)%22/%3E%3C/svg%3E')]";
 
 export default function AlgerieRenaissancePage() {
+  const nav = usePageNav()!;
   const [readingMode, setReadingMode] = useState<ReadingMode>('essentiel');
   const { scrollYProgress } = useScroll();
   const [insigneRevealed, setInsigneRevealed] = useState(false);
@@ -74,17 +78,8 @@ export default function AlgerieRenaissancePage() {
           </svg>
         </div>
 
-        <div className="flex justify-between items-center absolute top-4 left-4 right-4 z-10">
-          <Link href="/#algerie">
-            <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#dcb575]/20 text-xs" style={{ fontFamily: "'IBM Plex Mono', monospace" }} data-testid="link-back-themes">
-              <ArrowLeft className="mr-2 h-3 w-3" /> ACCUEIL
-            </Button>
-          </Link>
-          <Link href="/asie/tourmente-1940">
-            <Button variant="ghost" className="text-[#4a3b2a] hover:bg-[#dcb575]/20 text-xs" style={{ fontFamily: "'IBM Plex Mono', monospace" }} data-testid="link-back-tourmente">
-              TOURMENTE
-            </Button>
-          </Link>
+        <div className="relative z-10 max-w-5xl mx-auto px-0 pt-0">
+          <PageNavHeader {...nav} lightText={false} />
         </div>
 
         <motion.div
@@ -478,39 +473,7 @@ export default function AlgerieRenaissancePage() {
         </FadeInSection>
 
         <FadeInSection>
-          <section className="text-center space-y-8 py-12 border-t border-dashed border-[#4a3b2a]/20">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/asie/tourmente-1940">
-                <Button
-                  variant="outline"
-                  className="border-[#4a3b2a]/30 text-[#4a3b2a] hover:bg-[#dcb575]/20 px-8 py-6 text-sm"
-                  style={{ fontFamily: "'IBM Plex Mono', monospace" }}
-                  data-testid="button-back-tourmente"
-                >
-                  <ArrowLeft className="mr-2 h-4 w-4" /> La Tourmente
-                </Button>
-              </Link>
-              <Link href="/#algerie">
-                <Button
-                  variant="outline"
-                  className="border-[#4a3b2a]/30 text-[#4a3b2a] hover:bg-[#dcb575]/20 px-8 py-6 text-sm"
-                  style={{ fontFamily: "'IBM Plex Mono', monospace" }}
-                  data-testid="button-back-themes"
-                >
-                  Revenir aux thèmes
-                </Button>
-              </Link>
-              <Link href="/algerie/palestro">
-                <Button
-                  className="bg-[#1e40af] text-white hover:bg-[#1e3a8a] px-8 py-6 text-sm"
-                  style={{ fontFamily: "'IBM Plex Mono', monospace" }}
-                  data-testid="button-next-palestro"
-                >
-                  Palestro <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
-          </section>
+          <PageNavFooter {...nav} accent="#6b4c2a" />
         </FadeInSection>
       </div>
     </div>

@@ -1,3 +1,6 @@
+import { usePageNav } from "@/hooks/usePageNav";
+import PageNavHeader from "@/components/PageNavHeader";
+import PageNavFooter from "@/components/PageNavFooter";
 import { guyaneCrajData } from "@/lib/guyane-craj-data";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -46,6 +49,7 @@ const blocIcons = [GraduationCap, Target, Wrench];
 const blocLabels = ["FORMATION", "MISSIONS", "ÉQUIPEMENT"];
 
 export default function GuyaneCrajPage() {
+  const nav = usePageNav()!;
   const [readingMode, setReadingMode] = useState<ReadingMode>('comprendre');
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
@@ -91,9 +95,9 @@ export default function GuyaneCrajPage() {
           >
             <div className="max-w-5xl mx-auto px-4 h-12 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <Link href="/guyane/fluvial">
+                <Link href={nav.prevLink}>
                   <button className="text-[#4a3b2a]/60 hover:text-[#4a3b2a] transition-colors text-[10px] uppercase tracking-widest flex items-center gap-1" data-testid="sticky-link-back">
-                    <ArrowLeft className="h-3 w-3" /> Fluvial
+                    <ArrowLeft className="h-3 w-3" /> {nav.prevLabel}
                   </button>
                 </Link>
                 <span className="text-[#4a3b2a]/20 mx-1">/</span>
@@ -134,18 +138,7 @@ export default function GuyaneCrajPage() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 pt-8 pb-24 md:pb-32">
-          <div className="flex justify-between items-center mb-16">
-            <Link href="/guyane/fluvial">
-              <button className="text-[#c5dcc5]/50 hover:text-[#c5dcc5] transition-colors text-[10px] uppercase tracking-widest flex items-center gap-2" data-testid="link-back-fluvial">
-                <ArrowLeft className="h-3 w-3" /> Fluvial
-              </button>
-            </Link>
-            <Link href="/#guyane">
-              <button className="text-[#c5dcc5]/50 hover:text-[#c5dcc5] transition-colors text-[10px] uppercase tracking-widest" data-testid="link-back-guyane">
-                Guyane
-              </button>
-            </Link>
-          </div>
+          <PageNavHeader {...nav} />
 
           <motion.div
             className="space-y-8"
@@ -591,40 +584,7 @@ export default function GuyaneCrajPage() {
         )}
 
         <FadeInSection>
-          <section className="py-16">
-            <div className="text-center space-y-6">
-              <div className="w-16 h-[1px] bg-[#4a3b2a]/20 mx-auto" />
-              <p className="text-[10px] uppercase tracking-[0.4em] text-[#4a3b2a]/40">Navigation</p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link href="/guyane/fluvial">
-                  <Button
-                    variant="outline"
-                    className="border-[#4a3b2a]/15 text-[#4a3b2a]/70 hover:bg-white/40 hover:text-[#4a3b2a] px-6 py-5 text-xs rounded-lg"
-                    data-testid="button-back-fluvial"
-                  >
-                    <ArrowLeft className="mr-2 h-3.5 w-3.5" /> Fluvial
-                  </Button>
-                </Link>
-                <Link href="/#guyane">
-                  <Button
-                    variant="outline"
-                    className="border-[#4a3b2a]/15 text-[#4a3b2a]/70 hover:bg-white/40 hover:text-[#4a3b2a] px-6 py-5 text-xs rounded-lg"
-                    data-testid="button-back-themes"
-                  >
-                    <Layers className="mr-2 h-3.5 w-3.5" /> Thèmes
-                  </Button>
-                </Link>
-                <Link href="/guyane/jungle">
-                  <Button
-                    className="bg-[#2d4a1a] text-white hover:bg-[#1a3010] px-6 py-5 text-xs rounded-lg shadow-lg shadow-[#2d4a1a]/20"
-                    data-testid="button-continue-visit"
-                  >
-                    Jungle <ArrowRight className="ml-2 h-3.5 w-3.5" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </section>
+          <PageNavFooter {...nav} accent="#0d6b3d" />
         </FadeInSection>
       </div>
     </div>
