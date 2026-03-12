@@ -33,6 +33,7 @@ Preferred communication style: Simple, everyday language.
   - `client/src/lib/algerie-kj25-data.ts` — Operation KJ 25 content (timeline, blocs, glossary, quiz)
   - `client/src/lib/algerie-commandos-data.ts` — Commandos de chasse content (timeline, blocs, glossary, quiz)
   - `client/src/lib/algerie-disparition-data.ts` — Disparition 1960-1962 content (timeline, blocs, glossary, quiz)
+  - `client/src/lib/guyane-debuts-data.ts` — Guyane Débuts content (timeline, blocs, glossary, MCQ quiz)
 - Each content page has multiple reading modes: "Essential (5 min)", "Full Visit (20-30 min)", "Archives (deep reading)"
 - Pages feature: interactive timelines, accordion sections, image galleries with placeholders, glossaries, mini-quizzes
 
@@ -49,6 +50,7 @@ Preferred communication style: Simple, everyday language.
 - **Algérie/KJ 25** (`/algerie/kj25`) — Operation KJ 25 (23 Dec 1957): cordon & search along Tizi Ouzou–Bouira axis
 - **Algérie/Commandos de chasse** (`/algerie/commandos-chasse`) — Hunting commandos (1958-1962): origin, organization, missions, legacy
 - **Algérie/Disparition** (`/algerie/disparition`) — End of the war (1960-1962): Challe Plan decline, autodetermination, Évian accords, independence
+- **Guyane/Débuts** (`/guyane/debuts`) — Origins of the 9e BIMa in French Guiana (1638-1976): Cépérou legend, colonial forts, battalion recreation, first Maroni missions
 - **AI Assistant** (`/ai-assistant`) — Chat-style assistant (currently client-side simulation using museum data)
 
 ### Backend (Express)

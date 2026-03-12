@@ -64,7 +64,7 @@ export const museumData: Section[] = [
     colorClass: "bg-[#064e3b] text-[#ecfdf5]", // Jungle Green
     bgImage: "/images/bg-guyane.png",
     subsections: [
-      { id: "guyane-debuts", title: "Débuts", image: "/images/placeholder.png", content: "L'installation du régiment en Guyane..." },
+      { id: "guyane-debuts", title: "Débuts", image: "/images/placeholder.png", content: "L'installation du régiment en Guyane...", link: "/guyane/debuts" },
       { id: "guyane-emprises", title: "Emprises", image: "/images/placeholder.png", content: "Les différents postes et camps..." },
       { id: "guyane-fluvial", title: "Fluvial", image: "/images/placeholder.png", content: "La maîtrise du fleuve et la navigation..." },
       { id: "guyane-craj", title: "CRAJ", image: "/images/placeholder.png", content: "Le Centre d'Entraînement en Forêt Équatoriale..." },

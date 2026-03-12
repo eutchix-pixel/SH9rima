@@ -1,0 +1,155 @@
+
+MASTER PROMPT — REPLIT AI
+Projet : « Museum Tour Guide — 9e RIMa »
+Nouvelle page à créer : GUYANE → « Débuts »
+Slug conseillé : `/guyane/debuts`
+
+IMPORTANT (lire avant de coder)
+- Replit n’a pas accès à mes sources. La page doit rester **factuelle**. Ne rajoute pas de dates, de noms ou d’effectifs qui ne figurent pas dans le texte fourni.
+- Le ton doit être pédagogique et immersif : le visiteur découvre comment la Guyane militaire se met en place, des légendes amérindiennes aux premières missions du bataillon.
+- Le texte affiché sur la page doit être **exactement** celui de la section « CONTENU À AFFICHER ». Tu peux seulement ajouter de la micro‑copie UI (« Revenir aux thèmes », « Continuer »…).
+
+OBJECTIF VISITEUR
+Comprendre l’ancrage du 9e BIMa/RIMa en Guyane : du mythe fondateur de Cayenne et des fortifications coloniales à la recréation du bataillon en 1976 et à ses premières missions le long du Maroni. Cette page sert d’introduction aux autres parties.
+
+À FAIRE DANS L’APP (FONCTIONNEL)
+1) **ROUTAGE + Navigation**
+   - Ajouter cette page à la catégorie **Guyane**, en tête de la chronologie (1976–aujourd’hui).
+   - Prévoir des boutons fixes : « Revenir aux thèmes », « Retour Guyane », « Continuer la visite ».
+2) **STRUCTURE UX (simple + immersive)**
+   - **HERO** : illustration pleine largeur évoquant la légende de Cépérou et l’arrivée du 9e BIMa à Cayenne (dessin ou photo d’époque). Ajouter la **question directrice** sous la photo.
+   - **3 modes** :
+      a) **Comprendre (5 min)** : contexte historique et géopolitique, carte simple de Cayenne et de la Guyane, repères clés.
+      b) **Récit (10–15 min)** : chronologie interactive montrant la création du 9e BIMa, ses premières missions, la tradition du fort et la place des marins.
+      c) **Archives (approfondir)** : galerie d’images (fort de Cépérou, quartier Loubère, premières missions), glossaire des termes coloniaux, citations (placeholders).
+   - **Timeline** : 6 repères maximum (création du fort, colonisation, suppression du 9e RIC en 1962, décision de recréer un bataillon en 1976, première mission sur le Maroni en octobre 1976, adoption du nouvel insigne).
+   - **Carte interactive** : afficher Cayenne, le fort Cépérou, Saint‑Jean du Maroni et le Maroni. Icônes cliquables renvoyant aux sous‑pages.
+   - **Mini‑quiz** : 4 questions courtes pour tester la compréhension (dates, lieux, légende de Cépérou).
+3) **DONNÉES**
+   - Stocker le contenu dans le format existant (JSON/TS/MD). La structure suit les blocs ci‑dessous.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER (TEXTE DU SITE)
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Guyane — Débuts
+
+SOUS‑TITRE (H2)
+Au confluent de l’Amérique du Sud et de l’Europe, l’histoire de Cayenne mêle légende amérindienne, colonisation et renaissance d’un bataillon. Des origines mythiques à la recréation du 9e BIMa en 1976, cette page raconte la genèse du régiment en Guyane.
+
+QUESTION DIRECTRICE
+Comment la légende de Cépérou et l’histoire coloniale de Cayenne ont‑elles préparé le terrain pour la renaissance du 9e BIMa en Guyane en 1976 ?
+
+ENCADRÉ « REPÈRES » (cartel)
+• 1638 : les Européens achètent le terrain à Cépérou et construisent un fort en bois
+• 1870 : le quartier Loubère devient la nouvelle caserne de Cayenne
+• 1962 : dissolution du centre d’instruction du 9e RIMa à Nantes
+• 1er septembre 1976 : recréation du 9e BIMa en Guyane
+• Octobre 1976 : première mission de présence sur le Maroni
+• Conception du nouvel insigne (1976) : l’ancre et le chiffre 9 symbolisent les traditions et l’engagement amazonien
+
+BOUTONS (micro‑copie)
+- Comprendre (5 min)
+- Récit (10–15 min)
+- Archives (approfondir)
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+La Guyane militaire trouve ses racines dans une légende amérindienne : Cépérou, roi d’un petit peuple, aurait vendu la colline qui porte son nom aux Européens en 1638. Les colons y construisent un fort en bois puis en pierre, autour duquel naît Cayenne. Au XIXᵉ siècle, le quartier Loubère devient la caserne principale et les marsouins y perpétuent la tradition marine. Dissous en 1962, le centre d’instruction du 9e RIMa renaît en Guyane le 1ᵉʳ septembre 1976 pour répondre au « plan vert » et au développement du Centre Spatial. Le choix du 9e n’est pas anodin : il rappelle le bataillon de Guyane qui combattit pour la France libre et perpétue la présence des troupes de marine depuis 1604. Dès octobre 1976, les premières patrouilles remontent le Maroni, inaugurant une mission de présence qui durera jusqu’à nos jours.
+
+────────────────────────────
+BLOC 1 — La légende de Cépérou et la naissance de Cayenne
+────────────────────────────
+**Texte :**
+Au cœur de la colline surplombant Cayenne, une légende amérindienne raconte l’histoire du roi Cépérou. Dans les années 1630, ce chef autochtone aurait vendu aux Européens le terrain où s’élèvera un fort en bois. Rapidement remplacé par une forteresse en pierre, le **fort Cépérou** devient le pivot de la défense de la colonie. Autour de lui, la ville de **Cayenne** se développe, et la présence militaire s’ancre durablement sur l’île : les troupes de la marine y sont stationnées dès le XVIIᵉ siècle. En 1870, le quartier **Loubère** est construit à proximité du fort, offrant au régiment une nouvelle caserne dont l’architecture de bois et de brique évoque les établissements coloniaux. Ces récits et ces lieux forment le socle de l’identité militaire guyanaise.
+
+**À retenir (cartel)**
+- La légende de Cépérou symbolise la rencontre entre peuples autochtones et colons.
+- Le fort Cépérou assure la défense de Cayenne et attire une garnison permanente.
+- La caserne Loubère incarne la continuité des troupes de marine en Guyane.
+
+────────────────────────────
+BLOC 2 — La recréation du 9e BIMa en 1976
+────────────────────────────
+**Texte :**
+Après la dissolution du centre d’instruction du **9e RIMa** à Nantes en 1962, seul subsiste un détachement chargé de maintenir la tradition du régiment. Au milieu des années 1970, les autorités civiles et militaires lancent le **« plan vert »** et le développement du Centre Spatial Guyanais. Pour soutenir ces projets et protéger la frontière, la France décide de recréer un bataillon d’infanterie en Guyane. Le 1ᵉʳ septembre 1976, le **9e BIMa** renait officiellement à Cayenne. Le choix de cet héritage n’est pas anodin : il rappelle l’unité qui, sous les ordres du colonel Chandon, combattit pour la France libre en 1940 et honore les troupes de marine qui défendent la Guyane depuis 1604. Le nouvel insigne, dessiné par le commandant **Desmottes**, associe une ancre dorée et le chiffre 9 en référence à l’insigne de 1956 tout en évoquant la forêt amazonienne.
+
+**À retenir (cartel)**
+- La recréation du 9e BIMa répond aux besoins stratégiques du **plan vert** et du Centre Spatial.
+- Le choix du 9e perpétue la mémoire du bataillon de la France libre.
+- L’insigne combine tradition (ancre) et identité guyanaise (forêt, fleuve).
+
+────────────────────────────
+BLOC 3 — Premières missions sur le Maroni
+────────────────────────────
+**Texte :**
+Quelques semaines après sa création, le bataillon s’installe sur la rive occidentale. En octobre 1976, le commandant **Desmottes** envoie un détachement permanent à **Saint‑Jean du Maroni**, l’ancienne base du camp de déportation. Aux ordres du lieutenant **Leszczynsky**, quatre sous‑officiers et 37 marsouins occupent le site et prennent possession de 12 pirogues. Le 15 octobre, ils lancent la première mission de présence sur le **Maroni**, qui dure vingt jours. Les sections recensent le fleuve, remettent des drapeaux français aux chefs de village et installent des bases pour les opérations futures. Cet engagement marque le début d’une présence permanente sur le fleuve et ouvre la voie aux missions suivantes.
+
+**À retenir (cartel)**
+- La mission de présence d’octobre 1976 marque l’entrée du 9e BIMa dans la jungle.
+- Saint‑Jean du Maroni devient la base avancée du régiment sur la frontière.
+- Les pirogues symbolisent l’adaptation du bataillon à l’environnement fluvial.
+
+────────────────────────────
+BLOC 4 — Transmission et traditions
+────────────────────────────
+**Texte :**
+En recréant un bataillon en Guyane, les autorités entendent aussi transmettre un patrimoine immatériel. Le 9e BIMa reprend le flambeau des **troupes coloniales** et se souvient des marsouins qui ont écrit son histoire : **Jean Carli**, **Berthelin** et **Journet**, tombés pour la France libre. L’**Amicale des Anciens** du 9e perpétue cette mémoire et participe à la remise du nouvel insigne aux recrues lors de la première cérémonie des couleurs. Dès les premières années, le régiment s’implante dans la vie locale : défilé sur la place des Palmistes, participation au carnaval et construction d’une pagode pour rappeler les campagnes d’Extrême‑Orient. Ces traditions forment le cœur de l’esprit du 9.
+
+**À retenir (cartel)**
+- La mémoire des anciens relie le 9e RIMa métropolitain à son homologue guyanais.
+- Cérémonies et symboles (insigne, pagode) renforcent l’identité régimentaire.
+- L’ancrage local (défilés, carnaval) ouvre le régiment à la société guyanaise.
+
+────────────────────────────
+TIMELINE (6 repères)
+────────────────────────────
+- **1638 : Vente de la colline de Cépérou aux colons** — Les Européens construisent un fort en bois.
+- **1870 : Quartier Loubère** — Construction de la nouvelle caserne à Cayenne.
+- **1962 : Dissolution du centre d’instruction du 9e RIMa** — Fin temporaire du régiment.
+- **1ᵉʳ septembre 1976 : Création du 9e BIMa** — Le bataillon renaît à Cayenne.
+- **Octobre 1976 : Première mission sur le Maroni** — Installation du détachement permanent à Saint‑Jean et patrouille fluviale.
+- **Années 1976–1977 : Adoption du nouvel insigne** — Combinaison de l’ancre dorée et du chiffre 9.
+
+────────────────────────────
+GLOSSAIRE (à afficher au survol)
+────────────────────────────
+**Cépérou :** colline dominant Cayenne où les colons bâtissent un fort au XVIIᵉ siècle.
+**Quartier Loubère :** caserne historique de Cayenne, construite en 1870 pour abriter les troupes de marine.
+**Plan vert :** programme de développement lancé dans les années 1970 pour moderniser la Guyane et soutenir le Centre Spatial.
+**Pirogue :** embarcation légère utilisée pour naviguer sur le Maroni et ses affluents.
+**Détachement de Saint‑Jean du Maroni :** base avancée du 9e BIMa sur la frontière avec le Suriname.
+
+────────────────────────────
+QUIZ (4 questions — pas de réponses dans le texte)
+────────────────────────────
+1. Quelle légende est à l’origine du nom « Cépérou » ?
+   A) La bataille de Bazeilles
+   B) Un roi amérindien vendant une colline aux colons
+   C) Un chef harki
+   D) Le commandant Desmottes
+
+2. En quelle année le 9e BIMa a‑t‑il été recréé en Guyane ?
+   A) 1962
+   B) 1970
+   C) 1976
+   D) 1982
+
+3. Quelle est la principale mission des premières patrouilles sur le Maroni en 1976 ?
+   A) Construire le Centre Spatial
+   B) Installer des bases de mines d’or
+   C) Recenser le fleuve et établir une présence
+   D) Combattre la guérilla bushtnegro
+
+4. Quel symbole domine le nouvel insigne du 9e BIMa créé en 1976 ?
+   A) Une étoile rouge
+   B) Une ancre dorée et le chiffre 9
+   C) Une fusée spatiale
+   D) Un jaguar noir
+
+────────────────────────────
+CONCLUSION / TRANSITION
+────────────────────────────
+Le 9e BIMa, devenu plus tard le 9e RIMa, est né d’une légende et d’un choix politique. En ancrant le régiment dans une histoire longue, cette page prépare le visiteur à explorer les chapitres suivants : **Emprises** (les postes et les camps), **Fluvial** (la maîtrise du fleuve), **CRAJ** (formation en jungle), **Jungle**, **International**, **Harpie** et **Titan**.
