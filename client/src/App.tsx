@@ -20,6 +20,7 @@ import GuyaneFluvialPage from "./pages/guyane/GuyaneFluvial";
 import GuyaneCrajPage from "./pages/guyane/GuyaneCraj";
 import GuyaneJunglePage from "./pages/guyane/GuyaneJungle";
 import GuyaneInternationalPage from "./pages/guyane/GuyaneInternational";
+import GuyaneHarpiePage from "./pages/guyane/GuyaneHarpie";
 import ScanPage from "./pages/Scan";
 import NotFound from "./pages/not-found";
 
@@ -47,6 +48,7 @@ function Router() {
         <Route path="/guyane/craj" component={GuyaneCrajPage} />
         <Route path="/guyane/jungle" component={GuyaneJunglePage} />
         <Route path="/guyane/international" component={GuyaneInternationalPage} />
+        <Route path="/guyane/harpie" component={GuyaneHarpiePage} />
         <Route path="/scan" component={ScanPage} />
         <Route component={NotFound} />
       </Switch>

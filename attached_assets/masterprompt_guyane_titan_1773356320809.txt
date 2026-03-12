@@ -1,0 +1,150 @@
+
+MASTER PROMPT — REPLIT AI
+Projet : « Museum Tour Guide — 9e RIMa »
+Nouvelle page à créer : GUYANE → « Titan »
+Slug conseillé : `/guyane/titan`
+
+IMPORTANT
+- Utiliser uniquement les données vérifiées sur l’opération **Titan**, mission de sécurisation du Centre Spatial Guyanais (CSG). Ne pas inventer de dates ou d’effectifs au‑delà de ceux disponibles.
+- Le texte doit être reproduit fidèlement ; seules des micro‑copie UI peuvent être ajoutées.
+
+OBJECTIF VISITEUR
+Présenter l’opération **Titan**, dispositif exceptionnel déployé à chaque lancement pour protéger le Centre Spatial Guyanais. Montrer le rôle du 9e RIMa dans la sécurisation des zones terrestres, maritimes et aériennes, et souligner l’importance économique et stratégique du CSG.
+
+À FAIRE DANS L’APP
+1) **Placement** : insérer cette page après « Harpie » et avant le chapitre « Traditions ». Boutons habituels.
+2) **UX / UI**
+   - **HERO** : vue nocturne d’un lanceur Ariane sur le pas de tir, avec en surimpression la **question directrice**.
+   - **Modes de lecture** :
+      a) **Comprendre** : description du Centre Spatial, des menaces potentielles et de la structure de l’opération Titan.
+      b) **Récit** : journée type d’un lancement : préparation, mise en place du dispositif, décollage, levée des dispositifs.
+      c) **Archives** : photos d’opérations Titan, cartes des zones d’exclusion, témoignages de marsouins et de gendarmes.
+   - **Timeline** : 4 repères (création du CSG en 1968, premier lancement Ariane, mise en place du dispositif Titan, évolutions récentes).
+   - **Carte interactive** : carte du Centre Spatial (660 km²) avec zones de sécurité (terrestre, maritime, aérienne). Cliquer sur chaque zone affiche le rôle des forces engagées.
+   - **Mini‑quiz** : 4 questions sur le dispositif Titan et l’importance du CSG.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Guyane — Titan
+
+SOUS‑TITRE (H2)
+Chaque lancement spatial est une mission militaire. L’opération **Titan** sécurise le Centre Spatial Guyanais, site stratégique de l’Europe, et mobilise le 9e RIMa pour protéger le ciel, la mer et la terre.
+
+QUESTION DIRECTRICE
+Qu’est‑ce que le Centre Spatial Guyanais, pourquoi est‑il stratégique et comment l’opération Titan associe‑t‑elle gendarmes et militaires pour garantir la sécurité des lancements ?
+
+ENCADRÉ « REPÈRES »
+• 1968 : création du **Centre Spatial Guyanais (CSG)** à Kourou. S’étendant sur environ **660 km²**, il constitue le cosmodrome de l’Europe et représente 20 % du PIB de la Guyane.
+• Années 1990 : mise en place des premiers dispositifs de sécurisation lors des lancements d’Ariane et de Soyouz.
+• 2000 : institutionnalisation de l’**opération Titan** : dispositif terrestre, maritime et aérien mobilisant gendarmes, militaires et autorités civiles.
+• Début des années 2020 : adaptation du dispositif Titan aux nouvelles menaces (drones, intrusions) et renforcement de la coopération avec l’Agence spatiale européenne.
+
+BOUTONS
+- Comprendre (5 min)
+- Récit (10–15 min)
+- Archives (approfondir)
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+Le **Centre Spatial Guyanais** est un site unique : 660 km² de savane et de mangroves où sont assemblés et lancés les satellites européens. Ce cosmodrome abrite plusieurs pas de tir (Ariane 5, Vega, Soyouz) et une base portuaire et aéroportuaire. Son importance économique est majeure : il génère près de 20 % du PIB de la Guyane et emploie des milliers de personnes. À chaque lancement, des menaces potentielles (intrusions, sabotage, pollution, attentats) exigent un dispositif de sécurité rigoureux. L’**opération Titan** mobilise environ **150 gendarmes** et un détachement de militaires du 9e RIMa, du 3e REI et de la Marine nationale. Cette mission couvre trois domaines : **sécurisation terrestre** (périmètre du pas de tir et des bâtiments), **surveillance maritime** (zone interdite autour de la fusée) et **contrôle aérien** (espace aérien interdit). Une **force de réaction rapide (QRF)** est prête à intervenir par hélicoptère en cas d’incident. Le dispositif Titan garantit la réussite des lancements et la protection des populations.
+
+────────────────────────────
+BLOC 1 — Le Centre Spatial Guyanais, un site stratégique
+────────────────────────────
+**Texte :**
+Situé près de Kourou, le **CSG** est le cosmodrome européen. Créé en 1968, il est choisi pour sa proximité de l’équateur, qui permet de profiter de la rotation terrestre pour la mise en orbite des satellites. Le site s’étend sur environ **660 km²** et comprend des pas de tir pour les lanceurs **Ariane 5**, **Vega** et **Soyouz**. Il emploie des milliers de techniciens, d’ingénieurs et de militaires. Les fusées emportent des satellites de télécommunication, d’observation, de navigation ou de science. L’enjeu est non seulement économique mais aussi politique : le CSG symbolise la souveraineté spatiale de l’Europe. Sa protection est donc une priorité nationale.
+
+**À retenir (cartel)**
+- Le CSG est le principal centre de lancement de l’Europe.
+- Il s’étend sur 660 km² et contribue à 20 % du PIB de la Guyane.
+- Sa proximité de l’équateur optimise la mise en orbite des satellites.
+
+────────────────────────────
+BLOC 2 — Organisation de l’opération Titan
+────────────────────────────
+**Texte :**
+À chaque lancement, l’opération **Titan** se déploie. Environ **150 gendarmes** et des détachements de l’armée de terre et de la marine forment un dispositif intégré. Ils se répartissent en trois volets :
+1. **Sécurisation terrestre :** protection des zones sensibles (pas de tir, usines de carburant, centres de contrôle), filtrage des entrées, patrouilles cynophiles.
+2. **Surveillance maritime :** mise en place d’une zone d’exclusion en mer autour de la trajectoire du lanceur, surveillance par vedettes rapides et par un avion de patrouille maritime.
+3. **Contrôle aérien :** activation d’une zone d’interdiction aérienne, suivi radar et intervention d’hélicoptères pour neutraliser les drones ou les aéronefs intrusifs.
+Une **force de réaction rapide (QRF)** est prête à décoller en hélicoptère pour intervenir sur une intrusion ou un accident. Des postes de commandement coordonnent l’ensemble avec le centre de contrôle du CSG et les autorités civiles.
+
+**À retenir (cartel)**
+- Titan mobilise environ 150 gendarmes et des militaires terrestres, maritimes et aériens.
+- Les zones terrestre, maritime et aérienne sont surveillées simultanément.
+- Une QRF est toujours prête à intervenir en cas d’incident.
+
+────────────────────────────
+BLOC 3 — Jour de lancement : une chorégraphie millimétrée
+────────────────────────────
+**Texte :**
+Le jour d’un lancement, des semaines de préparation culminent en quelques heures. La veille, les équipes Titan installent des checkpoints et des périmètres de sécurité. Au matin, les gendarmes filtrent les entrées et surveillent les zones sensibles. La **Marine nationale** déploie ses patrouilleurs et interdit la navigation dans une zone d’environ 50 km autour de la trajectoire. Dans les airs, un hélicoptère **Fennec** ou **Panther** patrouille en liaison radio avec la tour de contrôle. À H‑2, les routes d’accès sont fermées et les véhicules non essentiels sont évacués. Pendant le compte à rebours, la tension est palpable. Lorsque la fusée décolle, une immense flamme illumine la savane. Les équipes restent mobilisées jusqu’à la confirmation que le lanceur a quitté la zone et que l’onde acoustique est passée. Ce n’est qu’alors que les périmètres sont levés.
+
+**À retenir (cartel)**
+- La préparation d’un lancement mobilise des équipes interarmées et interservices.
+- Les zones d’exclusion maritimes et aériennes sont strictement contrôlées.
+- La coordination entre militaires et personnel du CSG est essentielle à la sécurité.
+
+────────────────────────────
+BLOC 4 — Évolution et enjeux de Titan
+────────────────────────────
+**Texte :**
+Depuis sa mise en place, l’opération Titan s’adapte aux évolutions technologiques et aux nouvelles menaces. Les drones civils constituent un risque grandissant : des unités spécialisées de la gendarmerie repèrent et neutralisent les appareils intrusifs. La menace terroriste impose un contrôle renforcé des accès et des personnels. Parallèlement, l’arrivée de nouveaux lanceurs (Ariane 6) et l’extension des installations exigent l’ajustement du dispositif. Titan est aussi un vecteur de coopération : la gendarmerie travaille avec l’Agence spatiale européenne, Arianespace, le CNES et la préfecture. Des exercices réguliers testent la réactivité des équipes et améliorent les procédures. Enfin, le développement de la filière spatiale en Guyane fait de Titan un enjeu économique majeur : la sécurité est une condition sine qua non pour attirer des clients internationaux et maintenir la confiance des partenaires.
+
+**À retenir (cartel)**
+- Titan évolue face aux nouvelles menaces (drones, terrorisme) et aux nouveaux lanceurs.
+- La coopération entre la gendarmerie, les forces armées et les acteurs du spatial est constante.
+- La sécurité des lancements est essentielle à l’économie guyanaise et à l’image de l’Europe spatiale.
+
+────────────────────────────
+TIMELINE (4 repères)
+────────────────────────────
+- **1968 : Création du CSG** — début de l’aventure spatiale en Guyane, installation des premières infrastructures.
+- **Années 1990 : Premiers dispositifs de sécurité** — mise en place des protections terrestres, maritimes et aériennes lors des lancements.
+- **2000 : Institutionnalisation de l’opération Titan** — formalisation d’un dispositif permanent mobilisant gendarmes et militaires.
+- **Années 2020 : Adaptation aux nouvelles menaces** — intégration de moyens anti‑drones, coopération renforcée avec l’ESA et préparation des lancements Ariane 6.
+
+────────────────────────────
+GLOSSAIRE
+────────────────────────────
+**CSG (Centre Spatial Guyanais)** : base de lancement de l’Agence spatiale européenne située à Kourou, d’une superficie de 660 km².
+**Opération Titan** : dispositif de sécurité interarmées et interministériel déployé à chaque lancement pour protéger le CSG.
+**QRF (Quick Reaction Force)** : force d’intervention rapide prête à décoller en hélicoptère pour répondre à une intrusion ou un incident.
+**Zone d’exclusion** : espace terrestre, maritime ou aérien interdit d’accès pendant les opérations de lancement.
+**Ariane 6** : futur lanceur européen destiné à succéder à Ariane 5.
+
+────────────────────────────
+QUIZ (4 questions)
+────────────────────────────
+1. Quelle superficie approximative recouvre le Centre Spatial Guyanais ?
+   A) 6,6 km²
+   B) 66 km²
+   C) 660 km²
+   D) 6 600 km²
+
+2. Quel pourcentage du PIB de la Guyane est généré par le CSG selon les estimations ?
+   A) Environ 2 %
+   B) Environ 10 %
+   C) Environ 20 %
+   D) Environ 50 %
+
+3. Combien de gendarmes environ sont mobilisés lors de l’opération Titan pour sécuriser un lancement ?
+   A) 15
+   B) 150
+   C) 1 500
+   D) 15 000
+
+4. Quel est l’un des objectifs principaux de l’opération Titan ?
+   A) Creuser des pistes forestières
+   B) Protéger le Centre Spatial Guyanais contre les intrusions et les menaces
+   C) Former les marsouins à la jungle
+   D) Construire des écoles pour les enfants
+
+────────────────────────────
+CONCLUSION / TRANSITION
+────────────────────────────
+L’opération Titan montre une autre facette du 9e RIMa : celle d’un régiment engagé dans la protection d’un site industriel et scientifique unique au monde. Après avoir découvert cette mission singulière, le visiteur peut se diriger vers la section **Traditions** pour explorer le patrimoine et l’identité du régiment à travers ses symboles (drapeau, insigne, pagode, chant et esprit du 9).

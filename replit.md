@@ -39,6 +39,7 @@ Preferred communication style: Simple, everyday language.
   - `client/src/lib/guyane-craj-data.ts` — Guyane CRAJ content (timeline, blocs, glossary, MCQ quiz)
   - `client/src/lib/guyane-jungle-data.ts` — Guyane Jungle content (timeline, blocs, glossary, MCQ quiz)
   - `client/src/lib/guyane-international-data.ts` — Guyane International content (timeline, blocs, glossary, MCQ quiz)
+  - `client/src/lib/guyane-harpie-data.ts` — Guyane Harpie content (timeline, blocs, glossary, MCQ quiz)
 - Each content page has multiple reading modes: "Essential (5 min)", "Full Visit (20-30 min)", "Archives (deep reading)"
 - Pages feature: interactive timelines, accordion sections, image galleries with placeholders, glossaries, mini-quizzes
 
@@ -61,6 +62,7 @@ Preferred communication style: Simple, everyday language.
 - **Guyane/CRAJ** (`/guyane/craj`) — Jungle commando unit: C3F training center, infiltration missions, Operation Harpie, equipment
 - **Guyane/Jungle** (`/guyane/jungle`) — Life in the equatorial forest (1977-2023): climate, border markers, trail-clearing, indigenous peoples, Maufrais expedition
 - **Guyane/International** (`/guyane/international`) — International cooperation: Brazil CIGS, Suriname/Guyana patrols, Tradewinds, Curaçao challenge, military diplomacy
+- **Guyane/Harpie** (`/guyane/harpie`) — Operation Harpie (2008-present): illegal gold mining, interagency response, CRAJ infiltrations, results and evolution
 - **AI Assistant** (`/ai-assistant`) — Chat-style assistant (currently client-side simulation using museum data)
 
 ### Backend (Express)

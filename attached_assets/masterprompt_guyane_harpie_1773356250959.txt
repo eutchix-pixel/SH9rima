@@ -1,0 +1,147 @@
+
+MASTER PROMPT — REPLIT AI
+Projet : « Museum Tour Guide — 9e RIMa »
+Nouvelle page à créer : GUYANE → « Harpie »
+Slug conseillé : `/guyane/harpie`
+
+IMPORTANT
+- Ne pas inventer de chiffres ou d’anecdotes : cette page s’appuie sur les données disponibles sur l’opération **Harpie**, mission interarmées de lutte contre l’orpaillage illégal en Guyane. Les citations proviennent d’articles officiels de la gendarmerie nationale.
+- Le texte doit être reproduit exactement, à l’exception des micro‑copie UI.
+
+OBJECTIF VISITEUR
+Comprendre l’ampleur de l’orpaillage clandestin en Guyane et découvrir comment l’opération **Harpie** mobilise le 9e RIMa, la gendarmerie et d’autres forces pour préserver l’environnement, protéger les populations et lutter contre l’économie criminelle.
+
+À FAIRE DANS L’APP
+1) **Position** : placer cette page après « International » et avant « Titan ». Boutons fixes standards.
+2) **UX / UI**
+   - **HERO** : photo d’un camp d’orpaillage clandestin démantelé, ou d’un hélicoptère transportant des soldats au cœur de la jungle, avec la **question directrice**.
+   - **Modes de lecture** :
+      a) **Comprendre** : présentation des causes de l’orpaillage illégal, des acteurs impliqués et des objectifs de l’opération Harpie.
+      b) **Récit** : description d’une mission type Harpie (infiltration, renseignement, intervention, destruction de matériel, arrestations).
+      c) **Archives** : infographies (statistiques d’arrestations, matériel saisi), photos des camps détruits, témoignages de marsouins et de gendarmes.
+   - **Timeline** : 5 repères (2000 : début des opérations contre l’orpaillage, 2008 : création d’Harpie, 2016 : adaptation, 2023 : bilan annuel, années 2020 : projets de coopération internationale).
+   - **Carte interactive** : localisation des zones d’orpaillage (haut Maroni, parc amazonien, bas Oyapock) et des bases de départ (Saint‑Jean, Maripasoula). Cliquer sur une zone affiche des statistiques et des anecdotes.
+   - **Mini‑quiz** : 4 questions sur le dispositif et ses résultats.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Guyane — Harpie
+
+SOUS‑TITRE (H2)
+La Guyane est confrontée à un fléau : l’orpaillage clandestin. L’opération Harpie est la réponse interarmées à ce défi, mobilisant des milliers de gendarmes et de militaires pour démanteler les sites illégaux et protéger l’environnement.
+
+QUESTION DIRECTRICE
+Quelles sont les origines de l’opération Harpie, quels moyens engage‑t‑elle et quel rôle joue le 9e RIMa dans la lutte contre l’orpaillage clandestin ?
+
+ENCADRÉ « REPÈRES »
+• Début des années 2000 : premières actions coordonnées contre l’orpaillage illégal, sous l’appellation **Anaconda**.
+• Février 2008 : lancement officiel de l’**opération Harpie** par la gendarmerie et les forces armées en Guyane. 1 180 gendarmes et 2 465 militaires des forces armées (FAG) sont mobilisés.
+• 2010 : mise en place d’**équipes mixtes** (CRAJ du 9e RIMa, gendarmes mobiles, légionnaires du 3e REI) pour les infiltrations.
+• 2023 : bilan des opérations : 225 personnes interpellées, 61 millions d’euros de biens saisis, plus de 1 000 missions annuelles mobilisant 50–60 gendarmes et 200–300 militaires par jour.
+
+BOUTONS
+- Comprendre (5 min)
+- Récit (10–15 min)
+- Archives (approfondir)
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+L’orpaillage clandestin dévaste les forêts et les fleuves de Guyane. Des milliers de **garimpeiros** (chercheurs d’or illégaux) venus du Brésil, du Suriname ou de l’intérieur du pays exploitent illégalement les gisements, contaminent les rivières au mercure et créent des réseaux criminels. Dès les années 2000, les autorités françaises lancent des actions ponctuelles (opération **Anaconda**), mais l’ampleur du phénomène impose un dispositif permanent. Le 28 février 2008, l’**opération Harpie** voit le jour. Ce dispositif mobilise plus de 1 100 gendarmes et 2 400 soldats des Forces Armées en Guyane. Harpie combine des missions judiciaires (arrestations), administratives (destruction de matériels), économiques (soutien aux filières légales), sociales et diplomatiques. Chaque jour, 50 à 60 gendarmes et 200 à 300 militaires sont engagés, principalement des légionnaires du 3e REI et des marsouins du 9e RIMa. Les **commandos CRAJ** infiltrent les sites pour collecter du renseignement et orienter les unités d’intervention.
+
+────────────────────────────
+BLOC 1 — Les causes et les impacts de l’orpaillage clandestin
+────────────────────────────
+**Texte :**
+L’orpaillage illégal se développe à la faveur du prix élevé de l’or et de la porosité des frontières en forêt. Les **garimpeiros**, originaires principalement du Brésil, installent des campements en pleine jungle. Ils utilisent des pompes et du mercure pour extraire l’or, détruisent la végétation et polluent les rivières. Cette activité entraîne une dégradation environnementale considérable, met en danger la santé des populations amérindiennes et bushinengue, et finance des réseaux criminels. L’État français doit réagir pour préserver la biodiversité et la souveraineté.
+
+**À retenir (cartel)**
+- L’orpaillage clandestin est motivé par la ruée vers l’or et la pauvreté régionale.
+- Il provoque des dégâts écologiques et sanitaires majeurs.
+- Il alimente des réseaux criminels transnationaux.
+
+────────────────────────────
+BLOC 2 — Genèse et organisation de l’opération Harpie
+────────────────────────────
+**Texte :**
+Au début des années 2000, des opérations ponctuelles (Anaconda) sont menées pour détruire les sites illégaux. Toutefois, la pression reste forte. Le 28 février 2008, l’**opération Harpie** est lancée par la gendarmerie et les Forces Armées en Guyane. Ce dispositif permanent associe **1 180 gendarmes** et **2 465 militaires** des FAG. Harpie repose sur quatre piliers : **action judiciaire** (arrestation des orpailleurs et traducteurs), **action administrative** (destruction de matériel, évacuation des camps), **action économique et sociale** (soutien aux filières légales d’orpaillage), **action diplomatique** (coopération avec le Brésil et le Suriname). Les interventions ont lieu sur l’ensemble du territoire, mais se concentrent sur le haut Maroni, le parc amazonien et la région de l’Oyapock.
+
+**À retenir (cartel)**
+- Harpie est une opération permanente et interarmées lancée en 2008.
+- Elle mobilise des gendarmes et des militaires pour des missions judiciaires, administratives, économiques et diplomatiques.
+- Les zones d’action principales sont le haut Maroni, le parc amazonien et l’Oyapock.
+
+────────────────────────────
+BLOC 3 — Rôle du 9e RIMa et des commandos CRAJ
+────────────────────────────
+**Texte :**
+Le 9e RIMa est l’un des piliers d’Harpie. Ses soldats assurent l’**escorte** des unités de gendarmerie, la protection des hélicoptères et la logistique dans les bases avancées. Ils participent aussi aux phases d’intervention, détruisent le matériel (moteurs, concasseurs), et assurent la sécurité des populations voisines. Le **CRAJ** joue un rôle essentiel dans la phase de **renseignement** : infiltrations en profondeur pour localiser les sites illégaux, observation des allées et venues, désignation des objectifs. Les informations recueillies permettent aux gendarmes mobiles et aux légionnaires d’intervenir avec un maximum d’efficacité. Le 9e RIMa apporte également une expertise fluviale indispensable pour accéder aux camps par pirogue.
+
+**À retenir (cartel)**
+- Le 9e RIMa protège et appuie les unités de gendarmerie lors des interventions.
+- Le CRAJ réalise les infiltrations et fournit le renseignement opérationnel.
+- Les compétences fluviales du régiment facilitent l’accès aux sites isolés.
+
+────────────────────────────
+BLOC 4 — Résultats et évolution de l’opération
+────────────────────────────
+**Texte :**
+Chaque année, l’opération Harpie conduit à la destruction de centaines de campements, à la saisie de plusieurs centaines de kilos d’or et de mercure et à l’arrestation de dizaines d’orpailleurs. En 2023, les forces engagées ont **interpellé 225 personnes** et saisi **61 millions d’euros** d’avoirs criminels. Plus de **1 000 missions** sont menées chaque année, mobilisant **50 à 60 gendarmes** et **200 à 300 militaires** par jour. Le dispositif s’adapte en permanence : développement de la **méthode Harpie 2** (opérations plus longues et plus mobiles), renforcement de la coopération avec les pays voisins et implication accrue des autorités judiciaires. L’objectif est de réduire durablement l’orpaillage illégal tout en soutenant les filières légales et les populations locales.
+
+**À retenir (cartel)**
+- Harpie a permis l’arrestation de centaines d’orpailleurs et la saisie de millions d’euros.
+- Les missions mobilisent quotidiennement plusieurs centaines de gendarmes et de militaires.
+- Le dispositif évolue vers des opérations plus longues et une coopération renforcée.
+
+────────────────────────────
+TIMELINE (5 repères)
+────────────────────────────
+- **Début des années 2000 : Opérations Anaconda** — premières actions coordonnées contre les sites illégaux.
+- **28 février 2008 : Lancement de l’opération Harpie** — mise en place d’un dispositif permanent associant gendarmes et militaires.
+- **2010 : Mise en place des équipes mixtes** — intégration du CRAJ, des gendarmes mobiles et des légionnaires du 3e REI.
+- **2023 : Bilan annuel** — 225 personnes interpellées, 61 millions d’euros saisis, environ 1 000 missions.
+- **Années 2020 : Harpie 2 et coopération internationale** — renforcement des moyens mobiles et du dialogue avec le Brésil et le Suriname.
+
+────────────────────────────
+GLOSSAIRE
+────────────────────────────
+**Garimpeiro** : orpailleur clandestin en Amazonie.
+**Anaconda** : nom des opérations précédant Harpie, menées dans les années 2000 pour lutter contre l’orpaillage illégal.
+**Harpie** : opération interarmées et interministérielle de lutte contre l’orpaillage illégal, lancée en 2008.
+**Avoirs criminels** : biens saisis (or, carburant, machines) provenant d’activités illégales.
+**Harpie 2** : évolution du dispositif visant à prolonger les opérations et à renforcer la coopération avec les pays voisins.
+
+────────────────────────────
+QUIZ (4 questions)
+────────────────────────────
+1. En quelle année l’opération Harpie a‑t‑elle été officiellement lancée ?
+   A) 2005
+   B) 2008
+   C) 2010
+   D) 2015
+
+2. Quel est le rôle principal du CRAJ dans le cadre de l’opération Harpie ?
+   A) Construire des campements
+   B) S’infiltrer et fournir le renseignement sur les sites illégaux
+   C) Fixer la valeur de l’or
+   D) Former les gendarmes au tir
+
+3. Combien de gendarmes et de militaires sont engagés en moyenne chaque jour dans Harpie ?
+   A) 5 gendarmes et 20 militaires
+   B) 50–60 gendarmes et 200–300 militaires
+   C) 500 gendarmes et 2 000 militaires
+   D) 1 gendarme et 3 militaires
+
+4. Quel montant total d’avoirs criminels a été saisi en 2023 lors des opérations Harpie ?
+   A) 61 milliers d’euros
+   B) 61 millions d’euros
+   C) 6,1 milliards d’euros
+   D) 61 euros
+
+────────────────────────────
+CONCLUSION / TRANSITION
+────────────────────────────
+L’opération Harpie illustre l’engagement du 9e RIMa pour protéger l’environnement et soutenir l’État de droit. En découvrant cette lutte contre l’orpaillage, le visiteur mesure l’importance des opérations conjuguées. L’étape suivante, **Titan**, le conduira à un autre théâtre d’engagement du régiment : la protection du Centre Spatial Guyanais.

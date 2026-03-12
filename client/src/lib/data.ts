@@ -70,7 +70,7 @@ export const museumData: Section[] = [
       { id: "guyane-craj", title: "CRAJ", image: "/images/placeholder.png", content: "Le Centre d'Entraînement en Forêt Équatoriale...", link: "/guyane/craj" },
       { id: "guyane-jungle", title: "Jungle", image: "/images/placeholder.png", content: "La vie et le combat en milieu équatorial...", link: "/guyane/jungle" },
       { id: "guyane-inter", title: "International", image: "/images/placeholder.png", content: "La coopération avec les armées voisines...", link: "/guyane/international" },
-      { id: "guyane-harpie", title: "Harpie", image: "/images/placeholder.png", content: "L'opération Harpie contre l'orpaillage..." },
+      { id: "guyane-harpie", title: "Harpie", image: "/images/placeholder.png", content: "L'opération Harpie contre l'orpaillage...", link: "/guyane/harpie" },
       { id: "guyane-titan", title: "Titan", image: "/images/placeholder.png", content: "La protection du Centre Spatial Guyanais..." }
     ]
   },
