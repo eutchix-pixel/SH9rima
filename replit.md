@@ -36,6 +36,7 @@ Preferred communication style: Simple, everyday language.
   - `client/src/lib/guyane-debuts-data.ts` — Guyane Débuts content (timeline, blocs, glossary, MCQ quiz)
   - `client/src/lib/guyane-emprises-data.ts` — Guyane Emprises content (timeline, blocs, glossary, MCQ quiz)
   - `client/src/lib/guyane-fluvial-data.ts` — Guyane Fluvial content (timeline, blocs, glossary, MCQ quiz)
+  - `client/src/lib/guyane-craj-data.ts` — Guyane CRAJ content (timeline, blocs, glossary, MCQ quiz)
 - Each content page has multiple reading modes: "Essential (5 min)", "Full Visit (20-30 min)", "Archives (deep reading)"
 - Pages feature: interactive timelines, accordion sections, image galleries with placeholders, glossaries, mini-quizzes
 
@@ -55,6 +56,7 @@ Preferred communication style: Simple, everyday language.
 - **Guyane/Débuts** (`/guyane/debuts`) — Origins of the 9e BIMa in French Guiana (1638-1976): Cépérou legend, colonial forts, battalion recreation, first Maroni missions
 - **Guyane/Emprises** (`/guyane/emprises`) — Posts and camps along the Maroni (1976-1993): Saint-Jean, Plan Maroni, Plan Alizé, Groupement Maroni
 - **Guyane/Fluvial** (`/guyane/fluvial`) — River navigation (1976-1996): pirogues, takariste/motoriste roles, rapids, life on the Maroni
+- **Guyane/CRAJ** (`/guyane/craj`) — Jungle commando unit: C3F training center, infiltration missions, Operation Harpie, equipment
 - **AI Assistant** (`/ai-assistant`) — Chat-style assistant (currently client-side simulation using museum data)
 
 ### Backend (Express)

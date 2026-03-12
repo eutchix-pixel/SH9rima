@@ -1,0 +1,136 @@
+
+MASTER PROMPT — REPLIT AI
+Projet : « Museum Tour Guide — 9e RIMa »
+Nouvelle page à créer : GUYANE → « CRAJ (Commando de recherche et d’action en jungle) »
+Slug conseillé : `/guyane/craj`
+
+IMPORTANT
+- Ne pas inventer de noms, de dates ou d’effectifs qui ne sont pas explicitement fournis. Cette page présente la formation en jungle et les missions d’infiltration de la **CRAJ**, unité d’élite du 9e RIMa impliquée notamment dans l’opération Harpie.
+- Le texte doit être reproduit tel quel ; seules des micro‑copies d’interface peuvent être ajoutées.
+
+OBJECTIF VISITEUR
+Expliquer ce qu’est le Commando de recherche et d’action en jungle (CRAJ) : une unité d’expertise du 9e RIMa formée à la survie et à l’infiltration en milieu amazonien. Mettre en avant la formation dispensée par le Centre d’entraînement en forêt équatoriale (C3F), les compétences acquises et le rôle du CRAJ dans la lutte contre l’orpaillage clandestin.
+
+À FAIRE DANS L’APP
+1) **Placement** : insérer cette page après « Fluvial » et avant « Jungle ». Boutons fixes identiques.
+2) **UX / UI**
+   - **HERO** : photo immersive de marsouins encordés progressant en jungle, avec la **question directrice** en surimpression.
+   - **Modes de lecture** :
+      a) **Comprendre** : présentation du CRAJ et du C3F, missions, organigramme.
+      b) **Récit** : témoignage d’un stagiaire du C3F (texte + audio) sur sa formation (orientation, tir, survie).
+      c) **Archives** : documents sur les brevets, matériel spécifique (machettes, topofil), citations officielles.
+   - **Timeline** : 5 repères (création du C3F, création du CRAJ, premières missions Harpie, adaptations récentes, partenariats internationaux).
+   - **Carte** : schéma du camp d’entraînement dans la jungle avec zones (piste d’orientation, parcours de progression, zone de tir).
+   - **Mini‑quiz** : 4 questions sur la formation, les missions et le matériel.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Guyane — CRAJ (Commando de recherche et d’action en jungle)
+
+SOUS‑TITRE (H2)
+Pour opérer en forêt équatoriale, il faut plus que des muscles : il faut des connaissances, de la discrétion et du sang‑froid. Le CRAJ forme les marsouins à survivre, à se repérer et à infiltrer des sites illégaux au cœur de la jungle.
+
+QUESTION DIRECTRICE
+Quelles compétences les marsouins du CRAJ acquièrent‑ils au Centre d’entraînement en forêt équatoriale et quel rôle jouent‑ils dans les missions d’infiltration et de lutte contre l’orpaillage clandestin ?
+
+ENCADRÉ « REPÈRES »
+• Création du **Centre d’entraînement en forêt équatoriale (C3F)** : date à préciser (début des années 1980) — formation initiale des marsouins à la vie en jungle.
+• Création du **CRAJ** : unité d’élite du 9e RIMa spécialisée dans la recherche et l’action en jungle, missions d’infiltration dans le cadre de l’opération Harpie.
+• Opération Harpie (2008) : première opération d’envergure contre l’orpaillage clandestin mobilisant le CRAJ, les gendarmes mobiles et les légionnaires.
+• Évolutions récentes : adaptation du CRAJ aux nouvelles menaces (orpaillage, trafic d’espèces) et coopération avec le Brésil et le Suriname dans le cadre de patrouilles mixtes.
+
+BOUTONS
+- Comprendre (5 min)
+- Récit (10–15 min)
+- Archives (approfondir)
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+Le **CRAJ** est un **commando** du 9e RIMa spécialisé dans la recherche et l’action en jungle. Ses membres suivent un cursus exigeant au **Centre d’entraînement en forêt équatoriale (C3F)**, souvent appelé centre de mise en condition « Cayenne Jungle ». Ce stage leur enseigne la survie (orientation au topofil, construction de bivouac, gestion de l’eau et de la nourriture), la progression discrète (machette, cordes, descente en rappel) et les techniques d’infiltration. Les commandos sont ensuite engagés au sein d’équipes mixtes armée-gendarmerie pour **l’opération Harpie**, dispositif de lutte contre l’orpaillage clandestin créé en 2008 qui mobilise près de 3 600 militaires et gendarmes. Leur mission consiste à pénétrer profondément en forêt, repérer les sites illégaux, collecter des renseignements et guider les forces d’intervention. Le CRAJ est ainsi la pointe avancée de la présence française en forêt amazonienne.
+
+────────────────────────────
+BLOC 1 — Le Centre d’entraînement en forêt équatoriale (C3F)
+────────────────────────────
+**Texte :**
+Pour se familiariser avec la jungle, les marsouins du 9e RIMa et des unités venues de métropole passent par le **C3F**, installé dans une base reculée. Pendant plusieurs semaines, les stagiaires apprennent à se repérer sans GPS : utilisation de la **boussole**, du **topofil** (fil d’orientation), lecture de reliefs et observation de la canopée. Ils construisent des **bivouacs** avec des bâches et des lianes, apprennent à filtrer l’eau et à préparer des repas à partir de gibier ou de plantes comestibles. Le stage comprend également des modules de **tir en jungle** (courtes distances et visibilité réduite), de **progression encordée** (passages d’obstacles, franchissement de rivières en tyrolienne) et de **secourisme** spécifique (gestion des morsures, extraction en hélicoptère). Les stagiaires doivent démontrer endurance, initiative et esprit d’équipe pour obtenir leur brevet.
+
+**À retenir (cartel)**
+- Le C3F forme à la survie, à la navigation et au combat en jungle.
+- Les outils de base sont la boussole, le topofil et la machette.
+- Chaque stagiaire doit construire un bivouac et gérer sa nourriture et son eau.
+
+────────────────────────────
+BLOC 2 — Le commando CRAJ et ses missions
+────────────────────────────
+**Texte :**
+Après la formation, les marsouins les plus aguerris rejoignent le **Commando de recherche et d’action en jungle (CRAJ)**. Cette unité d’élite, forte d’une trentaine d’hommes, est capable de s’infiltrer sur des centaines de kilomètres à pied ou en pirogue. Dans le cadre de l’**opération Harpie**, le CRAJ mène des missions clandestines pour localiser les campements d’orpaillage illégal. Ses membres opèrent en binômes, parfois durant plusieurs jours sans soutien, en observant les allées et venues des garimpeiros et en signalant leur position par radio sécurisé. Une fois les coordonnées confirmées, les gendarmes mobiles et les autres unités de l’armée entament l’assaut et détruisent le matériel d’extraction. Le CRAJ participe aussi à des missions de secours (évacuation sanitaire de bûcherons blessés) et d’appui à la recherche scientifique (accompagnement d’ethnologues et d’archéologues). Ses savoir‑faire sont recherchés par les alliés : les commandos s’entraînent régulièrement avec des forces brésiliennes et surinamaises.
+
+**À retenir (cartel)**
+- Le CRAJ est spécialisé dans l’infiltration et la reconnaissance en forêt profonde.
+- Ses missions principales : localisation de sites illégaux et guidage des forces d’intervention.
+- La coopération avec les gendarmes et les forces étrangères est essentielle à la réussite des opérations.
+
+────────────────────────────
+BLOC 3 — Savoir‑faire et équipements
+────────────────────────────
+**Texte :**
+Au cœur de la jungle, le CRAJ utilise un équipement spécifique : **machettes**, **coupe‑coupe**, **topofil**, **GPS encrypté**, radios longue portée, filets de camouflage et sacs étanches. Pour se déplacer discrètement, les commandos préfèrent les pistes de chasse et les lits de rivières asséchées. Ils adaptent leur tenue en fonction de la météo : casques légers avec moustiquaire, gilets à poches, gourdes isothermes. Le **savoir‑faire** du CRAJ repose avant tout sur l’anticipation : lecture de traces, évaluation du niveau des rivières, connaissance des usages des garimpeiros. La nuit, ils montent des bivouacs suspendus pour éviter insectes et serpents. Leur entraînement continu dans les forêts de Guyane et au **centre de jungle** brésilien de Manaus garantit un haut niveau de compétence et de résilience.
+
+**À retenir (cartel)**
+- L’équipement du CRAJ est adapté au milieu tropical et à l’infiltration discrète.
+- Les commandos utilisent des techniques d’observation et d’anticipation pour survivre et repérer les sites illégaux.
+- La formation continue (Guyane, Manaus) maintient le niveau opérationnel.
+
+────────────────────────────
+TIMELINE (5 repères)
+────────────────────────────
+- **Début des années 1980 : Création du C3F** — mise en place du premier stage de jungle pour les marsouins.
+- **Fin des années 1980 : Constitution des premiers commandos de recherche** — prémices de l’actuel CRAJ.
+- **2008 : Lancement de l’opération Harpie** — 1 180 gendarmes et 2 465 militaires mobilisés contre l’orpaillage clandestin.
+- **2010 : Missions d’infiltration mixte** — le CRAJ opère avec les gendarmes mobiles et les légionnaires du 3e REI.
+- **Années 2020 : Coopérations internationales** — entraînements conjoints avec les forces brésiliennes et surinamaises pour améliorer les techniques de recherche et d’arrestation.
+
+────────────────────────────
+GLOSSAIRE
+────────────────────────────
+**C3F (Centre d’entraînement en forêt équatoriale)** : structure de formation située en Guyane où les militaires apprennent la vie et le combat en jungle.
+**Topofil** : bobine de fil utilisée pour mesurer et suivre une distance lors des progressions en forêt.
+**Garimpeiro** : orpailleur clandestin opérant dans la forêt amazonienne.
+**Commando de recherche et d’action en jungle (CRAJ)** : unité d’élite du 9e RIMa spécialisée dans l’infiltration et la reconnaissance en milieu tropical.
+**Opération Harpie** : dispositif interarmées lancé en 2008 pour lutter contre l’orpaillage illégal et l’insécurité en Guyane.
+
+────────────────────────────
+QUIZ (4 questions)
+────────────────────────────
+1. Quel outil traditionnel de mesure de distance est enseigné au C3F ?
+   A) Le GPS
+   B) Le topofil
+   C) La montre à gousset
+   D) Le télémètre laser
+
+2. Quelle opération mobilise le CRAJ contre l’orpaillage clandestin ?
+   A) Opération Titan
+   B) Opération Harpie
+   C) Opération Maroni
+   D) Opération Jumelles
+
+3. Quel est l’un des rôles principaux du CRAJ ?
+   A) Installer des ponts flottants sur le Maroni
+   B) Localiser les sites illégaux et guider les forces d’intervention
+   C) Construire des pas de tir au Centre Spatial
+   D) Organiser des défilés à Cayenne
+
+4. Où les commandos du 9e RIMa se rendent‑ils pour se perfectionner à la jungle en dehors de la Guyane ?
+   A) À Paris
+   B) À Manaus, au Brésil
+   C) À Fort‑de‑France, en Martinique
+   D) À Dakar, au Sénégal
+
+────────────────────────────
+CONCLUSION / TRANSITION
+────────────────────────────
+Le CRAJ démontre l’excellence des marsouins en milieu extrême. Après avoir découvert cette unité d’élite, le visiteur est invité à explorer la page **Jungle**, qui présentera la diversité des opérations en forêt équatoriale et la vie quotidienne des détachements de brousse.
