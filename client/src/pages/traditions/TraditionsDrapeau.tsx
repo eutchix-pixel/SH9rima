@@ -5,7 +5,7 @@ import {
   ArrowLeft, ArrowRight, Clock, BookOpen, Check,
   Shield, Flag, Sword, Award,
   ChevronDown, FileText, HelpCircle, BookMarked,
-  Eye, Lightbulb, Layers
+  Eye, Lightbulb, Home, ChevronRight
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { motion, useScroll, useSpring, useInView, AnimatePresence, useMotionValueEvent } from "framer-motion";
@@ -94,7 +94,7 @@ export default function TraditionsDrapeauPage() {
               <div className="flex items-center gap-2">
                 <Link href="/#traditions">
                   <button className="text-[#4a3b2a]/60 hover:text-[#4a3b2a] transition-colors text-[10px] uppercase tracking-widest flex items-center gap-1" data-testid="sticky-link-back">
-                    <ArrowLeft className="h-3 w-3" /> Traditions
+                    <Home className="h-3 w-3" /> Accueil
                   </button>
                 </Link>
                 <span className="text-[#4a3b2a]/20 mx-1">/</span>
@@ -133,18 +133,21 @@ export default function TraditionsDrapeauPage() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 pt-8 pb-24 md:pb-32">
-          <div className="flex justify-between items-center mb-16">
+          <nav className="flex items-center justify-between mb-12 -mx-1" data-testid="page-nav-header">
+            <div className="min-w-[44px]" />
             <Link href="/#traditions">
-              <button className="text-[#d8b0b8]/50 hover:text-[#d8b0b8] transition-colors text-[10px] uppercase tracking-widest flex items-center gap-2" data-testid="link-back-traditions">
-                <ArrowLeft className="h-3 w-3" /> Traditions
+              <button className="flex items-center gap-1.5 px-4 py-2.5 rounded-lg text-white/50 active:text-white/80 active:bg-white/10 transition-colors min-h-[44px]" data-testid="link-back-home">
+                <Home className="h-3.5 w-3.5 shrink-0" />
+                <span className="text-[11px] uppercase tracking-wider font-medium">Accueil</span>
               </button>
             </Link>
-            <Link href="/">
-              <button className="text-[#d8b0b8]/50 hover:text-[#d8b0b8] transition-colors text-[10px] uppercase tracking-widest" data-testid="link-back-home">
-                Accueil
+            <Link href="/traditions/insignes">
+              <button className="flex items-center gap-1 px-3 py-2.5 rounded-lg text-white/50 active:text-white/80 active:bg-white/10 transition-colors min-h-[44px] min-w-[44px]" data-testid="link-next">
+                <span className="text-[11px] uppercase tracking-wider truncate max-w-[80px]">Insignes</span>
+                <ChevronRight className="h-4 w-4 shrink-0" />
               </button>
             </Link>
-          </div>
+          </nav>
 
           <motion.div
             className="space-y-8"
@@ -597,18 +600,9 @@ export default function TraditionsDrapeauPage() {
                   <Button
                     variant="outline"
                     className="border-[#4a3b2a]/15 text-[#4a3b2a]/70 hover:bg-white/40 hover:text-[#4a3b2a] px-6 py-5 text-xs rounded-lg"
-                    data-testid="button-back-traditions"
+                    data-testid="button-back-home"
                   >
-                    <ArrowLeft className="mr-2 h-3.5 w-3.5" /> Traditions
-                  </Button>
-                </Link>
-                <Link href="/">
-                  <Button
-                    variant="outline"
-                    className="border-[#4a3b2a]/15 text-[#4a3b2a]/70 hover:bg-white/40 hover:text-[#4a3b2a] px-6 py-5 text-xs rounded-lg"
-                    data-testid="button-back-themes"
-                  >
-                    <Layers className="mr-2 h-3.5 w-3.5" /> Thèmes
+                    <Home className="mr-2 h-3.5 w-3.5" /> Accueil
                   </Button>
                 </Link>
                 <Link href="/traditions/insignes">

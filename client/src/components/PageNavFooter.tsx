@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, Layers } from "lucide-react";
+import { ArrowLeft, ArrowRight, Home } from "lucide-react";
 
 interface PageNavFooterProps {
   prevLink: string;
@@ -10,6 +10,7 @@ interface PageNavFooterProps {
   sectionAnchor: string;
   accent: string;
   hasNext: boolean;
+  [key: string]: any;
 }
 
 export default function PageNavFooter({ prevLink, prevLabel, nextLink, nextLabel, sectionAnchor, accent, hasNext }: PageNavFooterProps) {
@@ -32,9 +33,9 @@ export default function PageNavFooter({ prevLink, prevLabel, nextLink, nextLabel
             <Button
               variant="outline"
               className="border-[#4a3b2a]/15 text-[#4a3b2a]/70 hover:bg-white/40 hover:text-[#4a3b2a] px-6 py-5 text-xs rounded-lg"
-              data-testid="button-back-themes"
+              data-testid="button-back-home"
             >
-              <Layers className="mr-2 h-3.5 w-3.5" /> Thèmes
+              <Home className="mr-2 h-3.5 w-3.5" /> Accueil
             </Button>
           </Link>
           {hasNext ? (

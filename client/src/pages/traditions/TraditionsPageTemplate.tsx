@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import {
   ArrowLeft, ArrowRight, Clock, BookOpen, Check,
   Shield, ChevronDown, FileText, HelpCircle, BookMarked,
-  Eye, Lightbulb, Layers
+  Eye, Lightbulb, Home, ChevronLeft, ChevronRight
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { motion, useScroll, useSpring, useInView, AnimatePresence, useMotionValueEvent } from "framer-motion";
@@ -110,18 +110,26 @@ export default function TraditionsPageTemplate({ data, accent, accentDark, accen
       <header className="relative overflow-hidden" style={{ background: heroGradient }}>
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: heroBgPattern }} />
         <div className="relative z-10 max-w-5xl mx-auto px-6 pt-8 pb-24 md:pb-32">
-          <div className="flex justify-between items-center mb-16">
+          <nav className="flex items-center justify-between mb-12 -mx-1" data-testid="page-nav-header">
             <Link href={prevLink}>
-              <button className="text-white/30 hover:text-white/60 transition-colors text-[10px] uppercase tracking-widest flex items-center gap-2" data-testid="link-back-prev">
-                <ArrowLeft className="h-3 w-3" /> {prevLabel}
+              <button className="flex items-center gap-1 px-3 py-2.5 rounded-lg text-white/50 active:text-white/80 active:bg-white/10 transition-colors min-h-[44px] min-w-[44px]" data-testid="link-back-prev">
+                <ChevronLeft className="h-4 w-4 shrink-0" />
+                <span className="text-[11px] uppercase tracking-wider truncate max-w-[80px]">{prevLabel}</span>
               </button>
             </Link>
             <Link href="/#traditions">
-              <button className="text-white/30 hover:text-white/60 transition-colors text-[10px] uppercase tracking-widest" data-testid="link-back-traditions">
-                Traditions
+              <button className="flex items-center gap-1.5 px-4 py-2.5 rounded-lg text-white/50 active:text-white/80 active:bg-white/10 transition-colors min-h-[44px]" data-testid="link-back-home">
+                <Home className="h-3.5 w-3.5 shrink-0" />
+                <span className="text-[11px] uppercase tracking-wider font-medium">Accueil</span>
               </button>
             </Link>
-          </div>
+            <Link href={nextLink}>
+              <button className="flex items-center gap-1 px-3 py-2.5 rounded-lg text-white/50 active:text-white/80 active:bg-white/10 transition-colors min-h-[44px] min-w-[44px]" data-testid="link-next">
+                <span className="text-[11px] uppercase tracking-wider truncate max-w-[80px]">{nextLabel}</span>
+                <ChevronRight className="h-4 w-4 shrink-0" />
+              </button>
+            </Link>
+          </nav>
           <motion.div className="space-y-8" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}>
             <div className="flex items-center gap-3">
               <div className="w-8 h-[1px]" style={{ backgroundColor: `${accentLight}66` }} />
@@ -361,7 +369,7 @@ export default function TraditionsPageTemplate({ data, accent, accentDark, accen
               <p className="text-[10px] uppercase tracking-[0.4em] text-[#4a3b2a]/40">Navigation</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link href={prevLink}><Button variant="outline" className="border-[#4a3b2a]/15 text-[#4a3b2a]/70 hover:bg-white/40 hover:text-[#4a3b2a] px-6 py-5 text-xs rounded-lg" data-testid="button-back-prev"><ArrowLeft className="mr-2 h-3.5 w-3.5" /> {prevLabel}</Button></Link>
-                <Link href="/#traditions"><Button variant="outline" className="border-[#4a3b2a]/15 text-[#4a3b2a]/70 hover:bg-white/40 hover:text-[#4a3b2a] px-6 py-5 text-xs rounded-lg" data-testid="button-back-themes"><Layers className="mr-2 h-3.5 w-3.5" /> Thèmes</Button></Link>
+                <Link href="/#traditions"><Button variant="outline" className="border-[#4a3b2a]/15 text-[#4a3b2a]/70 hover:bg-white/40 hover:text-[#4a3b2a] px-6 py-5 text-xs rounded-lg" data-testid="button-back-home"><Home className="mr-2 h-3.5 w-3.5" /> Accueil</Button></Link>
                 <Link href={nextLink}><Button className="text-white px-6 py-5 text-xs rounded-lg shadow-lg" style={{ backgroundColor: accent, boxShadow: `0 10px 15px -3px ${accent}33` }} data-testid="button-continue-visit">{nextLabel} <ArrowRight className="ml-2 h-3.5 w-3.5" /></Button></Link>
               </div>
             </div>

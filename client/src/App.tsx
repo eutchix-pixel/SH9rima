@@ -33,7 +33,18 @@ import NotFound from "./pages/not-found";
 function ScrollToTop() {
   const [location] = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const hash = window.location.hash;
+    if (hash) {
+      requestAnimationFrame(() => {
+        const el = document.getElementById(hash.slice(1));
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+      });
+    } else {
+      window.scrollTo(0, 0);
+    }
     if (location !== '/scan') {
       localStorage.setItem('lastVisitedPage', location);
     }
