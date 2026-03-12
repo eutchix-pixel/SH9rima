@@ -357,18 +357,6 @@ export default function AnneesHeureusesPage() {
         )}
 
         <FadeInSection>
-          <section className="relative overflow-hidden rounded-2xl shadow-2xl" data-testid="bloc-conclusion">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#4a3b2a] via-[#3a2e1f] to-[#2a1f14]" />
-            <div className="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%224%22%20height%3D%224%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%200v4M0%201h4%22%20stroke%3D%22%23dcb575%22%20stroke-width%3D%220.5%22%20fill%3D%22none%22/%3E%3C/svg%3E')]" />
-            <div className="relative z-10 text-[#e8dcc5] p-8 md:p-12 space-y-4">
-              <p className="font-serif text-xl md:text-2xl font-bold uppercase tracking-widest">
-                {heureusesData.nextStep}
-              </p>
-            </div>
-          </section>
-        </FadeInSection>
-
-        <FadeInSection>
           <section className="text-center space-y-8 py-12 border-t-2 border-[#4a3b2a]/10">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/asie/siberie-ww1">
