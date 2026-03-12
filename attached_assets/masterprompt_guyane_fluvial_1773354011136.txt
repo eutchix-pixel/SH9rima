@@ -1,0 +1,147 @@
+
+MASTER PROMPT — REPLIT AI
+Projet : « Museum Tour Guide — 9e RIMa »
+Nouvelle page à créer : GUYANE → « Fluvial »
+Slug conseillé : `/guyane/fluvial`
+
+IMPORTANT
+- Les informations doivent rester **factuelles** ; n’ajoute pas de chiffres ou de noms qui ne sont pas décrits dans le texte.
+- Cette page raconte la vie sur le fleuve : pirogues, navigateurs, rapides et navigation au Maroni et à l’Oyapock. Le texte sous « CONTENU À AFFICHER » doit être reproduit fidèlement.
+
+OBJECTIF VISITEUR
+Découvrir comment les marins du 9e RIMa se déplacent et vivent sur le fleuve Maroni. Comprendre le rôle des pirogues, la fonction des équipages (takariste, motoriste) et les défis posés par les rapides et la navigation en forêt amazonienne. Cette page est immersive et sensorielle.
+
+À FAIRE DANS L’APP (FONCTIONNEL)
+1) **Position dans la visite** : placer cette page après « Emprises » et avant « CRAJ ». Boutons de navigation identiques aux autres pages.
+2) **UX / UI**
+   - **HERO** : photo ou illustration d’une pirogue franchissant un rapide, avec la **question directrice** superposée.
+   - **Mode Comprendre** : schéma interactif d’une pirogue annotée (positions du **takariste** à l’avant, du **motoriste** à l’arrière et des passagers au centre).
+   - **Mode Récit** : mini‑reportage en trois blocs (départ, franchissement d’un saut, arrivée dans un village). Inclure audio de l’eau et animations de carte.
+   - **Mode Archives** : galerie photo des pirogues, cartes des rapides (sauts Acarouany, Charvein, Nassau), citation de marins.
+   - **Carte interactive** : fleuve Maroni et principaux sauts. Permettre au visiteur de cliquer sur un rapide pour voir une vidéo ou une anecdote.
+   - **Mini‑quiz** : 4 questions sur les rôles et les difficultés de la navigation.
+3) **Accessibilité** : proposer des textes alternatifs pour toutes les images et des sous‑titres pour les sons.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Guyane — Fluvial
+
+SOUS‑TITRE (H2)
+Le Maroni est l’artère vitale du régiment. En pirogue, les marsouins parcourent des centaines de kilomètres pour ravitailler les postes, soutenir les populations et affirmer la présence de la France. Entre rapides et troncs d’arbres, la navigation est un art.
+
+QUESTION DIRECTRICE
+Pourquoi la maîtrise du fleuve est‑elle au cœur des missions du 9e RIMa et quels savoir‑faire les marsouins développent‑ils pour franchir les rapides et naviguer dans la jungle ?
+
+ENCADRÉ « REPÈRES »
+• 1976 : acquisition d’un parc de 12 pirogues pour le détachement de Saint‑Jean
+• 1977 : premières missions fluviales vers les bornes frontières et le poste de Maripasoula
+• 1986 : plan Maroni : intensification des patrouilles fluviales pour sécuriser les camps et les villages
+• 1990 : création du poste de Nasson : base de la section fluviale avec pirogues motorisées
+• 1996 : réoccupation du camp de Maripasoula par le 9e RIMa, nécessitant une logistique fluviale renforcée
+
+BOUTONS
+- Comprendre (5 min)
+- Récit (10–15 min)
+- Archives (approfondir)
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+La Guyane est un territoire de fleuves. Pour le 9e RIMa, le **Maroni** et l’**Oyapock** constituent les voies d’accès principales. Depuis 1976, le détachement de **Saint‑Jean** dispose d’une flotte de **pirogues motorisées**. Ces embarcations légères, fabriquées en bois local, transportent hommes, vivres, médicaments et matériel. L’équipage est composé d’un **takariste** placé à l’avant, chargé de repérer les rochers et les passes, et d’un **motoriste** à l’arrière qui manœuvre l’hélice et gère la puissance. Entre les deux se tiennent les marsouins et les passagers, qui doivent se répartir pour équilibrer la pirogue. Sur le fleuve, les dangers sont nombreux : **rapides** appelés « sauts », troncs flottants et variations brutales du niveau de l’eau. Les marins franchissent ces obstacles grâce à une connaissance fine des courants et une solidarité sans faille.
+
+────────────────────────────
+BLOC 1 — La pirogue, un vecteur de présence
+────────────────────────────
+**Texte :**
+Lorsque le 9e BIMa s’installe à Saint‑Jean du Maroni, il reçoit douze pirogues taillées dans des troncs de bois local. Ces bateaux deviennent la colonne vertébrale de la logistique. Chaque semaine, des convois remontent le fleuve jusqu’à **Maripasoula** et parfois au‑delà pour ravitailler les postes isolés et transporter des vivres, du carburant, du courrier et des matériaux de construction. Dans les années 1980, la mission s’intensifie avec l’augmentation des réfugiés : il faut assurer la liaison entre les camps et les villages, tout en affirmant la souveraineté française. Au fil du temps, les pirogues se modernisent : moteurs plus puissants, coques renforcées, bâches de protection pour la pluie. Mais l’esprit reste le même : un équipage soudé et un fleuve majestueux.
+
+**À retenir (cartel)**
+- La pirogue est à la fois moyen de transport et symbole de présence.
+- Le fleuve relie les postes et les villages, remplaçant les routes inexistantes.
+- La logistique fluviale évolue mais reste essentielle à la mission.
+
+────────────────────────────
+BLOC 2 — Rôles du takariste et du motoriste
+────────────────────────────
+**Texte :**
+La navigation au Maroni obéit à un rituel précis. À l’avant, le **takariste** — généralement un marsouin expérimenté ou un **Amérindien** — tient une longue perche. Sa mission : repérer les rochers, branchages et bancs de sable qui affleurent et indiquer la trajectoire au motoriste. Il crie « taka » (attention) en touchant l’eau pour signaler un obstacle. À l’arrière, le **motoriste** manœuvre un moteur hors‑bord de forte puissance. Il doit réagir immédiatement aux indications du takariste, adapter le régime du moteur, enclencher le pas d’hélice, et parfois soulever l’hélice pour éviter les chocs. Entre les deux, les passagers doivent rester parfaitement équilibrés ; un faux mouvement peut faire chavirer la pirogue. La communication entre l’avant et l’arrière est constante et se fait par des gestes et des cris, même au milieu du vacarme des rapides.
+
+**À retenir (cartel)**
+- Takariste : éclaireur et guide du fleuve.
+- Motoriste : pilote et responsable de la propulsion.
+- La coordination et l’équilibre des passagers sont primordiaux pour la sécurité.
+
+────────────────────────────
+BLOC 3 — Franchir les rapides et les sauts
+────────────────────────────
+**Texte :**
+Le Maroni est parsemé de **sauts**, rapides où le courant se resserre et se cabre. Franchir un saut exige une préparation minutieuse. Avant d’engager la pirogue, le takariste reconnaît les remous à pied ou depuis la berge. Le motoriste choisit la « passe » la moins dangereuse et accélère pour prendre de la vitesse. Dans certains cas, l’équipage doit **porter** la pirogue : la vider, la hisser sur la berge, contourner l’obstacle et la remettre à l’eau plus haut. Sur les plus grands sauts, des câbles ou des rampes aménagés par les marins facilitent le halage. Chaque franchissement est une aventure où se mêlent bruit assourdissant, éclaboussures et tension. La récompense vient ensuite : la rivière redevient calme, les berges s’ouvrent et les villages apparaissent.
+
+**À retenir (cartel)**
+- Les rapides sont des points dangereux qui nécessitent reconnaissance et technique.
+- Le portage est parfois indispensable pour contourner les sauts les plus violents.
+- L’entretien des rampes et des câbles fait partie des missions des sections fluviales.
+
+────────────────────────────
+BLOC 4 — Vie sur le fleuve
+────────────────────────────
+**Texte :**
+Naviguer pendant des heures entre deux murs de verdure crée une routine singulière. Les convois partent souvent à l’aube pour profiter de la fraîcheur. Les marins emportent des hamacs, de l’eau, des vivres et des filets à moustiques. Les arrêts se font dans les **carbets** (abris traditionnels) des villages amérindiens ou bushinengue. Les soldats apprennent à préparer le poisson, à fumer la viande et à filtrer l’eau. Sur le fleuve, la météo décide de tout : crues soudaines, brouillards matinaux, averses tropicales. La pirogue est aussi un lien social : les marins transportent des enfants à l’école, des infirmiers vers les villages, des matériaux pour construire une église. Ce quotidien forge l’esprit d’entraide et l’attachement au fleuve.
+
+**À retenir (cartel)**
+- La navigation rythme la vie des marsouins et des populations locales.
+- Les marins adoptent des pratiques de survie et de partage en forêt.
+- Le fleuve est un espace de solidarité et d’échanges culturels.
+
+────────────────────────────
+TIMELINE (5 repères)
+────────────────────────────
+- **1976 : Réception des premières pirogues** — 12 pirogues motorisées pour Saint‑Jean.
+- **1977 : Première mission fluviale vers les bornes frontières** — réussite partielle, la mission vers la borne 5 échoue mais celle vers la borne 2 réussit.
+- **1986 : Intensification des patrouilles** — plan Maroni et escortes des convois de réfugiés.
+- **1990 : Installation du poste de Nasson** — base d’appui pour la section fluviale sur le bas Maroni.
+- **1996 : Réoccupation du camp de Maripasoula** — reprise des missions d’endurance sur 400 km de fleuve.
+
+────────────────────────────
+GLOSSAIRE
+────────────────────────────
+**Maroni :** fleuve frontière entre la Guyane française et le Suriname, long de plus de 500 km.
+**Takariste :** membre d’équipage placé à l’avant de la pirogue qui repère les obstacles et guide le motoriste.
+**Motoriste :** pilote de la pirogue qui manœuvre le moteur et suit les indications du takariste.
+**Saut (rapide)** : portion du fleuve où le courant s’accélère et crée des tourbillons. Les sauts les plus connus du Maroni sont Acarouany, Charvein, Nassau.
+**Portage** : action de transporter la pirogue à terre pour contourner un obstacle infranchissable.
+
+────────────────────────────
+QUIZ (4 questions)
+────────────────────────────
+1. Quel est le rôle principal du **takariste** dans une pirogue ?
+   A) Conduire le moteur
+   B) Repérer les obstacles et guider
+   C) Préparer les repas
+   D) Naviguer au GPS
+
+2. Quelle opération est parfois nécessaire pour franchir les sauts les plus dangereux ?
+   A) Tirer au canon
+   B) Portager la pirogue sur la berge
+   C) Vider la pirogue et la couler
+   D) Attendre la saison sèche
+
+3. En quelle année le poste de **Nasson** a‑t‑il été créé pour soutenir la section fluviale ?
+   A) 1976
+   B) 1986
+   C) 1990
+   D) 1996
+
+4. Quel fleuve constitue la principale voie logistique du 9e RIMa ?
+   A) Le Maroni
+   B) La Seine
+   C) Le Danube
+   D) L’Amazone
+
+────────────────────────────
+CONCLUSION / TRANSITION
+────────────────────────────
+Maîtriser le fleuve, c’est comprendre la Guyane. Grâce aux pirogues et aux savoir‑faire des marsouins, le 9e RIMa tisse un lien permanent avec les postes et les villages. Cette immersion fluviale prépare le visiteur à découvrir la page suivante : **CRAJ**, consacrée à la formation et aux missions d’infiltration en jungle.
