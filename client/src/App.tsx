@@ -35,6 +35,9 @@ function ScrollToTop() {
   const [location] = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (location !== '/scan') {
+      localStorage.setItem('lastVisitedPage', location);
+    }
   }, [location]);
   return null;
 }

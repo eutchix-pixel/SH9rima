@@ -7,12 +7,11 @@ export default function ScanPage() {
   const [, setLocation] = useLocation();
   const [scanning, setScanning] = useState(true);
 
-  // Simulate scanning delay and finding a specific ID
   useEffect(() => {
     const timer = setTimeout(() => {
         setScanning(false);
-        // Simulate finding "tonkin-naissance" from the spec
-        setLocation(`/detail/tonkin-naissance`);
+        const lastPage = localStorage.getItem('lastVisitedPage') || '/';
+        setLocation(lastPage);
     }, 2000);
     return () => clearTimeout(timer);
   }, [setLocation]);
