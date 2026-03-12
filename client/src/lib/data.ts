@@ -82,7 +82,7 @@ export const museumData: Section[] = [
     colorClass: "bg-[#7f1d1d] text-[#fef3c7]", // Rouge Garance / Or
     bgImage: "/images/bg-traditions.png",
     subsections: [
-      { id: "traditions-drapeau", title: "Drapeau", image: "/images/placeholder.png", content: "L'histoire et les décorations du drapeau..." },
+      { id: "traditions-drapeau", title: "Drapeau", image: "/images/placeholder.png", content: "L'histoire et les décorations du drapeau...", link: "/traditions/drapeau" },
       { id: "traditions-insignes", title: "Insignes", image: "/images/placeholder.png", content: "La symbolique de l'insigne du régiment..." },
       { id: "traditions-pagode", title: "Pagode", image: "/images/placeholder.png", content: "La Pagode, lieu de mémoire et de tradition..." },
       { id: "traditions-chant", title: "Chant", image: "/images/placeholder.png", content: "Les chants de marche et de bivouac..." },

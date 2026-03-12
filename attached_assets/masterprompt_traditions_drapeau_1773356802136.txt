@@ -1,0 +1,125 @@
+
+MASTER PROMPT — REPLIT AI
+Projet : « Museum Tour Guide — 9e RIMa »
+Nouvelle page à créer : TRADITIONS → « Drapeau »
+Slug conseillé : `/traditions/drapeau`
+
+IMPORTANT
+- Cette page célèbre le **drapeau** du 9e RIMa, héritier de celui du 9e RIC. Ne pas inventer de décorations ou de batailles : se limiter aux informations disponibles.
+- Le texte doit reproduire fidèlement la section « CONTENU À AFFICHER ».
+
+OBJECTIF VISITEUR
+Faire découvrir le drapeau et ses symboles : décorations, devise, bataille de Bazeilles, et noms inscrits en lettres d’or. Expliquer la continuité entre le 9e RIC et le 9e RIMa.
+
+À FAIRE DANS L’APP
+1) **Placement** : au sein de la section **Traditions**, premier onglet avant « Insignes » et « Pagode ».
+2) **UX / UI**
+   - **HERO** : photographie en haute définition du drapeau du régiment flottant devant une caserne, question directrice en surimpression.
+   - **Modes** : « Comprendre » (expliquer les éléments du drapeau), « Récit » (histoire des batailles et des décorations), « Archives » (documents officiels, extraits d’ordres du jour, photos de remises).
+   - **Infobulles interactives** : au survol de chaque motif (croix de guerre, ancre, inscriptions), affichage d’une courte explication.
+   - **Timeline** : 4 repères (création du 9e RIC, guerre de Crimée, Bazeilles 1870, transfert du drapeau au 9e RIMa en 1992).
+   - **Mini‑quiz** : 3 questions sur les décorations et symboles.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Traditions — Drapeau
+
+SOUS‑TITRE (H2)
+Symbole du régiment, le drapeau du 9e RIMa porte en lui l’histoire du 9e RIC et des marsouins qui se sont illustrés de la Crimée à la Guyane.
+
+QUESTION DIRECTRICE
+Quelles batailles et quelles valeurs le drapeau du 9e RIMa rappelle‑t‑il et comment perpétue‑t‑il la mémoire des anciens marsouins ?
+
+ENCADRÉ « REPÈRES »
+• 1831 : création du **9e régiment d’infanterie de marine** (9e RIC). Il combat en Crimée, en Cochinchine et à Bazeilles.
+• 1870 : **Bataille de Bazeilles** lors de la guerre de 1870. Les marsouins du 9e RIC se couvrent de gloire en défendant le village contre les Prussiens.
+• 1914–1918 : participation du régiment à la Première Guerre mondiale, obtenant plusieurs citations et la **croix de guerre 1914‑1918**.
+• 1992 : transfert du drapeau du 9e RIC au 9e RIMa, recréé en Guyane. Les noms des capitaines **Carli**, **Berthelin** et **Journet**, héros de la France libre, sont associés au drapeau.
+
+BOUTONS
+- Comprendre (5 min)
+- Récit (10–15 min)
+- Archives (approfondir)
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+Le drapeau du 9e RIMa est le dépositaire d’une longue histoire. Conçu au XIXᵉ siècle pour le 9e Régiment d’infanterie de marine, il porte les noms des campagnes où les marsouins se sont illustrés : **Crimée, Cochinchine, Bazeilles**, mais aussi **Tonkin, Madagascar** et les combats de la Première Guerre mondiale. Couvert de la **croix de guerre 1914‑1918** et de citations, il symbolise la bravoure et l’abnégation des soldats coloniaux. En 1992, lors de la transformation du 9e BIMa en 9e RIMa, le drapeau est transféré en Guyane. Trois noms y sont attachés : **Jean Carli**, **Bernard Berthelin** et **Robert Journet**, officiers tombés au Tonkin et en Algérie et devenus des figures de la mémoire régimentaire. À chaque cérémonie, ce drapeau rappelle aux jeunes marsouins l’honneur de ceux qui les ont précédés.
+
+────────────────────────────
+BLOC 1 — Origines et décorations du drapeau
+────────────────────────────
+**Texte :**
+Le drapeau actuel du 9e RIMa est hérité du 9e régiment d’infanterie de marine, créé en **1831**. Ses plis portent en lettres d’or les noms des grandes campagnes coloniales : **Crimée (1854‑1856)**, **Cochinchine (1859‑1862)**, **Bazeilles (1870)**. Au fil des décennies, d’autres batailles s’y ajoutent, notamment celles de **Tonkin** et de **Madagascar**. Durant la Première Guerre mondiale, le régiment s’illustre sur la Somme et à Verdun ; il reçoit la **croix de guerre 1914‑1918** avec palme. Le drapeau arbore également l’ancre des troupes de marine et la devise « Et au besoin… au bout du monde », qui résume l’esprit d’aventure des marsouins.
+
+**À retenir (cartel)**
+- Le drapeau est le témoin des campagnes coloniales et mondiales du 9e RIC.
+- La croix de guerre et les palmes rappellent les citations obtenues au combat.
+- L’ancre symbolise l’appartenance à l’infanterie de marine et la devise souligne l’engagement lointain.
+
+────────────────────────────
+BLOC 2 — Bazeilles : une mémoire vive
+────────────────────────────
+**Texte :**
+Parmi toutes les inscriptions, **Bazeilles** occupe une place particulière. En août 1870, lors de la guerre contre la Prusse, les marsouins du 9e RIC défendent le village de Bazeilles, près de Sedan. Ils se battent maison par maison, contre une force supérieure en nombre. Le sacrifice des officiers et des soldats retarde l’ennemi et permet au reste de l’armée de se replier. Chaque année, le 9e RIMa commémore **Bazeilles** en Guyane par une prise d’armes et une lecture du célèbre ordre du jour du colonel **de Liniers**. Le drapeau est alors entouré d’une garde d’honneur et les jeunes recrues prêtent serment devant lui.
+
+**À retenir (cartel)**
+- Bazeilles est un symbole de bravoure et de sacrifice.
+- La commémoration annuelle perpétue l’esprit des combattants de 1870.
+- Le drapeau est au centre de la cérémonie, rappelant la continuité historique.
+
+────────────────────────────
+BLOC 3 — Le transfert du drapeau en Guyane et les héros de la France libre
+────────────────────────────
+**Texte :**
+Lorsque le 9e BIMa devient régiment d’infanterie de marine en **1992**, il reçoit officiellement le drapeau du 9e RIC. Ce transfert marque la continuité entre les régiments métropolitains et guyanais. Trois noms sont liés à ce drapeau : **Jean Carli**, capitaine tué en Indochine en 1946 ; **Bernard Berthelin**, capitaine tombé en Algérie en 1957 ; **Robert Journet**, capitaine disparu lors d’une patrouille en Kabylie en 1959. Leur mémoire est entretenue par l’Amicale des Anciens et par les plaques commémoratives installées au quartier Loubère. À chaque déploiement, les marsouins se rappellent que leur drapeau a flotté sur des théâtres lointains et qu’il incarne le sacrifice des générations passées.
+
+**À retenir (cartel)**
+- Le drapeau du 9e RIMa est transféré en Guyane en 1992.
+- Les noms de Carli, Berthelin et Journet symbolisent l’engagement des officiers de la France libre.
+- Les plaques commémoratives au quartier Loubère perpétuent leur mémoire.
+
+────────────────────────────
+TIMELINE (4 repères)
+────────────────────────────
+- **1831 : Création du 9e RIC** — naissance du drapeau.
+- **1870 : Bataille de Bazeilles** — inscription du nom sur le drapeau.
+- **1914‑1918 : Première Guerre mondiale** — obtention de la croix de guerre et de palmes pour citations.
+- **1992 : Transfert du drapeau au 9e RIMa** — adoption en Guyane et ajout des noms Carli, Berthelin, Journet.
+
+────────────────────────────
+GLOSSAIRE
+────────────────────────────
+**Drapeau** : emblème porté par un régiment, sur lequel sont inscrits ses titres de gloire et ses décorations.
+**Croix de guerre** : décoration française attribuée pour faits d’armes pendant les conflits mondiaux, accompagnée de palmes ou d’étoiles selon le nombre de citations.
+**Bazeilles** : village des Ardennes où les marsouins se battirent héroïquement le 31 août 1870.
+**Carli, Berthelin, Journet** : capitaines du 9e RIC/9e RIMa morts au combat, dont la mémoire est associée au drapeau.
+
+────────────────────────────
+QUIZ (3 questions)
+────────────────────────────
+1. De quel régiment le 9e RIMa a‑t‑il hérité son drapeau ?
+   A) 1er RIC
+   B) 9e RIC
+   C) 3e REI
+   D) 2e RIMa
+
+2. Quelle bataille emblématique est inscrite en lettres d’or sur le drapeau du régiment ?
+   A) Verdun
+   B) Bazeilles
+   C) Trafalgar
+   D) Valmy
+
+3. En quelle année le drapeau a‑t‑il été transféré en Guyane au 9e RIMa ?
+   A) 1962
+   B) 1976
+   C) 1992
+   D) 2008
+
+────────────────────────────
+CONCLUSION / TRANSITION
+────────────────────────────
+Le drapeau résume à lui seul près de deux siècles d’histoire. Il est le fil rouge qui relie les marsouins de la Crimée à ceux de la Guyane. Le visiteur peut poursuivre la découverte des traditions régimentaires en explorant la page **Insignes**, où il découvrira l’évolution des symboles et des écussons du 9e RIMa.
