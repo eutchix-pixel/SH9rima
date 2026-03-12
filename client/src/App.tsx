@@ -2,7 +2,6 @@ import { Switch, Route, useLocation } from "wouter";
 import { useEffect } from "react";
 import { Layout } from "./components/layout";
 import Home from "./pages/Home";
-import DetailPage from "./pages/Detail";
 import TonkinOriginsPage from "./pages/asia/TonkinOrigins";
 import ChinaExpedition1900Page from "./pages/asia/ChinaExpedition1900";
 import Tonkin1901Page from "./pages/asia/Tonkin1901";
@@ -48,7 +47,6 @@ function Router() {
       <ScrollToTop />
       <Switch>
         <Route path="/" component={Home} />
-        <Route path="/detail/:id" component={DetailPage} />
         <Route path="/asie/naissance-du-9-tonkin" component={TonkinOriginsPage} />
         <Route path="/asie/chine-1900-expedition" component={ChinaExpedition1900Page} />
         <Route path="/asie/tonkin-1901-1914" component={Tonkin1901Page} />

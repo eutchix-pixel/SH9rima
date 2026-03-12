@@ -1,16 +1,10 @@
 import { museumData } from "@/lib/data";
 import { Link } from "wouter";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useEffect } from "react";
-import { ChevronDown, Map, ArrowRight } from "lucide-react";
+import { useRef } from "react";
+import { ChevronDown, ArrowRight } from "lucide-react";
 
 export default function Home() {
-  useEffect(() => {
-    if (!window.location.hash) {
-      const el = document.getElementById("tonkin");
-      if (el) el.scrollIntoView({ behavior: "instant" });
-    }
-  }, []);
 
   return (
       <div className="bg-background text-foreground">
@@ -57,19 +51,6 @@ export default function Home() {
           {museumData.map((section, index) => (
             <SectionView key={section.id} section={section} index={index} />
           ))}
-          {/* Footer / Map Link */}
-          <section className="py-20 px-6 bg-zinc-900 text-white text-center">
-            <h2 className="font-serif text-3xl mb-6">Plan du Musée</h2>
-            <p className="text-muted-foreground mb-8 max-w-md mx-auto">
-              Repérez-vous dans les différentes salles et trouvez les œuvres principales.
-            </p>
-            <Link href="/map">
-                <button className="bg-white text-black px-8 py-4 rounded-none font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors inline-flex items-center gap-2">
-                    <Map className="h-5 w-5" />
-                    Ouvrir le plan
-                </button>
-            </Link>
-          </section>
       </div>
   );
 }
