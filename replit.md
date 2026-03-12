@@ -38,6 +38,7 @@ Preferred communication style: Simple, everyday language.
   - `client/src/lib/guyane-fluvial-data.ts` — Guyane Fluvial content (timeline, blocs, glossary, MCQ quiz)
   - `client/src/lib/guyane-craj-data.ts` — Guyane CRAJ content (timeline, blocs, glossary, MCQ quiz)
   - `client/src/lib/guyane-jungle-data.ts` — Guyane Jungle content (timeline, blocs, glossary, MCQ quiz)
+  - `client/src/lib/guyane-international-data.ts` — Guyane International content (timeline, blocs, glossary, MCQ quiz)
 - Each content page has multiple reading modes: "Essential (5 min)", "Full Visit (20-30 min)", "Archives (deep reading)"
 - Pages feature: interactive timelines, accordion sections, image galleries with placeholders, glossaries, mini-quizzes
 
@@ -59,6 +60,7 @@ Preferred communication style: Simple, everyday language.
 - **Guyane/Fluvial** (`/guyane/fluvial`) — River navigation (1976-1996): pirogues, takariste/motoriste roles, rapids, life on the Maroni
 - **Guyane/CRAJ** (`/guyane/craj`) — Jungle commando unit: C3F training center, infiltration missions, Operation Harpie, equipment
 - **Guyane/Jungle** (`/guyane/jungle`) — Life in the equatorial forest (1977-2023): climate, border markers, trail-clearing, indigenous peoples, Maufrais expedition
+- **Guyane/International** (`/guyane/international`) — International cooperation: Brazil CIGS, Suriname/Guyana patrols, Tradewinds, Curaçao challenge, military diplomacy
 - **AI Assistant** (`/ai-assistant`) — Chat-style assistant (currently client-side simulation using museum data)
 
 ### Backend (Express)
