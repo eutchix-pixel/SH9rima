@@ -21,15 +21,6 @@ export const traditionsEspritData = {
       ],
     },
     {
-      titre: "Diversité des structures et des hommes",
-      texte: "Le 9e RIMa est un régiment singulier par la diversité de ses missions et de ses hommes. Son organigramme se compose d'une compagnie commandement et logistique (CCL), chargée des transmissions et de la logistique, d'une compagnie jungle, spécialisée dans le combat en forêt équatoriale, d'une compagnie fluviale, experte dans la navigation des pirogues sur le Maroni et l'Oyapock, d'une compagnie de réserve et d'un état‑major. Cette organisation reflète la variété des missions : de la patrouille en pirogue à l'opération Titan, en passant par les missions internationales.",
-      aRetenir: [
-        "Les structures du régiment sont variées : CCL, compagnie jungle, compagnie fluviale, compagnie réserve.",
-        "Les marsouins viennent de métropole et d'outre‑mer, reflétant la diversité de la France et de la Guyane.",
-        "Cette diversité est une force pour les missions en jungle et sur les fleuves.",
-      ],
-    },
-    {
       titre: "Cérémonies et mémoire collective",
       texte: "Les marsouins entretiennent leur esprit de corps à travers des cérémonies régulières. Bazeilles : le 31 août et le 1ᵉʳ septembre, les troupes de marine commémorent la défense héroïque du village de Bazeilles en 1870. Le 9e RIMa organise une prise d'armes où l'ordre du jour du colonel de Liniers est lu et où la devise « Et au nom de Dieu, vive la coloniale ! » est proclamée. Fête du régiment (10 mars) : anniversaire de la création du 9e RIC en 1890, la cérémonie se déroule devant la pagode, avec remise de décorations et repas de cohésion. Baptêmes de promotions : les jeunes marsouins reçoivent leur fourragère lors de cérémonies où les anciens témoignent.",
       aRetenir: [
