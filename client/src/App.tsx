@@ -34,9 +34,7 @@ import NotFound from "./pages/not-found";
 function ScrollToTop() {
   const [location] = useLocation();
   useEffect(() => {
-    if (!window.location.hash) {
-      window.scrollTo(0, 0);
-    }
+    window.scrollTo(0, 0);
   }, [location]);
   return null;
 }
