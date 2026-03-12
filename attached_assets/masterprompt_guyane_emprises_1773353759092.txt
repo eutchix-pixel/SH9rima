@@ -1,0 +1,151 @@
+
+MASTER PROMPT — REPLIT AI
+Projet : « Museum Tour Guide — 9e RIMa »
+Nouvelle page à créer : GUYANE → « Emprises »
+Slug conseillé : `/guyane/emprises`
+
+IMPORTANT (lire avant de coder)
+- Replit n’a pas accès à mes sources. La page doit rester **factuelle**, sans ajouter de chiffres ou de dates non présents dans le texte.
+- Cette page présente les **postes, camps et structures** du 9e BIMa/RIMa le long du Maroni. Elle fait le lien entre le contexte historique et le quotidien des marsouins.
+- Le texte fourni sous « CONTENU À AFFICHER » doit être reproduit à l’identique. Tu peux seulement ajouter de la micro‑copie UI (navigation).
+
+OBJECTIF VISITEUR
+Découvrir comment le 9e BIMa puis 9e RIMa ont implanté des postes et des camps pour assurer la présence de la France sur la frontière occidentale, gérer la crise surinamaise et accueillir des réfugiés. Comprendre les missions de ces emprises et leur évolution.
+
+À FAIRE DANS L’APP (FONCTIONNEL)
+1) **Navigation**
+   - Insérer cette page après « Débuts » et avant « Fluvial ». Boutons fixes : « Revenir aux thèmes », « Retour Guyane », « Continuer ».
+2) **UX / UI**
+   - **HERO** : image immersive d’un poste isolé sur le Maroni (Nasson ou Saint‑Jean) avec la **question directrice** superposée.
+   - **Modes de lecture** : « Comprendre » (vue d’ensemble), « Récit » (historique des plans Maroni et Alizé), « Archives » (photos des emprises, documents administratifs, organigrammes).
+   - **Timeline** : 7 repères maximum retraçant l’ouverture des postes (1976 : Saint‑Jean ; 1980 : crise surinamaise et création de camps ; 1986 : Plan Maroni ; 1990 : Plan Alizé ; 1992 : fermeture progressive des camps ; 1993 : Plan Alizé‑bis).
+   - **Carte interactive** : carte du Maroni avec les postes (Saint‑Jean, Nasson, Acarouany, Charvein, PK9, Mana, Maripasoula). Chaque icône ouvre une fiche avec photos et textes.
+   - **Organigramme** : schéma interactif des unités du **Groupement Maroni** (Détachement de base, 3e CIE, 4e CIE) pour visualiser les responsabilités.
+   - **Mini‑quiz** : 4 questions pour tester la compréhension des missions et dates clés.
+
+──────────────────────────────────────────────────────────────────────────────
+CONTENU À AFFICHER (TEXTE DU SITE)
+──────────────────────────────────────────────────────────────────────────────
+
+TITRE (H1)
+Guyane — Emprises
+
+SOUS‑TITRE (H2)
+Du camp de déportation de Saint‑Jean au poste isolé de Nasson, les marsouins ont construit et occupé des emprises pour contrôler la frontière, aider les populations et gérer les crises. Cette page décrit ces lieux et les hommes qui les ont faits vivre.
+
+QUESTION DIRECTRICE
+Comment les postes et les camps du 9e BIMa/RIMa ont‑ils assuré la présence de la France sur le Maroni tout en faisant face à la crise surinamaise et à l’afflux de réfugiés ?
+
+ENCADRÉ « REPÈRES »
+• 20 septembre 1976 : installation du détachement permanent à Saint‑Jean du Maroni, ancienne base du camp de la déportation
+• 15 octobre 1976 : première mission de présence sur le Maroni (recensement du fleuve, remise de drapeaux aux villages)
+• 1980 : soulèvement militaire au Suriname et début de l’instabilité politique
+• 3 septembre 1986 : lancement du **Plan Maroni**, création des camps A et PK9 pour accueillir les réfugiés
+• 1ᵉʳ octobre 1990 : **Plan Alizé**, création des postes de Nasson, Aé roplane‑Condé et les Hattes ; prise en main de tous les postes du Maroni
+• 14 janvier 1993 : fin du plan Maroni et début du plan Alizé bis
+
+BOUTONS (micro‑copie)
+- Comprendre (5 min)
+- Récit (10–15 min)
+- Archives (approfondir)
+
+────────────────────────────
+RÉSUMÉ (60 secondes)
+────────────────────────────
+À peine créé, le 9e BIMa reçoit l’ordre de s’implanter à **Saint‑Jean du Maroni**, réhabilitant les maisons abandonnées du camp de déportation et s’équipant de pirogues. Cette présence devient permanente et s’étend avec la création de nouvelles sections et d’une école d’instruction. En 1980, une crise ébranle le **Suriname** voisin : putsch militaires, guérilla des **Busshnégros**, et arrivée massive de réfugiés. Pour y faire face, le **Plan Maroni** (septembre 1986) fixe trois objectifs : maintenir la sécurité sur le fleuve, rassurer les réfugiés et organiser des camps d’accueil. Les marsouins créent les camps A, PK9 et Charvein et assurent la gestion des réfugiés avec l’appui d’autres unités (RSMA, GSMA). En 1990, le **Plan Alizé** confère au 9e BIMa le contrôle de postes supplémentaires (Nasson, Aé roplane‑Condé, Les Hattes) et prévoit la fermeture progressive des camps. Après 1993, le **Plan Alizé‑bis** réoriente la mission vers la lutte contre l’immigration clandestine et l’appui logistique aux autorités surinamaises et aux négociations avec le chef rebelle **Ronie Brunswijk**. La page raconte l’histoire de ces emprises et la vie quotidienne de leurs occupants.
+
+────────────────────────────
+BLOC 1 — Saint‑Jean du Maroni : la base historique
+────────────────────────────
+**Texte :**
+Le 20 septembre 1976, à peine quinze jours après la recréation du bataillon, le commandant **Desmottes** ordonne l’installation d’un détachement permanent à **Saint‑Jean du Maroni**. L’ancienne colonie pénitentiaire, envahie par la végétation, est réinvestie par 37 marsouins et 12 pirogues. Des maisons abandonnées sont remises en état, un héliport est dégagé et un premier recensement du fleuve est lancé. En 1978, la section d’instruction vient renforcer le détachement, portant l’effectif à 90 hommes. **Saint‑Jean** devient le cœur logistique et administratif du Groupement Maroni.
+
+**À retenir (cartel)**
+- Saint‑Jean du Maroni est la première emprise et sert de base arrière à toutes les opérations.
+- Les marsouins transforment un camp de déportation en place d’armes et en lieu de vie.
+- La section d’instruction de 1978 marque la professionnalisation de la présence.
+
+────────────────────────────
+BLOC 2 — La crise surinamaise et le Plan Maroni
+────────────────────────────
+**Texte :**
+Au début des années 1980, le Suriname, ex‑colonie hollandaise devenue indépendante en 1975, sombre dans l’instabilité. En juillet 1986, le sergent **Ronie Brunswijk** lance la guérilla des **Busshnégros** contre le régime militaire. Les exactions provoquent un exode de plusieurs milliers de réfugiés vers la Guyane française, qui s’installent sur les berges du Maroni. Le 3 septembre 1986, le **Plan Maroni** est déclenché. Ses trois objectifs : maintenir la sécurité sur le fleuve, rassurer les réfugiés et créer des camps pour les accueillir. La 1re compagnie du 9e commandée par le capitaine **Manach** est déployée en mission de présence et de surveillance. Les camps **A** à Saint‑Laurent, **PK9** sur la route de Mana et **Charvein** sont construits pour protéger et organiser les réfugiés. Le 9e BIMa gère ces emprises avec le concours du 3e REI et du RSMA.
+
+**À retenir (cartel)**
+- Le Plan Maroni répond à une crise humanitaire et sécuritaire due à la guerre civile surinamaise.
+- Les camps A, PK9 et Charvein servent à l’accueil et à la protection des réfugiés.
+- La coopération avec d’autres unités (3e REI, RSMA, GSMA) illustre la dimension interarmées de la mission.
+
+────────────────────────────
+BLOC 3 — Du Plan Maroni au Plan Alizé
+────────────────────────────
+**Texte :**
+Avec la stabilisation progressive au Suriname, l’objectif évolue. Le 1ᵉʳ octobre 1990, le 9e BIMa lance le **Plan Alizé**, qui prévoit la création de postes permanents sur le fleuve et la fermeture progressive des camps. De nouvelles emprises voient le jour : **Nasson**, **Aé roplane‑Condé** et **Les Hattes**. Le 9e BIMa prend alors le contrôle de tous les postes du Maroni et assure la sécurité de la frontière jusqu’à Maripasoula. En janvier 1993, le Plan Maroni est officiellement terminé et le **Plan Alizé‑bis** prend le relais. Celui‑ci se concentre sur la lutte contre l’immigration clandestine et la protection des négociations entre les autorités surinamaises et les rebelles. La 4e compagnie de renfort demeure installée à **Nasson**, tandis que l’adjudant **Piloz** réorganise le bataillon en régiment en août 1992. Les postes isolés de Nasson et de Maripasoula reflètent le quotidien rustique des marsouins, proches des populations bushinengue et amérindiennes.
+
+**À retenir (cartel)**
+- Le Plan Alizé marque la transition d’une mission humanitaire vers une mission de souveraineté.
+- Les postes de Nasson, Aé roplane‑Condé et Les Hattes illustrent la surveillance fine du fleuve.
+- L’immigration clandestine devient un défi majeur à partir de 1993.
+
+────────────────────────────
+BLOC 4 — Organigramme et vie quotidienne
+────────────────────────────
+**Texte :**
+Pour gérer l’ensemble des postes et des camps, le **Groupement Maroni** s’organise autour de trois entités : un **détachement de base** (commandement, service général, atelier auto, section fluviale et groupe transmissions), la **3e compagnie** qui assure la présence sur les postes, et la **4e compagnie** responsable des camps. Les marsouins y vivent dans des conditions parfois spartiates : constructions en bois, alimentation par pirogue et liaison radio permanente avec Cayenne. Malgré l’isolement, ces emprises favorisent une relation de proximité avec les populations locales, qu’il s’agisse de soigner, d’aider à transporter du matériel ou de partager des moments de convivialité. La rusticité du poste de **Nasson**, dernier en activité, plonge les jeunes marsouins dans la vie de leurs anciens et nourrit l’esprit de corps du régiment.
+
+**À retenir (cartel)**
+- Le Groupement Maroni comprend un détachement de base et deux compagnies de renfort, chacune avec des missions distinctes.
+- La vie quotidienne dans les postes repose sur l’autonomie et l’entraide avec les populations.
+- Les emprises participent à la cohésion et à la transmission des traditions.
+
+────────────────────────────
+TIMELINE (7 repères)
+────────────────────────────
+- **20 septembre 1976 : Installation à Saint‑Jean** — premier détachement permanent.
+- **15 octobre 1976 : Première mission sur le Maroni** — recensement et remise de drapeaux.
+- **Septembre 1986 : Début du Plan Maroni** — création des camps A, PK9 et Charvein.
+- **1987 : Fermeture du camp d’Apatou** — transferts de réfugiés à Saint‑Laurent.
+- **1ᵉʳ octobre 1990 : Plan Alizé** — création des postes de Nasson, Aé roplane‑Condé et Les Hattes.
+- **Août 1992 : Réorganisation du bataillon en régiment** — le 9e BIMa devient 9e RIMa et recompose ses unités.
+- **Janvier 1993 : Début du Plan Alizé‑bis** — lutte contre l’immigration clandestine et soutien aux négociations.
+
+────────────────────────────
+GLOSSAIRE
+────────────────────────────
+**Plan Maroni :** dispositif de 1986 visant à sécuriser le fleuve, accueillir les réfugiés surinamais et créer des camps.
+**Busshnégros :** guérilla menée par Ronie Brunswijk au Suriname dans les années 1980.
+**Plan Alizé :** plan de 1990 qui remplace le Plan Maroni et confie au 9e BIMa la responsabilité de nouveaux postes tout en fermant les camps.
+**Plan Alizé‑bis :** dispositif de 1993 recentrant la mission sur la lutte contre l’immigration clandestine.
+**Groupement Maroni :** structure du 9e RIMa chargée de gérer les postes et les camps sur le fleuve, composée d’un détachement de base et de deux compagnies de renfort.
+
+────────────────────────────
+QUIZ (4 questions)
+────────────────────────────
+1. Quel poste constitue la première implantation permanente du 9e BIMa sur le Maroni ?
+   A) Nasson
+   B) Saint‑Jean du Maroni
+   C) Charvein
+   D) Mana
+
+2. Quel événement déclenche la mise en place du Plan Maroni en 1986 ?
+   A) La construction du Centre Spatial
+   B) La dissolution du 9e RIMa
+   C) La crise politique et les exactions au Suriname
+   D) L’ouverture du camp de Maripasoula
+
+3. Quel plan prévoit la création des postes de Nasson, Aé roplane‑Condé et Les Hattes ?
+   A) Plan Maroni
+   B) Plan Alizé
+   C) Plan Alizé‑bis
+   D) Plan Vert
+
+4. La 4e compagnie du Groupement Maroni est principalement chargée :
+   A) De l’instruction des recrues
+   B) Du service général et des transmissions
+   C) De la tenue des camps et du renfort sur les postes
+   D) De la protection du Centre Spatial
+
+────────────────────────────
+CONCLUSION / TRANSITION
+────────────────────────────
+Les postes et les camps du Maroni forment l’épine dorsale de l’action du 9e RIMa en Guyane. Après avoir découvert comment le régiment s’est implanté et adapté aux crises, le visiteur peut maintenant plonger dans la **vie sur le fleuve** (page Fluvial) et comprendre comment la maîtrise des pirogues et des rapides constitue une compétence essentielle au succès des missions.
