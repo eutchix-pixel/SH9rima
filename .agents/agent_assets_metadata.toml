@@ -12,3 +12,9 @@ id = "rx8kxCrEDeLctUQdtBBHF"
 uri = "file://museum-9rima-static.tar.gz"
 type = "unspecified"
 title = "Build statique complet (avec images) — 54 Mo"
+
+[[outputs]]
+id = "Hn0_RiuCERrqeU_a3djjK"
+uri = "file://site-9rima-static.tar.gz"
+type = "unspecified"
+title = "Site 9e RIMa - Fichiers statiques (HTML/CSS/JS)"
